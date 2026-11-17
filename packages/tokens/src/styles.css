@@ -1,0 +1,578 @@
+/* =====================================================================
+   @blocos/tokens — Design System "Aurora" (beta)
+   Baseado no livro de Walter Isaacson sobre Steve Jobs: restricao,
+   hierarquia tipografica forte, muito espaco em branco, vidro com
+   profundidade real, e movimento que explica a interface em vez de
+   divertir. Nenhuma cor decorativa sem significado.
+   ---------------------------------------------------------------------
+   Uso:
+     @import "tailwindcss";
+     @import "@blocos/tokens/styles.css";
+   E para ativar um tema: <div class="bloco-theme aurora"> ...
+   ===================================================================== */
+
+/* ---------- 1. Escalas primitivas (independentes de tema) ---------- */
+:root {
+  /* Neutros com leve viés azul — evita o cinza "dead" */
+  --n-0: #ffffff;
+  --n-25: #fbfbfd;
+  --n-50: #f5f5f7;
+  --n-100: #ededf0;
+  --n-150: #e4e4e9;
+  --n-200: #d6d6dd;
+  --n-300: #b8b8c0;
+  --n-400: #8e8e96;
+  --n-500: #6e6e73;
+  --n-600: #55555c;
+  --n-700: #3a3a40;
+  --n-800: #26262b;
+  --n-850: #1c1c20;
+  --n-900: #131316;
+  --n-950: #0b0b0d;
+  --n-1000: #050506;
+
+  /* Acentos (Apple system palette) */
+  --accent-blue: #0a84ff;
+  --accent-purple: #bf5af2;
+  --accent-teal: #40c8e0;
+  --accent-pink: #ff375f;
+  --accent-orange: #ff9f0a;
+  --accent-yellow: #ffd60a;
+  --accent-green: #30d158;
+  --accent-red: #ff453a;
+  --accent-mint: #63e6e2;
+  --accent-indigo: #5e5ce6;
+
+  /* Tipografia */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Inter", "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo,
+    Consolas, monospace;
+
+  --text-display: 2.75rem;
+  --text-display-lh: 1.06;
+  --text-title1: 2rem;
+  --text-title1-lh: 1.12;
+  --text-title2: 1.5rem;
+  --text-title2-lh: 1.18;
+  --text-title3: 1.25rem;
+  --text-title3-lh: 1.24;
+  --text-headline: 1.0625rem;
+  --text-headline-lh: 1.35;
+  --text-body: 0.9375rem;
+  --text-body-lh: 1.5;
+  --text-callout: 0.8125rem;
+  --text-callout-lh: 1.45;
+  --text-caption: 0.75rem;
+  --text-caption-lh: 1.35;
+  --text-micro: 0.6875rem;
+  --text-micro-lh: 1.3;
+
+  /* Espacamento (base 4) */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+
+  /* Raios */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-2xl: 30px;
+  --r-pill: 999px;
+
+  /* Movimento */
+  --ease-apple: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+  --dur-3: 260ms;
+  --dur-4: 420ms;
+  --dur-5: 700ms;
+
+  /* Desfoque */
+  --blur-sm: 8px;
+  --blur-md: 16px;
+  --blur-lg: 24px;
+  --blur-xl: 40px;
+
+  /* Densidade (ajustada por .bloco-density-*) */
+  --density-row-y: 0.75rem;
+  --density-card-p: 1.25rem;
+  --density-gap: 1rem;
+}
+
+/* ---------- 2. Tema: AURORA (padrao — escuro, vidro, luz) ---------- */
+.bloco-theme,
+.bloco-theme-aurora {
+  color-scheme: dark;
+
+  --bg: var(--n-1000);
+  --bg-elevated: var(--n-950);
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.075);
+  --surface-solid: #14141a;
+  --surface-hover: rgba(255, 255, 255, 0.07);
+  --surface-active: rgba(255, 255, 255, 0.1);
+
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --glass-highlight: rgba(255, 255, 255, 0.22);
+  --glass-blur: var(--blur-lg);
+
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --hairline: rgba(255, 255, 255, 0.14);
+
+  --text: rgba(255, 255, 255, 0.94);
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-faint: rgba(255, 255, 255, 0.32);
+  --text-inverse: #0b0b0d;
+
+  --accent: var(--accent-blue);
+  --accent-hover: #3d9bff;
+  --accent-soft: rgba(10, 132, 255, 0.16);
+  --accent-text: #ffffff;
+  --accent-2: var(--accent-purple);
+  --accent-2-soft: rgba(191, 90, 242, 0.16);
+
+  --success: var(--accent-green);
+  --success-soft: rgba(48, 209, 88, 0.15);
+  --warn: var(--accent-orange);
+  --warn-soft: rgba(255, 159, 10, 0.15);
+  --danger: var(--accent-red);
+  --danger-soft: rgba(255, 69, 58, 0.15);
+  --info: var(--accent-teal);
+  --info-soft: rgba(64, 200, 224, 0.15);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.34);
+  --shadow-3: 0 12px 40px rgba(0, 0, 0, 0.44);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 18px 60px rgba(10, 132, 255, 0.12);
+
+  --aurora-1: rgba(10, 132, 255, 0.28);
+  --aurora-2: rgba(191, 90, 242, 0.22);
+  --aurora-3: rgba(64, 200, 224, 0.16);
+}
+
+/* ---------- 3. Tema: DAYLIGHT (claro, editorial, preciso) ---------- */
+.bloco-theme-daylight {
+  color-scheme: light;
+
+  --bg: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-solid: #ffffff;
+  --surface-hover: rgba(0, 0, 0, 0.035);
+  --surface-active: rgba(0, 0, 0, 0.06);
+
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-bg-strong: rgba(255, 255, 255, 0.86);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.9);
+  --glass-blur: var(--blur-lg);
+
+  --border: rgba(0, 0, 0, 0.09);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --hairline: rgba(0, 0, 0, 0.1);
+
+  --text: #1d1d1f;
+  --text-secondary: rgba(29, 29, 31, 0.78);
+  --text-muted: rgba(29, 29, 31, 0.52);
+  --text-faint: rgba(29, 29, 31, 0.34);
+  --text-inverse: #ffffff;
+
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-soft: rgba(0, 113, 227, 0.1);
+  --accent-text: #ffffff;
+  --accent-2: #8944ab;
+  --accent-2-soft: rgba(137, 68, 171, 0.1);
+
+  --success: #248a3d;
+  --success-soft: rgba(36, 138, 61, 0.1);
+  --warn: #b25000;
+  --warn-soft: rgba(178, 80, 0, 0.1);
+  --danger: #d70015;
+  --danger-soft: rgba(215, 0, 21, 0.09);
+  --info: #0071e3;
+  --info-soft: rgba(0, 113, 227, 0.1);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.07);
+  --shadow-3: 0 16px 48px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 18px 60px rgba(0, 113, 227, 0.1);
+
+  --aurora-1: rgba(0, 113, 227, 0.1);
+  --aurora-2: rgba(137, 68, 171, 0.07);
+  --aurora-3: rgba(64, 200, 224, 0.06);
+}
+
+/* ---------- 4. Tema: GRAPHITE (escuro neutro, densidade de dados) ---------- */
+.bloco-theme-graphite {
+  color-scheme: dark;
+
+  --bg: #0b0b0d;
+  --bg-elevated: #101013;
+  --surface: #131316;
+  --surface-strong: #18181c;
+  --surface-solid: #131316;
+  --surface-hover: #1c1c21;
+  --surface-active: #23232a;
+
+  --glass-bg: rgba(255, 255, 255, 0.035);
+  --glass-bg-strong: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.14);
+  --glass-blur: var(--blur-md);
+
+  --border: #26262b;
+  --border-strong: #34343b;
+  --hairline: rgba(255, 255, 255, 0.1);
+
+  --text: #ededf0;
+  --text-secondary: rgba(237, 237, 240, 0.74);
+  --text-muted: rgba(237, 237, 240, 0.48);
+  --text-faint: rgba(237, 237, 240, 0.3);
+  --text-inverse: #0b0b0d;
+
+  --accent: #7c7cff;
+  --accent-hover: #9494ff;
+  --accent-soft: rgba(124, 124, 255, 0.14);
+  --accent-text: #0b0b0d;
+  --accent-2: #b58cff;
+  --accent-2-soft: rgba(181, 140, 255, 0.14);
+
+  --success: #3ddc84;
+  --success-soft: rgba(61, 220, 132, 0.13);
+  --warn: #ffb340;
+  --warn-soft: rgba(255, 179, 64, 0.13);
+  --danger: #ff6b6b;
+  --danger-soft: rgba(255, 107, 107, 0.13);
+  --info: #5ac8fa;
+  --info-soft: rgba(90, 200, 250, 0.13);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-3: 0 14px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  --aurora-1: rgba(124, 124, 255, 0.14);
+  --aurora-2: rgba(181, 140, 255, 0.1);
+  --aurora-3: rgba(255, 255, 255, 0.03);
+}
+
+/* ---------- 5. Densidade ---------- */
+.bloco-density-compact {
+  --density-row-y: 0.375rem;
+  --density-card-p: 0.75rem;
+  --density-gap: 0.5rem;
+  --text-body: 0.875rem;
+  --text-callout: 0.78125rem;
+}
+
+/* ---------- 6. Superficieies de vidro ---------- */
+.bloco-glass {
+  position: relative;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  box-shadow: var(--shadow-2), inset 0 1px 0 var(--glass-highlight);
+}
+
+.bloco-glass-strong {
+  background: var(--glass-bg-strong);
+}
+
+/* Reflexo especular superior — da profundidade "de verdade" */
+.bloco-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    160deg,
+    var(--glass-highlight) 0%,
+    transparent 28%,
+    transparent 72%,
+    color-mix(in srgb, var(--glass-highlight) 40%, transparent) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ---------- 7. Fundo com aurora ---------- */
+.bloco-aurora-bg {
+  position: relative;
+  isolation: isolate;
+  background: var(--bg);
+}
+
+.bloco-aurora-bg::after {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 70%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(45% 55% at 18% 12%, var(--aurora-1) 0%, transparent 70%),
+    radial-gradient(40% 50% at 82% 8%, var(--aurora-2) 0%, transparent 70%),
+    radial-gradient(38% 45% at 50% 0%, var(--aurora-3) 0%, transparent 70%);
+  filter: blur(28px);
+}
+
+/* ---------- 8. Tipografia utilitaria ---------- */
+.bloco-display {
+  font-family: var(--font-sans);
+  font-size: var(--text-display);
+  line-height: var(--text-display-lh);
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  color: var(--text);
+}
+.bloco-title1 {
+  font-family: var(--font-sans);
+  font-size: var(--text-title1);
+  line-height: var(--text-title1-lh);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  color: var(--text);
+}
+.bloco-title2 {
+  font-family: var(--font-sans);
+  font-size: var(--text-title2);
+  line-height: var(--text-title2-lh);
+  font-weight: 650;
+  letter-spacing: -0.018em;
+  color: var(--text);
+}
+.bloco-title3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-title3);
+  line-height: var(--text-title3-lh);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  color: var(--text);
+}
+.bloco-headline {
+  font-family: var(--font-sans);
+  font-size: var(--text-headline);
+  line-height: var(--text-headline-lh);
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  color: var(--text);
+}
+.bloco-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--text-body-lh);
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.bloco-callout {
+  font-family: var(--font-sans);
+  font-size: var(--text-callout);
+  line-height: var(--text-callout-lh);
+  color: var(--text-secondary);
+}
+.bloco-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  line-height: var(--text-caption-lh);
+  color: var(--text-muted);
+}
+.bloco-micro {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  line-height: var(--text-micro-lh);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.bloco-mono {
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+  font-feature-settings: "zero" 1;
+}
+
+/* ---------- 9. Foco acessivel ---------- */
+.bloco-focus:focus-visible,
+.bloco-focus-visible:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- 10. Animacoes base ---------- */
+@keyframes bloco-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bloco-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bloco-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes bloco-shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.bloco-anim-fade-up {
+  animation: bloco-fade-up var(--dur-4) var(--ease-apple) both;
+}
+.bloco-anim-fade {
+  animation: bloco-fade var(--dur-3) var(--ease-out) both;
+}
+.bloco-anim-scale {
+  animation: bloco-scale-in var(--dur-3) var(--ease-spring) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bloco-anim-fade-up,
+  .bloco-anim-fade,
+  .bloco-anim-scale {
+    animation: none !important;
+  }
+  * {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+  }
+}
+
+/* ---------- 11. Scrollbar discreta ---------- */
+.bloco-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+.bloco-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.bloco-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--r-pill);
+}
+.bloco-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 12. Skeleton ---------- */
+.bloco-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    var(--surface-hover) 37%,
+    var(--surface) 63%
+  );
+  background-size: 200% 100%;
+  animation: bloco-shimmer 1.6s ease-in-out infinite;
+  border-radius: var(--r-sm);
+}
+
+/* ---------- 13. Mapeamento Tailwind (v4) ---------- */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-solid: var(--surface-solid);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
+
+  --color-glass: var(--glass-bg);
+  --color-glass-strong: var(--glass-bg-strong);
+  --color-glass-border: var(--glass-border);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-hairline: var(--hairline);
+
+  --color-fg: var(--text);
+  --color-fg-secondary: var(--text-secondary);
+  --color-fg-muted: var(--text-muted);
+  --color-fg-faint: var(--text-faint);
+  --color-fg-inverse: var(--text-inverse);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-text);
+  --color-accent-2: var(--accent-2);
+  --color-accent-2-soft: var(--accent-2-soft);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius-xs: var(--r-xs);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-2xl);
+  --radius-pill: var(--r-pill);
+
+  --shadow-bloco-1: var(--shadow-1);
+  --shadow-bloco-2: var(--shadow-2);
+  --shadow-bloco-3: var(--shadow-3);
+  --shadow-bloco-glow: var(--shadow-glow);
+
+  --ease-apple: var(--ease-apple);
+  --ease-out-bloco: var(--ease-out);
+  --ease-spring: var(--ease-spring);
+}
