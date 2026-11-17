@@ -117,6 +117,7 @@ export const officeTeamRecipe = defineBlock({
     "Regra 11: remover um membro da equipe encerra a resposta daquele contato.",
     "Nenhum dado de saude (consulta, medida, plano alimentar) aparece na lista de equipe.",
   ],
+  emptyAction: { id: "office.team.invite", label: "Convidar membro" },
   variants: [
     {
       id: "list",

@@ -25,7 +25,8 @@ import {
   Tabs,
   cn,
 } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { officeSettingsRecipe } from "./office-settings.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -177,7 +178,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
           <Panel key={channel.id} tone="glass" padding="md" className="flex flex-col gap-3">
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent">
+                <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
                   {CHANNEL_ICON[channel.id]}
                 </span>
                 <div className="min-w-0">
@@ -194,7 +195,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
 
             {channel.connected ? (
               <>
-                <p className="bloco-caption text-fg-muted">
+                <p className="bloco-caption break-words text-fg-muted">
                   Provedor: {channel.provider ?? "—"}
                   {channel.connectedAt ? ` · desde ${formatDateTime(channel.connectedAt)}` : ""}
                 </p>
@@ -256,16 +257,16 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
             <p className="bloco-micro text-fg-muted">Risco aceito</p>
             <dl className="mt-2 grid gap-2 sm:grid-cols-3">
               <div>
-                <dt className="bloco-micro text-fg-muted">Versao do texto</dt>
-                <dd className="bloco-callout text-fg">{data.riskAcceptance.version}</dd>
+                <dt className="bloco-micro break-words text-fg-muted">Versao do texto</dt>
+                <dd className="bloco-callout break-words text-fg">{data.riskAcceptance.version}</dd>
               </div>
               <div>
-                <dt className="bloco-micro text-fg-muted">Aceito por</dt>
-                <dd className="bloco-callout text-fg">{data.riskAcceptance.acceptedBy}</dd>
+                <dt className="bloco-micro break-words text-fg-muted">Aceito por</dt>
+                <dd className="bloco-callout break-words text-fg">{data.riskAcceptance.acceptedBy}</dd>
               </div>
               <div>
-                <dt className="bloco-micro text-fg-muted">Em</dt>
-                <dd className="bloco-callout text-fg">{formatDateTime(data.riskAcceptance.acceptedAt)}</dd>
+                <dt className="bloco-micro break-words text-fg-muted">Em</dt>
+                <dd className="bloco-callout break-words text-fg">{formatDateTime(data.riskAcceptance.acceptedAt)}</dd>
               </div>
             </dl>
             {riskIsOutdated ? (
@@ -279,7 +280,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
 
         {needsRiskAcceptance || riskIsOutdated ? (
           <Button
-            variant={riskIsOutdated ? "primary" : "secondary"}
+            variant="secondary"
             icon={<AlertTriangle className="h-4 w-4" aria-hidden />}
             onClick={handleAcceptRisk}
           >
@@ -413,7 +414,11 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
         </Callout>
 
         <div className="flex flex-wrap gap-2">
-          <Button icon={<Send className="h-4 w-4" aria-hidden />} onClick={handleSaveWebhook}>
+          <Button
+            variant="secondary"
+            icon={<Send className="h-4 w-4" aria-hidden />}
+            onClick={handleSaveWebhook}
+          >
             Salvar webhook
           </Button>
           <Button variant="ghost" onClick={handleTestWebhook} disabled={!webhookUrl.trim()}>
@@ -481,12 +486,13 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className="flex flex-col gap-4"
-    >
+        recipe={officeSettingsRecipe}
+        onAction={onAction}
+      >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

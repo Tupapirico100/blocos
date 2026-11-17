@@ -6,6 +6,7 @@ import {
   Badge,
   Button,
   Callout,
+  ConfirmDialog,
   DataTable,
   EmptyState,
   Field,
@@ -15,7 +16,8 @@ import {
   Select,
   cn,
 } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { officeTeamRecipe } from "./office-team.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -110,9 +112,27 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
   const [showInvite, setShowInvite] = React.useState(false);
   const [inviteEmail, setInviteEmail] = React.useState("");
   const [inviteRole, setInviteRole] = React.useState<OfficeTeamRole>("nutritionist");
+  /** Confirmacao pendente de uma acao destrutiva. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
+    null,
+  );
 
   const platformMembers = data.members.filter((member) => member.accessSource === "platform");
   const pendingInvites = data.invites.filter((invite) => invite.status === "pending");
+
+  const confirmPayload = (confirmando?.payload ?? {}) as {
+    memberId?: string;
+    inviteId?: string;
+  };
+  const membroEmConfirmacao =
+    confirmando?.acao === "office.team.remove"
+      ? (data.members.find((member) => member.id === confirmPayload.memberId) ?? null)
+      : null;
+  const conviteEmConfirmacao =
+    confirmando?.acao === "office.team.revokeInvite"
+      ? (data.invites.find((invite) => invite.id === confirmPayload.inviteId) ?? null)
+      : null;
+  const primeiroNome = (nome?: string) => (nome ? nome.split(" ")[0] ?? nome : "");
 
   const handleInvite = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -126,7 +146,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
   };
 
   const handleRemove = (member: OfficeTeamMember) => {
-    void onAction?.("office.team.remove", { memberId: member.id });
+    setConfirmando({ acao: "office.team.remove", payload: { memberId: member.id } });
   };
 
   const handleCopyInvite = (invite: OfficeTeamInvite) => {
@@ -134,7 +154,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
   };
 
   const handleRevokeInvite = (invite: OfficeTeamInvite) => {
-    void onAction?.("office.team.revokeInvite", { inviteId: invite.id });
+    setConfirmando({ acao: "office.team.revokeInvite", payload: { inviteId: invite.id } });
   };
 
   /* ---- Cabecalho ---- */
@@ -192,7 +212,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
   const invitesPanel = (
     <Panel tone="glass" padding="md" className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <Link2 className="h-4 w-4 text-accent" aria-hidden />
+        <Link2 className="h-4 w-4 text-accent-ink" aria-hidden />
         <p className="bloco-headline">Convites por link</p>
         <Badge tone="outline">{pendingInvites.length}</Badge>
       </div>
@@ -224,14 +244,16 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
                       variant="ghost"
                       size="sm"
                       icon={<Link2 className="h-3.5 w-3.5" aria-hidden />}
+                      aria-label={`Copiar link do convite de ${invite.email}`}
                       onClick={() => handleCopyInvite(invite)}
                     >
                       Copiar link
                     </Button>
                     <Button
-                      variant="ghost"
+                      variant="danger-ghost"
                       size="sm"
                       icon={<Trash2 className="h-3.5 w-3.5" aria-hidden />}
+                      aria-label={`Revogar convite de ${invite.email}`}
                       onClick={() => handleRevokeInvite(invite)}
                     >
                       Revogar
@@ -257,6 +279,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
           size="sm"
           icon={<UserMinus className="h-3.5 w-3.5" aria-hidden />}
           disabled={isPlatformAccess || member.role === "receptionist"}
+          aria-label={`Rebaixar ${member.name}`}
           title={
             isPlatformAccess
               ? "Acesso do dono da plataforma nao pode ser rebaixado"
@@ -267,10 +290,11 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
           Rebaixar
         </Button>
         <Button
-          variant="ghost"
+          variant="danger-ghost"
           size="sm"
           icon={<Trash2 className="h-3.5 w-3.5" aria-hidden />}
           disabled={isPlatformAccess}
+          aria-label={`Remover ${member.name} da equipe`}
           title={
             isPlatformAccess
               ? "Acesso do dono da plataforma nao pode ser removido"
@@ -304,7 +328,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
                 <p className="flex items-center gap-2 truncate text-[14px] font-medium text-fg">
                   {member.name}
                   {isPlatformAccess ? (
-                    <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden />
+                    <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-ink" aria-hidden />
                   ) : null}
                 </p>
                 <p className="bloco-caption truncate text-fg-muted">
@@ -382,7 +406,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
             </p>
 
             {isPlatformAccess ? (
-              <p className="bloco-micro text-accent">
+              <p className="bloco-micro text-accent-ink">
                 Este acesso vem do dono da plataforma e nao pode ser rebaixado nem removido aqui.
               </p>
             ) : null}
@@ -405,7 +429,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
           key: "name",
           header: "Membro",
           render: (member) => (
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2">
               <Avatar name={member.name} size={28} />
               <div className="min-w-0">
                 <p className="truncate font-medium text-fg">{member.name}</p>
@@ -464,7 +488,6 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
@@ -476,7 +499,9 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
         />
       }
       className="flex flex-col gap-4"
-    >
+        recipe={officeTeamRecipe}
+        onAction={onAction}
+      >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -502,6 +527,38 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
           parcial.
         </p>
       </motion.div>
+
+      <ConfirmDialog
+        open={confirmando !== null}
+        onOpenChange={(open) => {
+          if (!open) setConfirmando(null);
+        }}
+        title={
+          membroEmConfirmacao
+            ? `Remover ${membroEmConfirmacao.name} da equipe`
+            : conviteEmConfirmacao
+              ? `Revogar o convite de ${conviteEmConfirmacao.email}`
+              : "Confirmar acao destrutiva"
+        }
+        description={
+          membroEmConfirmacao
+            ? `${membroEmConfirmacao.name} perde o acesso ao consultorio assim que a remocao for confirmada. Para reverter, convide a pessoa novamente pelo link de convite.`
+            : conviteEmConfirmacao
+              ? `O link de convite de ${conviteEmConfirmacao.email} deixa de valer e o convite pendente e descartado. Para reverter, envie um novo convite por e-mail.`
+              : "Esta acao nao pode ser desfeita pela interface."
+        }
+        confirmLabel={
+          membroEmConfirmacao
+            ? `Remover ${primeiroNome(membroEmConfirmacao.name)}`
+            : conviteEmConfirmacao
+              ? "Revogar convite"
+              : "Confirmar"
+        }
+        onConfirm={() => {
+          if (!confirmando) return;
+          void onAction?.(confirmando.acao, confirmando.payload);
+        }}
+      />
     </BlockFrame>
   );
 }
