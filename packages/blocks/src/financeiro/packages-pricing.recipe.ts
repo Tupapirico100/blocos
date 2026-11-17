@@ -87,6 +87,7 @@ export const packagesPricingRecipe = defineBlock({
     "Estorno devolve o lead: o pacote comprado entra na mesma regra de estorno do pagamento.",
     "O preco do pacote nao carrega dado de saude em log, URL ou telemetria.",
   ],
+  emptyAction: { id: "package.save", label: "Novo pacote" },
   variants: [
     {
       id: "cards",

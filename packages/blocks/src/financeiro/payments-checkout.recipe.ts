@@ -120,6 +120,7 @@ export const paymentsCheckoutRecipe = defineBlock({
     "Regra 11: so respondemos a quem esta na lista de permitidos.",
     "O recibo carrega nome e valor, nunca dado de saude.",
   ],
+  emptyAction: { id: "payment.create", label: "Novo pagamento" },
   variants: [
     {
       id: "form",

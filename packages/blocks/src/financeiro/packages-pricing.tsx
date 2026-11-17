@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Badge,
   Button,
+  ConfirmDialog,
   DataTable,
   Panel,
   SectionHeader,
@@ -10,7 +11,8 @@ import {
 } from "@blocos/ui";
 import { formatBRL } from "@blocos/core";
 import { BadgeCheck, CalendarClock, PackageOpen } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { packagesPricingRecipe } from "./packages-pricing.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -73,12 +75,27 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
 
   const packages = data.packages ?? [];
   const [selectedId, setSelectedId] = React.useState<string | null>(packages[0]?.id ?? null);
+  /** Confirmacao pendente de uma acao destrutiva. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
+    null,
+  );
 
   const effectiveState = state === "success" && packages.length === 0 ? "empty" : state;
   const selected = packages.find((p) => p.id === selectedId) ?? packages[0] ?? null;
 
+  const confirmPayload = (confirmando?.payload ?? {}) as { id?: string };
+  const pacoteEmConfirmacao =
+    confirmando?.acao === "package.toggleActive"
+      ? (packages.find((pkg) => pkg.id === confirmPayload.id) ?? null)
+      : null;
+
   function toggleActive(pkg: ServicePackage) {
     onAction?.("package.toggleActive", { id: pkg.id, active: !pkg.active });
+  }
+
+  /** Desativar e destrutivo: passa pelo dialogo de confirmacao. */
+  function requestDeactivate(pkg: ServicePackage) {
+    setConfirmando({ acao: "package.toggleActive", payload: { id: pkg.id, active: false } });
   }
 
   function save(pkg: ServicePackage) {
@@ -98,8 +115,10 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
-      <div className="flex flex-col gap-4">
+        recipe={packagesPricingRecipe}
+        onAction={onAction}
+      >
+      <div className="@container flex flex-col gap-4">
         <SectionHeader
           eyebrow="Financeiro"
           title="Pacotes e precos"
@@ -107,14 +126,17 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
         />
 
         {variant === "cards" ? (
-          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          /* Grade por CONTAINER: quantas colunas cabem depende do espaco real do
+             bloco, nao da viewport. Com 3 colunas apertadas o preco e o titulo
+             do pacote atravessavam a borda do cartao. */
+          <div className="grid grid-cols-1 gap-3 @[560px]:grid-cols-2 @[860px]:grid-cols-3">
             {packages.map((pkg) => (
-              <Panel key={pkg.id} tone="glass" className="flex flex-col gap-3">
-                <div className="flex items-start justify-between gap-3">
+              <Panel key={pkg.id} tone="glass" className="flex min-w-[248px] flex-col gap-3">
+                <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <p className="bloco-title3 truncate">{pkg.name}</p>
                     {pkg.description ? (
-                      <p className="bloco-caption mt-0.5 text-fg-muted">{pkg.description}</p>
+                      <p className="bloco-caption mt-0.5 break-words text-fg-muted">{pkg.description}</p>
                     ) : null}
                   </div>
                   <Badge tone={statusTone(pkg.active)}>
@@ -122,26 +144,47 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
                   </Badge>
                 </div>
 
-                <p className="bloco-title1 tabular-nums">{formatBRL(pkg.priceCents)}</p>
+                <p className="bloco-title1 break-words tabular-nums">{formatBRL(pkg.priceCents)}</p>
 
                 <dl className="grid grid-cols-2 gap-3">
-                  <div>
-                    <dt className="bloco-micro">Sessoes</dt>
+                  <div className="min-w-0">
+                    <dt className="bloco-micro break-words">Sessoes</dt>
                     <dd className="bloco-body tabular-nums text-fg">{pkg.sessions}</dd>
                   </div>
-                  <div>
-                    <dt className="bloco-micro">Validade</dt>
-                    <dd className="bloco-body text-fg">{validityLabel(pkg)}</dd>
+                  <div className="min-w-0">
+                    <dt className="bloco-micro break-words">Validade</dt>
+                    <dd className="bloco-body break-words text-fg">{validityLabel(pkg)}</dd>
                   </div>
                 </dl>
 
                 <div className="flex items-center gap-2 border-t border-border pt-3">
-                  <Button size="sm" variant="secondary" onClick={() => save(pkg)}>
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    aria-label={`Salvar pacote ${pkg.name}`}
+                    onClick={() => save(pkg)}
+                  >
                     Salvar
                   </Button>
-                  <Button size="sm" variant="ghost" onClick={() => toggleActive(pkg)}>
-                    {pkg.active ? "Desativar" : "Ativar"}
-                  </Button>
+                  {pkg.active ? (
+                    <Button
+                      size="sm"
+                      variant="danger-ghost"
+                      aria-label={`Desativar pacote ${pkg.name}`}
+                      onClick={() => requestDeactivate(pkg)}
+                    >
+                      Desativar
+                    </Button>
+                  ) : (
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      aria-label={`Ativar pacote ${pkg.name}`}
+                      onClick={() => toggleActive(pkg)}
+                    >
+                      Ativar
+                    </Button>
+                  )}
                 </div>
               </Panel>
             ))}
@@ -151,7 +194,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
         {variant === "table" ? (
           <Panel tone="outline" padding="none">
             <DataTable
-              columns={packageColumns(packages, onAction)}
+              columns={packageColumns(packages, onAction, requestDeactivate)}
               rows={packages}
               rowKey={(row) => row.id}
             />
@@ -186,10 +229,10 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
 
             <Panel tone="glass" className="flex flex-col gap-4">
               <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="bloco-title3">{selected.name}</p>
+                <div className="min-w-0">
+                  <p className="bloco-title3 truncate">{selected.name}</p>
                   {selected.description ? (
-                    <p className="bloco-caption mt-0.5 text-fg-muted">{selected.description}</p>
+                    <p className="bloco-caption mt-0.5 break-words text-fg-muted">{selected.description}</p>
                   ) : null}
                 </div>
                 <Badge tone={statusTone(selected.active)}>
@@ -217,17 +260,60 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
               </dl>
 
               <div className="flex items-center gap-2 border-t border-border pt-3">
-                <Button size="sm" variant="secondary" onClick={() => save(selected)}>
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  aria-label={`Salvar pacote ${selected.name}`}
+                  onClick={() => save(selected)}
+                >
                   Salvar
                 </Button>
-                <Button size="sm" variant="ghost" onClick={() => toggleActive(selected)}>
-                  {selected.active ? "Desativar" : "Ativar"}
-                </Button>
+                {selected.active ? (
+                  <Button
+                    size="sm"
+                    variant="danger-ghost"
+                    aria-label={`Desativar pacote ${selected.name}`}
+                    onClick={() => requestDeactivate(selected)}
+                  >
+                    Desativar
+                  </Button>
+                ) : (
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    aria-label={`Ativar pacote ${selected.name}`}
+                    onClick={() => toggleActive(selected)}
+                  >
+                    Ativar
+                  </Button>
+                )}
               </div>
             </Panel>
           </div>
         ) : null}
       </div>
+
+      <ConfirmDialog
+        open={confirmando !== null}
+        onOpenChange={(open) => {
+          if (!open) setConfirmando(null);
+        }}
+        title={
+          pacoteEmConfirmacao
+            ? `Desativar o pacote ${pacoteEmConfirmacao.name}`
+            : "Confirmar acao destrutiva"
+        }
+        description={
+          pacoteEmConfirmacao
+            ? `O pacote ${pacoteEmConfirmacao.name} deixa de aparecer para novos pacientes e nao pode mais ser vendido. Para reverter, ative o pacote novamente na lista.`
+            : "Esta acao nao pode ser desfeita pela interface."
+        }
+        confirmLabel={pacoteEmConfirmacao ? `Desativar ${pacoteEmConfirmacao.name}` : "Confirmar"}
+        onConfirm={() => {
+          if (!confirmando) return;
+          void onAction?.(confirmando.acao, confirmando.payload);
+        }}
+      />
     </BlockFrame>
   );
 }
@@ -239,6 +325,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
 function packageColumns(
   packages: ServicePackage[],
   onAction?: (action: string, payload?: unknown) => void | Promise<void>,
+  onRequestDeactivate?: (pkg: ServicePackage) => void,
 ): Array<Column<ServicePackage>> {
   return [
     {
@@ -284,16 +371,28 @@ function packageColumns(
       key: "actions",
       header: "Acoes",
       align: "right",
-      render: (row) => (
-        <Button
-          size="sm"
-          variant="ghost"
-          icon={<BadgeCheck size={13} aria-hidden />}
-          onClick={() => onAction?.("package.toggleActive", { id: row.id, active: !row.active })}
-        >
-          {row.active ? "Desativar" : "Ativar"}
-        </Button>
-      ),
+      render: (row) =>
+        row.active ? (
+          <Button
+            size="sm"
+            variant="danger-ghost"
+            icon={<BadgeCheck size={13} aria-hidden />}
+            aria-label={`Desativar pacote ${row.name}`}
+            onClick={() => onRequestDeactivate?.(row)}
+          >
+            Desativar
+          </Button>
+        ) : (
+          <Button
+            size="sm"
+            variant="secondary"
+            icon={<BadgeCheck size={13} aria-hidden />}
+            aria-label={`Ativar pacote ${row.name}`}
+            onClick={() => onAction?.("package.toggleActive", { id: row.id, active: true })}
+          >
+            Ativar
+          </Button>
+        ),
     },
   ];
 }
