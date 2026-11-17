@@ -4,9 +4,10 @@ import { ArrowLeft, ArrowRight, CircleDot, Megaphone, MessageCircle, Share2, Use
 import { formatBRL } from "@blocos/core";
 import { Badge, DataTable, IconButton, Panel, Skeleton } from "@blocos/ui";
 import type { BadgeTone, Column } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDateTime, formatPhone } from "./format.js";
+import { leadsBoardRecipe } from "./leads-board.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -78,7 +79,7 @@ const ORIGIN_TONE: Record<LeadOrigin, BadgeTone> = {
 /* ------------------------------------------------------------------ */
 
 export function LeadsBoard(props: BlockProps<LeadBoardData, "board" | "table" | "timeline">) {
-  const { data, onAction, variant = "board", state = "success", className } = props;
+  const { data, onAction, variant = "board", state = "success", className, connectors, onRequestConnector } = props;
 
   const stages = data.stages.length > 0 ? data.stages : DEFAULT_STAGES;
 
@@ -87,14 +88,16 @@ export function LeadsBoard(props: BlockProps<LeadBoardData, "board" | "table" | 
       state={state}
       className={className}
       loading={
-        <div className="grid gap-4 lg:grid-cols-3">
-          {[0, 1, 2].map((column) => (
-            <div key={column} className="flex flex-col gap-2 rounded-[var(--r-lg)] border border-border p-4">
-              <Skeleton className="h-4 w-24" />
-              <Skeleton className="h-24 w-full" />
-              <Skeleton className="h-24 w-full" />
-            </div>
-          ))}
+        <div className="@container w-full">
+          <div className="grid gap-4 @[520px]:grid-cols-2 @[860px]:grid-cols-3">
+            {[0, 1, 2].map((column) => (
+              <div key={column} className="flex flex-col gap-2 rounded-[var(--r-lg)] border border-border p-4">
+                <Skeleton className="h-4 w-24" />
+                <Skeleton className="h-24 w-full" />
+                <Skeleton className="h-24 w-full" />
+              </div>
+            ))}
+          </div>
         </div>
       }
       empty={
@@ -105,7 +108,12 @@ export function LeadsBoard(props: BlockProps<LeadBoardData, "board" | "table" | 
           </p>
         </div>
       }
-    >
+        recipe={leadsBoardRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       {variant === "table" ? (
         <LeadTable leads={data.leads} stages={stages} onAction={onAction} />
       ) : variant === "timeline" ? (
@@ -134,33 +142,45 @@ function LeadBoardView({
   onAction?: (action: string, payload?: unknown) => void | Promise<void>;
 }) {
   return (
-    <div className="grid gap-4 lg:grid-cols-3">
-      {stages.map((stage) => {
-        const columnLeads = leads.filter((lead) => lead.stage === stage.id);
-        return (
-          <Panel key={stage.id} tone="solid" padding="md" className="flex flex-col gap-3">
-            <div className="flex items-start justify-between gap-2">
-              <div className="min-w-0">
-                <h3 className="bloco-title3">{stage.label}</h3>
-                {stage.hint ? <p className="bloco-caption mt-0.5 text-fg-muted">{stage.hint}</p> : null}
+    /*
+     * Container query em vez de breakpoint de viewport: o quadro vive dentro
+     * de um painel que pode ser estreito (menu lateral, drawer) mesmo em
+     * telas grandes. Com 3 colunas forcadas o nome do lead ficava com 14px
+     * de largura e quebrava uma letra por linha.
+     */
+    <div className="@container w-full">
+      <div className="grid gap-4 @[520px]:grid-cols-2 @[860px]:grid-cols-3">
+        {stages.map((stage) => {
+          const columnLeads = leads.filter((lead) => lead.stage === stage.id);
+          return (
+            <Panel key={stage.id} tone="solid" padding="md" className="flex min-w-0 flex-col gap-3">
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0">
+                  <h3 className="bloco-title3 break-words">{stage.label}</h3>
+                  {stage.hint ? (
+                    <p className="bloco-caption mt-0.5 break-words text-fg-muted">{stage.hint}</p>
+                  ) : null}
+                </div>
+                <Badge tone="neutral" className="shrink-0">
+                  {columnLeads.length}
+                </Badge>
               </div>
-              <Badge tone="neutral">{columnLeads.length}</Badge>
-            </div>
 
-            <div className="flex flex-col gap-2">
-              {columnLeads.length === 0 ? (
-                <p className="bloco-caption rounded-[var(--r-md)] border border-dashed border-border px-3 py-4 text-center text-fg-muted">
-                  Nenhum lead nesta etapa.
-                </p>
-              ) : (
-                columnLeads.map((lead) => (
-                  <LeadCard key={lead.id} lead={lead} stages={stages} onAction={onAction} />
-                ))
-              )}
-            </div>
-          </Panel>
-        );
-      })}
+              <div className="flex flex-col gap-2">
+                {columnLeads.length === 0 ? (
+                  <p className="bloco-caption rounded-[var(--r-md)] border border-dashed border-border px-3 py-4 text-center text-fg-muted">
+                    Nenhum lead nesta etapa.
+                  </p>
+                ) : (
+                  columnLeads.map((lead) => (
+                    <LeadCard key={lead.id} lead={lead} stages={stages} onAction={onAction} />
+                  ))
+                )}
+              </div>
+            </Panel>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -190,9 +210,9 @@ function LeadCard({
       className="rounded-[var(--r-md)] border border-border bg-surface/70 p-3 transition-colors hover:border-border-strong"
     >
       <div className="flex items-start justify-between gap-2">
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <p className="bloco-headline break-words">{lead.name}</p>
-          <p className="bloco-caption text-fg-muted">{formatPhone(lead.phone)}</p>
+          <p className="bloco-caption min-w-0 break-words text-fg-muted">{formatPhone(lead.phone)}</p>
         </div>
         <Badge
           tone={ORIGIN_TONE[lead.origin]}
@@ -215,8 +235,7 @@ function LeadCard({
           {previous ? (
             <IconButton
               label={`Mover ${lead.name} para ${previous.label}`}
-              size="sm"
-              className="h-8 w-8 p-0"
+              size="icon-sm"
               onClick={() => move(previous.id)}
             >
               <ArrowLeft size={14} aria-hidden />
@@ -225,8 +244,7 @@ function LeadCard({
           {next ? (
             <IconButton
               label={`Mover ${lead.name} para ${next.label}`}
-              size="sm"
-              className="h-8 w-8 p-0"
+              size="icon-sm"
               onClick={() => move(next.id)}
             >
               <ArrowRight size={14} aria-hidden />
@@ -319,8 +337,7 @@ function LeadTable({
             {previous ? (
               <IconButton
                 label={`Mover ${lead.name} para ${previous.label}`}
-                size="sm"
-                className="h-8 w-8 p-0"
+                size="icon-sm"
                 onClick={() => void onAction?.("lead.move", { id: lead.id, stage: previous.id })}
               >
                 <ArrowLeft size={14} aria-hidden />
@@ -329,8 +346,7 @@ function LeadTable({
             {next ? (
               <IconButton
                 label={`Mover ${lead.name} para ${next.label}`}
-                size="sm"
-                className="h-8 w-8 p-0"
+                size="icon-sm"
                 onClick={() => void onAction?.("lead.move", { id: lead.id, stage: next.id })}
               >
                 <ArrowRight size={14} aria-hidden />

@@ -58,6 +58,7 @@ export const clinicalEntryRecipe = defineBlock({
     "Dado de saude (consulta, medida, plano) nunca vai para log, URL ou telemetria.",
     "Fuso America/Sao_Paulo: a conversao local<->UTC faz duas passadas por causa do DST.",
   ],
+  emptyAction: { id: "clinical.entry.create", label: "Registrar atendimento" },
   variants: [
     {
       id: "form",

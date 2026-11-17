@@ -10,9 +10,10 @@ import {
 } from "lucide-react";
 import { localToUtc, utcToLocal } from "@blocos/core";
 import { Badge, Button, Field, Input, Panel, Segmented, Select, Skeleton, Textarea } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { TZ, formatDateTime } from "./format.js";
+import { clinicalEntryRecipe } from "./clinical-entry.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -52,7 +53,7 @@ const KIND_META: Record<ClinicalEntryKind, { label: string; hint: string }> = {
 export function ClinicalEntry(
   props: BlockProps<ClinicalEntryData, "form" | "wizard" | "inline">,
 ) {
-  const { data, onAction, variant = "form", state = "success", className } = props;
+  const { data, onAction, variant = "form", state = "success", className, connectors, onRequestConnector } = props;
 
   const [kind, setKind] = React.useState<ClinicalEntryKind>(data.kind);
   const [professional, setProfessional] = React.useState(data.defaultProfessional ?? data.professionals?.[0] ?? "");
@@ -112,7 +113,8 @@ export function ClinicalEntry(
       state={state}
       className={className}
       loading={
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4"
+      >
           <Skeleton className="h-16 w-full" />
           <Skeleton className="h-56 w-full" />
         </div>
@@ -125,12 +127,17 @@ export function ClinicalEntry(
           </p>
         </div>
       }
-    >
+        recipe={clinicalEntryRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <Panel tone="solid" padding="md">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
                 <Stethoscope size={18} aria-hidden />
               </span>
               <div className="min-w-0">
@@ -215,6 +222,7 @@ function ConsentGate({
 }) {
   return (
     <div
+      role="alert"
       className={`rounded-[var(--r-lg)] border border-warn/30 bg-warn-soft p-5 ${className ?? ""}`}
     >
       <div className="flex items-start gap-3">
@@ -338,7 +346,7 @@ function EntryWizard(props: EntryFieldsProps) {
             <span
               className={`flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold ${
                 index <= step
-                  ? "border-accent bg-accent-soft text-accent"
+                  ? "border-accent bg-accent-soft text-accent-ink"
                   : "border-border text-fg-faint"
               }`}
             >
@@ -440,15 +448,30 @@ function EntryWizard(props: EntryFieldsProps) {
       ) : null}
 
       <div className="flex items-center justify-between gap-2">
-        <Button variant="ghost" size="sm" onClick={() => setStep((s) => Math.max(0, s - 1))} disabled={step === 0}>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="min-h-8"
+          onClick={() => setStep((s) => Math.max(0, s - 1))}
+          disabled={step === 0}
+        >
           Voltar
         </Button>
         {step < steps.length - 1 ? (
-          <Button size="sm" onClick={() => setStep((s) => Math.min(steps.length - 1, s + 1))}>
+          <Button
+            size="sm"
+            className="min-h-8"
+            onClick={() => setStep((s) => Math.min(steps.length - 1, s + 1))}
+          >
             Avancar
           </Button>
         ) : (
-          <Button size="sm" onClick={props.onSubmit} icon={<NotebookPen size={14} aria-hidden />}>
+          <Button
+            size="sm"
+            className="min-h-8"
+            onClick={props.onSubmit}
+            icon={<NotebookPen size={14} aria-hidden />}
+          >
             Gravar
           </Button>
         )}
