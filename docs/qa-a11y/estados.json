@@ -1,0 +1,2622 @@
+{
+ "auth-login": {
+  "estados": {
+   "Normal": {
+    "text": "Aurora Nutri Aurora Do primeiro contato no WhatsApp ao plano alimentar, com o consultorio no controle. Atendimento no WhatsApp com fila unica Consentimento registrado antes do prontuario Acesso do dono da plataforma auditado DADOS DE SAUDE NUNCA SAO EXIBIDOS FORA DO CONSULTORIO. NUTRI AURORA Entrar na sua conta Acesse ",
+    "len": 454,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Esqueci minha senha",
+     "Entrar"
+    ],
+    "nBotoes": 2,
+    "campos": 2,
+    "headings": [
+     "H1"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "auth-two-factor": {
+  "estados": {
+   "Normal": {
+    "text": "Aplicativo autenticador Aurora · TOTP Ativo Aponte a camera do aplicativo autenticador para este codigo. CHAVE DE CONFIGURACAO JBSW Y3DP EHPK 3PXP Copiar chave CRIADO EM 28/10/2025 ULTIMO USO 17/11/2025 Remover fator AO REMOVER, O ACESSO PASSA A DEPENDER APENAS DE E-MAIL E SENHA. Codigos de recuperacao 5 disponiveis Mo",
+    "len": 584,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Copiar chave",
+     "Remover fator",
+     "Mostrar",
+     "Copiar codigos",
+     "Gerar novos codigos"
+    ],
+    "nBotoes": 5,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "auth-recovery": {
+  "estados": {
+   "Normal": {
+    "text": "AURORA Esqueci minha senha Informe o e-mail cadastrado e enviaremos o link de recuperacao. E-mail da conta* Enviar link de recuperacao O link de recuperacao nunca e enviado por WhatsApp.",
+    "len": 186,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Enviar link de recuperacao"
+    ],
+    "nBotoes": 1,
+    "campos": 1,
+    "headings": [
+     "H1"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "admin-platform": {
+  "estados": {
+   "Normal": {
+    "text": "Painel do dono da plataforma Voce administra a plataforma inteira: todos os consultorios, membros e canais ficam visiveis aqui. Este acesso nao pode ser rebaixado nem removido pelo dono do consultorio. acesso total PLATAFORMA Consultorios administrados Visao do dono da plataforma sobre todos os consultorios ativos, em ",
+    "len": 1054,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Novo consultorio"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhum consultorio ainda Crie o primeiro consultorio para comecar a atender. Novo consultorio",
+    "len": 93,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Novo consultorio"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "office-team": {
+  "estados": {
+   "Normal": {
+    "text": "O dono da plataforma tem acesso total a este consultorio. O acesso marcado como \"Acesso do dono da plataforma\" nao pode ser rebaixado nem removido pelo dono do consultorio. CONSULTÓRIO AURORA NUTRIÇÃO Equipe e acessos Quem tem acesso ao consultorio, com qual papel e por onde o acesso entrou. Convidar MA Mariana Albuque",
+    "len": 1237,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Convidar",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar"
+    ],
+    "nBotoes": 13,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhum membro ainda Convoque a equipe para o consultorio com um convite por link.",
+    "len": 81,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "office-settings": {
+  "estados": {
+   "Normal": {
+    "text": "CONSULTÓRIO AURORA NUTRIÇÃO Configuracoes do consultorio Canais, provedor de WhatsApp, horario de atendimento e webhooks de saida. Canais conectados Por onde o consultorio conversa com os pacientes. WhatsApp +5511987654321 Conectado Provedor: Evolution API · desde 10/06/2025, 12:00 Desconectar Instagram sem numero conf",
+    "len": 1628,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Desconectar",
+     "Conectar",
+     "Aceitar a versao risco-whatsapp-nao-oficial@2025-11",
+     "Salvar horario",
+     "Salvar webhook",
+     "Enviar teste"
+    ],
+    "nBotoes": 6,
+    "campos": 15,
+    "headings": [
+     "H2",
+     "H2",
+     "H2",
+     "H2",
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "database nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "leads-board": {
+  "estados": {
+   "Normal": {
+    "text": "Novo Chegou e ainda nao foi qualificado 3 Ana Beatriz Souza +55 (11) 98765-4321 Anuncio ATRIBUICAO DO PRIMEIRO TOQUE Marina Alencar · WhatsApp · 12/03/2025, 09:14 R$ 480,00 Carlos Eduardo Lima +55 (21) 99887-7665 Organico ATRIBUICAO DO PRIMEIRO TOQUE Pedro Lins · Instagram · 13/03/2025, 06:02 R$ 320,00 Mariana Alves Ro",
+    "len": 1291,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Mover Ana Beatriz Souza para Qualificado",
+     "Mover Carlos Eduardo Lima para Qualificado",
+     "Mover Mariana Alves Rocha para Qualificado",
+     "Mover Rafael Nogueira para Novo",
+     "Mover Rafael Nogueira para Cliente",
+     "Mover Juliana Prado para Novo",
+     "Mover Juliana Prado para Cliente",
+     "Mover Thiago Marques para Novo"
+    ],
+    "nBotoes": 12,
+    "campos": 0,
+    "headings": [
+     "H3",
+     "H3",
+     "H3"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 9,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhum lead por aqui Quando um lead entrar no funil, ele aparece aqui com a origem do primeiro toque.",
+    "len": 101,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Novo Chegou e ainda nao foi qualificado 3 Ana Beatriz Souza +55 (11) 98765-4321 Anuncio ATRIBUICAO DO PRIMEIRO TOQUE Marina Alencar · WhatsApp · 12/03/2025, 09:14 R$ 480,00 Carlos Eduardo Lima +55 (21) 99887-7665 Organico ATRIBUICAO DO PRIMEIRO TOQUE Pedro Lins · Instagram · 13/03/2025, 06:02 R$ 320,00 Mariana Alves Ro",
+    "len": 1291,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Mover Ana Beatriz Souza para Qualificado",
+     "Mover Carlos Eduardo Lima para Qualificado",
+     "Mover Mariana Alves Rocha para Qualificado",
+     "Mover Rafael Nogueira para Novo",
+     "Mover Rafael Nogueira para Cliente",
+     "Mover Juliana Prado para Novo",
+     "Mover Juliana Prado para Cliente",
+     "Mover Thiago Marques para Novo"
+    ],
+    "nBotoes": 12,
+    "campos": 0,
+    "headings": [
+     "H3",
+     "H3",
+     "H3"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "inbox-whatsapp": {
+  "estados": {
+   "Normal": {
+    "text": "Buscar conversa AB Ana Beatriz Souza 14:12 Boa tarde! Gostaria de saber os horarios de avaliacao. 2 nova(s) Permitido Dentro da janela CE Carlos Eduardo Lima 12:40 Obrigado, ate mais! Permitido Fora da janela D( Desconhecido (numero novo) 09:05 Voce vende esse produto? Quero revender. 1 nova(s) Bloqueado Dentro da jane",
+    "len": 745,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "AB Ana Beatriz Souza 14:12 Boa tarde! Gostaria de saber os horarios de avaliacao. 2 nova(s) Permitido Dentro da janela",
+     "CE Carlos Eduardo Lima 12:40 Obrigado, ate mais! Permitido Fora da janela",
+     "D( Desconhecido (numero novo) 09:05 Voce vende esse produto? Quero revender. 1 nova(s) Bloqueado Dentro da janela",
+     "JP Juliana Prado 16:22 Perfeito, ate quinta! Permitido Dentro da janela",
+     "Oi! Recebi sua mensagem, ja te explico.",
+     "Posso te enviar os horarios de consulta?",
+     "Quer que eu reserve uma avaliacao?",
+     "Enviar template aprovado"
+    ],
+    "nBotoes": 9,
+    "campos": 2,
+    "headings": [],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 7,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Caixa de entrada vazia Nenhuma conversa recebida pelo WhatsApp do consultorio.",
+    "len": 78,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "WhatsApp (Cloud API) nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 150,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "consent-panel": {
+  "estados": {
+   "Normal": {
+    "text": "Texto vigente do consultorio O consentimento guarda um snapshot do texto aceito. Registre apenas com o texto vigente — tratamento e marketing sao separados e o de tratamento nao substitui o de marketing. Tratamento de dados Art. 11 — dados de saude Vigente CONCEDIDO EM 12/03/2025, 09:20 CANAL WhatsApp VERSAO DO TEXTO A",
+    "len": 1046,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Registrar consentimento",
+     "Registrar consentimento"
+    ],
+    "nBotoes": 2,
+    "campos": 2,
+    "headings": [
+     "H3",
+     "H3"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 6,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhum consentimento registrado Registre a concessao de tratamento ou marketing com o texto vigente do consultorio.",
+    "len": 115,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Texto vigente do consultorio O consentimento guarda um snapshot do texto aceito. Registre apenas com o texto vigente — tratamento e marketing sao separados e o de tratamento nao substitui o de marketing. Tratamento de dados Art. 11 — dados de saude Vigente CONCEDIDO EM 12/03/2025, 09:20 CANAL WhatsApp VERSAO DO TEXTO A",
+    "len": 1046,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Registrar consentimento",
+     "Registrar consentimento"
+    ],
+    "nBotoes": 2,
+    "campos": 2,
+    "headings": [
+     "H3",
+     "H3"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "channel-connections": {
+  "estados": {
+   "Normal": {
+    "text": "Configuracao do canal do consultorio — visivel apenas para o dono. Nenhum trafega pelo bloco. WhatsApp Cloud API (Meta) +55 (11) 98765-4321 Ativo Oficial WABA (META) Consultorio Aurora - Atendimento Status: Conectado · Revisao: Aprovado 102938475610293 Provedor oficial: nao exige aceite de risco. Numero principal do co",
+    "len": 1050,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Reconectar",
+     "Reconectar",
+     "Reconectar"
+    ],
+    "nBotoes": 3,
+    "campos": 0,
+    "headings": [
+     "H3",
+     "H3",
+     "H3"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 6,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhuma conexao de canal O dono do consultorio pode conectar o numero do WhatsApp aqui.",
+    "len": 87,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "WhatsApp (Cloud API) nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 150,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "patients-list": {
+  "estados": {
+   "Normal": {
+    "text": "Buscar paciente por nome 7 de 7 paciente(s) NOME CONTATO CONSENTIMENTO DE TRATAMENTO ULTIMA CONSULTA AB Ana Beatriz Souza Reeducacao alimentar +55 (11) 98765-4321 ana.souza@example.com Consentido 12/03/2025 CE Carlos Eduardo Lima Emagrecimento +55 (21) 99887-7665 carlos.lima@example.com Consentido 10/02/2025 JP Juliana",
+    "len": 803,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Abrir prontuario de Ana Beatriz Souza",
+     "Abrir prontuario de Carlos Eduardo Lima",
+     "Abrir prontuario de Juliana Prado",
+     "Abrir prontuario de Rafael Nogueira",
+     "Abrir prontuario de Mariana Alves Rocha",
+     "Abrir prontuario de Thiago Marques",
+     "Abrir prontuario de Larissa Moreira"
+    ],
+    "nBotoes": 7,
+    "campos": 1,
+    "headings": [],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 5,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nenhum paciente cadastrado O paciente aparece aqui assim que o primeiro atendimento for registrado.",
+    "len": 99,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Buscar paciente por nome 7 de 7 paciente(s) NOME CONTATO CONSENTIMENTO DE TRATAMENTO ULTIMA CONSULTA AB Ana Beatriz Souza Reeducacao alimentar +55 (11) 98765-4321 ana.souza@example.com Consentido 12/03/2025 CE Carlos Eduardo Lima Emagrecimento +55 (21) 99887-7665 carlos.lima@example.com Consentido 10/02/2025 JP Juliana",
+    "len": 803,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Abrir prontuario de Ana Beatriz Souza",
+     "Abrir prontuario de Carlos Eduardo Lima",
+     "Abrir prontuario de Juliana Prado",
+     "Abrir prontuario de Rafael Nogueira",
+     "Abrir prontuario de Mariana Alves Rocha",
+     "Abrir prontuario de Thiago Marques",
+     "Abrir prontuario de Larissa Moreira"
+    ],
+    "nBotoes": 7,
+    "campos": 1,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "patient-chart": {
+  "estados": {
+   "Normal": {
+    "text": "AB Ana Beatriz Souza +55 (11) 98765-4321 · nasc. em 20/07/1988 Consentimento de tratamento vigente Plano v3 EVOLUCAO DO PACIENTE Medida 12/03/2025, 10:05 Serie de medidas 80.8 kg · 28.7% gordura · 88 cm cintura Consulta 12/03/2025, 10:00 Marina Alencar — Nutricionista Retorno da avaliacao. Mantido o plano alimentar v2 ",
+    "len": 1206,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H3"
+    ],
+    "temAcao": false
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Prontuario vazio As consultas, medidas e o plano alimentar do paciente aparecem aqui.",
+    "len": 85,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AB Ana Beatriz Souza +55 (11) 98765-4321 · nasc. em 20/07/1988 Consentimento de tratamento vigente Plano v3 EVOLUCAO DO PACIENTE Medida 12/03/2025, 10:05 Serie de medidas 80.8 kg · 28.7% gordura · 88 cm cintura Consulta 12/03/2025, 10:00 Marina Alencar — Nutricionista Retorno da avaliacao. Mantido o plano alimentar v2 ",
+    "len": 1206,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H3"
+    ],
+    "temAcao": false
+   }
+  },
+  "temBotaoConector": true
+ },
+ "clinical-entry": {
+  "estados": {
+   "Normal": {
+    "text": "Novo registro para Ana Beatriz Souza Anamnese, evolucao e orientacoes · consentimento tratamento-v3 Consentimento vigente Tipo de registro* Consulta Medida Profissional* Marina Alencar — Nutricionista Pedro Lins — Nutricionista Sofia Bastos — Educadora alimentar Data e hora* Resumo do atendimento Fica no prontuario do ",
+    "len": 386,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Consulta",
+     "Medida",
+     "Gravar registro"
+    ],
+    "nBotoes": 3,
+    "campos": 3,
+    "headings": [
+     "H3"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 2,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada para registrar O registro de consulta ou medida aparece aqui durante o atendimento.",
+    "len": 88,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Gravacao bloqueada Gravacao bloqueada: sem consentimento de tratamento. O prontuario de Ana Beatriz Souza so aceita gravar consultas e medidas com consentimento de tratamento vigente (art. 11). Registre o consentimento com o texto vigente do consultorio para liberar o atendimento. Ultimo consentimento registrado: trata",
+    "len": 350,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Novo registro para Ana Beatriz Souza Anamnese, evolucao e orientacoes · consentimento tratamento-v3 Consentimento vigente Tipo de registro* Consulta Medida Profissional* Marina Alencar — Nutricionista Pedro Lins — Nutricionista Sofia Bastos — Educadora alimentar Data e hora* Resumo do atendimento Fica no prontuario do ",
+    "len": 386,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Consulta",
+     "Medida",
+     "Gravar registro"
+    ],
+    "nBotoes": 3,
+    "campos": 3,
+    "headings": [
+     "H3"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "agenda-board": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDA Agenda de consultas Grade por profissional e por hora. Horarios em America/Sao_Paulo. Fuso America/Sao_Paulo Agendado Confirmado Compareceu Faltou Cancelado HORA Dra. Marina Albuquerque NUTRICAO CLINICA Dr. Rafael Bittencourt NUTRICAO ESPORTIVA Dra. Helena Camargo NUTRICAO MATERNAL 08:00 08:30 Joana Prado AVALIA",
+    "len": 806,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "08:30 Joana Prado AVALIACAO INICIAL Confirmado",
+     "08:00 Patricia Lemos AVALIACAO INICIAL Agendado",
+     "09:00 Bruno Sarmento CONSULTA DE ROTINA Faltou",
+     "10:00 Otavio Bezerra RETORNO Agendado",
+     "10:30 Renata Bastos AVALIACAO INICIAL Agendado",
+     "11:30 Larissa Fontes AVALIACAO INICIAL Agendado",
+     "13:00 Marcelo Tavares CONSULTA DE ROTINA Confirmado",
+     "14:00 Camila Rezende CONSULTA DE ROTINA Compareceu"
+    ],
+    "nBotoes": 10,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AGENDA Agenda de consultas Grade por profissional e por hora. Horarios em America/Sao_Paulo. Fuso America/Sao_Paulo Agendado Confirmado Compareceu Faltou Cancelado HORA Dra. Marina Albuquerque NUTRICAO CLINICA Dr. Rafael Bittencourt NUTRICAO ESPORTIVA Dra. Helena Camargo NUTRICAO MATERNAL 08:00 08:30 Joana Prado AVALIA",
+    "len": 806,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "08:30 Joana Prado AVALIACAO INICIAL Confirmado",
+     "08:00 Patricia Lemos AVALIACAO INICIAL Agendado",
+     "09:00 Bruno Sarmento CONSULTA DE ROTINA Faltou",
+     "10:00 Otavio Bezerra RETORNO Agendado",
+     "10:30 Renata Bastos AVALIACAO INICIAL Agendado",
+     "11:30 Larissa Fontes AVALIACAO INICIAL Agendado",
+     "13:00 Marcelo Tavares CONSULTA DE ROTINA Confirmado",
+     "14:00 Camila Rezende CONSULTA DE ROTINA Compareceu"
+    ],
+    "nBotoes": 10,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "availability": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDA Horarios de atendimento Grade semanal por profissional, folgas e slots livres do dia. Tudo em America/Sao_Paulo. Fuso America/Sao_Paulo PROFISSIONAL DOM SEG TER QUA QUI SEX SAB Dra. Marina Albuquerque NUTRICAO CLINICA FOLGA 08:00–12:00 14:00–18:00 FOLGA 08:00–12:00 FOLGA 08:00–13:00 FOLGA Dr. Rafael Bittencourt ",
+    "len": 496,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA"
+    ],
+    "nBotoes": 12,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AGENDA Horarios de atendimento Grade semanal por profissional, folgas e slots livres do dia. Tudo em America/Sao_Paulo. Fuso America/Sao_Paulo PROFISSIONAL DOM SEG TER QUA QUI SEX SAB Dra. Marina Albuquerque NUTRICAO CLINICA FOLGA 08:00–12:00 14:00–18:00 FOLGA 08:00–12:00 FOLGA 08:00–13:00 FOLGA Dr. Rafael Bittencourt ",
+    "len": 496,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA"
+    ],
+    "nBotoes": 12,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "follow-up-tasks": {
+  "estados": {
+   "Normal": {
+    "text": "ACOMPANHAMENTO Tarefas de acompanhamento Retorno, resultado de exame e recuperacao — com prazo e responsavel por tarefa. Fuso America/Sao_Paulo PACIENTE TIPO PRAZO RESPONSAVEL STATUS ACOES Eduardo Vilela Recuperacao 11/03 16:00 Dra. Helena Camargo Atrasada Concluir Reagendar Joana Prado Retorno 12/03 09:00 Dra. Marina ",
+    "len": 733,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Eduardo Vilela",
+     "Concluir",
+     "Reagendar",
+     "Joana Prado",
+     "Concluir",
+     "Reagendar",
+     "Camila Rezende",
+     "Concluir"
+    ],
+    "nBotoes": 18,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "ACOMPANHAMENTO Tarefas de acompanhamento Retorno, resultado de exame e recuperacao — com prazo e responsavel por tarefa. Fuso America/Sao_Paulo PACIENTE TIPO PRAZO RESPONSAVEL STATUS ACOES Eduardo Vilela Recuperacao 11/03 16:00 Dra. Helena Camargo Atrasada Concluir Reagendar Joana Prado Retorno 12/03 09:00 Dra. Marina ",
+    "len": 733,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Eduardo Vilela",
+     "Concluir",
+     "Reagendar",
+     "Joana Prado",
+     "Concluir",
+     "Reagendar",
+     "Camila Rezende",
+     "Concluir"
+    ],
+    "nBotoes": 18,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "packages-pricing": {
+  "estados": {
+   "Normal": {
+    "text": "FINANCEIRO Pacotes e precos Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote. Avaliacao inicial Primeira consulta com plano de atendimento. Ativo R$ 280,00 SESSOES 1 VALIDADE Validade de 30 dias Salvar Desativar Pacote 4 sessoes Quatro sessoes de acompanhamento. Ativo R$ 960,00 SESSOES",
+    "len": 764,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar"
+    ],
+    "nBotoes": 10,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "FINANCEIRO Pacotes e precos Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote. Avaliacao inicial Primeira consulta com plano de atendimento. Ativo R$ 280,00 SESSOES 1 VALIDADE Validade de 30 dias Salvar Desativar Pacote 4 sessoes Quatro sessoes de acompanhamento. Ativo R$ 960,00 SESSOES",
+    "len": 764,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar"
+    ],
+    "nBotoes": 10,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "payments-checkout": {
+  "estados": {
+   "Normal": {
+    "text": "FINANCEIRO Pagamento e recibo Valores em centavos exibidos em BRL. O estorno devolve o lead ao funil. Registrar pagamento Paciente Pacote Avaliacao inicial — R$ 280,00 (1 sessoes) Pacote 4 sessoes — R$ 960,00 (4 sessoes) Pacote 8 sessoes — R$ 1.760,00 (8 sessoes) Pacote 12 sessoes — R$ 2.400,00 (12 sessoes) Forma de pa",
+    "len": 502,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Registrar pagamento"
+    ],
+    "nBotoes": 1,
+    "campos": 3,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "FINANCEIRO Pagamento e recibo Valores em centavos exibidos em BRL. O estorno devolve o lead ao funil. Registrar pagamento Paciente Pacote Avaliacao inicial — R$ 280,00 (1 sessoes) Pacote 4 sessoes — R$ 960,00 (4 sessoes) Pacote 8 sessoes — R$ 1.760,00 (8 sessoes) Pacote 12 sessoes — R$ 2.400,00 (12 sessoes) Forma de pa",
+    "len": 502,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Registrar pagamento"
+    ],
+    "nBotoes": 1,
+    "campos": 3,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "finance-overview": {
+  "estados": {
+   "Normal": {
+    "text": "FINANCEIRO Visao financeira Receita, ticket medio e comparecimento de marco de 2024. Valores em centavos, exibidos em BRL. Exportar RECEITA DO MES R$ 128.460,00 ▲ +14,4% vs mes anterior 60 sessoes pagas TICKET MEDIO R$ 2.141,00 por atendimento pago TAXA DE COMPARECIMENTO 84,2% 71 sessoes agendadas SESSOES PAGAS 60 ▼ 11",
+    "len": 485,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Exportar"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "FINANCEIRO Visao financeira Receita, ticket medio e comparecimento de marco de 2024. Valores em centavos, exibidos em BRL. Exportar RECEITA DO MES R$ 128.460,00 ▲ +14,4% vs mes anterior 60 sessoes pagas TICKET MEDIO R$ 2.141,00 por atendimento pago TAXA DE COMPARECIMENTO 84,2% 71 sessoes agendadas SESSOES PAGAS 60 ▼ 11",
+    "len": 485,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Exportar"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "reports-funnel": {
+  "estados": {
+   "Normal": {
+    "text": "RELATORIOS Funil de conversao Pessoas por etapa em 01/03/2024 a 31/03/2024. Relatorio por origem conta PESSOAS; por anuncio conta CLIQUES. Exportar Etapas do funil Novo lead new 428 pessoas Qualificado qualified 186 pessoas Cliente customer 71 pessoas CONTAGEM DE PESSOAS: UM LEAD E UMA PESSOA, MESMO COM VARIOS TOQUES. ",
+    "len": 630,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Exportar"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "RELATORIOS Funil de conversao Pessoas por etapa em 01/03/2024 a 31/03/2024. Relatorio por origem conta PESSOAS; por anuncio conta CLIQUES. Exportar Etapas do funil Novo lead new 428 pessoas Qualificado qualified 186 pessoas Cliente customer 71 pessoas CONTAGEM DE PESSOAS: UM LEAD E UMA PESSOA, MESMO COM VARIOS TOQUES. ",
+    "len": 630,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Exportar"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "meta-conversion": {
+  "estados": {
+   "Normal": {
+    "text": "RELATORIOS Fila de eventos da Meta Eventos de conversao prontos para envio a Meta, com chave deterministica de dedup. 2 na fila 1 com erro LGPD: o payload nunca leva dado de saude A fila envia apenas evento, etapa e origem. Consulta, medida, plano alimentar e qualquer conteudo de atendimento ficam de fora do payload — ",
+    "len": 898,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Exportar fila",
+     "Reenviar com erro"
+    ],
+    "nBotoes": 2,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Meta Ads nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 138,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "social-accounts": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDADOR-INSTAGRAM Contas conectadas Cada conta usa um token de longa duracao do Instagram Graph API. A tela nunca mostra o token — apenas a referencia da variavel de ambiente e a data de expiracao. Conectar CE Consultorio Exemplo @exemplo.nutricao Token valido EXPIRACAO DO TOKEN 18/04/2026, 18:00 Expirou ha 212 dia(s",
+    "len": 1386,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Conectar",
+     "Reconectar"
+    ],
+    "nBotoes": 2,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 2,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Instagram Graph API nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 149,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "social-composer": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDADOR-INSTAGRAM Composer de publicacao Monte o post (carrossel ou Reels), revise o preview e agende. Nada e publicado direto daqui: tudo passa pelo agendador. Formato Post Carrossel Reels Ate 10 midias Conta* @exemplo.nutricao — Consultorio Exemplo @exemplo.clinica — Clinica Exemplo Pilates @exemplo.bemestar — Bem-",
+    "len": 1282,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Agendar publicacao",
+     "Limpar"
+    ],
+    "nBotoes": 2,
+    "campos": 5,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AGENDADOR-INSTAGRAM Composer de publicacao Monte o post (carrossel ou Reels), revise o preview e agende. Nada e publicado direto daqui: tudo passa pelo agendador. Instagram ainda nao conectado O agendamento so fica disponivel depois que o dono da plataforma autorizar as contas do Instagram. Aqui voce pode deixar o rasc",
+    "len": 1469,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso",
+     "Agendar publicacao",
+     "Limpar"
+    ],
+    "nBotoes": 3,
+    "campos": 5,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "social-automations": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDADOR-INSTAGRAM Automacoes de resposta Cada regra liga um gatilho a uma acao. Regras inativas ficam guardadas, mas nao respondem a ninguem. REGRA GATILHO ACAO EXECUCOES ATIVA Boas-vindas em comentario @exemplo.nutricao * (Comentario) Responder 132 05/03/2026, 15:20 Alternar regra Boas-vindas em comentario Duvida so",
+    "len": 923,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": false
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AGENDADOR-INSTAGRAM Automacoes de resposta Cada regra liga um gatilho a uma acao. Regras inativas ficam guardadas, mas nao respondem a ninguem. REGRA GATILHO ACAO EXECUCOES ATIVA Boas-vindas em comentario @exemplo.nutricao * (Comentario) Responder 132 05/03/2026, 15:20 Alternar regra Boas-vindas em comentario Duvida so",
+    "len": 923,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": false
+   }
+  },
+  "temBotaoConector": true
+ },
+ "social-logs": {
+  "estados": {
+   "Normal": {
+    "text": "AGENDADOR-INSTAGRAM Logs de publicacao e interacao Tudo que saiu para o Instagram, com nivel, conta, acao e horario. Falhas repetidas podem ser reexecutadas. NIVEL ACAO CONTA STATUS DATA Info Publicacao agendada Carrossel de 2 midias agendado para 10/03 as 09:00. @exemplo.nutricao concluido 05/03/2026, 09:04 — Atencao ",
+    "len": 1284,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Reexecutar",
+     "Reexecutar"
+    ],
+    "nBotoes": 2,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "AGENDADOR-INSTAGRAM Logs de publicacao e interacao Tudo que saiu para o Instagram, com nivel, conta, acao e horario. Falhas repetidas podem ser reexecutadas. NIVEL ACAO CONTA STATUS DATA Info Publicacao agendada Carrossel de 2 midias agendado para 10/03 as 09:00. @exemplo.nutricao concluido 05/03/2026, 09:04 — Atencao ",
+    "len": 1284,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Reexecutar",
+     "Reexecutar"
+    ],
+    "nBotoes": 2,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "webhooks-panel": {
+  "estados": {
+   "Normal": {
+    "text": "OPERACAO Webhooks de saida Eventos que o programa envia para fora. O segredo nunca aparece aqui: a interface mostra apenas o nome da variavel de ambiente que o guarda. Somente HTTPS e IP publico ENDPOINT EVENTOS GUARD TENTATIVAS ULTIMA ENTREGA ATIVO https://hooks.exemplo.com/consultorio/eventos WEBHOOK_SIGNING_SECRET_E",
+    "len": 1316,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": false
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "OPERACAO Webhooks de saida Eventos que o programa envia para fora. O segredo nunca aparece aqui: a interface mostra apenas o nome da variavel de ambiente que o guarda. Somente HTTPS e IP publico ENDPOINT EVENTOS GUARD TENTATIVAS ULTIMA ENTREGA ATIVO https://hooks.exemplo.com/consultorio/eventos WEBHOOK_SIGNING_SECRET_E",
+    "len": 1316,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": false
+   }
+  },
+  "temBotaoConector": true
+ },
+ "agent-console": {
+  "estados": {
+   "Normal": {
+    "text": "OPERACAO Console do agente O agente atende quem esta na lista de permitidos, dentro da janela de 24h, usando apenas as quatro ferramentas autorizadas. Ativo Agente ligado PACIENTEOi, tem horario para quinta de manha? 05/03/2026, 09:28 AGENTEOi! Para quinta de manha tenho 9h, 10h30 e 11h. Qual fica melhor para voce? 05/",
+    "len": 1557,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Enviar"
+    ],
+    "nBotoes": 1,
+    "campos": 1,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "Anthropic (Claude) nao esta conectado Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco. Solicitar acesso",
+    "len": 148,
+    "skeleton": 0,
+    "lock": true,
+    "live": [],
+    "botoes": [
+     "Solicitar acesso"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "ops-health": {
+  "estados": {
+   "Normal": {
+    "text": "OPERACAO Saude da operacao Instrumentacao, backup, filas e webhooks com falha — o suficiente para saber se o programa esta de pe antes do paciente ligar. Rodar backup ULTIMO BACKUP 05/03/2026, 00:00 Bucket de backup do programa · 2,4 GB · 3 min TAREFAS NA FILA 19 19 esperando · 3 com falha WEBHOOKS COM FALHA 2 Precisam",
+    "len": 1229,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Rodar backup"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "OPERACAO Saude da operacao Instrumentacao, backup, filas e webhooks com falha — o suficiente para saber se o programa esta de pe antes do paciente ligar. Rodar backup ULTIMO BACKUP 05/03/2026, 00:00 Bucket de backup do programa · 2,4 GB · 3 min TAREFAS NA FILA 19 19 esperando · 3 com falha WEBHOOKS COM FALHA 2 Precisam",
+    "len": 1229,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Rodar backup"
+    ],
+    "nBotoes": 1,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ },
+ "integration-manifest": {
+  "estados": {
+   "Normal": {
+    "text": "PROGRAMA · AURORA Manifesto de conexoes Todo conector de que o programa precisa, quem pode provisionar e o que cada um destrava. Este e o unico lugar onde um conector e provisionado. Somente o dono da plataforma Acesso de implementacao apenas do dono do programa Ninguem mais provisiona conector. O dono da plataforma e ",
+    "len": 3955,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Provisionar",
+     "Provisionar",
+     "Provisionar"
+    ],
+    "nBotoes": 3,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   },
+   "Carregando": {
+    "text": "",
+    "len": 0,
+    "skeleton": 3,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Vazio": {
+    "text": "Nada por aqui ainda Os itens vao aparecer aqui assim que existirem.",
+    "len": 67,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Erro": {
+    "text": "Algo deu errado Nao foi possivel carregar este bloco. Tente novamente.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   },
+   "Sem permissao": {
+    "text": "Acesso restrito Seu perfil nao tem permissao para ver esta informacao.",
+    "len": 70,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [],
+    "nBotoes": 0,
+    "campos": 0,
+    "headings": [],
+    "temAcao": false
+   }
+  },
+  "conector": {
+   "desconectado": {
+    "text": "PROGRAMA · AURORA Manifesto de conexoes Todo conector de que o programa precisa, quem pode provisionar e o que cada um destrava. Este e o unico lugar onde um conector e provisionado. Somente o dono da plataforma Acesso de implementacao apenas do dono do programa Ninguem mais provisiona conector. O dono da plataforma e ",
+    "len": 3955,
+    "skeleton": 0,
+    "lock": false,
+    "live": [],
+    "botoes": [
+     "Provisionar",
+     "Provisionar",
+     "Provisionar"
+    ],
+    "nBotoes": 3,
+    "campos": 0,
+    "headings": [
+     "H2"
+    ],
+    "temAcao": true
+   }
+  },
+  "temBotaoConector": true
+ }
+}

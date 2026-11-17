@@ -1,0 +1,6859 @@
+{
+ "auth-login": [
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Entrar na sua conta",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "form",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "E-mail*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Esqueci minha senha",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "textbox",
+   "name": "Senha*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "button",
+   "name": "Entrar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "image",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "link",
+   "name": "Falar com o suporte",
+   "props": {
+    "focusable": true,
+    "url": "https://suporte.exemplo.com.br/"
+   }
+  }
+ ],
+ "auth-two-factor": [
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "image",
+   "name": "QR Code ilustrativo de configuracao do autenticador",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Copiar chave",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Remover fator",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mostrar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Copiar codigos",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Gerar novos codigos",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  }
+ ],
+ "auth-recovery": [
+  {
+   "role": "heading",
+   "name": "Esqueci minha senha",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "form",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "E-mail da conta*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "button",
+   "name": "Enviar link de recuperacao",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "admin-platform": [
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Consultorios administrados",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Novo consultorio",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Abrir consultorio Consultório Aurora Nutrição",
+   "props": {
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Abrir consultorio Consultório Vila Nova",
+   "props": {
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Abrir consultorio Consultório Serra Azul",
+   "props": {
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Abrir consultorio Consultório Boa Vista",
+   "props": {
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "MEMBROS",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "LEADS HOJE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "MEMBROS",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "LEADS HOJE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "MEMBROS",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "LEADS HOJE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "MEMBROS",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "LEADS HOJE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "office-team": [
+  {
+   "role": "heading",
+   "name": "Equipe e acessos",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Convidar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rebaixar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Remover",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rebaixar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Remover",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rebaixar",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "Remover",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rebaixar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Remover",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rebaixar",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "Remover",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Copiar link",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Revogar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "office-settings": [
+  {
+   "role": "heading",
+   "name": "Configuracoes do consultorio",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Canais conectados",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Provedor de WhatsApp",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Horario de atendimento",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Webhook de saida",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Desconectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Conectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Aceitar a versao risco-whatsapp-nao-oficial@2025-11",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar horario",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "URL de destino",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar webhook",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Enviar teste",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "VERSAO DO TEXTO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ACEITO POR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "EM",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Webhook ativo",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Segunda-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Segunda-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Terça-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Terça-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Quarta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Quarta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Quinta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Quinta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Sexta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Sexta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Sábado",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Sábado",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "InputTime",
+   "name": "Inicio de Domingo",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "InputTime",
+   "name": "Fim de Domingo",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Segunda-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Terça-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Quarta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Quinta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Sexta-feira",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Sábado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Domingo",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  }
+ ],
+ "leads-board": [
+  {
+   "role": "heading",
+   "name": "Novo",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Qualificado",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Cliente",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "article",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Ana Beatriz Souza para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Carlos Eduardo Lima para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Mariana Alves Rocha para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Rafael Nogueira para Novo",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Mover Rafael Nogueira para Cliente",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Juliana Prado para Novo",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Mover Juliana Prado para Cliente",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Thiago Marques para Novo",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Mover Thiago Marques para Cliente",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Camila Ferraz para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Bruno Tavares para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Mover Larissa Moreira para Qualificado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "inbox-whatsapp": [
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "sectionheader",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "sectionfooter",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "searchbox",
+   "name": "Buscar conversa",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Oi! Recebi sua mensagem, ja te explico.",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Posso te enviar os horarios de consulta?",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Quer que eu reserve uma avaliacao?",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "textbox",
+   "name": "Escreva a resposta para o contato",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": true,
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Enviar",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "AB Ana Beatriz Souza 14:12 Boa tarde! Gostaria de saber os horarios de avaliacao. 2 nova(s) Permitido Dentro da janela",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "CE Carlos Eduardo Lima 12:40 Obrigado, ate mais! Permitido Fora da janela",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "D( Desconhecido (numero novo) 09:05 Voce vende esse produto? Quero revender. 1 nova(s) Bloqueado Dentro da janela",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "JP Juliana Prado 16:22 Perfeito, ate quinta! Permitido Dentro da janela",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Enviar template aprovado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "expanded": false
+   }
+  }
+ ],
+ "consent-panel": [
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Tratamento de dados",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "figure",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Canal da concessao de tratamento de dados",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Registrar consentimento",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "heading",
+   "name": "Marketing",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "figure",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Canal da concessao de marketing",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Registrar consentimento",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "CONCEDIDO EM",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "CANAL",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VERSAO DO TEXTO ACEITO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "PACIENTE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "Figcaption",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "blockquote",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "CONCEDIDO EM",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "CANAL",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VERSAO DO TEXTO ACEITO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "PACIENTE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "Figcaption",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "blockquote",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "option",
+   "name": "WhatsApp",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Presencial",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Assinado em papel",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "E-mail",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "WhatsApp",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Presencial",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Assinado em papel",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "E-mail",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  }
+ ],
+ "channel-connections": [
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "WhatsApp Cloud API (Meta)",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "WhatsApp auto-hospedado (Baileys)",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "heading",
+   "name": "Canal hospedado por terceiro",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Reconectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reconectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reconectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "patients-list": [
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "searchbox",
+   "name": "Buscar paciente por nome",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "AB Ana Beatriz Souza Reeducacao alimentar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (11) 98765-4321 ana.souza@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Consentido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "12/03/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Ana Beatriz Souza",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "CE Carlos Eduardo Lima Emagrecimento",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (21) 99887-7665 carlos.lima@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Consentido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "10/02/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Carlos Eduardo Lima",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "JP Juliana Prado Gestacao de peso",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (16) 99912-3456 juliana.prado@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Revogado",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "22/01/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Juliana Prado",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "RN Rafael Nogueira",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (41) 99998-8776 rafael.nogueira@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Sem consentimento",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "08/03/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Rafael Nogueira",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "MA Mariana Alves Rocha Performance",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (31) 98765-4322 mariana.rocha@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Consentido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "13/03/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Mariana Alves Rocha",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "TM Thiago Marques Reeducacao alimentar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (35) 99887-7664 thiago.marques@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Consentido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "06/03/2025",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Thiago Marques",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "LM Larissa Moreira",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "+55 (17) 98765-4323 larissa.moreira@example.com",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Sem consentimento",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "—",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Abrir prontuario de Larissa Moreira",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "NOME",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "CONTATO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "CONSENTIMENTO DE TRATAMENTO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ULTIMA CONSULTA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Ana Beatriz Souza",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Carlos Eduardo Lima",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Juliana Prado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Rafael Nogueira",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Mariana Alves Rocha",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Thiago Marques",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Abrir prontuario de Larissa Moreira",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "patient-chart": [
+  {
+   "role": "heading",
+   "name": "Ana Beatriz Souza",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VERSAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ATUALIZADO EM",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "RESPONSAVEL",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "PLANOS SAO VERSIONADOS",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "clinical-entry": [
+  {
+   "role": "heading",
+   "name": "Novo registro para Ana Beatriz Souza",
+   "props": {
+    "level": 3
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "tablist",
+   "name": "",
+   "props": {
+    "multiselectable": false,
+    "orientation": "horizontal"
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Profissional*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DateTime",
+   "name": "Data e hora*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "Resumo do atendimento",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": true,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Gravar registro",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "tab",
+   "name": "Consulta",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "tab",
+   "name": "Medida",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Marina Alencar — Nutricionista",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Pedro Lins — Nutricionista",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Sofia Bastos — Educadora alimentar",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  }
+ ],
+ "agenda-board": [
+  {
+   "role": "heading",
+   "name": "Agenda de consultas",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "08:30 Joana Prado AVALIACAO INICIAL Confirmado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "08:00 Patricia Lemos AVALIACAO INICIAL Agendado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "09:00 Bruno Sarmento CONSULTA DE ROTINA Faltou",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "10:00 Otavio Bezerra RETORNO Agendado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "10:30 Renata Bastos AVALIACAO INICIAL Agendado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "11:30 Larissa Fontes AVALIACAO INICIAL Agendado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "13:00 Marcelo Tavares CONSULTA DE ROTINA Confirmado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "14:00 Camila Rezende CONSULTA DE ROTINA Compareceu",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "15:00 Vinicius Andrada RETORNO Agendado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  },
+  {
+   "role": "button",
+   "name": "16:00 Eduardo Vilela RETORNO Cancelado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "pressed": "false"
+   }
+  }
+ ],
+ "availability": [
+  {
+   "role": "heading",
+   "name": "Horarios de atendimento",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "FOLGA",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "follow-up-tasks": [
+  {
+   "role": "heading",
+   "name": "Tarefas de acompanhamento",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Eduardo Vilela",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Recuperacao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "11/03 16:00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dra. Helena Camargo",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Atrasada",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Joana Prado",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Retorno",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "12/03 09:00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dra. Marina Albuquerque",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pendente",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Camila Rezende",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Resultado de exame",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "12/03 11:00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dra. Marina Albuquerque",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Em andamento",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Marcelo Tavares",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Recuperacao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "12/03 14:30",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dra. Helena Camargo",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluida",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Patricia Lemos",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Retorno",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "13/03 08:30",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dra. Marina Albuquerque",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pendente",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Renata Bastos",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Resultado de exame",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "14/03 10:00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Dr. Rafael Bittencourt",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pendente",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Concluir Reagendar",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "PACIENTE",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "TIPO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "PRAZO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "RESPONSAVEL",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "STATUS",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ACOES",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Eduardo Vilela",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Joana Prado",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Camila Rezende",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Marcelo Tavares",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Patricia Lemos",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Renata Bastos",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Concluir",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reagendar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "packages-pricing": [
+  {
+   "role": "heading",
+   "name": "Pacotes e precos",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Desativar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Desativar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Desativar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Desativar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Salvar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Ativar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "SESSOES",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VALIDADE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "SESSOES",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VALIDADE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "SESSOES",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VALIDADE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "SESSOES",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VALIDADE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "SESSOES",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VALIDADE",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "payments-checkout": [
+  {
+   "role": "heading",
+   "name": "Pagamento e recibo",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "Paciente",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Pacote",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Forma de pagamento",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Registrar pagamento",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "option",
+   "name": "Avaliacao inicial — R$ 280,00 (1 sessoes)",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Pacote 4 sessoes — R$ 960,00 (4 sessoes)",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Pacote 8 sessoes — R$ 1.760,00 (8 sessoes)",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Pacote 12 sessoes — R$ 2.400,00 (12 sessoes)",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Pix",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Cartao de credito",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Cartao de debito",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Dinheiro",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Transferencia",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  }
+ ],
+ "finance-overview": [
+  {
+   "role": "heading",
+   "name": "Visao financeira",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Exportar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Avaliacao inicial",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "6",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "R$ 16.800,00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pacote 4 sessoes",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "24",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "R$ 57.600,00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pacote 8 sessoes",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "16",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "R$ 35.200,00",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Pacote 12 sessoes",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "8",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "R$ 18.800,00",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "PACOTE",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "SESSOES",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "RECEITA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  }
+ ],
+ "reports-funnel": [
+  {
+   "role": "heading",
+   "name": "Funil de conversao",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Exportar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Instagram",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "152",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "1340",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Google Ads",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "118",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "2210",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Indicacao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "96",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "0",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "WhatsApp",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "41",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "0",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Site",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "21",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "460",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "ORIGEM",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "PESSOAS",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "CLIQUES",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  }
+ ],
+ "meta-conversion": [
+  {
+   "role": "heading",
+   "name": "Fila de eventos da Meta",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Exportar fila",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reenviar com erro",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "social-accounts": [
+  {
+   "role": "heading",
+   "name": "Contas conectadas",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Conectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Reconectar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "EXPIRACAO DO TOKEN",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ULTIMA PUBLICACAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "EXPIRACAO DO TOKEN",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ULTIMA PUBLICACAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "EXPIRACAO DO TOKEN",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ULTIMA PUBLICACAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "EXPIRACAO DO TOKEN",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ULTIMA PUBLICACAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "social-composer": [
+  {
+   "role": "heading",
+   "name": "Composer de publicacao",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Formato",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "combobox",
+   "name": "Conta*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "hasPopup": "menu",
+    "expanded": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "Legenda*",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": true,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "Hashtags",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": false,
+    "readonly": false,
+    "required": false,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DateTime",
+   "name": "Agendar para",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "settable": true,
+    "labelledby": null
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Agendar publicacao",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Limpar",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "checkbox",
+   "name": "prato-colorido.jpg",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "checkbox",
+   "name": "mesa-consultorio.jpg",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "checkbox",
+   "name": "card-agenda.png",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "checkbox",
+   "name": "roteiro-almoco.mp4",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "checkbox",
+   "name": "detalhe-armario.jpg",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "option",
+   "name": "Post",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "Carrossel",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "Reels",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "@exemplo.nutricao — Consultorio Exemplo",
+   "props": {
+    "focusable": true,
+    "selected": true
+   }
+  },
+  {
+   "role": "option",
+   "name": "@exemplo.clinica — Clinica Exemplo Pilates",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  },
+  {
+   "role": "option",
+   "name": "@exemplo.bemestar — Bem-estar Exemplo",
+   "props": {
+    "focusable": true,
+    "selected": false
+   }
+  }
+ ],
+ "social-automations": [
+  {
+   "role": "heading",
+   "name": "Automacoes de resposta",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Boas-vindas em comentario @exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "* (Comentario)",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Responder",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "132 05/03/2026, 15:20",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Alternar regra Boas-vindas em comentario",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Duvida sobre agenda @exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "agenda (Palavra-chave)",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Agendar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "47 04/03/2026, 13:05",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Alternar regra Duvida sobre agenda",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Mencao vira lead @exemplo.clinica",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.nutricao (Mencao)",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Marcar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "8 01/03/2026, 08:40",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Alternar regra Mencao vira lead",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Confirmacao de agendamento @exemplo.bemestar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "confirmo (Palavra-chave)",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Responder",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "21 30/01/2026, 17:10",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Alternar regra Confirmacao de agendamento",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "REGRA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "GATILHO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ACAO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "EXECUCOES",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ATIVA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "switch",
+   "name": "Alternar regra Boas-vindas em comentario",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Alternar regra Duvida sobre agenda",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Alternar regra Mencao vira lead",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Alternar regra Confirmacao de agendamento",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  }
+ ],
+ "social-logs": [
+  {
+   "role": "heading",
+   "name": "Logs de publicacao e interacao",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Info",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Publicacao agendada Carrossel de 2 midias agendado para 10/03 as 09:00.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "concluido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "05/03/2026, 09:04",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "—",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Atencao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Token proximo do limite O token desta conta expira em poucos dias. Reconecte para nao perder publicacoes.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.clinica",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "pendente",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "05/03/2026, 06:12",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "—",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Erro",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Publicacao rejeitada A API recusou o upload da midia. Reexecute depois de conferir o formato do arquivo.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.receitas",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "falhou",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "04/03/2026, 12:48",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Reexecutar Publicacao rejeitada em @exemplo.receitas",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Info",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Comentario respondido Regra de boas-vindas respondeu um comentario em @exemplo.bemestar.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.bemestar",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "concluido",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "04/03/2026, 08:03",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "—",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Atencao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Fila de publicacao lenta A fila de publicacao passou de 20 tarefas. O agendador vai processar em ordem.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "pendente",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "03/03/2026, 15:22",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "—",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Erro",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Reels rejeitado O video excede o limite de 60 segundos.",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "@exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "falhou",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "02/03/2026, 17:31",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Reexecutar Reels rejeitado em @exemplo.nutricao",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "NIVEL",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ACAO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "CONTA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "STATUS",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "DATA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reexecutar Publicacao rejeitada em @exemplo.receitas",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "button",
+   "name": "Reexecutar Reels rejeitado em @exemplo.nutricao",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  }
+ ],
+ "webhooks-panel": [
+  {
+   "role": "heading",
+   "name": "Webhooks de saida",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "strong",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "strong",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "table",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "rowgroup",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "row",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "https://hooks.exemplo.com/consultorio/eventos WEBHOOK_SIGNING_SECRET_EXEMPLO",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "lead.created appointment.scheduled payment.confirmed",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "HTTPS + IP publico",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "1",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Entregue 05/03/2026, 08:58 · HTTP 200",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Ativar ou desativar o endpoint https://hooks.exemplo.com/consultorio/eventos",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "https://erp.exemplo.com/webhook/atendimentos WEBHOOK_SIGNING_SECRET_ERP",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "appointment.scheduled attendance.recorded",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "HTTPS + IP publico",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "4",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Falhou 05/03/2026, 07:42 · HTTP 503",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Ativar ou desativar o endpoint https://erp.exemplo.com/webhook/atendimentos",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "https://relatorio.exemplo.com/api/entradas WEBHOOK_SIGNING_SECRET_RELATORIO",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "payment.confirmed",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "HTTPS + IP publico",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "0",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Aguardando nunca entregue",
+   "props": {}
+  },
+  {
+   "role": "cell",
+   "name": "Ativar ou desativar o endpoint https://relatorio.exemplo.com/api/entradas",
+   "props": {}
+  },
+  {
+   "role": "columnheader",
+   "name": "ENDPOINT",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "EVENTOS",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "GUARD",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "TENTATIVAS",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ULTIMA ENTREGA",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "columnheader",
+   "name": "ATIVO",
+   "props": {
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "switch",
+   "name": "Ativar ou desativar o endpoint https://hooks.exemplo.com/consultorio/eventos",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Ativar ou desativar o endpoint https://erp.exemplo.com/webhook/atendimentos",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "switch",
+   "name": "Ativar ou desativar o endpoint https://relatorio.exemplo.com/api/entradas",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "false",
+    "labelledby": null
+   }
+  }
+ ],
+ "agent-console": [
+  {
+   "role": "heading",
+   "name": "Console do agente",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "switch",
+   "name": "Agente ligado",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "checked": "true",
+    "labelledby": null
+   }
+  },
+  {
+   "role": "LabelText",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "textbox",
+   "name": "Mensagem para o agente",
+   "props": {
+    "invalid": "false",
+    "focusable": true,
+    "editable": "plaintext",
+    "settable": true,
+    "multiline": true,
+    "readonly": false,
+    "required": false
+   }
+  },
+  {
+   "role": "button",
+   "name": "Enviar",
+   "props": {
+    "disabled": true,
+    "invalid": "false"
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "term",
+   "name": "MODELO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "ULTIMA EXECUCAO",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  }
+ ],
+ "ops-health": [
+  {
+   "role": "heading",
+   "name": "Saude da operacao",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Rodar backup",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  }
+ ],
+ "integration-manifest": [
+  {
+   "role": "heading",
+   "name": "Manifesto de conexoes",
+   "props": {
+    "level": 2
+   }
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "strong",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "DescriptionList",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "paragraph",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Provisionar Meta Ads",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Provisionar Email",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "button",
+   "name": "Provisionar PDF",
+   "props": {
+    "invalid": "false",
+    "focusable": true
+   }
+  },
+  {
+   "role": "term",
+   "name": "QUEM PODE PROVISIONAR",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "VARIAVEIS DE AMBIENTE (NOME)",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "term",
+   "name": "O QUE DESTRAVA",
+   "props": {}
+  },
+  {
+   "role": "definition",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "list",
+   "name": "",
+   "props": {}
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  },
+  {
+   "role": "listitem",
+   "name": "",
+   "props": {
+    "level": 1
+   }
+  }
+ ]
+}
