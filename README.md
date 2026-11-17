@@ -41,7 +41,20 @@ npm install
 npm run build          # core -> tokens -> ui -> blocks
 npm run dev            # catalogo em http://localhost:5173
 npm run build:app      # build estatico do catalogo
+npm run html           # gera docs/catalogo-blocos.html (um arquivo so, offline)
+npm run mapa           # regenera docs/MAPA-BLOCOS.md a partir do codigo
+npm run verificar      # build + app + mapa + html
 ```
+
+### Catalogo offline (sem servidor, sem login)
+
+`npm run html` gera **`docs/catalogo-blocos.html`** — o catalogo inteiro em UM arquivo
+(CSS + JS inline, ~0,9 MB). Voce abre com dois cliques, funciona offline e nao depende de
+nenhuma URL publica. Util para levar a um celular, revisar num airplane ou mandar para
+alguem da equipe.
+
+> O arquivo gerado nao esta no repo (0,9 MB estouraria o limite do conector do GitHub).
+> O gerador esta: `scripts/gerar-html-autocontido.mjs`.
 
 ---
 
