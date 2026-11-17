@@ -33,7 +33,7 @@ async def main():
                 await page.wait_for_timeout(700)
             # troca o tema pelo seletor do topo
             if theme != "aurora":
-                await page.click(f'button[role="tab"]:has-text("{theme}")')
+                await page.click(f'button[role="radio"]:has-text("{theme}")')
                 await page.wait_for_timeout(700)
             await page.screenshot(path=str(OUT / f"{name}.png"))
             print("ok", name)

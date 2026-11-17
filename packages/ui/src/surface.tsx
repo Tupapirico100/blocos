@@ -21,7 +21,7 @@ const tones = {
 
 const paddings = {
   none: "",
-  sm: "p-3",
+  sm: "p-2",
   md: "p-[var(--density-card-p)]",
   lg: "p-6",
 } as const;
@@ -57,13 +57,20 @@ export interface SectionHeaderProps {
 
 export function SectionHeader({ title, description, actions, eyebrow, className }: SectionHeaderProps) {
   return (
-    <div className={cn("flex items-start justify-between gap-4", className)}>
-      <div className="min-w-0">
-        {eyebrow ? <div className="bloco-micro mb-1.5">{eyebrow}</div> : null}
-        <h2 className="bloco-title3 truncate">{title}</h2>
-        {description ? <p className="bloco-callout mt-1 max-w-prose">{description}</p> : null}
+    <div
+      className={cn(
+        "flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between sm:gap-4",
+        className,
+      )}
+    >
+      <div className="min-w-[140px] flex-1">
+        {eyebrow ? <div className="bloco-micro mb-1.5 truncate">{eyebrow}</div> : null}
+        <h2 className="bloco-title3 break-words">{title}</h2>
+        {description ? <p className="bloco-callout mt-1 max-w-prose break-words">{description}</p> : null}
       </div>
-      {actions ? <div className="flex shrink-0 items-center gap-2">{actions}</div> : null}
+      {actions ? (
+        <div className="flex max-w-full shrink-0 flex-wrap items-center gap-2">{actions}</div>
+      ) : null}
     </div>
   );
 }

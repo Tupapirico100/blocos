@@ -1,4 +1,5 @@
 import * as React from "react";
+import { MotionConfig } from "motion/react";
 import { cn } from "./cn.js";
 
 export type ThemeName = "aurora" | "daylight" | "graphite";
@@ -28,6 +29,33 @@ export function ThemeProvider({
 }) {
   const [theme, setThemeState] = React.useState<ThemeName>(initialTheme);
   const [density, setDensityState] = React.useState<Density>(initialDensity);
+
+  // O tema precisa viver no <html>: dialog e drawer sao portaled para o body,
+  // fora do wrapper — sem isso eles perdem as variaveis (fundo transparente,
+  // texto preto) e o modal fica invisivel.
+  React.useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove(
+      "bloco-theme-aurora",
+      "bloco-theme-daylight",
+      "bloco-theme-graphite",
+      "bloco-density-comfortable",
+      "bloco-density-compact",
+    );
+    root.classList.add(`bloco-theme-${theme}`);
+    root.classList.add(density === "compact" ? "bloco-density-compact" : "bloco-density-comfortable");
+    root.dataset.theme = theme;
+    root.dataset.density = density;
+    return () => {
+      root.classList.remove(
+        "bloco-theme-aurora",
+        "bloco-theme-daylight",
+        "bloco-theme-graphite",
+        "bloco-density-comfortable",
+        "bloco-density-compact",
+      );
+    };
+  }, [theme, density]);
 
   const value = React.useMemo<ThemeContextValue>(
     () => ({
@@ -86,3 +114,13 @@ export const DENSITIES: Array<{ value: Density; label: string; hint: string }> =
   { value: "comfortable", label: "Confortavel", hint: "Mais respiro, para leitura longa" },
   { value: "compact", label: "Compacto", hint: "Mais informacao por tela" },
 ];
+
+/**
+ * Envolve a aplicacao para que o motion/react respeite
+ * `prefers-reduced-motion` do sistema. Use na raiz do app.
+ *
+ *   <MotionProvider><App /></MotionProvider>
+ */
+export function MotionProvider({ children }: { children: React.ReactNode }) {
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+}
