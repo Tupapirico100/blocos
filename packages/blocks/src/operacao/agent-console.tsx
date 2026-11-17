@@ -12,8 +12,9 @@ import {
   Textarea,
 } from "@blocos/ui";
 import { Bot, CircleAlert, CircleCheckBig, Clock, Send, ShieldCheck, Terminal, WandSparkles } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { formatOpsDateTime } from "./format.js";
+import { agentConsoleRecipe } from "./agent-console.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -94,15 +95,7 @@ const logTone: Record<AgentLogEntry["level"], "info" | "warn" | "danger"> = {
 /* ------------------------------------------------------------------ */
 
 export function AgentConsole(props: BlockProps<AgentConsoleData, AgentConsoleVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "chat",
-    state = "success",
-    connectors = [],
-    onRequestConnector,
-    className,
-  } = props;
+  const { data, onAction, variant = "chat", state = "success", connectors = [], onRequestConnector, className } = props;
 
   const { agent, messages, logs } = data;
   const [draft, setDraft] = React.useState("");
@@ -120,12 +113,13 @@ export function AgentConsole(props: BlockProps<AgentConsoleData, AgentConsoleVar
 
   return (
     <BlockFrame
-      requires={["anthropic"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className={className}
-    >
+        recipe={agentConsoleRecipe}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Operacao"
@@ -166,6 +160,7 @@ export function AgentConsole(props: BlockProps<AgentConsoleData, AgentConsoleVar
                 <Field label="Mensagem para o agente" htmlFor="agent-console-input">
                   <Textarea
                     id="agent-console-input"
+                    aria-label="Mensagem para o agente"
                     value={draft}
                     onChange={(e) => setDraft(e.target.value)}
                     placeholder="Teste o comportamento do agente..."
@@ -248,7 +243,7 @@ export function AgentConsole(props: BlockProps<AgentConsoleData, AgentConsoleVar
                   {logs.map((entry) => (
                     <li key={entry.id} className="flex flex-wrap items-center gap-3 px-4 py-3">
                       <Badge tone={logTone[entry.level]}>{entry.level}</Badge>
-                      <span className="bloco-callout min-w-0 flex-1 text-fg-secondary">{entry.message}</span>
+                      <span className="bloco-callout min-w-0 flex-1 break-words text-fg-secondary">{entry.message}</span>
                       <span className="bloco-caption">{formatOpsDateTime(entry.createdAt)}</span>
                     </li>
                   ))}
@@ -312,7 +307,7 @@ function ToolAllowlist({ tools }: { tools: AgentTool[] }) {
         {tools.map((tool) => (
           <li
             key={tool.id}
-            className="flex items-start gap-2.5 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2.5"
+            className="flex items-start gap-2 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2.5"
           >
             <span className={tool.allowed ? "mt-0.5 text-success" : "mt-0.5 text-fg-faint"}>
               {tool.allowed ? (
@@ -324,7 +319,7 @@ function ToolAllowlist({ tools }: { tools: AgentTool[] }) {
             <span className="min-w-0 flex-1">
               <span className="bloco-callout block font-medium text-fg">{tool.label}</span>
               <span className="bloco-caption block">{tool.description}</span>
-              <span className="bloco-micro mt-1 block">{tool.id}</span>
+              <span className="bloco-micro mt-1 block break-words">{tool.id}</span>
             </span>
           </li>
         ))}
@@ -359,7 +354,12 @@ function PromptPanel({
 
       {editable ? (
         <Field label="Instrucao do agente" htmlFor="agent-console-prompt" hint="Somente o dono da plataforma altera o prompt.">
-          <Textarea id="agent-console-prompt" value={value} onChange={(e) => setValue(e.target.value)} />
+          <Textarea
+            id="agent-console-prompt"
+            aria-label="Prompt do agente"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
         </Field>
       ) : (
         <p className="bloco-mono block max-h-48 overflow-y-auto whitespace-pre-wrap rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5 text-[13px] text-fg-secondary">

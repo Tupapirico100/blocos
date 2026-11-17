@@ -21,7 +21,8 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { integrationManifestRecipe } from "./integration-manifest.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -102,22 +103,23 @@ const kindLabel: Record<ManifestConnector["kind"], string> = {
 /* ------------------------------------------------------------------ */
 
 export function IntegrationManifest(props: BlockProps<IntegrationManifestData, IntegrationManifestVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "cards",
-    state = "success",
-    onRequestConnector,
-    className,
-  } = props;
+  const { data, onAction, variant = "cards", state = "success", onRequestConnector, className, connectors } = props;
 
-  const connectors = data.connectors;
-  const ready = connectors.filter((c) => c.status === "provisioned");
-  const pending = connectors.filter((c) => c.status !== "provisioned");
+  const listaConectores = data.connectors;
+  const ready = listaConectores.filter((c) => c.status === "provisioned");
+  const pending = listaConectores.filter((c) => c.status !== "provisioned");
   const isOwner = data.viewer.isPlatformOwner;
 
   return (
-    <BlockFrame state={state} className={className}>
+    <BlockFrame state={state} className={className}
+        /* o manifesto NAO se bloqueia: e justamente o painel que mostra o que falta */
+        recipe={integrationManifestRecipe}
+        requires={[]}
+        requiredRoles={rolesOf(integrationManifestRecipe)}
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow={data.programName ? `Programa · ${data.programName}` : "Programa"}
@@ -141,7 +143,7 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
         </Callout>
 
         <div className="grid gap-3 sm:grid-cols-3">
-          <SummaryTile label="Conectores" value={connectors.length} hint={`${ready.length} prontos`} />
+          <SummaryTile label="Conectores" value={listaConectores.length} hint={`${ready.length} prontos`} />
           <SummaryTile label="Faltam" value={pending.length} hint={pending.length > 0 ? "Bloqueiam parte do programa" : "Tudo pronto"} />
           <SummaryTile
             label="Quem provisiona"
@@ -155,7 +157,7 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
             connectorLabel="Conectores do programa"
             onRequestAccess={() => onRequestConnector?.("connector.provision")}
           />
-        ) : connectors.length === 0 ? (
+        ) : listaConectores.length === 0 ? (
           <EmptyState
             icon={<Wrench className="h-5 w-5" aria-hidden />}
             title="Nenhum conector cadastrado"
@@ -165,8 +167,8 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
           <Panel tone="outline" padding="none">
             <DataTable<ManifestConnector>
               rowKey={(row) => row.id}
-              rows={connectors}
-              columns={manifestColumns(onAction)}
+              rows={listaConectores}
+              columns={manifestColumns(onAction, pending[0]?.id)}
               empty={<EmptyState title="Nenhum conector" description="O manifesto esta vazio." />}
             />
           </Panel>
@@ -178,6 +180,7 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
               connectors={ready}
               onAction={onAction}
               isOwner={isOwner}
+              primaryId={pending[0]?.id}
             />
             <ChecklistGroup
               title="Faltam provisionar"
@@ -185,12 +188,20 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
               connectors={pending}
               onAction={onAction}
               isOwner={isOwner}
+              primaryId={pending[0]?.id}
             />
           </div>
         ) : (
           <div className="grid gap-3 lg:grid-cols-2">
-            {connectors.map((connector) => (
-              <ConnectorCard key={connector.id} connector={connector} onAction={onAction} isOwner={isOwner} />
+            {listaConectores.map((connector) => (
+              <ConnectorCard
+                key={connector.id}
+                connector={connector}
+                onAction={onAction}
+                isOwner={isOwner}
+                /* Um elemento focal por tela: so o primeiro conector pendente fica primary. */
+                isPrimary={connector.id === pending[0]?.id}
+              />
             ))}
           </div>
         )}
@@ -211,10 +222,10 @@ export function IntegrationManifest(props: BlockProps<IntegrationManifestData, I
 
 function SummaryTile({ label, value, hint }: { label: string; value: string | number; hint: string }) {
   return (
-    <Panel tone="outline" padding="sm" className="flex flex-col gap-1">
-      <span className="bloco-micro">{label}</span>
-      <span className="bloco-title3">{value}</span>
-      <span className="bloco-caption">{hint}</span>
+    <Panel tone="outline" padding="sm" className="flex flex-col gap-2">
+      <span className="bloco-micro break-words">{label}</span>
+      <span className="bloco-title3 break-words">{value}</span>
+      <span className="bloco-caption break-words">{hint}</span>
     </Panel>
   );
 }
@@ -223,10 +234,12 @@ function ConnectorCard({
   connector,
   onAction,
   isOwner,
+  isPrimary,
 }: {
   connector: ManifestConnector;
   onAction?: (action: string, payload?: unknown) => void | Promise<void>;
   isOwner: boolean;
+  isPrimary: boolean;
 }) {
   return (
     <Panel tone="glass" padding="md" className="flex flex-col gap-3">
@@ -308,7 +321,9 @@ function ConnectorCard({
         <div className="mt-auto border-t border-border pt-3">
           <Button
             size="sm"
+            variant={isPrimary ? "primary" : "secondary"}
             icon={<Plus className="h-3.5 w-3.5" aria-hidden />}
+            aria-label={`Provisionar ${connector.label}`}
             onClick={() => onAction?.("connector.provision", { connectorId: connector.id })}
           >
             Provisionar
@@ -332,12 +347,15 @@ function ChecklistGroup({
   connectors,
   onAction,
   isOwner,
+  primaryId,
 }: {
   title: string;
   tone: "success" | "warn";
   connectors: ManifestConnector[];
   onAction?: (action: string, payload?: unknown) => void | Promise<void>;
   isOwner: boolean;
+  /** Conector que concentra a acao principal da tela. */
+  primaryId?: string;
 }) {
   if (connectors.length === 0) {
     return (
@@ -372,8 +390,9 @@ function ChecklistGroup({
               {connector.status !== "provisioned" && isOwner ? (
                 <Button
                   size="sm"
-                  variant="outline"
+                  variant={connector.id === primaryId ? "primary" : "secondary"}
                   icon={<Plus className="h-3.5 w-3.5" aria-hidden />}
+                  aria-label={`Provisionar ${connector.label}`}
                   onClick={() => onAction?.("connector.provision", { connectorId: connector.id })}
                 >
                   Provisionar
@@ -410,6 +429,7 @@ function ChecklistGroup({
 
 function manifestColumns(
   onAction?: (action: string, payload?: unknown) => void | Promise<void>,
+  primaryId?: string,
 ): Array<Column<ManifestConnector>> {
   return [
     {
@@ -473,8 +493,9 @@ function manifestColumns(
         ) : (
           <Button
             size="sm"
-            variant="outline"
+            variant={row.id === primaryId ? "primary" : "secondary"}
             icon={<Plus className="h-3.5 w-3.5" aria-hidden />}
+            aria-label={`Provisionar ${row.label}`}
             onClick={() => onAction?.("connector.provision", { connectorId: row.id })}
           >
             Provisionar

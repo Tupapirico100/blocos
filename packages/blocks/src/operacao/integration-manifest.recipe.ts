@@ -160,6 +160,7 @@ export const integrationManifestRecipe = defineBlock({
     "Um conector sem provisionar bloqueia os blocos que dependem dele — o bloqueio aparece no proprio bloco, com pedido de acesso.",
     "Nenhum conector grava ou envia dado de saude do paciente.",
   ],
+  emptyAction: { id: "connector.provision", label: "Provisionar conector" },
   variants: [
     {
       id: "cards",
