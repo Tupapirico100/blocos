@@ -25,6 +25,12 @@ const dialogSizes = {
 } as const;
 
 export function Dialog({ open, onOpenChange, title, description, children, footer, size = "md" }: DialogProps) {
+  // guarda o elemento que tinha o foco para devolver o foco a ele ao fechar
+  const gatilho = React.useRef<HTMLElement | null>(null);
+  React.useEffect(() => {
+    if (open) gatilho.current = document.activeElement as HTMLElement | null;
+  }, [open]);
+
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
       <DialogPrimitive.Portal>
@@ -37,14 +43,21 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
             className="fixed inset-0 z-50 bg-black/55 backdrop-blur-[3px]"
           />
         </DialogPrimitive.Overlay>
-        <DialogPrimitive.Content asChild>
+        <DialogPrimitive.Content
+          asChild
+          aria-modal="true"
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            gatilho.current?.focus?.();
+          }}
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.96, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: 4 }}
             transition={{ duration: 0.24, ease: [0.32, 0.72, 0, 1] }}
             className={cn(
-              "bloco-glass fixed left-1/2 top-1/2 z-50 w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2",
+              "bloco-glass bg-surface-solid/95 fixed left-1/2 top-1/2 z-50 w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2",
               "p-5 shadow-[var(--shadow-3)]",
               dialogSizes[size],
             )}
@@ -61,8 +74,9 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
             {footer ? <div className="mt-5 flex justify-end gap-2">{footer}</div> : null}
             <DialogPrimitive.Close asChild>
               <button
+                  type="button"
                 aria-label="Fechar"
-                className="absolute right-4 top-4 rounded-[var(--r-sm)] p-1 text-fg-muted transition-colors hover:bg-surface-hover hover:text-fg"
+                className="absolute right-4 top-4 rounded-[var(--r-sm)] p-1 text-fg-muted transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
                   <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -101,14 +115,18 @@ export function Tabs({
   className?: string;
 }) {
   return (
-    <TabsPrimitive.Root value={value} onValueChange={onChange} className={cn("flex flex-col gap-4", className)}>
-      <TabsPrimitive.List className="bloco-scroll flex gap-1 overflow-x-auto border-b border-border">
+    <TabsPrimitive.Root
+      value={value}
+      onValueChange={onChange}
+      className={cn("flex min-w-0 flex-col gap-4", className)}
+    >
+      <TabsPrimitive.List className="bloco-scroll flex min-w-0 gap-1 overflow-x-auto border-b border-border">
         {items.map((item) => (
           <TabsPrimitive.Trigger
             key={item.value}
             value={item.value}
             className={cn(
-              "group relative flex items-center gap-2 whitespace-nowrap px-3.5 pb-2.5 pt-2 text-[14px] font-medium",
+              "group relative flex items-center gap-2 whitespace-nowrap px-3.5 pb-2.5 pt-2 bloco-control font-medium",
               "text-fg-muted transition-colors duration-[var(--dur-2)] hover:text-fg-secondary",
               "data-[state=active]:text-fg",
               "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
@@ -193,45 +211,63 @@ export function Drawer({
   footer?: React.ReactNode;
   side?: "left" | "right";
 }) {
+  // Construido sobre Radix Dialog: foco preso, Esc fecha e o foco volta ao gatilho.
+  const gatilho = React.useRef<HTMLElement | null>(null);
+  React.useEffect(() => {
+    if (open) gatilho.current = document.activeElement as HTMLElement | null;
+  }, [open]);
+
   return (
-    <AnimatePresence>
-      {open ? (
-        <>
+    <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
+      <DialogPrimitive.Portal>
+        <DialogPrimitive.Overlay asChild>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => onOpenChange(false)}
+            transition={{ duration: 0.18 }}
             className="fixed inset-0 z-40 bg-black/45 backdrop-blur-[2px]"
           />
+        </DialogPrimitive.Overlay>
+        <DialogPrimitive.Content
+          asChild
+          aria-modal="true"
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            gatilho.current?.focus?.();
+          }}
+        >
           <motion.aside
             initial={{ x: side === "right" ? "100%" : "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: side === "right" ? "100%" : "-100%" }}
             transition={{ duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
             className={cn(
-              "bloco-glass fixed top-0 z-50 flex h-full w-full max-w-md flex-col",
+              "bloco-glass bg-surface-solid/95 fixed top-0 z-50 flex h-full w-full max-w-md flex-col",
               "rounded-none border-y-0",
               side === "right" ? "right-0 border-l" : "left-0 border-r",
             )}
           >
             <div className="flex items-center justify-between border-b border-border px-5 py-4">
-              <h2 className="bloco-title3">{title}</h2>
-              <button
-                onClick={() => onOpenChange(false)}
-                aria-label="Fechar"
-                className="rounded-[var(--r-sm)] p-1 text-fg-muted hover:bg-surface-hover hover:text-fg"
-              >
-                <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
-                  <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-              </button>
+              <DialogPrimitive.Title className="bloco-title3">{title}</DialogPrimitive.Title>
+              <DialogPrimitive.Close asChild>
+                <button
+                  type="button"
+                  aria-label="Fechar"
+                  className="rounded-[var(--r-sm)] p-1 text-fg-muted transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
+                    <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                </button>
+              </DialogPrimitive.Close>
             </div>
+            <DialogPrimitive.Description className="sr-only">{title}</DialogPrimitive.Description>
             <div className="bloco-scroll flex-1 overflow-y-auto px-5 py-4">{children}</div>
             {footer ? <div className="border-t border-border px-5 py-4">{footer}</div> : null}
           </motion.aside>
-        </>
-      ) : null}
-    </AnimatePresence>
+        </DialogPrimitive.Content>
+      </DialogPrimitive.Portal>
+    </DialogPrimitive.Root>
   );
 }

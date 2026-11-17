@@ -5,4 +5,5 @@ export * from "./field.js";
 export * from "./data.js";
 export * from "./overlay.js";
 export * from "./feedback.js";
+export * from "./confirm.js";
 export * from "./theme.js";
