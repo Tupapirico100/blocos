@@ -1,9 +1,10 @@
 import * as React from "react";
 import { motion } from "motion/react";
 import { Check, Copy, Eye, EyeOff, KeyRound, RefreshCw, ShieldCheck, Smartphone, Trash2 } from "lucide-react";
-import { Badge, Button, Callout, Field, Panel, cn } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { Badge, Button, Callout, ConfirmDialog, Field, Panel, cn } from "@blocos/ui";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { AuthCodeInput } from "./code-input.js";
+import { authTwoFactorRecipe } from "./auth-two-factor.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -177,6 +178,8 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
   const [step, setStep] = React.useState<AuthTwoFactorStep>("verify");
   const [code, setCode] = React.useState("");
   const [codesVisible, setCodesVisible] = React.useState(false);
+  /* Remover o segundo fator e irreversivel: passa por confirmacao. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(null);
 
   const factor = data.factor;
   const qrSeed = `${factor.id}:${factor.secret ?? factor.createdAt}`;
@@ -187,8 +190,8 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
     setStep("confirm");
   };
 
-  const handleRemove = () => {
-    void onAction?.("auth.twoFactor.remove", { factorId: factor.id });
+  const askRemove = () => {
+    setConfirmando({ acao: "auth.twoFactor.remove", payload: { factorId: factor.id } });
   };
 
   const handleCopyCodes = () => {
@@ -204,31 +207,38 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
   /* ---- Cartao do fator TOTP ---- */
 
   const factorCard = (
-    <Panel tone="glass" padding="lg" className="flex flex-col gap-4">
+    <Panel tone="glass" padding="lg" className="@container flex flex-col gap-4">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent">
+        <div className="flex min-w-0 items-center gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
             <Smartphone className="h-4 w-4" aria-hidden />
           </span>
-          <div>
-            <p className="bloco-headline">{factor.label}</p>
-            <p className="bloco-caption text-fg-muted">
+          <div className="min-w-0">
+            <p className="bloco-headline break-words">{factor.label}</p>
+            <p className="bloco-caption break-words text-fg-muted">
               {factor.issuer ? `${factor.issuer} · ` : ""}TOTP
             </p>
           </div>
         </div>
-        <Badge tone={STATUS_TONE[factor.status]}>{STATUS_LABEL[factor.status]}</Badge>
+        <Badge tone={STATUS_TONE[factor.status]} className="shrink-0">
+          {STATUS_LABEL[factor.status]}
+        </Badge>
       </div>
 
-      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+      {/*
+        Container query: o QR so fica ao lado do texto quando o CARTAO tem
+        largura para os dois. Antes (sm:flex-row) a coluna de texto caia para
+        ~47px e "CHAVE DE CONFIGURACAO" atravessava a borda do cartao.
+      */}
+      <div className="flex flex-col items-start gap-4 @[440px]:flex-row @[440px]:items-center">
         <QrPlaceholder seed={qrSeed} />
         <div className="min-w-0 flex-1">
-          <p className="bloco-callout text-fg-secondary">
+          <p className="bloco-callout break-words text-fg-secondary">
             Aponte a camera do aplicativo autenticador para este codigo.
           </p>
           {factor.secret ? (
             <div className="mt-3">
-              <p className="bloco-micro text-fg-muted">Chave de configuracao</p>
+              <p className="bloco-micro break-words text-fg-muted">Chave de configuracao</p>
               <p className="bloco-mono mt-1 break-all rounded-[var(--r-md)] border border-border bg-surface-strong/60 px-3 py-2 text-[13px] text-fg">
                 {factor.secret}
               </p>
@@ -247,13 +257,13 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
       </div>
 
       <div className="grid grid-cols-2 gap-3 border-t border-border pt-4">
-        <div>
-          <p className="bloco-micro text-fg-muted">Criado em</p>
-          <p className="bloco-callout text-fg">{formatDate(factor.createdAt)}</p>
+        <div className="min-w-0">
+          <p className="bloco-micro break-words text-fg-muted">Criado em</p>
+          <p className="bloco-callout break-words text-fg">{formatDate(factor.createdAt)}</p>
         </div>
-        <div>
-          <p className="bloco-micro text-fg-muted">Ultimo uso</p>
-          <p className="bloco-callout text-fg">
+        <div className="min-w-0">
+          <p className="bloco-micro break-words text-fg-muted">Ultimo uso</p>
+          <p className="bloco-callout break-words text-fg">
             {factor.lastUsedAt ? formatDate(factor.lastUsedAt) : "Nunca usado"}
           </p>
         </div>
@@ -265,7 +275,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
           size="sm"
           icon={<Trash2 className="h-3.5 w-3.5" aria-hidden />}
           disabled={!data.canRemove || factor.status === "disabled"}
-          onClick={handleRemove}
+          onClick={askRemove}
         >
           Remover fator
         </Button>
@@ -278,6 +288,20 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
             Este fator nao pode ser removido pelo seu perfil.
           </p>
         )}
+
+        <ConfirmDialog
+          open={confirmando !== null}
+          onOpenChange={(open) => {
+            if (!open) setConfirmando(null);
+          }}
+          title={`Remover ${factor.label}`}
+          description="O segundo fator e os codigos de recuperacao vinculados a ele deixam de valer. O acesso passa a depender apenas de e-mail e senha, e um e-mail avisa voce sobre a remocao."
+          confirmLabel="Remover fator"
+          tone="danger"
+          onConfirm={() => {
+            if (confirmando?.payload) onAction?.(confirmando.acao, confirmando.payload);
+          }}
+        />
       </div>
     </Panel>
   );
@@ -287,13 +311,13 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
   const recoveryPanel = (
     <Panel tone="glass" padding="lg" className="flex flex-col gap-4">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] bg-info-soft text-info">
+        <div className="flex min-w-0 items-center gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-info-soft text-info">
             <KeyRound className="h-4 w-4" aria-hidden />
           </span>
-          <div>
-            <p className="bloco-headline">Codigos de recuperacao</p>
-            <p className="bloco-caption text-fg-muted">
+          <div className="min-w-0">
+            <p className="bloco-headline break-words">Codigos de recuperacao</p>
+            <p className="bloco-caption break-words text-fg-muted">
               {data.recoveryCodes.filter((item) => !item.usedAt).length} disponiveis
             </p>
           </div>
@@ -301,6 +325,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
         <Button
           variant="ghost"
           size="sm"
+          className="shrink-0"
           icon={codesVisible ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />}
           onClick={() => setCodesVisible((current) => !current)}
         >
@@ -382,7 +407,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
               className={cn(
                 "flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold",
                 done && "border-accent bg-accent text-accent-fg",
-                active && "border-accent text-accent",
+                active && "border-accent text-accent-ink",
                 !done && !active && "border-border text-fg-faint",
               )}
               aria-hidden
@@ -462,11 +487,12 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
   if (variant === "inline") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authTwoFactorRecipe}
+        onAction={onAction}
       >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
@@ -486,11 +512,14 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
   if (variant === "steps") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authTwoFactorRecipe}
+        requires={requiresOf(authTwoFactorRecipe)}
+        requiredRoles={rolesOf(authTwoFactorRecipe)}
+        onAction={onAction}
       >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
@@ -515,12 +544,15 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className="w-full"
-    >
+        recipe={authTwoFactorRecipe}
+        requires={requiresOf(authTwoFactorRecipe)}
+        requiredRoles={rolesOf(authTwoFactorRecipe)}
+        onAction={onAction}
+      >
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
@@ -529,9 +561,12 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
     >
       {data.error ? <Callout tone="danger" title="Nao foi possivel concluir">{data.error}</Callout> : null}
       {data.notice ? <Callout tone="success">{data.notice}</Callout> : null}
-      <div className="grid w-full gap-4 lg:grid-cols-2">
-        {factorCard}
-        {recoveryPanel}
+      {/* Container query: dois cartoes so quando o container tem largura para os dois. */}
+      <div className="@container w-full">
+        <div className="grid w-full gap-4 @[860px]:grid-cols-2">
+          {factorCard}
+          {recoveryPanel}
+        </div>
       </div>
     </motion.div>
     </BlockFrame>

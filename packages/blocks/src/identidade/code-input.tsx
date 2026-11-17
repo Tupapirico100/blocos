@@ -93,7 +93,7 @@ export function AuthCodeInput({
           autoComplete={index === 0 ? "one-time-code" : "off"}
           maxLength={1}
           aria-label={`Digito ${index + 1} de ${length}`}
-          className="bloco-mono h-12 w-11 rounded-[var(--r-md)] border border-border bg-surface-strong/60 text-center text-[18px] text-fg transition-[border-color,box-shadow] focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15 disabled:opacity-50"
+          className="bloco-mono h-12 w-11 rounded-[var(--r-md)] border border-border bg-surface-strong/60 text-center text-[20px] tracking-[0.08em] text-fg transition-[border-color,box-shadow] focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15 disabled:opacity-50"
         />
       ))}
     </div>

@@ -129,6 +129,7 @@ export const agentConsoleRecipe = defineBlock({
     "O agente nao registra dado de saude — apenas agendamento, atendimento e lead.",
     "A chave da Anthropic nunca e exibida: a interface so mostra o nome da variavel de ambiente.",
   ],
+  emptyAction: { id: "agent.toggle", label: "Ativar agente" },
   variants: [
     {
       id: "chat",
