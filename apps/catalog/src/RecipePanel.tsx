@@ -4,6 +4,15 @@ import { Tabs, TabPanel, Badge, cn } from "@blocos/ui";
 import type { CatalogEntry } from "./types.js";
 
 export function RecipePanel({ entry }: { entry: CatalogEntry }) {
+  return (
+    <aside className="bloco-scroll flex w-[340px] shrink-0 flex-col overflow-y-auto border-l border-border bg-surface/30">
+      <RecipeContent entry={entry} />
+    </aside>
+  );
+}
+
+/** Conteudo da receita, sem o invólucro de painel (para uso dentro de Drawer). */
+export function RecipeContent({ entry }: { entry: CatalogEntry }) {
   const recipe = entry.recipe;
   const [copied, setCopied] = React.useState(false);
 
@@ -18,7 +27,7 @@ export function RecipePanel({ entry }: { entry: CatalogEntry }) {
   };
 
   return (
-    <aside className="bloco-scroll flex w-[340px] shrink-0 flex-col overflow-y-auto border-l border-border bg-surface/30">
+    <>
       <div className="border-b border-border px-4 py-4">
         <p className="bloco-micro">A receita do bloco</p>
         <p className="bloco-headline mt-1.5">Como montar em um programa novo</p>
@@ -44,7 +53,7 @@ export function RecipePanel({ entry }: { entry: CatalogEntry }) {
             {recipe.actions.map((a) => (
               <li key={a.id} className="rounded-[var(--r-md)] border border-border bg-surface/60 p-3">
                 <div className="flex items-start justify-between gap-2">
-                  <code className="bloco-mono text-[12px] font-medium text-accent">{a.id}</code>
+                  <code className="bloco-mono text-[12px] font-medium text-accent-ink">{a.id}</code>
                   {a.readOnly ? <Badge tone="info">leitura</Badge> : null}
                 </div>
                 <p className="bloco-callout mt-1.5 font-medium text-fg">{a.title}</p>
@@ -73,7 +82,7 @@ export function RecipePanel({ entry }: { entry: CatalogEntry }) {
           <ul className="space-y-2.5">
             {recipe.ports.map((p) => (
               <li key={p.id} className="rounded-[var(--r-md)] border border-border bg-surface/60 p-3">
-                <code className="bloco-mono text-[12px] font-medium text-accent">{p.id}</code>
+                <code className="bloco-mono text-[12px] font-medium text-accent-ink">{p.id}</code>
                 <p className="bloco-callout mt-1.5 font-medium text-fg">{p.label}</p>
                 <p className="bloco-caption mt-1">{p.contract}</p>
                 <ul className="mt-2 space-y-0.5">
@@ -96,7 +105,7 @@ export function RecipePanel({ entry }: { entry: CatalogEntry }) {
             {recipe.connectors.map((c) => (
               <li key={c.id} className="rounded-[var(--r-md)] border border-border bg-surface/60 p-3">
                 <div className="flex items-center justify-between gap-2">
-                  <code className="bloco-mono text-[12px] font-medium text-accent">{c.id}</code>
+                  <code className="bloco-mono text-[12px] font-medium text-accent-ink">{c.id}</code>
                   <Badge tone={c.ownerOnly === false ? "neutral" : "warn"}>
                     {c.ownerOnly === false ? "livre" : "somente dono"}
                   </Badge>
@@ -149,6 +158,6 @@ export function RecipePanel({ entry }: { entry: CatalogEntry }) {
           </button>
         </TabPanel>
       </Tabs>
-    </aside>
+    </>
   );
 }

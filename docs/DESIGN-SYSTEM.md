@@ -69,6 +69,46 @@ Use **sempre** pelas classes, nunca por hex.
 Regra de contraste: **um elemento focal por tela**. Se dois colorful disputam atencao,
 um deles nao e importante.
 
+### Acento: três papéis, três tokens
+
+Um mesmo azul **nao** serve como fundo de botao e como cor de texto. Medido: o azul
+`#0A84FF` dá 5,6:1 sobre o fundo escuro e 3,65:1 com o texto branco em cima dele.
+São papeis matematicamente diferentes:
+
+| Token | Papel | Aurora | Daylight | Graphite |
+|---|---|---|---|---|
+| `--accent` | **preenchimento** (fundo de botao, badge) | `#0069d6` | `#0069d6` | `#7c7cff` |
+| `--accent-ink` | **acento como texto** (link, icone, valor) | `#5eb3ff` | `#0069d6` | `#a5a5ff` |
+| `--accent-strong` | fundo de botao com `hover` | idem `--accent` | idem | `#6a6aff` |
+| `--accent-fg` | texto sobre o acento | `#ffffff` | `#ffffff` | `#0b0b0d` |
+
+Regra: `bg-accent` para fundo, `text-accent-ink` para texto. Nunca `text-accent` sobre
+fundo claro.
+
+### Estados: cor nunca sozinha
+
+`--danger` e `--danger-fg` sao separados: o vermelho de texto (`#ff453a`, 6:1 no fundo
+escuro) e o vermelho de preenchimento (`#d62d21`, 4,9:1 com branco) nao podem ser o
+mesmo pixel. Todo badge tem **texto alem da cor**.
+
+### Borda de campo: 3:1
+
+`--border-input` garante 3:1 do contorno do campo contra o fundo (WCAG 1.4.11).
+`--border` continua sendo fio decorativo (1px) para separacao de painel.
+
+### Escala de controle (nomeada)
+
+Nao usar `text-[13px]` avulso. Cada tamanho tem classe:
+
+| Classe | Tamanho | Uso |
+|---|---|---|
+| `bloco-control-sm` | 13px / 1.2 | botao `sm`, campo curto, label de controle |
+| `bloco-control` | 14px / 1.25 | botao `md`, input, celula de tabela densa |
+| `bloco-control-lg` | 16px / 1.25 | botao `lg`, titulo de dialogo |
+| `bloco-cell` | 14px / 1.45 + cor secundaria | celula de `DataTable` |
+| `bloco-label` | 12px / 1.35 | rotulo de campo, texto auxiliar |
+| `bloco-label-sm` | 11px / 1.3 | micro-rotulo sem uppercase |
+
 ### Tipografia
 
 | Classe | Tamanho | Uso |
@@ -147,6 +187,22 @@ import { motion } from "motion/react";
 
 ---
 
+## 5.1 Regras de acao (coerencia entre blocos)
+
+A mesma acao tem a mesma aparencia em todos os blocos:
+
+| Acao | Variante | Tamanho |
+|---|---|---|
+| Conectar / Reconectar (servico externo) | `primary` | `md` (CTA) / `sm` (dentro de card) |
+| Executar / Reexecutar / Reenviar | `secondary` | `sm` |
+| Criar / Novo / Salvar | `primary` | `sm` ou `md` conforme o contexto |
+| Cancelar / Remover / Desativar / Revogar / Estornar | `danger` (destrutiva visivel) ou `danger-ghost` (linha de tabela) | `sm` |
+| Terciaria (ver, copiar, abrir) | `outline` ou `ghost` | `sm` |
+| Somente icone | `IconButton` com `aria-label` descritivo | `icon` (36px) ou `icon-sm` (32px) em lista densa |
+
+**Acao destrutiva sempre pede confirmacao** (`ConfirmDialog`). Nunca remover, cancelar,
+desativar, revogar ou estornar em 1 clique.
+
 ## 6. Estados (obrigatorio em todo bloco)
 
 Todo bloco declara e implementa:
@@ -157,6 +213,15 @@ Todo bloco declara e implementa:
 - `empty` — explica o que vai aparecer ali e **oferece a proxima acao**.
 - `forbidden` — diz qual papel falta (nao "acesso negado" generico).
 - `not-provisioned` — mostra o conector que falta e quem pode resolver (dono da plataforma).
+
+O portao de conector e **derivado da receita** (`requiresOf(recipe)`), nao escrito a mao:
+se a receita declara `whatsapp`, o bloco trava sem ele. Infra do programa
+(`database`, `storage`, `email`, `pdf`) nao bloqueia.
+
+O estado vazio oferece a **acao principal declarada na receita** (`emptyAction`). Se o
+dado chega sozinho (lead entra pelo WhatsApp, log entra pela fila), a receita **nao**
+declara `emptyAction` e o vazio explica que o dado vai chegar — sem prometer acao que
+nao existe.
 
 No catalogo, o seletor **Estado** acima do palco alterna entre esses cinco para voce
 conferir o bloco inteiro sem mexer em codigo.
@@ -191,3 +256,7 @@ export function LeadBoard(props: BlockProps<LeadBoardData, "board" | "table">) {
 - [ ] Teclado funciona; `aria-label` em botao so-icone; foco visivel.
 - [ ] Nao loga dado de saude nem coloca dado de saude em URL.
 - [ ] Roda no React 19 e no Next.js App Router (`"use client"` onde usar estado).
+- [ ] O estado vazio oferece a acao declarada em `emptyAction` (ou explica que o dado chega sozinho).
+- [ ] A acao destrutiva pede confirmacao (`ConfirmDialog`).
+- [ ] Nao usa `text-[Npx]` avulso: apenas `bloco-control*`, `bloco-cell`, `bloco-label*`.
+- [ ] `bg-accent` para fundo, `text-accent-ink` para texto.

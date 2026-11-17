@@ -34,23 +34,33 @@ export function BlockStage({
   const recipe = entry.recipe;
   const requires = entry.requires ?? recipe.connectors.map((c) => c.id);
 
+  // Infra do programa (banco, storage, email) ja esta pronta; servico externo
+  // (WhatsApp, Claude, Instagram, Meta Ads, webhook) e o que o dono liga.
+  const INFRA = new Set(["database", "storage", "email", "pdf"]);
+
   const connectorState = React.useMemo(
     () =>
-      requires.map((id) => ({
-        id,
-        status: connected ? ("provisioned" as const) : ("missing" as const),
-        message: connected ? undefined : "Conector nao provisionado pelo dono da plataforma",
-      })),
-    [requires, connected],
+      recipe.connectors.map((c) => {
+        const isInfra = INFRA.has(c.id);
+        const ok = isInfra || connected;
+        return {
+          id: c.id,
+          status: ok ? ("provisioned" as const) : ("missing" as const),
+          message: ok
+            ? undefined
+            : "Conector nao provisionado pelo dono da plataforma",
+        };
+      }),
+    [recipe.connectors, connected],
   );
 
   const VariantCmp = entry.Component;
 
   return (
-    <section className="flex min-w-0 flex-1 flex-col">
+    <section className="flex min-w-0 flex-1 flex-col" aria-label={recipe.name}>
       {/* Barra de controle */}
-      <div className="sticky top-0 z-20 flex flex-wrap items-center justify-between gap-3 border-b border-border bg-surface/50 px-6 py-3 backdrop-blur-xl">
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="sticky top-0 z-20 grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-border bg-surface/50 px-6 py-3 backdrop-blur-xl">
+        <div className="flex min-w-0 items-center gap-3 overflow-x-auto">
           <Segmented
             size="sm"
             value={variant}
@@ -69,7 +79,7 @@ export function BlockStage({
           />
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           {requires.length > 0 ? (
             <Button
               size="sm"
@@ -91,9 +101,9 @@ export function BlockStage({
       <div className="bloco-scroll flex-1 overflow-y-auto px-6 py-8">
         <div className="mx-auto w-full max-w-5xl">
           <div className="mb-6">
-            <h2 className="bloco-title2">{recipe.name}</h2>
+            <p className="bloco-micro">{recipe.name}</p>
             <p className="bloco-body mt-1.5 max-w-prose">{recipe.summary}</p>
-            <p className="bloco-caption mt-2 text-fg-faint">{recipe.id}</p>
+            <p className="bloco-mono mt-2 text-fg-faint">{recipe.id}</p>
           </div>
 
           <div

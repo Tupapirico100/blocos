@@ -48,11 +48,13 @@ export function Sidebar({
   }, [filtered]);
 
   return (
-    <aside className="bloco-scroll flex w-[264px] shrink-0 flex-col overflow-y-auto border-r border-border bg-surface/30">
+    <aside className="bloco-scroll hidden w-[264px] shrink-0 flex-col overflow-y-auto border-r border-border bg-surface/30 md:flex">
       <div className="sticky top-0 z-10 border-b border-border bg-surface/70 px-4 py-3 backdrop-blur-xl">
         <div className="relative">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-fg-faint" />
           <input
+            type="search"
+            aria-label="Buscar bloco pelo nome ou id"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Buscar bloco..."
@@ -77,11 +79,12 @@ export function Sidebar({
                 return (
                   <li key={entry.id}>
                     <button
+                      type="button"
                       onClick={() => onSelect(entry.id)}
                       className={cn(
-                        "w-full rounded-[var(--r-sm)] px-3 py-1.5 text-left text-[13px] transition-colors duration-[var(--dur-2)]",
+                        "flex min-h-8 w-full flex-col items-start justify-center gap-0.5 rounded-[var(--r-sm)] px-3 py-1.5 text-left transition-colors duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
                         active
-                          ? "bg-accent-soft font-medium text-accent"
+                          ? "bg-accent-soft font-medium text-accent-ink"
                           : "text-fg-secondary hover:bg-surface-hover hover:text-fg",
                       )}
                     >
