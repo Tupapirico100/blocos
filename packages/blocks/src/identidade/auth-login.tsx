@@ -2,8 +2,9 @@ import * as React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, KeyRound, Mail, ShieldCheck, Sparkles } from "lucide-react";
 import { Badge, Button, Callout, Field, Input, Panel } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { AuthCodeInput } from "./code-input.js";
+import { authLoginRecipe } from "./auth-login.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -120,7 +121,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           <button
             type="button"
             onClick={handleRecovery}
-            className="rounded-[var(--r-sm)] text-[12px] text-accent transition-colors hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="-mx-1 inline-flex min-h-8 items-center rounded-[var(--r-sm)] px-1 text-[12px] font-medium text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Esqueci minha senha
           </button>
@@ -151,14 +152,14 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
         <button
           type="button"
           onClick={handleResend}
-          className="rounded-[var(--r-sm)] text-[13px] text-accent transition-colors hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] text-[13px] text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Reenviar codigo
         </button>
         <button
           type="button"
           onClick={() => void onAction?.("auth.twoFactor.cancel", { challengeId: data.challengeId })}
-          className="rounded-[var(--r-sm)] text-[13px] text-fg-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] text-[13px] text-fg-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Voltar para o login
         </button>
@@ -196,7 +197,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           Precisa de ajuda?{" "}
           <a
             href={data.support.href}
-            className="text-accent underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="inline-flex min-h-8 items-center text-accent-ink underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {data.support.label}
           </a>
@@ -211,7 +212,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
     <div className="mb-5">
       {variant === "minimal" ? null : (
         <div className="mb-4 flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent">
+          <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
             <Sparkles className="h-4 w-4" aria-hidden />
           </span>
           <span className="bloco-micro text-fg-muted">{brandName}</span>
@@ -250,7 +251,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           { icon: <KeyRound className="h-4 w-4" aria-hidden />, text: "Acesso do dono da plataforma auditado" },
         ].map((item) => (
           <li key={item.text} className="flex items-start gap-2.5">
-            <span className="mt-0.5 text-accent">{item.icon}</span>
+            <span className="mt-0.5 text-accent-ink">{item.icon}</span>
             <span className="bloco-callout text-fg-secondary">{item.text}</span>
           </li>
         ))}
@@ -267,11 +268,12 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
   if (variant === "split") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authLoginRecipe}
+        onAction={onAction}
       >
       <div className="grid w-full gap-6 lg:grid-cols-2">
         {brandPanel}
@@ -289,11 +291,14 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
   if (variant === "centered") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authLoginRecipe}
+        requires={requiresOf(authLoginRecipe)}
+        requiredRoles={rolesOf(authLoginRecipe)}
+        onAction={onAction}
       >
       <div className="flex w-full items-center justify-center p-2">
         <motion.div
@@ -317,12 +322,15 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className="w-full"
-    >
+        recipe={authLoginRecipe}
+        requires={requiresOf(authLoginRecipe)}
+        requiredRoles={rolesOf(authLoginRecipe)}
+        onAction={onAction}
+      >
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

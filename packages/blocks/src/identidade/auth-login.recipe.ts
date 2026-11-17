@@ -45,7 +45,7 @@ export const authLoginRecipe = defineBlock({
       description:
         "Use quando o usuario enviar e-mail e senha no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.",
       http: { method: "POST", path: "/auth/login" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error", "forbidden"],
     },
@@ -55,7 +55,7 @@ export const authLoginRecipe = defineBlock({
       description:
         "Use quando o usuario informar o codigo de 6 digitos do segundo fator. Consome o desafio pendente e conclui o login; codigo invalido devolve erro sem revelar se o fator existe.",
       http: { method: "POST", path: "/auth/two-factor/verify" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error"],
     },
@@ -65,7 +65,7 @@ export const authLoginRecipe = defineBlock({
       description:
         "Use quando o usuario pedir um novo codigo do segundo fator. Gera um desafio novo e invalida o anterior.",
       http: { method: "POST", path: "/auth/two-factor/resend" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database", "email"],
       states: ["success", "error"],
     },
@@ -75,7 +75,7 @@ export const authLoginRecipe = defineBlock({
       description:
         "Use quando o usuario voltar para a etapa de credenciais a partir do desafio de 2FA. Descarta o desafio pendente.",
       http: { method: "POST", path: "/auth/two-factor/cancel" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error"],
     },
@@ -85,7 +85,7 @@ export const authLoginRecipe = defineBlock({
       description:
         "Use quando o usuario clicar em 'Esqueci minha senha'. Envia um link de uso unico por e-mail, sempre com a mesma resposta para e-mails existentes e inexistentes.",
       http: { method: "POST", path: "/auth/recovery" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database", "email"],
       states: ["success", "error"],
     },
@@ -134,7 +134,7 @@ export const authLoginRecipe = defineBlock({
       tradeoff: "Nao carrega marca, cabecalho ou link de suporte",
     },
   ],
-  states: ["idle", "loading", "success", "error", "forbidden"],
+  states: ["idle", "loading", "success", "empty", "error", "forbidden"],
   sensitive: true,
 });
 

@@ -3,6 +3,7 @@ import {
   Badge,
   Button,
   Callout,
+  ConfirmDialog,
   Field,
   Input,
   Panel,
@@ -12,7 +13,8 @@ import {
 } from "@blocos/ui";
 import { formatBRL } from "@blocos/core";
 import { Download, Printer, RotateCcw, ShieldCheck } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { paymentsCheckoutRecipe } from "./payments-checkout.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -111,12 +113,22 @@ export function PaymentsCheckout(props: BlockProps<PaymentsCheckoutData, Payment
   const [packageId, setPackageId] = React.useState(data.selectedPackageId ?? packages[0]?.id ?? "");
   const [methodId, setMethodId] = React.useState(data.selectedMethodId ?? methods[0]?.id ?? "");
   const [patientName, setPatientName] = React.useState(data.payment?.patientName ?? "");
+  /** Confirmacao pendente de uma acao destrutiva. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
+    null,
+  );
 
   const selectedPackage = packages.find((p) => p.id === packageId) ?? null;
   const selectedMethod = methods.find((m) => m.id === methodId) ?? null;
 
   const amountCents =
     data.amountCents ?? selectedPackage?.priceCents ?? data.payment?.amountCents ?? 0;
+
+  const confirmPayload = (confirmando?.payload ?? {}) as { id?: string };
+  const pagamentoEmConfirmacao =
+    confirmando?.acao === "payment.refund" && data.payment?.id === confirmPayload.id
+      ? data.payment
+      : null;
 
   const effectiveState =
     state === "success" && !data.payment && packages.length === 0 && methods.length === 0
@@ -133,13 +145,17 @@ export function PaymentsCheckout(props: BlockProps<PaymentsCheckoutData, Payment
     });
   }
 
-  function refund(payment: PaymentRecord) {
-    onAction?.("payment.refund", {
-      id: payment.id,
-      amountCents: payment.amountCents,
-      reason: "estorno_solicitado",
-      returnLead: true,
-      leadId: payment.leadId,
+  /** Estornar e destrutivo: passa pelo dialogo de confirmacao. */
+  function requestRefund(payment: PaymentRecord) {
+    setConfirmando({
+      acao: "payment.refund",
+      payload: {
+        id: payment.id,
+        amountCents: payment.amountCents,
+        reason: "estorno_solicitado",
+        returnLead: true,
+        leadId: payment.leadId,
+      },
     });
   }
 
@@ -161,7 +177,7 @@ export function PaymentsCheckout(props: BlockProps<PaymentsCheckoutData, Payment
   const receipt = data.payment ? (
     <PaymentReceipt
       payment={data.payment}
-      onRefund={() => refund(data.payment!)}
+      onRefund={() => requestRefund(data.payment!)}
       onPrint={() => onAction?.("payment.receipt", { id: data.payment!.id, format: "print" })}
       onDownload={() => onAction?.("payment.receipt", { id: data.payment!.id, format: "pdf" })}
     />
@@ -180,7 +196,9 @@ export function PaymentsCheckout(props: BlockProps<PaymentsCheckoutData, Payment
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
+        recipe={paymentsCheckoutRecipe}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Financeiro"
@@ -197,6 +215,32 @@ export function PaymentsCheckout(props: BlockProps<PaymentsCheckoutData, Payment
           </div>
         ) : null}
       </div>
+
+      <ConfirmDialog
+        open={confirmando !== null}
+        onOpenChange={(open) => {
+          if (!open) setConfirmando(null);
+        }}
+        title={
+          pagamentoEmConfirmacao
+            ? `Estornar o pagamento de ${pagamentoEmConfirmacao.patientName}`
+            : "Estornar pagamento"
+        }
+        description={
+          pagamentoEmConfirmacao
+            ? `O valor de ${formatBRL(pagamentoEmConfirmacao.amountCents)} volta ao paciente e o lead retorna para a etapa new do funil. A operacao fica registrada e o paciente precisa ser notificado. Para reverter, registre um novo pagamento.`
+            : "Esta acao nao pode ser desfeita pela interface."
+        }
+        confirmLabel={
+          pagamentoEmConfirmacao
+            ? `Estornar ${formatBRL(pagamentoEmConfirmacao.amountCents)}`
+            : "Estornar"
+        }
+        onConfirm={() => {
+          if (!confirmando) return;
+          void onAction?.(confirmando.acao, confirmando.payload);
+        }}
+      />
     </BlockFrame>
   );
 }
