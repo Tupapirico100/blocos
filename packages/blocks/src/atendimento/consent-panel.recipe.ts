@@ -57,6 +57,7 @@ export const consentPanelRecipe = defineBlock({
     "Prontuario exige consentimento de tratamento vigente — nao da para gravar sem.",
     "Consentimento e dado sensivel: nunca vai para log, URL ou telemetria.",
   ],
+  emptyAction: { id: "consent.grant", label: "Registrar consentimento" },
   variants: [
     {
       id: "cards",

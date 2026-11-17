@@ -3,9 +3,10 @@ import { motion } from "motion/react";
 import { FileCheck2, History, ScrollText, ShieldCheck, ShieldX } from "lucide-react";
 import { Badge, Button, DataTable, Field, Panel, Select, Skeleton } from "@blocos/ui";
 import type { BadgeTone, Column } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDate, formatDateTime } from "./format.js";
+import { consentPanelRecipe } from "./consent-panel.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -65,7 +66,7 @@ function isVigente(record: ConsentRecord): boolean {
 /* ------------------------------------------------------------------ */
 
 export function ConsentPanel(props: BlockProps<ConsentPanelData, "cards" | "timeline" | "table">) {
-  const { data, onAction, variant = "cards", state = "success", className } = props;
+  const { data, onAction, variant = "cards", state = "success", className, connectors, onRequestConnector } = props;
 
   const patient = data.patient ?? {
     id: data.consents[0]?.patientId ?? "",
@@ -90,7 +91,8 @@ export function ConsentPanel(props: BlockProps<ConsentPanelData, "cards" | "time
       state={state}
       className={className}
       loading={
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2"
+      >
           {[0, 1].map((card) => (
             <div key={card} className="flex flex-col gap-3 rounded-[var(--r-lg)] border border-border p-4">
               <Skeleton className="h-5 w-40" />
@@ -108,7 +110,12 @@ export function ConsentPanel(props: BlockProps<ConsentPanelData, "cards" | "time
           </p>
         </div>
       }
-    >
+        recipe={consentPanelRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <div className="rounded-[var(--r-md)] border border-warn/25 bg-warn-soft px-4 py-3">
           <p className="bloco-headline flex items-center gap-2 text-warn">
@@ -128,12 +135,14 @@ export function ConsentPanel(props: BlockProps<ConsentPanelData, "cards" | "time
           <div className="grid gap-4 lg:grid-cols-2">
             <ConsentCard
               kind="tratamento"
+              patientName={patient.name}
               records={data.consents.filter((record) => record.kind === "tratamento")}
               currentVersion={data.currentTextVersions?.tratamento}
               onGrant={(channel) => grant("tratamento", channel)}
             />
             <ConsentCard
               kind="marketing"
+              patientName={patient.name}
               records={data.consents.filter((record) => record.kind === "marketing")}
               currentVersion={data.currentTextVersions?.marketing}
               onGrant={(channel) => grant("marketing", channel)}
@@ -151,11 +160,14 @@ export function ConsentPanel(props: BlockProps<ConsentPanelData, "cards" | "time
 
 function ConsentCard({
   kind,
+  patientName,
   records,
   currentVersion,
   onGrant,
 }: {
   kind: ConsentKind;
+  /** Nome do paciente: entra no nome acessivel do botao de concessao. */
+  patientName: string;
   records: ConsentRecord[];
   currentVersion?: string;
   onGrant: (channel: ConsentChannel) => void;
@@ -187,26 +199,26 @@ function ConsentCard({
 
       {latest ? (
         <dl className="grid gap-3 sm:grid-cols-2">
-          <div>
-            <dt className="bloco-micro">Concedido em</dt>
-            <dd className="bloco-body mt-0.5 text-fg">{formatDateTime(latest.grantedAt)}</dd>
+          <div className="min-w-0">
+            <dt className="bloco-micro break-words">Concedido em</dt>
+            <dd className="bloco-body mt-0.5 break-words text-fg">{formatDateTime(latest.grantedAt)}</dd>
           </div>
-          <div>
-            <dt className="bloco-micro">Canal</dt>
-            <dd className="bloco-body mt-0.5 text-fg">{CHANNEL_LABEL[latest.channel]}</dd>
+          <div className="min-w-0">
+            <dt className="bloco-micro break-words">Canal</dt>
+            <dd className="bloco-body mt-0.5 break-words text-fg">{CHANNEL_LABEL[latest.channel]}</dd>
           </div>
-          <div>
-            <dt className="bloco-micro">Versao do texto aceito</dt>
-            <dd className="bloco-body mt-0.5 text-fg">
+          <div className="min-w-0">
+            <dt className="bloco-micro break-words">Versao do texto aceito</dt>
+            <dd className="bloco-body mt-0.5 break-words text-fg">
               {latest.textVersion}
               {currentVersion ? (
-                <span className="bloco-caption ml-1.5 text-fg-muted">(vigente: {currentVersion})</span>
+                <span className="bloco-caption ml-1.5 break-words text-fg-muted">(vigente: {currentVersion})</span>
               ) : null}
             </dd>
           </div>
-          <div>
-            <dt className="bloco-micro">Paciente</dt>
-            <dd className="bloco-body mt-0.5 text-fg">{latest.patientName}</dd>
+          <div className="min-w-0">
+            <dt className="bloco-micro break-words">Paciente</dt>
+            <dd className="bloco-body mt-0.5 break-words text-fg">{latest.patientName}</dd>
           </div>
         </dl>
       ) : (
@@ -220,7 +232,7 @@ function ConsentCard({
           <figcaption className="bloco-micro mb-1 text-fg-faint">
             Snapshot do texto aceito ({latest.textVersion})
           </figcaption>
-          <blockquote className="bloco-caption text-fg-secondary">{latest.textSnapshot}</blockquote>
+          <blockquote className="bloco-caption break-words text-fg-secondary">{latest.textSnapshot}</blockquote>
         </figure>
       ) : null}
 
@@ -248,7 +260,11 @@ function ConsentCard({
         <Button
           variant="secondary"
           size="sm"
+          className="min-h-8"
           icon={<FileCheck2 size={14} aria-hidden />}
+          /* Ha dois botoes "Registrar consentimento" na tela: o nome
+             acessivel diz de que consentimento e de quem e. */
+          aria-label={`Registrar consentimento de ${kind === "tratamento" ? "tratamento" : "marketing"} de ${patientName}`}
           onClick={() => onGrant(channel)}
         >
           Registrar consentimento
@@ -284,7 +300,7 @@ function ConsentTimeline({ consents }: { consents: ConsentRecord[] }) {
               <Badge tone={isVigente(record) ? "success" : "danger"}>
                 {isVigente(record) ? "Vigente" : "Revogado"}
               </Badge>
-              <span className="bloco-caption text-fg-muted">
+              <span className="bloco-caption break-words text-fg-muted">
                 {record.patientName} · {CHANNEL_LABEL[record.channel]}
               </span>
             </div>
@@ -293,7 +309,7 @@ function ConsentTimeline({ consents }: { consents: ConsentRecord[] }) {
               Texto aceito: {record.textVersion}
               {record.revokedAt ? ` · revogado em ${formatDate(record.revokedAt)}` : ""}
             </p>
-            <p className="bloco-caption mt-1.5 text-fg-secondary">{record.textSnapshot}</p>
+            <p className="bloco-caption mt-1.5 break-words text-fg-secondary">{record.textSnapshot}</p>
           </motion.li>
         ))}
       </ol>

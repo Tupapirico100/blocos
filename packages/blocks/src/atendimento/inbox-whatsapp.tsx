@@ -12,9 +12,10 @@ import {
   UserCheck,
 } from "lucide-react";
 import { Avatar, Badge, Button, EmptyState, IconButton, Panel, Skeleton, Textarea } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDateTime, formatPhone, formatTime, isWithin24h } from "./format.js";
+import { inboxWhatsappRecipe } from "./inbox-whatsapp.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -145,7 +146,6 @@ export function InboxWhatsapp(
 
   return (
     <BlockFrame
-      requires={["whatsapp"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
@@ -169,10 +169,12 @@ export function InboxWhatsapp(
         <EmptyState
           icon={<MessageSquareText size={20} aria-hidden />}
           title="Caixa de entrada vazia"
-          description="Nenhuma conversa recebida pelo WhatsApp do consultorio."
+          description="Nenhuma conversa recebida pelo WhatsApp do consultorio ainda. Quando alguem escrever, a conversa aparece aqui."
         />
       }
-    >
+        recipe={inboxWhatsappRecipe}
+        onAction={onAction}
+      >
       {variant === "focus" ? (
         <div className="flex flex-col gap-4">{chat}</div>
       ) : variant === "stacked" ? (
@@ -235,7 +237,8 @@ function ConversationList({
         </label>
       </div>
 
-      <ul className="bloco-scroll max-h-[420px] overflow-y-auto">
+      {/* px-1/py-1 dao folga para o anel de foco da linha nao ser cortado pelo scroll */}
+      <ul className="bloco-scroll max-h-[420px] overflow-y-auto px-1 py-1">
         {filtered.length === 0 ? (
           <li className="p-4">
             <p className="bloco-caption text-fg-muted">Nenhuma conversa encontrada.</p>
@@ -250,7 +253,7 @@ function ConversationList({
                   type="button"
                   onClick={() => onSelect(conversation.id)}
                   aria-current={selected ? "true" : undefined}
-                  className={`flex w-full items-start gap-3 border-b border-border/60 px-3 py-3 text-left transition-colors ${
+                  className={`flex min-h-8 w-full items-start gap-3 border-b border-border/60 px-3 py-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                     selected ? "bg-surface-hover" : "hover:bg-surface-hover/60"
                   }`}
                 >
@@ -331,9 +334,16 @@ function ChatPanel({
       <header className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-4 py-3">
         <div className="flex min-w-0 items-center gap-3">
           <Avatar name={conversation.name} size={38} />
-          <div className="min-w-0">
-            <p className="bloco-headline truncate">{conversation.name}</p>
-            <p className="bloco-caption text-fg-muted">{formatPhone(conversation.phone)}</p>
+          <div className="min-w-0 flex-1">
+            <p className="bloco-headline truncate" title={conversation.name}>
+              {conversation.name}
+            </p>
+            <p
+              className="bloco-caption min-w-0 truncate text-fg-muted"
+              title={formatPhone(conversation.phone)}
+            >
+              {formatPhone(conversation.phone)}
+            </p>
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -361,7 +371,7 @@ function ChatPanel({
           <Button
             variant="secondary"
             size="sm"
-            className="mt-2"
+            className="mt-2 min-h-8"
             icon={<UserCheck size={14} aria-hidden />}
             onClick={onAllow}
           >
@@ -406,7 +416,7 @@ function ChatPanel({
                 key={reply}
                 type="button"
                 onClick={() => onDraftChange(reply)}
-                className="rounded-[var(--r-pill)] border border-border bg-surface/60 px-3 py-1 text-[12px] text-fg-secondary transition-colors hover:border-border-strong hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex min-h-8 items-center rounded-[var(--r-pill)] border border-border bg-surface/60 px-3 py-1.5 text-[12px] text-fg-secondary transition-colors hover:border-border-strong hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {reply}
               </button>
@@ -422,6 +432,8 @@ function ChatPanel({
 
         <div className="flex items-end gap-2">
           <Textarea
+            id="inbox-whatsapp-reply"
+            aria-label="Escreva a resposta para o contato"
             value={draft}
             onChange={(event) => onDraftChange(event.target.value)}
             rows={2}
@@ -439,7 +451,7 @@ function ChatPanel({
             <div className="relative">
               <IconButton
                 label="Enviar template aprovado"
-                variant="secondary"
+                variant="outline"
                 onClick={onToggleTemplates}
                 aria-expanded={templateOpen}
               >
