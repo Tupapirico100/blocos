@@ -9,7 +9,8 @@ import {
   type Column,
 } from "@blocos/ui";import { formatMinutes, minutesSinceMidnight, utcToLocal } from "@blocos/core";
 import { CalendarOff, Clock3, LockOpen, Unlock } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { availabilityRecipe } from "./availability.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -187,7 +188,9 @@ export function Availability(props: BlockProps<AvailabilityData, AvailabilityVar
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
+        recipe={availabilityRecipe}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agenda"
@@ -272,7 +275,8 @@ function WeekGrid({
                     <button
                       type="button"
                       onClick={() => onSetHours(professional.id, weekday)}
-                      className="bloco-micro flex w-full items-center justify-center gap-1 rounded-[var(--r-sm)] border border-dashed border-border py-1.5 text-fg-faint transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                      aria-label={`Folga de ${professional.name} em ${WEEKDAYS[weekday]}`}
+                      className="bloco-micro flex min-h-8 w-full items-center justify-center gap-1 rounded-[var(--r-sm)] border border-dashed border-border py-2 text-fg-faint transition-colors hover:border-accent hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     >
                       <CalendarOff size={12} aria-hidden />
                       Folga
@@ -281,7 +285,7 @@ function WeekGrid({
                     windows.map((window, index) => (
                       <span
                         key={`${window.startMinutes}-${index}`}
-                        className="mb-1 block rounded-[var(--r-sm)] bg-accent-soft px-2 py-1 text-[12px] font-medium tabular-nums text-accent"
+                        className="mb-1 block rounded-[var(--r-sm)] bg-accent-soft px-2 py-1 text-[12px] font-medium tabular-nums text-accent-ink"
                       >
                         {formatMinutes(window.startMinutes)}–{formatMinutes(window.endMinutes)}
                       </span>
@@ -377,7 +381,11 @@ function AvailabilityList({
       header: "Acoes",
       align: "right",
       render: (row) => (
-        <IconButton label="Liberar bloqueio" size="icon" onClick={() => onUnblock(row.id)}>
+        <IconButton
+          label={`Liberar bloqueio de ${row.date.split("-").reverse().join("/")} (${formatMinutes(row.startMinutes)}-${formatMinutes(row.endMinutes)}) de ${nameOf(row.professionalId)}`}
+          size="icon"
+          onClick={() => onUnblock(row.id)}
+        >
           <Unlock size={15} aria-hidden />
         </IconButton>
       ),

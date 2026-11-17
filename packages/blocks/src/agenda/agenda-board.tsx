@@ -2,7 +2,9 @@ import * as React from "react";
 import {
   Badge,
   Button,
+  ConfirmDialog,
   DataTable,
+  EmptyState,
   IconButton,
   Input,
   Panel,
@@ -13,7 +15,8 @@ import {
 } from "@blocos/ui";
 import { formatMinutes, localDateKey, minutesSinceMidnight, utcToLocal } from "@blocos/core";
 import { CalendarClock, CheckCircle2, Clock3, Repeat, UserRound, XCircle } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { agendaBoardRecipe } from "./agenda-board.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -117,11 +120,21 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
   const [rescheduling, setRescheduling] = React.useState(false);
   const [newDate, setNewDate] = React.useState("");
   const [newTime, setNewTime] = React.useState("");
+  /** Confirmacao pendente de uma acao destrutiva. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
+    null,
+  );
 
   const appointments = data.appointments ?? [];
   const hours = data.hours?.length ? data.hours : DEFAULT_HOURS;
 
   const selected = appointments.find((a) => a.id === selectedId) ?? null;
+
+  const confirmPayload = (confirmando?.payload ?? {}) as { id?: string };
+  const consultaEmConfirmacao =
+    confirmando?.acao === "appointment.cancel"
+      ? (appointments.find((a) => a.id === confirmPayload.id) ?? null)
+      : null;
 
   const effectiveState =
     state === "success" && appointments.length === 0 ? "empty" : state;
@@ -162,8 +175,12 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
     onAction?.("appointment.setStatus", { id: appointment.id, status });
   }
 
+  /** Cancelar e destrutivo: passa pelo dialogo de confirmacao. */
   function cancel(appointment: AgendaAppointment) {
-    onAction?.("appointment.cancel", { id: appointment.id, reason: "cancelado_pelo_usuario" });
+    setConfirmando({
+      acao: "appointment.cancel",
+      payload: { id: appointment.id, reason: "cancelado_pelo_usuario" },
+    });
   }
 
   function reschedule(appointment: AgendaAppointment) {
@@ -195,21 +212,31 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
+        recipe={agendaBoardRecipe}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<CalendarClock className="h-5 w-5" aria-hidden />}
+            title="Nenhum agendamento"
+            description="Os agendamentos chegam sozinhos assim que a agenda do consultorio for criada."
+          />
+        }
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agenda"
           title="Agenda de consultas"
           description="Grade por profissional e por hora. Horarios em America/Sao_Paulo."
           actions={
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge tone="info" icon={<Clock3 size={12} aria-hidden />}>
-                Fuso America/Sao_Paulo
-              </Badge>
-              {legend}
-            </div>
+            <Badge tone="info" icon={<Clock3 size={12} aria-hidden />}>
+              Fuso America/Sao_Paulo
+            </Badge>
           }
         />
+
+        {/* A legenda fica em uma linha propria: dentro do cabecalho ela consumia
+            toda a largura e o titulo do bloco ficava com 0px (invisivel). */}
+        <div className="flex flex-wrap items-center gap-2">{legend}</div>
 
         {variant === "list" ? (
           <AgendaList
@@ -251,6 +278,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
                 size="sm"
                 variant="secondary"
                 icon={<Repeat size={14} aria-hidden />}
+                aria-label={`Reagendar consulta de ${selected.patientName}`}
                 onClick={() => setRescheduling((v) => !v)}
               >
                 Reagendar
@@ -271,8 +299,13 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
               >
                 Faltou
               </Button>
-              <Button size="sm" variant="danger" onClick={() => cancel(selected)}>
-                Cancelar
+              <Button
+                size="sm"
+                variant="danger"
+                icon={<XCircle size={14} aria-hidden />}
+                onClick={() => cancel(selected)}
+              >
+                Cancelar atendimento
               </Button>
             </div>
 
@@ -307,6 +340,30 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
           </Panel>
         ) : null}
       </div>
+
+      <ConfirmDialog
+        open={confirmando !== null}
+        onOpenChange={(open) => {
+          if (!open) setConfirmando(null);
+        }}
+        title={
+          consultaEmConfirmacao
+            ? `Cancelar a consulta de ${consultaEmConfirmacao.patientName}`
+            : "Cancelar atendimento"
+        }
+        description={
+          consultaEmConfirmacao
+            ? `A consulta de ${consultaEmConfirmacao.patientName} em ${timeLabel(consultaEmConfirmacao.startsAt)} sera cancelada e o horario volta a ficar livre para outro paciente. O paciente precisa ser avisado. Para reverter, reagende o atendimento em outro horario.`
+            : "Esta acao nao pode ser desfeita pela interface."
+        }
+        confirmLabel={
+          consultaEmConfirmacao ? `Cancelar consulta de ${consultaEmConfirmacao.patientName}` : "Cancelar"
+        }
+        onConfirm={() => {
+          if (!confirmando) return;
+          onAction?.(confirmando.acao, confirmando.payload);
+        }}
+      />
     </BlockFrame>
   );
 }
@@ -348,11 +405,22 @@ function ScheduleGrid({
   const keyOf = (appointment: AgendaAppointment): string =>
     variant === "day" ? appointment.professionalId : dayKeyOf(appointment.startsAt);
 
+  /**
+   * Largura minima de uma coluna de dia/profissional. Abaixo disso o nome do
+   * paciente fica ilegivel ("Joana P"), entao a grade ROLA em vez de esmagar.
+   */
+  const MIN_COLUMN = 160;
+  const totalColumns = Math.max(columns.length, 1);
+
   return (
     <div className="bloco-scroll overflow-x-auto">
       <div
-        className="grid min-w-[640px] gap-px rounded-[var(--r-lg)] border border-border bg-border/60"
-        style={{ gridTemplateColumns: `72px repeat(${Math.max(columns.length, 1)}, minmax(0, 1fr))` }}
+        className="grid gap-px rounded-[var(--r-lg)] border border-border bg-border/60"
+        style={{
+          gridTemplateColumns: `72px repeat(${totalColumns}, minmax(${MIN_COLUMN}px, 1fr))`,
+          /* a borda acompanha a grade inteira, mesmo quando ela rola */
+          minWidth: `calc(72px + ${totalColumns} * ${MIN_COLUMN + 1}px)`,
+        }}
       >
         <div className="bg-surface/90 px-2 py-2">
           <span className="bloco-micro">Hora</span>
@@ -453,7 +521,7 @@ function AgendaList({
           type="button"
           onClick={() => onSelect(row)}
           aria-current={selectedId === row.id ? "true" : undefined}
-          className="text-left font-medium text-fg hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center py-2 text-left font-medium text-fg hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {row.patientName}
         </button>
@@ -505,7 +573,7 @@ function AgendaList({
       render: (row) => (
         <div className="flex items-center justify-end gap-1">
           <IconButton
-            label="Reagendar"
+            label={`Reagendar consulta de ${row.patientName}`}
             size="icon"
             onClick={() => {
               onSelect(row);
@@ -514,7 +582,12 @@ function AgendaList({
           >
             <CalendarClock size={15} aria-hidden />
           </IconButton>
-          <IconButton label="Cancelar atendimento" size="icon" onClick={() => onCancel(row)}>
+          <IconButton
+            label={`Cancelar atendimento de ${row.patientName}`}
+            variant="danger"
+            size="icon"
+            onClick={() => onCancel(row)}
+          >
             <XCircle size={15} aria-hidden />
           </IconButton>
         </div>

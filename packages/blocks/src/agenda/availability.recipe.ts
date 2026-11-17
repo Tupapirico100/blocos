@@ -109,6 +109,7 @@ export const availabilityRecipe = defineBlock({
     "A grade semanal nao carrega dado de saude em log, URL ou telemetria.",
     "Folga e horario de atendimento sao do profissional, nao do consultorio inteiro.",
   ],
+  emptyAction: { id: "availability.setHours", label: "Definir horário" },
   variants: [
     {
       id: "week",
