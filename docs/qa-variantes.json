@@ -1,0 +1,233 @@
+{
+  "achados": [],
+  "resumo": {
+    "auth-login": {
+      "variantes": [
+        "split",
+        "centered",
+        "minimal"
+      ],
+      "distintos": 3
+    },
+    "auth-two-factor": {
+      "variantes": [
+        "cards",
+        "inline",
+        "steps"
+      ],
+      "distintos": 2
+    },
+    "auth-recovery": {
+      "variantes": [
+        "form",
+        "steps",
+        "split"
+      ],
+      "distintos": 3
+    },
+    "admin-platform": {
+      "variantes": [
+        "cards",
+        "table",
+        "split"
+      ],
+      "distintos": 3
+    },
+    "office-team": {
+      "variantes": [
+        "list",
+        "cards",
+        "table"
+      ],
+      "distintos": 3
+    },
+    "office-settings": {
+      "variantes": [
+        "sections",
+        "tabs",
+        "cards"
+      ],
+      "distintos": 2
+    },
+    "leads-board": {
+      "variantes": [
+        "board",
+        "table",
+        "timeline"
+      ],
+      "distintos": 3
+    },
+    "inbox-whatsapp": {
+      "variantes": [
+        "split",
+        "stacked",
+        "focus"
+      ],
+      "distintos": 2
+    },
+    "consent-panel": {
+      "variantes": [
+        "cards",
+        "timeline",
+        "table"
+      ],
+      "distintos": 3
+    },
+    "channel-connections": {
+      "variantes": [
+        "cards",
+        "table"
+      ],
+      "distintos": 2
+    },
+    "patients-list": {
+      "variantes": [
+        "table",
+        "cards",
+        "grid"
+      ],
+      "distintos": 3
+    },
+    "patient-chart": {
+      "variantes": [
+        "timeline",
+        "sections",
+        "tabs"
+      ],
+      "distintos": 3
+    },
+    "clinical-entry": {
+      "variantes": [
+        "form",
+        "wizard",
+        "inline"
+      ],
+      "distintos": 3
+    },
+    "agenda-board": {
+      "variantes": [
+        "day",
+        "week",
+        "list"
+      ],
+      "distintos": 3
+    },
+    "availability": {
+      "variantes": [
+        "week",
+        "list",
+        "slots"
+      ],
+      "distintos": 3
+    },
+    "follow-up-tasks": {
+      "variantes": [
+        "list",
+        "calendar",
+        "board"
+      ],
+      "distintos": 3
+    },
+    "packages-pricing": {
+      "variantes": [
+        "cards",
+        "table",
+        "split"
+      ],
+      "distintos": 3
+    },
+    "payments-checkout": {
+      "variantes": [
+        "form",
+        "receipt",
+        "split"
+      ],
+      "distintos": 3
+    },
+    "finance-overview": {
+      "variantes": [
+        "cards",
+        "chart",
+        "table"
+      ],
+      "distintos": 3
+    },
+    "reports-funnel": {
+      "variantes": [
+        "funnel",
+        "cards",
+        "table"
+      ],
+      "distintos": 3
+    },
+    "meta-conversion": {
+      "variantes": [
+        "timeline",
+        "table",
+        "cards"
+      ],
+      "distintos": 3
+    },
+    "social-accounts": {
+      "variantes": [
+        "cards",
+        "grid"
+      ],
+      "distintos": 2
+    },
+    "social-composer": {
+      "variantes": [
+        "composer",
+        "split",
+        "preview"
+      ],
+      "distintos": 2
+    },
+    "social-automations": {
+      "variantes": [
+        "list",
+        "cards",
+        "flow"
+      ],
+      "distintos": 3
+    },
+    "social-logs": {
+      "variantes": [
+        "table",
+        "timeline"
+      ],
+      "distintos": 2
+    },
+    "webhooks-panel": {
+      "variantes": [
+        "list",
+        "flow"
+      ],
+      "distintos": 2
+    },
+    "agent-console": {
+      "variantes": [
+        "chat",
+        "cards",
+        "logs"
+      ],
+      "distintos": 3
+    },
+    "ops-health": {
+      "variantes": [
+        "cards",
+        "table",
+        "timeline"
+      ],
+      "distintos": 3
+    },
+    "integration-manifest": {
+      "variantes": [
+        "cards",
+        "table",
+        "checklist"
+      ],
+      "distintos": 3
+    }
+  }
+}
