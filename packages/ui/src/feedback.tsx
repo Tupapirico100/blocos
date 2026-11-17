@@ -74,8 +74,9 @@ export function ConnectorLock({
       </div>
       {onRequestAccess ? (
         <button
+          type="button"
           onClick={onRequestAccess}
-          className="rounded-[var(--r-md)] border border-border-strong bg-surface-strong px-3.5 py-2 text-[13px] font-medium transition-colors hover:bg-surface-hover"
+          className="rounded-[var(--r-md)] border border-border-strong bg-surface-strong px-3.5 py-2 bloco-control-sm font-medium transition-colors hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Solicitar acesso
         </button>
@@ -110,9 +111,10 @@ export function ToastStack({ toasts, onDismiss }: { toasts: ToastMessage[]; onDi
           </div>
           {onDismiss ? (
             <button
+              type="button"
               onClick={() => onDismiss(t.id)}
               aria-label="Dispensar"
-              className="text-fg-faint transition-colors hover:text-fg"
+              className="text-fg-faint transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
                 <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

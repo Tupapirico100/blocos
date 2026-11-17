@@ -15,7 +15,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 const badgeTones: Record<BadgeTone, string> = {
   neutral: "bg-surface-strong text-fg-secondary border-border",
-  accent: "bg-accent-soft text-accent border-transparent",
+  accent: "bg-accent-soft text-accent-ink border-transparent",
   success: "bg-success-soft text-success border-transparent",
   warn: "bg-warn-soft text-warn border-transparent",
   danger: "bg-danger-soft text-danger border-transparent",
@@ -28,7 +28,7 @@ export function Badge({ tone = "neutral", size = "sm", icon, className, children
     <span
       className={cn(
         "inline-flex items-center gap-1 rounded-[var(--r-pill)] border font-medium whitespace-nowrap",
-        size === "sm" ? "h-5 px-2 text-[11px]" : "h-6 px-2.5 text-[12px]",
+        size === "sm" ? "h-5 px-2 bloco-label-sm" : "h-6 px-2.5 bloco-label",
         badgeTones[tone],
         className,
       )}
@@ -91,8 +91,8 @@ export function Stat({ label, value, delta, hint, icon, className, onClick }: St
         <span className="bloco-micro">{label}</span>
         {icon ? <span className="text-fg-faint">{icon}</span> : null}
       </div>
-      <div className="mt-2 flex items-baseline gap-2">
-        <span className="bloco-title2 tabular-nums">{value}</span>
+      <div className="mt-2 flex flex-wrap items-baseline gap-2">
+        <span className="bloco-title2 min-w-0 break-words tabular-nums">{value}</span>
         {deltaNode}
       </div>
       {hint ? <div className="bloco-caption mt-1.5">{hint}</div> : null}
@@ -125,7 +125,7 @@ export function Avatar({
     <span
       className={cn(
         "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full",
-        "bg-accent-soft text-[12px] font-semibold text-accent ring-1 ring-inset ring-hairline",
+        "bg-accent-soft bloco-label font-semibold text-accent-ink ring-1 ring-inset ring-hairline",
         className,
       )}
       style={{ width: size, height: size }}
@@ -182,7 +182,7 @@ export function DataTable<T>({
                 scope="col"
                 style={col.width ? { width: col.width } : undefined}
                 className={cn(
-                  "bloco-micro bg-surface/80 px-3 py-2.5 backdrop-blur-sm",
+                  "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var(--density-cell-y)] backdrop-blur-sm",
                   col.align === "right" && "text-right",
                   col.align === "center" && "text-center",
                 )}
@@ -206,7 +206,7 @@ export function DataTable<T>({
                 <td
                   key={col.key}
                   className={cn(
-                    "px-3 py-2.5 text-[14px] text-fg-secondary",
+                    "px-[var(--density-cell-x)] py-[var(--density-cell-y)] bloco-cell",
                     col.align === "right" && "text-right tabular-nums",
                     col.align === "center" && "text-center",
                   )}
