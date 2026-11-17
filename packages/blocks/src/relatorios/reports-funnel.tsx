@@ -3,6 +3,7 @@ import {
   Badge,
   Button,
   DataTable,
+  EmptyState,
   Panel,
   SectionHeader,
   Stat,
@@ -10,7 +11,8 @@ import {
   type Column,
 } from "@blocos/ui";
 import { Download, Filter, MousePointerClick, Users } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { reportsFunnelRecipe } from "./reports-funnel.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -90,7 +92,16 @@ export function ReportsFunnel(props: BlockProps<ReportsFunnelData, ReportsFunnel
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
+        recipe={reportsFunnelRecipe}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<Users className="h-5 w-5" aria-hidden />}
+            title="Funil sem etapas"
+            description="As etapas do funil entram sozinhas conforme os leads passam de new para customer."
+          />
+        }
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Relatorios"
@@ -191,7 +202,7 @@ function FunnelView({ stages, topCount }: { stages: FunnelStage[]; topCount: num
         stages.map((stage) => {
           const width = topCount > 0 ? Math.max((stage.peopleCount / topCount) * 100, 4) : 0;
           return (
-            <div key={stage.id} className="flex flex-col gap-1.5">
+            <div key={stage.id} className="flex flex-col gap-2">
               <div className="flex items-center justify-between gap-3">
                 <span className="bloco-caption flex items-center gap-2 font-medium text-fg">
                   {stage.label}

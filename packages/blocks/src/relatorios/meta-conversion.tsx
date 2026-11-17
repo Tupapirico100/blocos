@@ -3,13 +3,15 @@ import {
   Badge,
   Button,
   DataTable,
+  EmptyState,
   Panel,
   SectionHeader,
   type BadgeTone,
   type Column,
 } from "@blocos/ui";
 import { ShieldCheck } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { metaConversionRecipe } from "./meta-conversion.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -100,12 +102,20 @@ export function MetaConversion(props: BlockProps<MetaConversionData, MetaConvers
 
   return (
     <BlockFrame
-      requires={["meta_ads"]}
       state={effectiveState}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
+        recipe={metaConversionRecipe}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<ShieldCheck className="h-5 w-5" aria-hidden />}
+            title="Fila de eventos vazia"
+            description="A fila e alimentada sozinha pela API da Meta quando um lead avanca no funil."
+          />
+        }
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Relatorios"
@@ -160,7 +170,7 @@ export function MetaConversion(props: BlockProps<MetaConversionData, MetaConvers
           {errors > 0 ? (
             <Button
               size="sm"
-              variant="ghost"
+              variant="secondary"
               onClick={() =>
                 onAction?.("meta.event.retry", {
                   ids: events.filter((e) => e.status === "erro").map((e) => e.id),
@@ -190,7 +200,7 @@ function EventTimeline({ events }: { events: MetaConversionEvent[] }) {
   }
 
   return (
-    <Panel tone="outline" className="flex flex-col gap-0">
+    <Panel tone="outline" className="flex flex-col">
       {sorted.map((event, index) => (
         <div key={event.id} className="flex gap-3">
           <div className="flex w-4 shrink-0 flex-col items-center">
