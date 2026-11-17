@@ -32,6 +32,10 @@ for p in sorted(ROOT.rglob("*")):
     if p.suffix in SKIP_EXT or rel.startswith(SKIP_PREFIX) or p.name == "package-lock.json":
         continue
     data = p.read_bytes()
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        continue  # binario: push_files so aceita texto
     sha = blob_sha(data)
     if remote.get(rel) != sha:
         pending.append({"path": rel, "content": data.decode("utf-8"), "sha": sha})
@@ -40,9 +44,12 @@ print(f"pendentes: {len(pending)}")
 for f in pending:
     print("  -", f["path"], f"({len(f['content'])} chars)")
 
-BATCH = 8
+BATCH = 3
 for i in range(0, len(pending), BATCH):
-    batch = pending[i : i + BATCH]
+    batch = [f for f in pending[i : i + BATCH] if len(f["content"]) < 120000]
+    grandes = [f for f in pending[i : i + BATCH] if len(f["content"]) >= 120000]
+    for g in grandes:
+        print(f"  (grande demais para o conector, pulando: {g['path']} {len(g['content'])} chars)")
     args = {"owner": OWNER, "repo": REPO, "branch": "main",
             "message": f"chore: sincroniza biblioteca beta ({i//BATCH+1}/{(len(pending)+BATCH-1)//BATCH})",
             "files": [{"path": f["path"], "content": f["content"]} for f in batch]}
