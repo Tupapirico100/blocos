@@ -131,6 +131,12 @@ export interface BlockRecipe {
   rules: string[];
   /** Variacoes de UI disponiveis para este bloco. */
   variants: BlockVariant[];
+  /**
+   * Acao oferecida no estado vazio. Omitir quando o dado chega sozinho
+   * (lead entra pelo WhatsApp, log entra pela fila) — o estado vazio
+   * explica que o dado vai chegar, sem prometer acao que nao existe.
+   */
+  emptyAction?: { id: string; label: string };
   /** Estados de UI a cobertura. */
   states: BlockState[];
   /** Acoes sensiveis (saude, dinheiro, credencial) — proibidas em logs/URL. */
