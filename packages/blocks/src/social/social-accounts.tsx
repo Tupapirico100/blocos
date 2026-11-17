@@ -10,8 +10,9 @@ import {
   SectionHeader,
 } from "@blocos/ui";
 import { CalendarClock, Instagram, KeyRound, Link2, Plus, ShieldCheck, TriangleAlert } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { daysUntilSocial, formatSocialDateTime } from "./format.js";
+import { socialAccountsRecipe } from "./social-accounts.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -87,22 +88,13 @@ function expiryHint(account: SocialAccount): string {
 /* ------------------------------------------------------------------ */
 
 export function SocialAccounts(props: BlockProps<SocialAccountsData, SocialAccountsVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "cards",
-    state = "success",
-    connectors = [],
-    onRequestConnector,
-    className,
-  } = props;
+  const { data, onAction, variant = "cards", state = "success", connectors = [], onRequestConnector, className } = props;
 
   const accounts = data.accounts;
   const hasAccounts = accounts.length > 0;
 
   return (
     <BlockFrame
-      requires={["instagram"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
@@ -113,7 +105,9 @@ export function SocialAccounts(props: BlockProps<SocialAccountsData, SocialAccou
           <div className="bloco-skeleton h-40 w-full" />
         </div>
       }
-    >
+        recipe={socialAccountsRecipe}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agendador-Instagram"
@@ -121,6 +115,8 @@ export function SocialAccounts(props: BlockProps<SocialAccountsData, SocialAccou
           description="Cada conta usa um token de longa duracao do Instagram Graph API. A tela nunca mostra o token — apenas a referencia da variavel de ambiente e a data de expiracao."
           actions={
             <Button
+              variant="primary"
+              size="md"
               icon={<Plus className="h-4 w-4" aria-hidden />}
               onClick={() => onAction?.("social.connect", {})}
             >
@@ -135,7 +131,13 @@ export function SocialAccounts(props: BlockProps<SocialAccountsData, SocialAccou
             title="Nenhuma conta conectada"
             description="Conecte uma conta do Instagram para publicar e automatizar respostas."
             action={
-              <Button icon={<Link2 className="h-4 w-4" aria-hidden />} onClick={() => onAction?.("social.connect", {})}>
+              /* O CTA principal da tela ja e o botao "Conectar" do cabecalho. */
+              <Button
+                variant="secondary"
+                size="md"
+                icon={<Link2 className="h-4 w-4" aria-hidden />}
+                onClick={() => onAction?.("social.connect", {})}
+              >
                 Conectar conta
               </Button>
             }
@@ -203,25 +205,29 @@ function AccountCard({
         columns={2}
         items={[
           {
-            label: "Expiracao do token",
+            /* O rotulo pode cair em coluna estreita: break-words evita que a
+               palavra mais longa atravesse a borda da coluna. */
+            label: <span className="break-words">Expiracao do token</span>,
             value: (
-              <span className="flex flex-col">
-                <span>{formatSocialDateTime(account.tokenExpiresAt)}</span>
-                <span className="bloco-caption">{expiryHint(account)}</span>
+              <span className="flex min-w-0 flex-col break-words">
+                <span className="break-words">{formatSocialDateTime(account.tokenExpiresAt)}</span>
+                <span className="bloco-caption break-words">{expiryHint(account)}</span>
               </span>
             ),
           },
           {
-            label: "Ultima publicacao",
+            label: <span className="break-words">Ultima publicacao</span>,
             value: account.lastPost ? (
-              <span className="flex flex-col">
-                <span className="truncate">{account.lastPost.title}</span>
-                <span className="bloco-caption">
+              <span className="flex min-w-0 flex-col break-words">
+                <span className="truncate" title={account.lastPost.title}>
+                  {account.lastPost.title}
+                </span>
+                <span className="bloco-caption break-words">
                   {formatLabel[account.lastPost.format]} · {formatSocialDateTime(account.lastPost.publishedAt)}
                 </span>
               </span>
             ) : (
-              <span className="bloco-caption">Nenhuma publicacao ainda</span>
+              <span className="bloco-caption break-words">Nenhuma publicacao ainda</span>
             ),
           },
         ]}
@@ -234,14 +240,16 @@ function AccountCard({
         {needsReconnect ? (
           <Button
             size="sm"
-            variant="outline"
+            variant="secondary"
             icon={<Link2 className="h-3.5 w-3.5" aria-hidden />}
             onClick={() => onAction?.("social.connect", { accountId: account.id })}
           >
             Reconectar
           </Button>
         ) : (
-          <span className="bloco-caption">Conectada em {formatSocialDateTime(account.connectedAt)}</span>
+          <span className="bloco-caption min-w-0 truncate" title={`Conectada em ${formatSocialDateTime(account.connectedAt)}`}>
+            Conectada em {formatSocialDateTime(account.connectedAt)}
+          </span>
         )}
       </div>
     </Panel>
@@ -286,7 +294,7 @@ function AccountTile({
       {needsReconnect ? (
         <Button
           size="sm"
-          variant="outline"
+          variant="secondary"
           icon={<TriangleAlert className="h-3.5 w-3.5" aria-hidden />}
           onClick={() => onAction?.("social.connect", { accountId: account.id })}
         >

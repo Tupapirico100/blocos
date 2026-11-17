@@ -3,6 +3,7 @@ import {
   Badge,
   Button,
   Callout,
+  ConfirmDialog,
   DataTable,
   EmptyState,
   Panel,
@@ -11,8 +12,9 @@ import {
   type Column,
 } from "@blocos/ui";
 import { ArrowRight, AtSign, Hash, ListChecks, MessageCircle, Play, Zap } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { formatSocialDateTime } from "./format.js";
+import { socialAutomationsRecipe } from "./social-automations.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -82,23 +84,31 @@ const actionIcon: Record<AutomationActionType, React.ReactNode> = {
 /* ------------------------------------------------------------------ */
 
 export function SocialAutomations(props: BlockProps<SocialAutomationsData, SocialAutomationsVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "list",
-    state = "success",
-    className,
-  } = props;
+  const { data, onAction, variant = "list", state = "success", className, connectors, onRequestConnector } = props;
 
   const automations = data.automations;
   const hasRules = automations.length > 0;
 
+  /* Desativar uma regra interrompe as respostas automaticas: passa por confirmacao. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(null);
+
   const toggle = (automation: SocialAutomation) => {
-    onAction?.("automation.toggle", { id: automation.id, active: !automation.active });
+    const nextActive = !automation.active;
+    if (!nextActive) {
+      setConfirmando({ acao: "automation.toggle", payload: { id: automation.id, active: false } });
+      return;
+    }
+    onAction?.("automation.toggle", { id: automation.id, active: true });
   };
 
   return (
-    <BlockFrame state={state} className={className}>
+    <BlockFrame state={state} className={className}
+        recipe={socialAutomationsRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agendador-Instagram"
@@ -141,6 +151,20 @@ export function SocialAutomations(props: BlockProps<SocialAutomationsData, Socia
           A automacao so responde para quem esta na lista de permitidos e so dentro da janela de 24h — fora dela, entra
           somente template aprovado. Marcar cria lead; nunca grava dado de saude.
         </Callout>
+
+        <ConfirmDialog
+          open={confirmando !== null}
+          onOpenChange={(open) => {
+            if (!open) setConfirmando(null);
+          }}
+          title="Desativar regra de automacao"
+          description="A regra para de responder comentarios, palavra-chave e mencoes. Ela continua guardada e pode ser reativada a qualquer momento."
+          confirmLabel="Desativar"
+          tone="danger"
+          onConfirm={() => {
+            if (confirmando?.payload) onAction?.(confirmando.acao, confirmando.payload);
+          }}
+        />
       </div>
     </BlockFrame>
   );
@@ -207,6 +231,7 @@ function automationColumns(
           checked={row.active}
           onCheckedChange={() => toggle(row)}
           label={<span className="sr-only">Alternar regra {row.name}</span>}
+          ariaLabel={`Alternar regra ${row.name}`}
         />
       ),
     },
@@ -249,7 +274,12 @@ function AutomationCard({
           {automation.hits} execucao(oes)
           {automation.lastTriggeredAt ? ` · ${formatSocialDateTime(automation.lastTriggeredAt)}` : ""}
         </span>
-        <Button size="sm" variant="outline" onClick={onToggle}>
+        <Button
+          size="sm"
+          variant="outline"
+          aria-label={`${automation.active ? "Desativar" : "Ativar"} ${automation.name}`}
+          onClick={onToggle}
+        >
           {automation.active ? "Desativar" : "Ativar"}
         </Button>
       </div>
@@ -272,7 +302,12 @@ function AutomationFlow({
           <Badge tone={automation.active ? "success" : "neutral"}>
             {automation.active ? "Ativa" : "Inativa"}
           </Badge>
-          <Button size="sm" variant="outline" onClick={onToggle}>
+          <Button
+            size="sm"
+            variant="outline"
+            aria-label={`${automation.active ? "Desativar" : "Ativar"} ${automation.name}`}
+            onClick={onToggle}
+          >
             {automation.active ? "Desativar" : "Ativar"}
           </Button>
         </div>

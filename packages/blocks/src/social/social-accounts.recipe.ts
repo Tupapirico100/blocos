@@ -79,6 +79,7 @@ export const socialAccountsRecipe = defineBlock({
     "Nenhum token, secret ou valor de credencial aparece na tela, no log ou na URL — apenas `tokenRef`.",
     "Reconectar uma conta expirada nao cria uma conta duplicada: reaproveita o mesmo registro.",
   ],
+  emptyAction: { id: "social.connect", label: "Conectar conta" },
   variants: [
     {
       id: "cards",
