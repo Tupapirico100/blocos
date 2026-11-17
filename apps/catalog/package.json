@@ -1,0 +1,26 @@
+{
+  "name": "@blocos/catalog",
+  "private": true,
+  "version": "0.1.0-beta",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@blocos/blocks": "0.1.0-beta",
+    "@blocos/core": "0.1.0-beta",
+    "@blocos/tokens": "0.1.0-beta",
+    "@blocos/ui": "0.1.0-beta",
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@blocos/tokens/styles.css";
+
+@source "../../../packages/ui/src";
+@source "../../../packages/blocks/src";
+@source "../src";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
