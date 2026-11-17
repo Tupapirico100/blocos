@@ -3,6 +3,7 @@ import {
   Badge,
   Button,
   DataTable,
+  EmptyState,
   Panel,
   SectionHeader,
   Stat,
@@ -10,7 +11,8 @@ import {
 } from "@blocos/ui";
 import { formatBRL } from "@blocos/core";
 import { BarChart3, Download, Percent, Ticket } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { financeOverviewRecipe } from "./finance-overview.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -66,7 +68,7 @@ function revenueDelta(current: number, previous?: number): { value: string; dire
   const diff = (current - previous) / previous;
   const sign = diff > 0 ? "+" : "";
   return {
-    value: `${sign}${percent(diff)} vs mes anterior`,
+    value: `${sign}${percent(diff)}`,
     direction: diff > 0 ? "up" : diff < 0 ? "down" : "flat",
   };
 }
@@ -74,6 +76,17 @@ function revenueDelta(current: number, previous?: number): { value: string; dire
 function dayLabel(date: string): string {
   const [, month = "", day = ""] = date.split("-");
   return `${day}/${month}`;
+}
+
+/**
+ * Legenda do Stat de receita: a comparacao com o mes anterior fica aqui
+ * (o bloco quebra em varias linhas) e o delta fica so com o percentual.
+ */
+function revenueHint(data: FinanceOverviewData): string {
+  const delta = revenueDelta(data.revenueCents, data.previousRevenueCents);
+  const sessions = `${data.paidSessions} sessoes pagas`;
+  if (delta.direction === "flat") return sessions;
+  return `${delta.value} vs mes anterior · ${sessions}`;
 }
 
 /* ------------------------------------------------------------------ */
@@ -123,8 +136,17 @@ export function FinanceOverview(props: BlockProps<FinanceOverviewData, FinanceOv
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
-      <div className="flex flex-col gap-4">
+        recipe={financeOverviewRecipe}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<BarChart3 className="h-5 w-5" aria-hidden />}
+            title="Sem lancamentos neste mes"
+            description="A receita e o comparecimento chegam sozinhos assim que houver atendimento pago no mes."
+          />
+        }
+      >
+      <div className="@container flex flex-col gap-4">
         <SectionHeader
           eyebrow="Financeiro"
           title="Visao financeira"
@@ -142,12 +164,14 @@ export function FinanceOverview(props: BlockProps<FinanceOverviewData, FinanceOv
         />
 
         {variant === "cards" ? (
-          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          /* Grade por container: o Stat nao cabe em 4 colunas estreitas sem que
+             o valor (+ variacao) atravesse a borda do cartao. */
+          <div className="grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[880px]:grid-cols-4">
             <Stat
               label="Receita do mes"
               value={formatBRL(data.revenueCents)}
               delta={revenueDelta(data.revenueCents, data.previousRevenueCents)}
-              hint={`${data.paidSessions} sessoes pagas`}
+              hint={revenueHint(data)}
               icon={<BarChart3 size={14} aria-hidden />}
             />
             <Stat

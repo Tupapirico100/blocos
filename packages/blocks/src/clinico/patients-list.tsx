@@ -3,9 +3,10 @@ import { motion } from "motion/react";
 import { ChevronRight, Search, ShieldCheck, ShieldQuestion, ShieldX, UserRound } from "lucide-react";
 import { Avatar, Badge, DataTable, Panel, Skeleton } from "@blocos/ui";
 import type { BadgeTone, Column } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDate, formatPhone, normalizeText } from "./format.js";
+import { patientsListRecipe } from "./patients-list.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -54,7 +55,7 @@ const CONSENT_ICON: Record<ConsentSituation, React.ReactNode> = {
 /* ------------------------------------------------------------------ */
 
 export function PatientsList(props: BlockProps<PatientsListData, "table" | "cards" | "grid">) {
-  const { data, onAction, variant = "table", state = "success", className } = props;
+  const { data, onAction, variant = "table", state = "success", className, connectors, onRequestConnector } = props;
 
   const [query, setQuery] = React.useState("");
 
@@ -73,7 +74,8 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
       state={state}
       className={className}
       loading={
-        <div className="flex flex-col gap-2 rounded-[var(--r-lg)] border border-border p-4">
+        <div className="flex flex-col gap-2 rounded-[var(--r-lg)] border border-border p-4"
+      >
           <Skeleton className="h-9 w-64" />
           {[0, 1, 2, 3].map((row) => (
             <Skeleton key={row} className="h-12 w-full" />
@@ -88,7 +90,12 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
           </p>
         </div>
       }
-    >
+        recipe={patientsListRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <label className="relative block w-full max-w-xs">
@@ -191,7 +198,7 @@ function PatientTable({
           type="button"
           onClick={() => onOpen(patient)}
           aria-label={`Abrir prontuario de ${patient.name}`}
-          className="rounded-[var(--r-sm)] p-1.5 text-fg-faint transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] text-fg-faint transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           <ChevronRight size={16} aria-hidden />
         </button>

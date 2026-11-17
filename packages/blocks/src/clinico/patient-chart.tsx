@@ -13,9 +13,10 @@ import {
 import { formatBRL } from "@blocos/core";
 import { Avatar, Badge, KeyValue, Panel, Skeleton } from "@blocos/ui";
 import type { BadgeTone } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDate, formatDateTime, formatPhone } from "./format.js";
+import { patientChartRecipe } from "./patient-chart.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -80,7 +81,7 @@ const KIND_TONE: Record<ChartEntryKind, BadgeTone> = {
 /* ------------------------------------------------------------------ */
 
 export function PatientChart(props: BlockProps<PatientChartData, "timeline" | "sections" | "tabs">) {
-  const { data, onAction, variant = "sections", state = "success", className } = props;
+  const { data, onAction, variant = "sections", state = "success", className, connectors, onRequestConnector } = props;
 
   const hasConsent = Boolean(data.treatmentConsent);
   const activePlan = data.mealPlan?.active ? data.mealPlan : (data.mealPlan ?? null);
@@ -94,7 +95,8 @@ export function PatientChart(props: BlockProps<PatientChartData, "timeline" | "s
       state={state}
       className={className}
       loading={
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4"
+      >
           <Skeleton className="h-16 w-full" />
           <div className="grid gap-4 xl:grid-cols-2">
             <Skeleton className="h-48 w-full" />
@@ -110,15 +112,22 @@ export function PatientChart(props: BlockProps<PatientChartData, "timeline" | "s
           </p>
         </div>
       }
-    >
+        recipe={patientChartRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <Panel tone="solid" padding="md">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">
               <Avatar name={data.patient.name} size={42} />
               <div className="min-w-0">
-                <h3 className="bloco-title3 truncate">{data.patient.name}</h3>
-                <p className="bloco-caption text-fg-muted">
+                <h3 className="bloco-title3 truncate" title={data.patient.name}>
+                  {data.patient.name}
+                </h3>
+                <p className="bloco-caption min-w-0 break-words text-fg-muted">
                   {formatPhone(data.patient.phone)}
                   {data.patient.birthDate ? ` · nasc. em ${formatDate(data.patient.birthDate)}` : ""}
                 </p>
@@ -267,7 +276,7 @@ function ChartTabs({ data, onOpen }: { data: PatientChartData; onOpen: () => voi
             type="button"
             aria-selected={tab === item.id}
             onClick={() => setTab(item.id)}
-            className={`rounded-[var(--r-md)] px-3 py-1.5 text-[13px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+            className={`inline-flex min-h-8 items-center rounded-[var(--r-md)] px-3 py-1.5 text-[13px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               tab === item.id
                 ? "bg-surface-strong text-fg"
                 : "text-fg-muted hover:bg-surface-hover hover:text-fg-secondary"
@@ -392,10 +401,19 @@ function PlanBlock({ plan }: { plan: MealPlanVersion | null }) {
           <KeyValue
             columns={2}
             items={[
-              { label: "Versao", value: plan.version },
-              { label: "Atualizado em", value: formatDateTime(plan.updatedAt) },
-              { label: "Responsavel", value: plan.author },
-              { label: "Planos sao versionados", value: "A versao ativa e a que vale" },
+              { label: <span className="break-words">Versao</span>, value: <span className="break-words">{plan.version}</span> },
+              {
+                label: <span className="break-words">Atualizado em</span>,
+                value: <span className="break-words">{formatDateTime(plan.updatedAt)}</span>,
+              },
+              {
+                label: <span className="break-words">Responsavel</span>,
+                value: <span className="break-words">{plan.author}</span>,
+              },
+              {
+                label: <span className="break-words">Planos sao versionados</span>,
+                value: <span className="break-words">A versao ativa e a que vale</span>,
+              },
             ]}
           />
           <p className="bloco-caption rounded-[var(--r-md)] border border-border bg-surface/60 p-3 text-fg-secondary">
@@ -421,9 +439,9 @@ function FinancialBlock({ data, onOpen }: { data: PatientChartData; onOpen: () =
         <KeyValue
           columns={3}
           items={[
-            { label: "Total", value: formatBRL(financial.totalCents) },
-            { label: "Pago", value: formatBRL(financial.paidCents) },
-            { label: "Em aberto", value: formatBRL(financial.pendingCents) },
+            { label: <span className="break-words">Total</span>, value: <span className="break-words">{formatBRL(financial.totalCents)}</span> },
+            { label: <span className="break-words">Pago</span>, value: <span className="break-words">{formatBRL(financial.paidCents)}</span> },
+            { label: <span className="break-words">Em aberto</span>, value: <span className="break-words">{formatBRL(financial.pendingCents)}</span> },
           ]}
         />
       ) : (
@@ -432,7 +450,7 @@ function FinancialBlock({ data, onOpen }: { data: PatientChartData; onOpen: () =
       <button
         type="button"
         onClick={onOpen}
-        className="self-start rounded-[var(--r-sm)] text-[13px] font-medium text-accent underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="inline-flex min-h-8 self-start items-center rounded-[var(--r-sm)] text-[13px] font-medium text-accent-ink underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Abrir financeiro do paciente
       </button>
