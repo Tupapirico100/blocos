@@ -83,6 +83,7 @@ export const adminPlatformRecipe = defineBlock({
     "Nenhum dado de saude (consulta, medida, plano alimentar) aparece neste painel.",
     "Criacao de consultorio e uma acao do dono da plataforma: a interface trava o botao enquanto a chamada nao resolve.",
   ],
+  emptyAction: { id: "admin.office.create", label: "Novo consultório" },
   variants: [
     {
       id: "cards",

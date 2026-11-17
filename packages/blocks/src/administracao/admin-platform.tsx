@@ -10,7 +10,8 @@ import {
   UsersRound,
 } from "lucide-react";
 import { Badge, Button, Callout, DataTable, EmptyState, Panel, SectionHeader, Stat } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { adminPlatformRecipe } from "./admin-platform.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -107,8 +108,14 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
 
   /* ---- Metricas ---- */
 
-  const metrics = (
-    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+  const metrics = (dense: boolean) => (
+    <div
+      className={
+        dense
+          ? "grid grid-cols-2 gap-3"
+          : "grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[860px]:grid-cols-4"
+      }
+    >
       <Stat
         label="Consultorios ativos"
         value={data.metrics.activeOffices}
@@ -154,12 +161,12 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           openOffice(office.id);
         }
       }}
-      className="flex flex-col gap-3"
+      className="flex min-w-[180px] flex-col gap-3"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="bloco-headline truncate">{office.name}</p>
-          <p className="bloco-caption text-fg-muted">{office.city}</p>
+          <p className="bloco-caption break-words text-fg-muted">{office.city}</p>
         </div>
         <Badge tone={STATUS_TONE[office.status]}>{STATUS_LABEL[office.status]}</Badge>
       </div>
@@ -174,12 +181,12 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
       </div>
 
       <dl className="grid grid-cols-2 gap-3 border-t border-border pt-3">
-        <div>
-          <dt className="bloco-micro text-fg-muted">Membros</dt>
+        <div className="min-w-0">
+          <dt className="bloco-micro break-words text-fg-muted">Membros</dt>
           <dd className="bloco-body text-fg tabular-nums">{office.members}</dd>
         </div>
-        <div>
-          <dt className="bloco-micro text-fg-muted">Leads hoje</dt>
+        <div className="min-w-0">
+          <dt className="bloco-micro break-words text-fg-muted">Leads hoje</dt>
           <dd className="bloco-body text-fg tabular-nums">{office.leadsToday}</dd>
         </div>
       </dl>
@@ -205,7 +212,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           render: (office) => (
             <div className="min-w-0">
               <p className="truncate font-medium text-fg">{office.name}</p>
-              <p className="bloco-caption text-fg-muted">{office.city}</p>
+              <p className="bloco-caption break-words text-fg-muted">{office.city}</p>
             </div>
           ),
         },
@@ -257,7 +264,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           >
             <span className="min-w-0">
               <span className="block truncate text-[14px] font-medium text-fg">{office.name}</span>
-              <span className="bloco-caption block text-fg-muted">
+              <span className="bloco-caption block break-words text-fg-muted">
                 {office.city} · {office.members} membros
               </span>
             </span>
@@ -291,7 +298,6 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
   if (variant === "table") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
@@ -308,17 +314,19 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           />
         }
         className="flex flex-col gap-4"
+        recipe={adminPlatformRecipe}
+        onAction={onAction}
       >
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={MOTION}
-          className="flex flex-col gap-4"
+          className="@container flex flex-col gap-4"
         >
           {ownerBanner}
           {data.notice ? <Callout tone="info">{data.notice}</Callout> : null}
           {header}
-          {metrics}
+          {metrics(false)}
           <Panel tone="glass" padding="none" className="overflow-hidden">
             {table}
           </Panel>
@@ -330,7 +338,6 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
   if (variant === "split") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
@@ -339,22 +346,29 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
             icon={<Building2 className="h-5 w-5" aria-hidden />}
             title="Nenhum consultorio ainda"
             description="Crie o primeiro consultorio para comecar a atender."
+            action={
+              <Button icon={<Plus className="h-4 w-4" aria-hidden />} onClick={createOffice}>
+                Novo consultorio
+              </Button>
+            }
           />
         }
         className="flex flex-col gap-4"
+        requires={requiresOf(adminPlatformRecipe)}
+        requiredRoles={rolesOf(adminPlatformRecipe)}
       >
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={MOTION}
-          className="flex flex-col gap-4"
+          className="@container flex flex-col gap-4"
         >
           {ownerBanner}
           {data.notice ? <Callout tone="info">{data.notice}</Callout> : null}
           {header}
           <div className="grid gap-4 lg:grid-cols-[320px_1fr]">
             <div className="flex flex-col gap-3">
-              {metrics}
+              {metrics(true)}
               <div className="rounded-[var(--r-lg)] border border-border bg-surface/50 p-4">
                 <p className="bloco-micro text-fg-muted">Assinado como</p>
                 <p className="bloco-body mt-1 text-fg">{data.viewer.name}</p>
@@ -373,7 +387,6 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
@@ -390,18 +403,20 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
         />
       }
       className="flex flex-col gap-4"
-    >
+        requires={requiresOf(adminPlatformRecipe)}
+        requiredRoles={rolesOf(adminPlatformRecipe)}
+      >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={MOTION}
-        className="flex flex-col gap-4"
+        className="@container flex flex-col gap-4"
       >
         {ownerBanner}
         {data.notice ? <Callout tone="info">{data.notice}</Callout> : null}
         {header}
-        {metrics}
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        {metrics(false)}
+        <div className="grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[860px]:grid-cols-3">
           {offices.map((office) => officeCard(office))}
         </div>
       </motion.div>
