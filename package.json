@@ -1,0 +1,24 @@
+{
+  "name": "blocos",
+  "private": true,
+  "version": "0.1.0-beta",
+  "description": "Biblioteca de blocos reutilizaveis + design system (beta)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @blocos/core && npm run build -w @blocos/tokens && npm run build -w @blocos/ui && npm run build -w @blocos/blocks",
+    "typecheck": "tsc -b packages/core packages/tokens packages/ui packages/blocks --pretty",
+    "dev": "npm run dev -w @blocos/catalog",
+    "build:app": "npm run build -w @blocos/catalog",
+    "mapa": "node scripts/gerar-mapa.mjs",
+    "verificar": "npm run build && npm run build:app && npm run mapa"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.7.2"
+  }
+}

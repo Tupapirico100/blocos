@@ -1,0 +1,19 @@
+{
+  "name": "@blocos/blocks",
+  "version": "0.1.0-beta",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "scripts": { "build": "tsc -b" },
+  "dependencies": {
+    "@blocos/core": "0.1.0-beta",
+    "@blocos/ui": "0.1.0-beta",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "motion": "^12.0.0",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": { "react": ">=18", "react-dom": ">=18" }
+}
