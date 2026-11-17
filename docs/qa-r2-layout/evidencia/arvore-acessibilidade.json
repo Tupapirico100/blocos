@@ -1,0 +1,2037 @@
+{
+ "estrutura": {
+  "lang": "pt-BR",
+  "title": "Blocos · Catálogo beta",
+  "main": 1,
+  "h": [
+   "H1:Blocos",
+   "H1:Entrar na sua conta"
+  ],
+  "th": [],
+  "roles": {
+   "radiogroup": 4,
+   "radio": 13,
+   "tablist": 1,
+   "tab": 5,
+   "tabpanel": 5
+  }
+ },
+ "radios": {
+  "auth-login": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Dividida",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Centralizada",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Minima",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "auth-two-factor": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartões",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Coluna",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Passos",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "auth-recovery": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Formulário",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Passos",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Dividida",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "admin-platform": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartões",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Dividida",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "office-team": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Cartões",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "office-settings": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Seções",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Abas",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartões",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "leads-board": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Quadro",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Timeline",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "inbox-whatsapp": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Dividido",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Empilhado",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Foco",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "consent-panel": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Timeline",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "channel-connections": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "patients-list": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Grade",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "patient-chart": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Timeline",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Blocos",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Abas",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "clinical-entry": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Formulario",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Wizard",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Linha",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Consulta",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Medida",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "agenda-board": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Dia",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Semana",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "availability": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Semana",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Slots",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "follow-up-tasks": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Calendario",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Quadro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "packages-pricing": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cards",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Split",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "payments-checkout": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Formulario",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Recibo",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Split",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "finance-overview": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cards",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Grafico",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "reports-funnel": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Funil",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Cards",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "meta-conversion": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Timeline",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cards",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "social-accounts": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Grade",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "social-composer": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Composer",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Dividido",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "So preview",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "social-automations": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Fluxo",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "social-logs": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Linha do tempo",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "webhooks-panel": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Lista",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Fluxo",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "agent-console": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Conversa",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Logs",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "ops-health": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Linha do tempo",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ],
+  "integration-manifest": [
+   {
+    "t": "Aurora",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Daylight",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Graphite",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Confortavel",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Compacto",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Cartoes",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Tabela",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Checklist",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Normal",
+    "checked": "true",
+    "inGroup": true
+   },
+   {
+    "t": "Carregando",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Vazio",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Erro",
+    "checked": "false",
+    "inGroup": true
+   },
+   {
+    "t": "Sem permissao",
+    "checked": "false",
+    "inGroup": true
+   }
+  ]
+ },
+ "nomesDuplicados": {
+  "auth-login": {},
+  "auth-two-factor": {},
+  "auth-recovery": {},
+  "admin-platform": {},
+  "office-team": {
+   "Rebaixar": 5,
+   "Remover": 5
+  },
+  "office-settings": {
+   "Show time picker Show time picker": 10,
+   "Hours Hours": 14,
+   "Minutes Minutes": 14,
+   "AM/PM AM/PM": 14
+  },
+  "leads-board": {},
+  "inbox-whatsapp": {},
+  "consent-panel": {
+   "Registrar consentimento": 2,
+   "WhatsApp": 2,
+   "Presencial": 2,
+   "Assinado em papel": 2,
+   "E-mail": 2
+  },
+  "channel-connections": {
+   "Reconectar": 3
+  },
+  "patients-list": {},
+  "patient-chart": {},
+  "clinical-entry": {},
+  "agenda-board": {},
+  "availability": {
+   "FOLGA": 12
+  },
+  "follow-up-tasks": {
+   "Concluir": 6,
+   "Reagendar": 6
+  },
+  "packages-pricing": {
+   "Salvar": 5,
+   "Desativar": 4
+  },
+  "payments-checkout": {},
+  "finance-overview": {},
+  "reports-funnel": {},
+  "meta-conversion": {},
+  "social-accounts": {},
+  "social-composer": {},
+  "social-automations": {},
+  "social-logs": {},
+  "webhooks-panel": {},
+  "agent-console": {},
+  "ops-health": {},
+  "integration-manifest": {}
+ },
+ "semNome": {},
+ "tabs": [
+  {
+   "t": "Acoes",
+   "sel": "true",
+   "controls": "radix-_r_0_-content-acoes"
+  },
+  {
+   "t": "Portas",
+   "sel": "false",
+   "controls": "radix-_r_0_-content-portas"
+  },
+  {
+   "t": "Conectores",
+   "sel": "false",
+   "controls": "radix-_r_0_-content-conectores"
+  },
+  {
+   "t": "Regras",
+   "sel": "false",
+   "controls": "radix-_r_0_-content-regras"
+  },
+  {
+   "t": "Origem",
+   "sel": "false",
+   "controls": "radix-_r_0_-content-origem"
+  }
+ ]
+}

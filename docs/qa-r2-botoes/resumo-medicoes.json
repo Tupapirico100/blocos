@@ -1,0 +1,383 @@
+{
+ "cobertura": {
+  "varredura_1": "29 blocos x 3 temas x 2 densidades (estado Normal, variante 0)",
+  "varredura_2": "29 blocos x todas as variantes x 5 estados x 2 configs (Aurora/Confortavel, Graphite/Compacto)",
+  "foco": "116 varreduras com Tab real (29 blocos x 2 densidades x 2 temas), 420ms de assentamento",
+  "ordem": "58 analises DOM x posicao absoluta",
+  "dialogos": "5 ConfirmDialog + 1 Drawer"
+ },
+ "botoes_29x3x2": {
+  "controles": 1146,
+  "button_sem_type": 0,
+  "sem_nome_acessivel": 0,
+  "so_icone": 132,
+  "so_icone_sem_aria_label": 0,
+  "alvo_menor_32": 0,
+  "alvo_menor_24": 0,
+  "menor_alvo_medido": [
+   32,
+   32
+  ],
+  "disabled": 54,
+  "disabled_com_opacity_lt_1": 24
+ },
+ "botoes_variantes_estados": {
+  "controles": 988,
+  "button_sem_type": 0,
+  "sem_nome_acessivel": 2,
+  "so_icone": 0,
+  "so_icone_sem_aria_label": 0,
+  "alvo_menor_32": 0,
+  "alvo_menor_24": 0,
+  "menor_alvo_medido": [
+   32,
+   32
+  ],
+  "disabled": 54,
+  "disabled_com_opacity_lt_1": 16
+ },
+ "foco": {
+  "paradas_dentro_do_bloco": 904,
+  "outline_2px_accent_offset_2px": 604,
+  "ring_do_ds_4px_accent15": 242,
+  "anel_padrao_do_navegador": 8,
+  "inputs_desabilitados_sem_foco": 48
+ },
+ "ordem": {
+  "tabindex_positivo": 0
+ },
+ "dialogos": [
+  {
+   "bloco": "agenda-board",
+   "seletor": "button[aria-label='Cancelar atendimento']",
+   "variante": "Lista",
+   "gatilho_aria": "Cancelar atendimento",
+   "gatilho_variant": "danger",
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "Cancelar",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 523,
+    "y": 1423
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_shift_tab": {
+    "tag": "BUTTON",
+    "texto": "Cancelar consulta de Joana Prado",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "solid 2px 2px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 625,
+    "y": 840
+   },
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "dialog_ainda_aberto": false,
+   "foco_restaurado_no_gatilho": false,
+   "foco_atual_apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "bloco": "agenda-board",
+   "seletor": "button:has-text('Cancelar atendimento')",
+   "variante": null,
+   "erro": "gatilho nao encontrado em nenhuma variante"
+  },
+  {
+   "bloco": "office-team",
+   "seletor": "button:has-text('Remover')",
+   "variante": "Lista",
+   "gatilho_aria": "Remover",
+   "gatilho_variant": "danger-ghost",
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "Cancelar",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 635,
+    "y": 1413
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_shift_tab": {
+    "tag": "BUTTON",
+    "texto": "Remover Mariana",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "solid 2px 2px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 737,
+    "y": 840
+   },
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "dialog_ainda_aberto": false,
+   "foco_restaurado_no_gatilho": false,
+   "foco_atual_apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "bloco": "packages-pricing",
+   "seletor": "button:has-text('Desativar')",
+   "variante": "Cards",
+   "gatilho_aria": "Desativar",
+   "gatilho_variant": "danger-ghost",
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "Cancelar",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 575,
+    "y": 1413
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_shift_tab": {
+    "tag": "BUTTON",
+    "texto": "Desativar Avaliacao inicial",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "solid 2px 2px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 676,
+    "y": 840
+   },
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "dialog_ainda_aberto": false,
+   "foco_restaurado_no_gatilho": false,
+   "foco_atual_apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "bloco": "payments-checkout",
+   "seletor": "button:has-text('Estornar')",
+   "variante": "Recibo",
+   "gatilho_aria": "Estornar",
+   "gatilho_variant": "danger",
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "Cancelar",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 623,
+    "y": 1423
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_shift_tab": {
+    "tag": "BUTTON",
+    "texto": "Estornar R$ 960,00",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "solid 2px 2px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 725,
+    "y": 840
+   },
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "dialog_ainda_aberto": false,
+   "foco_restaurado_no_gatilho": false,
+   "foco_atual_apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "bloco": "auth-two-factor",
+   "seletor": "button:has-text('Remover fator')",
+   "variante": "Cartões",
+   "gatilho_aria": "Remover fator",
+   "gatilho_variant": "danger",
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "Cancelar",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 658,
+    "y": 1423
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_shift_tab": {
+    "tag": "BUTTON",
+    "texto": "Remover fator",
+    "ariaLabel": null,
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "solid 2px 2px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 760,
+    "y": 840
+   },
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "dialog_ainda_aberto": false,
+   "foco_restaurado_no_gatilho": false,
+   "foco_atual_apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "bloco": "catalogo: Drawer da Receita",
+   "gatilho_visivel": true,
+   "apos_clique": {
+    "tag": "BUTTON",
+    "texto": "",
+    "ariaLabel": "Fechar",
+    "dentroDoDialog": true,
+    "dialogExiste": true,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 404,
+    "y": 816
+   },
+   "tabs_dentro": 14,
+   "tabs_fora": [],
+   "apos_esc": {
+    "tag": "BODY",
+    "texto": "IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+    "ariaLabel": null,
+    "dentroDoDialog": null,
+    "dialogExiste": false,
+    "dialogModal": null,
+    "outline": "none 3px 0px rgb(0, 0, 0)",
+    "boxShadow": "none",
+    "x": 0,
+    "y": 0
+   },
+   "foco_restaurado": false
+  }
+ ]
+}
