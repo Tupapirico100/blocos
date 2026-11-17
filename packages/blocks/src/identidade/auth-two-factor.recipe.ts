@@ -45,7 +45,7 @@ export const authTwoFactorRecipe = defineBlock({
       description:
         "Use quando o usuario confirmar o codigo de 6 digitos do autenticador. Valida o codigo TOTP, consome o desafio pendente e, em caso de sucesso, ativa o segundo fator.",
       http: { method: "POST", path: "/auth/two-factor/verify" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error"],
     },
@@ -55,7 +55,7 @@ export const authTwoFactorRecipe = defineBlock({
       description:
         "Use quando o usuario clicar em 'Remover fator'. Exclui o fator e os codigos de recuperacao; o login passa a exigir apenas e-mail e senha.",
       http: { method: "DELETE", path: "/auth/two-factor" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error", "forbidden"],
     },
@@ -64,7 +64,7 @@ export const authTwoFactorRecipe = defineBlock({
       title: "Copiar chave de configuracao",
       description:
         "Use quando o usuario pedir para copiar a chave TOTP exibida no painel. A chave vai para a area de transferencia do proprio navegador — nunca para log ou telemetria.",
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: [],
       states: ["success", "error"],
     },
@@ -73,7 +73,7 @@ export const authTwoFactorRecipe = defineBlock({
       title: "Copiar codigos de recuperacao",
       description:
         "Use quando o usuario pedir para copiar os codigos de recuperacao ainda nao usados. Cada codigo funciona uma unica vez.",
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: [],
       states: ["success", "error"],
     },
@@ -83,7 +83,7 @@ export const authTwoFactorRecipe = defineBlock({
       description:
         "Use quando o usuario pedir novos codigos de recuperacao. Invalida todos os codigos anteriores antes de emitir a nova lista.",
       http: { method: "POST", path: "/auth/two-factor/recovery-codes" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error"],
     },

@@ -52,7 +52,7 @@ export const authRecoveryRecipe = defineBlock({
       description:
         "Use quando o usuario pedir para redefinir a senha. Gera um token de uso unico, envia o link por e-mail e responde de forma identica para e-mails existentes e inexistentes.",
       http: { method: "POST", path: "/auth/recovery" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database", "email"],
       states: ["success", "error"],
     },
@@ -62,7 +62,7 @@ export const authRecoveryRecipe = defineBlock({
       description:
         "Use quando o usuario confirmar a nova senha no formulario de recuperacao. Valida a politica de senha e consome o token — o token vem da sessao do servidor, nunca do cliente.",
       http: { method: "POST", path: "/auth/password" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database"],
       states: ["success", "error"],
     },
@@ -72,7 +72,7 @@ export const authRecoveryRecipe = defineBlock({
       description:
         "Use quando o usuario pedir um novo link sem esperar o primeiro. Invalida o token anterior e emite um novo.",
       http: { method: "POST", path: "/auth/recovery/resend" },
-      permissions: [],
+      permissions: ["owner", "employee"],
       connectors: ["database", "email"],
       states: ["success", "error"],
     },
@@ -123,7 +123,7 @@ export const authRecoveryRecipe = defineBlock({
       tradeoff: "Ocupa duas colunas; em telas estreitas vira uma coluna so",
     },
   ],
-  states: ["idle", "loading", "success", "empty", "error"],
+  states: ["idle", "loading", "success", "empty", "error", "forbidden"],
   sensitive: true,
 });
 

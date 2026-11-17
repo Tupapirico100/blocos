@@ -2,7 +2,8 @@ import * as React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Check, KeyRound, Link2, Lock, Mail, ShieldCheck } from "lucide-react";
 import { Button, Callout, Field, Input, Panel, ProgressBar, cn } from "@blocos/ui";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { authRecoveryRecipe } from "./auth-recovery.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -207,7 +208,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
               "bloco-caption font-medium",
               strength.tone === "danger" && "text-danger",
               strength.tone === "warn" && "text-warn",
-              strength.tone === "accent" && "text-accent",
+              strength.tone === "accent" && "text-accent-ink",
               strength.tone === "success" && "text-success",
             )}
           >
@@ -280,7 +281,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
           { icon: <Mail className="h-4 w-4" aria-hidden />, text: "Nunca enviamos dado de saude por e-mail" },
         ].map((item) => (
           <li key={item.text} className="flex items-start gap-2.5">
-            <span className="mt-0.5 text-accent">{item.icon}</span>
+            <span className="mt-0.5 text-accent-ink">{item.icon}</span>
             <span className="bloco-callout text-fg-secondary">{item.text}</span>
           </li>
         ))}
@@ -308,7 +309,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
               className={cn(
                 "flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold",
                 done && "border-accent bg-accent text-accent-fg",
-                active && "border-accent text-accent",
+                active && "border-accent text-accent-ink",
                 !done && !active && "border-border text-fg-faint",
               )}
               aria-hidden
@@ -328,7 +329,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
   const header = (
     <div className="mb-5">
       <div className="mb-4 flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent">
+        <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
           <KeyRound className="h-4 w-4" aria-hidden />
         </span>
         <span className="bloco-micro text-fg-muted">Aurora</span>
@@ -366,11 +367,12 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
   if (variant === "split") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authRecoveryRecipe}
+        onAction={onAction}
       >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
@@ -396,11 +398,14 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
   if (variant === "steps") {
     return (
       <BlockFrame
-        requires={["database"]}
         connectors={connectors}
         onRequestConnector={onRequestConnector}
         state={state}
         className="w-full"
+        recipe={authRecoveryRecipe}
+        requires={requiresOf(authRecoveryRecipe)}
+        requiredRoles={rolesOf(authRecoveryRecipe)}
+        onAction={onAction}
       >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
@@ -419,12 +424,15 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
 
   return (
     <BlockFrame
-      requires={["database"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className="w-full"
-    >
+        recipe={authRecoveryRecipe}
+        requires={requiresOf(authRecoveryRecipe)}
+        requiredRoles={rolesOf(authRecoveryRecipe)}
+        onAction={onAction}
+      >
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
