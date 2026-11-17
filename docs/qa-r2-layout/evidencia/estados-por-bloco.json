@@ -1,0 +1,1492 @@
+{
+ "estados": {
+  "auth-login": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nEntrar",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Entrar"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Aurora\n\nNutri Aurora\n\nDo primeiro contato no WhatsApp ao plano alimentar, com o consultorio no controle.\n\nAtendimento no WhatsApp com fila unica\nConsentimento registrado antes do prontuario\nAcesso do dono da plataforma auditado\n\nDADOS DE SAUDE NUNCA SAO EXIBIDOS FORA DO CONSULTORIO.\n\nNUTRI AURORA\nEn",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Esqueci minha senha",
+     "Entrar"
+    ],
+    "heads": [
+     "H1 Entrar na sua conta"
+    ]
+   }
+  },
+  "auth-two-factor": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+    "skel": 0,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Aplicativo autenticador\n\nAurora · TOTP\n\nAtivo\n\nAponte a camera do aplicativo autenticador para este codigo.\n\nCHAVE DE CONFIGURACAO\n\nJBSW Y3DP EHPK 3PXP\n\nCopiar chave\n\nCRIADO EM\n\n28/10/2025\n\nULTIMO USO\n\n17/11/2025\n\nRemover fator\n\nAO REMOVER, O ACESSO PASSA A DEPENDER APENAS DE E-MAIL E SENHA.\n\nCodigo",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Copiar chave",
+     "Remover fator",
+     "Mostrar",
+     "Copiar codigos",
+     "Gerar novos codigos"
+    ],
+    "heads": []
+   }
+  },
+  "auth-recovery": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+    "skel": 0,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nSeu perfil nao tem permissao para ver esta informacao."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "AURORA\nEsqueci minha senha\n\nInforme o e-mail cadastrado e enviaremos o link de recuperacao.\n\nE-mail da conta*\nEnviar link de recuperacao\n\nO link de recuperacao nunca e enviado por WhatsApp.",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Enviar link de recuperacao"
+    ],
+    "heads": [
+     "H1 Esqueci minha senha"
+    ]
+   }
+  },
+  "admin-platform": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhum consultorio ainda\n\nCrie o primeiro consultorio para comecar a atender.\n\nNovo consultorio",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Novo consultorio"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Painel do dono da plataforma\n\nVoce administra a plataforma inteira: todos os consultorios, membros e canais ficam visiveis aqui. Este acesso nao pode ser rebaixado nem removido pelo dono do consultorio.\nacesso total\nPLATAFORMA\nConsultorios administrados\n\nVisao do dono da plataforma sobre todos os co",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Novo consultorio"
+    ],
+    "heads": [
+     "H2 Consultorios administrados"
+    ]
+   }
+  },
+  "office-team": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhum membro ainda\n\nConvoque a equipe para o consultorio com um convite por link.\n\nConvidar membro",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Convidar membro"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "O dono da plataforma tem acesso total a este consultorio. O acesso marcado como \"Acesso do dono da plataforma\" nao pode ser rebaixado nem removido pelo dono do consultorio.\nCONSULTÓRIO AURORA NUTRIÇÃO\nEquipe e acessos\n\nQuem tem acesso ao consultorio, com qual papel e por onde o acesso entrou.\n\nConvi",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Convidar",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Rebaixar",
+     "Remover",
+     "Copiar link",
+     "Revogar"
+    ],
+    "heads": [
+     "H2 Equipe e acessos"
+    ]
+   }
+  },
+  "office-settings": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nConectar canal",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Conectar canal"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou administrador da plataforma ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou administrador da plataforma ou recepcionista. Fale com o dono do consultório para pedir "
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "WhatsApp (Cloud API) nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "leads-board": {
+   "Carregando": {
+    "txt": "",
+    "skel": 9,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhum lead por aqui\n\nQuando um lead entrar no funil, ele aparece aqui com a origem do primeiro toque.\n\nMover lead",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Mover lead"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Novo\n\nChegou e ainda nao foi qualificado\n\n3\n\nAna Beatriz Souza\n\n+55 (11) 98765-4321\n\nAnuncio\n\nATRIBUICAO DO PRIMEIRO TOQUE\n\nMarina Alencar · WhatsApp · 12/03/2025, 09:14\n\nR$ 480,00\n\nCarlos Eduardo Lima\n\n+55 (21) 99887-7665\n\nOrganico\n\nATRIBUICAO DO PRIMEIRO TOQUE\n\nPedro Lins · Instagram · 13/03/2025,",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Mover Ana Beatriz Souza para Q",
+     "Mover Carlos Eduardo Lima para",
+     "Mover Mariana Alves Rocha para",
+     "Mover Rafael Nogueira para Nov",
+     "Mover Rafael Nogueira para Cli",
+     "Mover Juliana Prado para Novo",
+     "Mover Juliana Prado para Clien",
+     "Mover Thiago Marques para Novo",
+     "Mover Thiago Marques para Clie",
+     "Mover Camila Ferraz para Quali",
+     "Mover Bruno Tavares para Quali",
+     "Mover Larissa Moreira para Qua"
+    ],
+    "heads": [
+     "H3 Novo",
+     "H3 Qualificado",
+     "H3 Cliente"
+    ]
+   }
+  },
+  "inbox-whatsapp": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Caixa de entrada vazia\n\nNenhuma conversa recebida pelo WhatsApp do consultorio.\n\nEnviar mensagem",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Enviar mensagem"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "WhatsApp (Cloud API) nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "consent-panel": {
+   "Carregando": {
+    "txt": "",
+    "skel": 6,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhum consentimento registrado\n\nRegistre a concessao de tratamento ou marketing com o texto vigente do consultorio.\n\nRegistrar consentimento",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Registrar consentimento"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Texto vigente do consultorio\n\nO consentimento guarda um snapshot do texto aceito. Registre apenas com o texto vigente — tratamento e marketing sao separados e o de tratamento nao substitui o de marketing.\n\nTratamento de dados\n\nArt. 11 — dados de saude\n\nVigente\nCONCEDIDO EM\n12/03/2025, 09:20\nCANAL\nWh",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Registrar consentimento",
+     "Registrar consentimento"
+    ],
+    "heads": [
+     "H3 Tratamento de dados",
+     "H3 Marketing"
+    ]
+   }
+  },
+  "channel-connections": {
+   "Carregando": {
+    "txt": "",
+    "skel": 6,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhuma conexao de canal\n\nO dono do consultorio pode conectar o numero do WhatsApp aqui.\n\nReconectar canal",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Reconectar canal"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "WhatsApp (Cloud API) nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "patients-list": {
+   "Carregando": {
+    "txt": "",
+    "skel": 5,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nenhum paciente cadastrado\n\nO paciente aparece aqui assim que o primeiro atendimento for registrado.\n\nAbrir paciente",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Abrir paciente"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Buscar paciente por nome\n\n7 de 7 paciente(s)\n\nNOME\tCONTATO\tCONSENTIMENTO DE TRATAMENTO\tULTIMA CONSULTA\t\n\nAB\n\nAna Beatriz Souza\n\nReeducacao alimentar\n\n\t\n\n+55 (11) 98765-4321\n\nana.souza@example.com\n\n\t\nConsentido\t12/03/2025\t\n\n\nCE\n\nCarlos Eduardo Lima\n\nEmagrecimento\n\n\t\n\n+55 (21) 99887-7665\n\ncarlos.lima@",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Abrir prontuario de Ana Beatri",
+     "Abrir prontuario de Carlos Edu",
+     "Abrir prontuario de Juliana Pr",
+     "Abrir prontuario de Rafael Nog",
+     "Abrir prontuario de Mariana Al",
+     "Abrir prontuario de Thiago Mar",
+     "Abrir prontuario de Larissa Mo"
+    ],
+    "heads": []
+   }
+  },
+  "patient-chart": {
+   "Carregando": {
+    "txt": "",
+    "skel": 3,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Prontuario vazio\n\nAs consultas, medidas e o plano alimentar do paciente aparecem aqui.\n\nAbrir prontuario",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Abrir prontuario"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "AB\nAna Beatriz Souza\n\n+55 (11) 98765-4321 · nasc. em 20/07/1988\n\nConsentimento de tratamento vigente\nPlano v3\n\nEVOLUCAO DO PACIENTE\n\nMedida\n12/03/2025, 10:05\n\nSerie de medidas\n\n80.8 kg · 28.7% gordura · 88 cm cintura\n\nConsulta\n12/03/2025, 10:00\n\nMarina Alencar — Nutricionista\n\nRetorno da avaliacao. ",
+    "skel": 0,
+    "alerts": [],
+    "btns": [],
+    "heads": [
+     "H3 Ana Beatriz Souza"
+    ]
+   }
+  },
+  "clinical-entry": {
+   "Carregando": {
+    "txt": "",
+    "skel": 2,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada para registrar\n\nO registro de consulta ou medida aparece aqui durante o atendimento.\n\nGravar atendimento",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Gravar atendimento"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Gravacao bloqueada\n\nGravacao bloqueada: sem consentimento de tratamento.\n\nO prontuario de Ana Beatriz Souza so aceita gravar consultas e medidas com consentimento de tratamento vigente (art. 11). Registre o consentimento com o texto vigente do consultorio para liberar o atendimento.\n\nUltimo consenti",
+    "skel": 0,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Novo registro para Ana Beatriz Souza\n\nAnamnese, evolucao e orientacoes · consentimento tratamento-v3\n\nConsentimento vigente\nTipo de registro*\nConsulta\nMedida\nProfissional*\nMarina Alencar — Nutricionista\nPedro Lins — Nutricionista\nSofia Bastos — Educadora alimentar\nData e hora*\nResumo do atendimento\n",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Consulta",
+     "Medida",
+     "Gravar registro"
+    ],
+    "heads": [
+     "H3 Novo registro para Ana Bea"
+    ]
+   }
+  },
+  "agenda-board": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nReagendar consulta",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Reagendar consulta"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "AGENDA\nAgenda de consultas\n\nGrade por profissional e por hora. Horarios em America/Sao_Paulo.\n\nFuso America/Sao_Paulo\nAgendado\nConfirmado\nCompareceu\nFaltou\nCancelado\nHORA\n\nDra. Marina Albuquerque\n\nNUTRICAO CLINICA\n\nDr. Rafael Bittencourt\n\nNUTRICAO ESPORTIVA\n\nDra. Helena Camargo\n\nNUTRICAO MATERNAL\n\n0",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "08:30\nJoana Prado\nAVALIACAO IN",
+     "08:00\nPatricia Lemos\nAVALIACAO",
+     "09:00\nBruno Sarmento\nCONSULTA ",
+     "10:00\nOtavio Bezerra\nRETORNO\nA",
+     "10:30\nRenata Bastos\nAVALIACAO ",
+     "11:30\nLarissa Fontes\nAVALIACAO",
+     "13:00\nMarcelo Tavares\nCONSULTA",
+     "14:00\nCamila Rezende\nCONSULTA ",
+     "15:00\nVinicius Andrada\nRETORNO",
+     "16:00\nEduardo Vilela\nRETORNO\nC"
+    ],
+    "heads": [
+     "H2 Agenda de consultas"
+    ]
+   }
+  },
+  "availability": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nDefinir horario de atendimento",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Definir horario de atendimento"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "AGENDA\nHorarios de atendimento\n\nGrade semanal por profissional, folgas e slots livres do dia. Tudo em America/Sao_Paulo.\n\nFuso America/Sao_Paulo\nPROFISSIONAL\nDOM\nSEG\nTER\nQUA\nQUI\nSEX\nSAB\n\nDra. Marina Albuquerque\n\nNUTRICAO CLINICA\n\nFOLGA\n08:00–12:00\n14:00–18:00\nFOLGA\n08:00–12:00\nFOLGA\n08:00–13:00\nFOLG",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA",
+     "FOLGA"
+    ],
+    "heads": [
+     "H2 Horarios de atendimento"
+    ]
+   }
+  },
+  "follow-up-tasks": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nConcluir tarefa de acompanhamento",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Concluir tarefa de acompanhame"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "WhatsApp (Cloud API) nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "packages-pricing": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nSalvar pacote",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Salvar pacote"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "FINANCEIRO\nPacotes e precos\n\nPrecos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote.\n\nAvaliacao inicial\n\nPrimeira consulta com plano de atendimento.\n\nAtivo\n\nR$ 280,00\n\nSESSOES\n1\nVALIDADE\nValidade de 30 dias\nSalvar\nDesativar\n\nPacote 4 sessoes\n\nQuatro sessoes de acompanhame",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Desativar",
+     "Salvar",
+     "Ativar"
+    ],
+    "heads": [
+     "H2 Pacotes e precos"
+    ]
+   }
+  },
+  "payments-checkout": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nRegistrar pagamento",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Registrar pagamento"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "FINANCEIRO\nPagamento e recibo\n\nValores em centavos exibidos em BRL. O estorno devolve o lead ao funil.\n\nRegistrar pagamento\n\nPaciente\nPacote\nAvaliacao inicial — R$ 280,00 (1 sessoes)\nPacote 4 sessoes — R$ 960,00 (4 sessoes)\nPacote 8 sessoes — R$ 1.760,00 (8 sessoes)\nPacote 12 sessoes — R$ 2.400,00 (",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Registrar pagamento"
+    ],
+    "heads": [
+     "H2 Pagamento e recibo"
+    ]
+   }
+  },
+  "finance-overview": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nExportar visao financeira",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Exportar visao financeira"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "FINANCEIRO\nVisao financeira\n\nReceita, ticket medio e comparecimento de marco de 2024. Valores em centavos, exibidos em BRL.\n\nExportar\nRECEITA DO MES\nR$ 128.460,00\n▲ +14,4% vs mes anterior\n60 sessoes pagas\nTICKET MEDIO\nR$ 2.141,00\npor atendimento pago\nTAXA DE COMPARECIMENTO\n84,2%\n71 sessoes agendadas",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Exportar"
+    ],
+    "heads": [
+     "H2 Visao financeira"
+    ]
+   }
+  },
+  "reports-funnel": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nExportar relatorio",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Exportar relatorio"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "RELATORIOS\nFunil de conversao\n\nPessoas por etapa em 01/03/2024 a 31/03/2024. Relatorio por origem conta PESSOAS; por anuncio conta CLIQUES.\n\nExportar\n\nEtapas do funil\n\nNovo lead\nnew\n428 pessoas\nQualificado\nqualified\n186 pessoas\nCliente\ncustomer\n71 pessoas\n\nCONTAGEM DE PESSOAS: UM LEAD E UMA PESSOA, ",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Exportar"
+    ],
+    "heads": [
+     "H2 Funil de conversao"
+    ]
+   }
+  },
+  "meta-conversion": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nExportar fila da Meta",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Exportar fila da Meta"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Meta Ads nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "social-accounts": {
+   "Carregando": {
+    "txt": "",
+    "skel": 2,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nConectar conta do Instagram",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Conectar conta do Instagram"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Instagram Graph API nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "social-composer": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nAgendar publicacao",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Agendar publicacao"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Instagram Graph API nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "social-automations": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nLigar ou desligar automacao",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Ligar ou desligar automacao"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Instagram Graph API nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "social-logs": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nReexecutar publicacao",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Reexecutar publicacao"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Instagram Graph API nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "webhooks-panel": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nAtivar ou desativar webhook",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Ativar ou desativar webhook"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para platform_owner ou dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para platform_owner ou dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Webhooks de saida nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "agent-console": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nLigar ou desligar o agente",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Ligar ou desligar o agente"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para platform_owner ou dono do consultório. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para platform_owner ou dono do consultório. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Anthropic (Claude) nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "ops-health": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nRodar backup",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Rodar backup"
+    ],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "Webhooks de saida nao esta conectado\n\nApenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.\n\nSolicitar acesso",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Solicitar acesso"
+    ],
+    "heads": []
+   }
+  },
+  "integration-manifest": {
+   "Carregando": {
+    "txt": "",
+    "skel": 7,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Vazio": {
+    "txt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+    "skel": 0,
+    "alerts": [],
+    "btns": [],
+    "heads": []
+   },
+   "Erro": {
+    "txt": "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente.",
+    "skel": 0,
+    "alerts": [
+     "Algo deu errado\n\nNao foi possivel carregar este bloco. Tente novamente."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "Sem permissao": {
+    "txt": "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso.",
+    "skel": 0,
+    "alerts": [
+     "Acesso restrito\n\nEsta area e visivel apenas para platform_owner. Fale com o dono do consultório para pedir acesso."
+    ],
+    "btns": [],
+    "heads": []
+   },
+   "desconectado": {
+    "txt": "PROGRAMA · AURORA\nManifesto de conexoes\n\nTodo conector de que o programa precisa, quem pode provisionar e o que cada um destrava. Este e o unico lugar onde um conector e provisionado.\n\nSomente o dono da plataforma\n\nAcesso de implementacao apenas do dono do programa\n\nNinguem mais provisiona conector.",
+    "skel": 0,
+    "alerts": [],
+    "btns": [
+     "Provisionar",
+     "Provisionar",
+     "Provisionar"
+    ],
+    "heads": [
+     "H2 Manifesto de conexoes"
+    ]
+   }
+  }
+ },
+ "headings": {
+  "auth-login": [
+   "H1 Entrar na sua conta"
+  ],
+  "auth-two-factor": [],
+  "auth-recovery": [
+   "H1 Esqueci minha senha"
+  ],
+  "admin-platform": [
+   "H2 Consultorios administrados"
+  ],
+  "office-team": [
+   "H2 Equipe e acessos"
+  ],
+  "office-settings": [
+   "H2 Configuracoes do consultor",
+   "H2 Canais conectados",
+   "H2 Provedor de WhatsApp",
+   "H2 Horario de atendimento",
+   "H2 Webhook de saida"
+  ],
+  "leads-board": [
+   "H3 Novo",
+   "H3 Qualificado",
+   "H3 Cliente"
+  ],
+  "inbox-whatsapp": [],
+  "consent-panel": [
+   "H3 Tratamento de dados",
+   "H3 Marketing"
+  ],
+  "channel-connections": [
+   "H3 WhatsApp Cloud API (Meta)",
+   "H3 WhatsApp auto-hospedado (B",
+   "H3 Canal hospedado por tercei"
+  ],
+  "patients-list": [],
+  "patient-chart": [
+   "H3 Ana Beatriz Souza"
+  ],
+  "clinical-entry": [
+   "H3 Novo registro para Ana Bea"
+  ],
+  "agenda-board": [
+   "H2 Agenda de consultas"
+  ],
+  "availability": [
+   "H2 Horarios de atendimento"
+  ],
+  "follow-up-tasks": [
+   "H2 Tarefas de acompanhamento"
+  ],
+  "packages-pricing": [
+   "H2 Pacotes e precos"
+  ],
+  "payments-checkout": [
+   "H2 Pagamento e recibo"
+  ],
+  "finance-overview": [
+   "H2 Visao financeira"
+  ],
+  "reports-funnel": [
+   "H2 Funil de conversao"
+  ],
+  "meta-conversion": [
+   "H2 Fila de eventos da Meta"
+  ],
+  "social-accounts": [
+   "H2 Contas conectadas"
+  ],
+  "social-composer": [
+   "H2 Composer de publicacao"
+  ],
+  "social-automations": [
+   "H2 Automacoes de resposta"
+  ],
+  "social-logs": [
+   "H2 Logs de publicacao e inter"
+  ],
+  "webhooks-panel": [
+   "H2 Webhooks de saida"
+  ],
+  "agent-console": [
+   "H2 Console do agente"
+  ],
+  "ops-health": [
+   "H2 Saude da operacao"
+  ],
+  "integration-manifest": [
+   "H2 Manifesto de conexoes"
+  ]
+ }
+}

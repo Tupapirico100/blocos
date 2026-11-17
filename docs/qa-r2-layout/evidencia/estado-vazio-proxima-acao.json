@@ -1,0 +1,249 @@
+{
+ "auth-login": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "auth-two-factor": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "auth-recovery": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "admin-platform": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhum consultorio ainda\n\nCrie o primeiro consultorio para comecar a atender.\n\nNovo consultorio",
+  "dentro": [
+   "Novo consultorio"
+  ],
+  "todasBotoes": [
+   "Novo consultorio"
+  ]
+ },
+ "office-team": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhum membro ainda\n\nConvoque a equipe para o consultorio com um convite por link.",
+  "dentro": [],
+  "todasBotoes": [
+   "Convidar membro"
+  ]
+ },
+ "office-settings": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nConectar canal",
+  "dentro": [
+   "Conectar canal"
+  ],
+  "todasBotoes": [
+   "Conectar canal"
+  ]
+ },
+ "leads-board": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhum lead por aqui\n\nQuando um lead entrar no funil, ele aparece aqui com a origem do primeiro toque.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "inbox-whatsapp": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Caixa de entrada vazia\n\nNenhuma conversa recebida pelo WhatsApp do consultorio.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "consent-panel": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhum consentimento registrado\n\nRegistre a concessao de tratamento ou marketing com o texto vigente do consultorio.",
+  "dentro": [],
+  "todasBotoes": [
+   "Registrar consentimento"
+  ]
+ },
+ "channel-connections": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhuma conexao de canal\n\nO dono do consultorio pode conectar o numero do WhatsApp aqui.",
+  "dentro": [],
+  "todasBotoes": [
+   "Reconectar canal"
+  ]
+ },
+ "patients-list": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nenhum paciente cadastrado\n\nO paciente aparece aqui assim que o primeiro atendimento for registrado.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "patient-chart": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Prontuario vazio\n\nAs consultas, medidas e o plano alimentar do paciente aparecem aqui.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "clinical-entry": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada para registrar\n\nO registro de consulta ou medida aparece aqui durante o atendimento.",
+  "dentro": [],
+  "todasBotoes": [
+   "Registrar atendimento"
+  ]
+ },
+ "agenda-board": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "availability": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nDefinir horário",
+  "dentro": [
+   "Definir horário"
+  ],
+  "todasBotoes": [
+   "Definir horário"
+  ]
+ },
+ "follow-up-tasks": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "packages-pricing": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nNovo pacote",
+  "dentro": [
+   "Novo pacote"
+  ],
+  "todasBotoes": [
+   "Novo pacote"
+  ]
+ },
+ "payments-checkout": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nNovo pagamento",
+  "dentro": [
+   "Novo pagamento"
+  ],
+  "todasBotoes": [
+   "Novo pagamento"
+  ]
+ },
+ "finance-overview": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "reports-funnel": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "meta-conversion": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "social-accounts": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nConectar conta",
+  "dentro": [
+   "Conectar conta"
+  ],
+  "todasBotoes": [
+   "Conectar conta"
+  ]
+ },
+ "social-composer": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nPublicar",
+  "dentro": [
+   "Publicar"
+  ],
+  "todasBotoes": [
+   "Publicar"
+  ]
+ },
+ "social-automations": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "social-logs": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "webhooks-panel": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ },
+ "agent-console": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nAtivar agente",
+  "dentro": [
+   "Ativar agente"
+  ],
+  "todasBotoes": [
+   "Ativar agente"
+  ]
+ },
+ "ops-health": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.\n\nExecutar backup",
+  "dentro": [
+   "Executar backup"
+  ],
+  "todasBotoes": [
+   "Executar backup"
+  ]
+ },
+ "integration-manifest": {
+  "rootTag": "DIV.rounded-[var(--r-xl)] border border-border bg-surface/30 p-5",
+  "nEmpty": 1,
+  "emptyTxt": "Nada por aqui ainda\n\nOs itens vao aparecer aqui assim que existirem.",
+  "dentro": [],
+  "todasBotoes": []
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "semana_nomes_visiveis": [
+  {
+   "txt": "Joana Prado",
+   "w": 50,
+   "sw": 71,
+   "visivel": "Joana P"
+  },
+  {
+   "txt": "AVALIACAO INICIAL",
+   "w": 50,
+   "sw": 130,
+   "visivel": "AVALIA"
+  },
+  {
+   "txt": "Patricia Lemos",
+   "w": 50,
+   "sw": 87,
+   "visivel": "Patricia"
+  },
+  {
+   "txt": "AVALIACAO INICIAL",
+   "w": 50,
+   "sw": 130,
+   "visivel": "AVALIA"
+  },
+  {
+   "txt": "Bruno Sarmento",
+   "w": 50,
+   "sw": 98,
+   "visivel": "Bruno S"
+  },
+  {
+   "txt": "CONSULTA DE ROTINA",
+   "w": 50,
+   "sw": 147,
+   "visivel": "CONSUL"
+  }
+ ],
+ "foco_antes": "Receita",
+ "foco_dentro_dialog": {
+  "role": "dialog",
+  "modal": null,
+  "labelledby": "radix-_r_7_",
+  "active": "BUTTON:"
+ },
+ "foco_apos_esc_drawer": "BODY:Blocos\n\nBiblioteca de blocos reutilizave",
+ "confirm_dialog": {
+  "role": "dialog",
+  "modal": null,
+  "title": "Cancelar a consulta de Joana Prado\n\nA consulta de Joana Prado em 08:30 sera cancelada e o ",
+  "active": "BUTTON:Cancelar"
+ },
+ "confirm_focus_trap": [
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro"
+ ],
+ "confirm_esc": true,
+ "confirm_foco_apos_esc": "BODY:IDENTIDADE\n\nLogin\nauth-login\nVerificação",
+ "cls_inicial": 0,
+ "cls_trocas": [
+  {
+   "v": 0.2057,
+   "t": 3578.0999999996275,
+   "s": [
+    "DIV.bloco-scroll.flex-1.overflow-y-auto",
+    "DIV.bloco-scroll.inline-flex.max-w-full",
+    "DIV.flex.items-center.gap-2"
+   ]
+  },
+  {
+   "v": 0.0008,
+   "t": 3951.0999999996275,
+   "s": [
+    "DIV.bloco-scroll.inline-flex.max-w-full",
+    "DIV.flex.items-center.gap-2",
+    "BUTTON.rounded-[var(--r-sm)].font-medium.transition-all"
+   ]
+  }
+ ],
+ "cls_total": 0.2065
+}
