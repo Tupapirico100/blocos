@@ -68,6 +68,7 @@ export const channelConnectionsRecipe = defineBlock({
     "Acesso platform (dono da plataforma) nao pode ser removido nem rebaixado pelo dono do consultorio.",
     "Credencial e segredo: nunca vai para log, URL ou telemetria.",
   ],
+  emptyAction: { id: "channel.reconnect", label: "Reconectar canal" },
   variants: [
     {
       id: "cards",

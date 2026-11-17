@@ -2,9 +2,10 @@ import * as React from "react";
 import { Building2, Plug, Radio, Server, ShieldCheck, TriangleAlert } from "lucide-react";
 import { Badge, Button, DataTable, Panel, Skeleton } from "@blocos/ui";
 import type { BadgeTone, Column } from "@blocos/ui";
-import { BlockFrame } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDateTime, formatPhone } from "./format.js";
+import { channelConnectionsRecipe } from "./channel-connections.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -91,7 +92,6 @@ export function ChannelConnections(
 
   return (
     <BlockFrame
-      requires={["whatsapp"]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
@@ -115,7 +115,9 @@ export function ChannelConnections(
           </p>
         </div>
       }
-    >
+        recipe={channelConnectionsRecipe}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <p className="bloco-caption text-fg-muted">
           Configuracao do canal do consultorio — visivel apenas para o dono. Nenhum trafega pelo bloco.
@@ -157,8 +159,12 @@ function ConnectionCard({
     <Panel tone="solid" padding="md" className="flex flex-col gap-3">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <h3 className="bloco-title3 truncate">{connection.provider}</h3>
-          <p className="bloco-caption mt-0.5 text-fg-muted">{formatPhone(connection.phoneNumber)}</p>
+          <h3 className="bloco-title3 truncate" title={connection.provider}>
+            {connection.provider}
+          </h3>
+          <p className="bloco-caption mt-0.5 break-words text-fg-muted">
+            {formatPhone(connection.phoneNumber)}
+          </p>
         </div>
         <Badge tone={STATUS_TONE[connection.status]}>{STATUS_LABEL[connection.status]}</Badge>
       </div>
@@ -190,7 +196,7 @@ function ConnectionCard({
             {connection.waba.reviewStatus ? ` · Revisao: ${connection.waba.reviewStatus}` : ""}
           </p>
           {connection.waba.id ? (
-            <p className="bloco-mono mt-1 text-[11px] text-fg-faint">{connection.waba.id}</p>
+            <p className="bloco-mono mt-1 break-all text-[11px] text-fg-faint">{connection.waba.id}</p>
           ) : null}
         </div>
       ) : null}
@@ -227,9 +233,12 @@ function ConnectionCard({
 
       <div className="mt-auto">
         <Button
-          variant="secondary"
+          variant="primary"
           size="sm"
+          className="min-h-8"
           icon={<Plug size={14} aria-hidden />}
+          /* Varios cartoes na tela: o nome acessivel diz qual provedor. */
+          aria-label={`Reconectar ${connection.provider}`}
           onClick={onReconnect}
         >
           Reconectar

@@ -3,6 +3,7 @@ import {
   Badge,
   Button,
   DataTable,
+  EmptyState,
   Input,
   Panel,
   SectionHeader,
@@ -11,7 +12,8 @@ import {
 } from "@blocos/ui";
 import { localDateKey, utcToLocal } from "@blocos/core";
 import { CheckCircle2, Clock3, ListTodo, RotateCcw } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { followUpTasksRecipe } from "./follow-up-tasks.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Contrato de dados                                                    */
@@ -94,6 +96,20 @@ function localInputValue(iso: string): string {
 }
 
 /* ------------------------------------------------------------------ */
+/* Helpers de rotulo (nomes acessiveis unicos)                         */
+/* ------------------------------------------------------------------ */
+
+/** "Concluir tarefa de retorno de Joana Prado" — sem contexto o botao se repete. */
+function completeLabel(task: FollowUpTask): string {
+  return `Concluir tarefa de ${TYPE_LABEL[task.type].toLowerCase()} de ${task.patientName}`;
+}
+
+/** "Reagendar tarefa de retorno de Joana Prado". */
+function rescheduleLabel(task: FollowUpTask): string {
+  return `Reagendar tarefa de ${TYPE_LABEL[task.type].toLowerCase()} de ${task.patientName}`;
+}
+
+/* ------------------------------------------------------------------ */
 /* Bloco                                                                */
 /* ------------------------------------------------------------------ */
 
@@ -146,8 +162,17 @@ export function FollowUpTasks(props: BlockProps<FollowUpData, FollowUpVariant>) 
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-    >
-      <div className="flex flex-col gap-4">
+        recipe={followUpTasksRecipe}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<ListTodo className="h-5 w-5" aria-hidden />}
+            title="Nenhuma tarefa de acompanhamento"
+            description="Retorno, resultado e recuperacao entram sozinhos quando a agenda marca o atendimento."
+          />
+        }
+      >
+      <div className="@container flex flex-col gap-4">
         <SectionHeader
           eyebrow="Acompanhamento"
           title="Tarefas de acompanhamento"
@@ -198,6 +223,7 @@ export function FollowUpTasks(props: BlockProps<FollowUpData, FollowUpVariant>) 
                 size="sm"
                 variant="secondary"
                 icon={<CheckCircle2 size={14} aria-hidden />}
+                aria-label={completeLabel(selected)}
                 onClick={() => complete(selected)}
               >
                 Concluir
@@ -206,6 +232,7 @@ export function FollowUpTasks(props: BlockProps<FollowUpData, FollowUpVariant>) 
                 size="sm"
                 variant="secondary"
                 icon={<RotateCcw size={14} aria-hidden />}
+                aria-label={rescheduleLabel(selected)}
                 onClick={() => setRescheduling((v) => !v)}
               >
                 Reagendar
@@ -266,7 +293,7 @@ function TaskTable({
           type="button"
           onClick={() => onSelect(row)}
           aria-current={selectedId === row.id ? "true" : undefined}
-          className="text-left font-medium text-fg hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center py-2 text-left font-medium text-fg hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {row.patientName}
         </button>
@@ -298,10 +325,20 @@ function TaskTable({
       align: "right",
       render: (row) => (
         <div className="flex items-center justify-end gap-2">
-          <Button size="sm" variant="secondary" onClick={() => onComplete(row)}>
+          <Button
+            size="sm"
+            variant="secondary"
+            aria-label={completeLabel(row)}
+            onClick={() => onComplete(row)}
+          >
             Concluir
           </Button>
-          <Button size="sm" variant="ghost" onClick={() => onReschedule(row)}>
+          <Button
+            size="sm"
+            variant="secondary"
+            aria-label={rescheduleLabel(row)}
+            onClick={() => onReschedule(row)}
+          >
             Reagendar
           </Button>
         </div>
@@ -340,7 +377,7 @@ function TaskCalendar({
 
   return (
     <div className="bloco-scroll overflow-x-auto">
-      <div className="grid min-w-[640px] gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[860px]:grid-cols-4">
         {dayKeys.map((day) => {
           const dayTasks = tasks
             .filter((task) => dayKeyOf(task.dueAt) === day)
@@ -404,7 +441,7 @@ function TaskBoard({
 }) {
   return (
     <div className="bloco-scroll overflow-x-auto">
-      <div className="grid min-w-[640px] gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[860px]:grid-cols-4">
         {STATUS_ORDER.map((status) => {
           const column = tasks.filter((task) => task.status === status);
           return (
@@ -445,6 +482,7 @@ function TaskBoard({
                       size="sm"
                       variant="secondary"
                       className="w-full"
+                      aria-label={completeLabel(task)}
                       onClick={() => onComplete(task)}
                     >
                       Concluir
