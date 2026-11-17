@@ -1,0 +1,4764 @@
+{
+ "auth-login": {
+  "sequencia": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Esqueci minha senha",
+    "cls": "-mx-1 inline-flex min-h-8 items-center rounded-[var(--r-sm)] px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Entrar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "A",
+    "role": null,
+    "texto": "Falar com o suporte",
+    "cls": "inline-flex min-h-8 items-center text-accent underline-offset-2 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 543,
+    "x": 719,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 599,
+    "x": 886,
+    "texto": "Esqueci minha senha"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 637,
+    "x": 719,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 693,
+    "x": 719,
+    "texto": "Entrar"
+   },
+   {
+    "tag": "A",
+    "role": null,
+    "y": 757,
+    "x": 828,
+    "texto": "Falar com o suporte"
+   }
+  ]
+ },
+ "auth-two-factor": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Copiar chave",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.82)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Remover fator",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mostrar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Copiar codigos",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Gerar novos codigos",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 616,
+    "x": 522,
+    "texto": "Copiar chave"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 747,
+    "x": 346,
+    "texto": "Remover fator"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 353,
+    "x": 924,
+    "texto": "Mostrar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 795,
+    "x": 715,
+    "texto": "Copiar codigos"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 835,
+    "x": 715,
+    "texto": "Gerar novos codigos"
+   }
+  ]
+ },
+ "auth-recovery": {
+  "sequencia": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Enviar link de recuperacao",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 502,
+    "x": 472,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 558,
+    "x": 472,
+    "texto": "Enviar link de recuperacao"
+   }
+  ]
+ },
+ "admin-platform": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Novo consultorio",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "texto": "Consultório Aurora Nutrição São Paulo/",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform,box",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": true,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0.34) 0px 4px 16px 0px, rgba(255, 255, 255, 0.",
+    "dentroDoPalco": true,
+    "tabindex": "0"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "texto": "Consultório Vila Nova Curitiba/PR Ativ",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform,box",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": true,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0.34) 0px 4px 16px 0px, rgba(255, 255, 255, 0.",
+    "dentroDoPalco": true,
+    "tabindex": "0"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "texto": "Consultório Serra Azul Belo Horizonte/",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform,box",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": true,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0.34) 0px 4px 16px 0px, rgba(255, 255, 255, 0.",
+    "dentroDoPalco": true,
+    "tabindex": "0"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "texto": "Consultório Boa Vista Recife/PE Suspen",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform,box",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": true,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0.34) 0px 4px 16px 0px, rgba(255, 255, 255, 0.",
+    "dentroDoPalco": true,
+    "tabindex": "0"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 46,
+    "x": 869,
+    "texto": "Novo consultorio"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "y": 302,
+    "x": 321,
+    "texto": "Consultório Aurora Nutrição Sã"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "y": 302,
+    "x": 566,
+    "texto": "Consultório Vila Nova Curitiba"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "y": 302,
+    "x": 810,
+    "texto": "Consultório Serra Azul Belo Ho"
+   },
+   {
+    "tag": "DIV",
+    "role": "button",
+    "y": 557,
+    "x": 321,
+    "texto": "Consultório Boa Vista Recife/P"
+   }
+  ]
+ },
+ "office-team": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Convidar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Rebaixar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Remover",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Rebaixar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Remover",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Remover",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Rebaixar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Remover",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Copiar link",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Revogar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -13,
+    "x": 924,
+    "texto": "Convidar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 133,
+    "x": 819,
+    "texto": "Rebaixar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 133,
+    "x": 924,
+    "texto": "Remover"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 248,
+    "x": 338,
+    "texto": "Rebaixar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 248,
+    "x": 443,
+    "texto": "Remover"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 363,
+    "x": 443,
+    "texto": "Remover"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 479,
+    "x": 338,
+    "texto": "Rebaixar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 479,
+    "x": 443,
+    "texto": "Remover"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 724,
+    "x": 790,
+    "texto": "Copiar link"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 724,
+    "x": 911,
+    "texto": "Revogar"
+   }
+  ]
+ },
+ "office-settings": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Desconectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.82)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Conectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Aceitar a versao risco-whatsapp-nao-of",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(1, 105, 214, 1)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Segunda-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Terça-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(111, 170, 232, 0.973)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quarta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Quinta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Inicio de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "Fim de Sexta-feira",
+    "cls": "rounded-[var(--r-md)] border bg-surface-strong/60 px-3 text-[14p",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar horario",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar webhook",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Enviar teste",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -942,
+    "x": 342,
+    "texto": "Desconectar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -971,
+    "x": 709,
+    "texto": "Conectar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -424,
+    "x": 342,
+    "texto": "Aceitar a versao risco-whatsap"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": -243,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -248,
+    "x": 750,
+    "texto": "Inicio de Segunda-feira"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -248,
+    "x": 897,
+    "texto": "Fim de Segunda-feira"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": -173,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -178,
+    "x": 750,
+    "texto": "Inicio de Terça-feira"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -178,
+    "x": 897,
+    "texto": "Fim de Terça-feira"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": -103,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -108,
+    "x": 750,
+    "texto": "Inicio de Quarta-feira"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -108,
+    "x": 897,
+    "texto": "Fim de Quarta-feira"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": -33,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -38,
+    "x": 750,
+    "texto": "Inicio de Quinta-feira"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": -38,
+    "x": 897,
+    "texto": "Fim de Quinta-feira"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 37,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 32,
+    "x": 750,
+    "texto": "Inicio de Sexta-feira"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 32,
+    "x": 897,
+    "texto": "Fim de Sexta-feira"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 107,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 177,
+    "x": 355,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 235,
+    "x": 342,
+    "texto": "Salvar horario"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 426,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 502,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 740,
+    "x": 342,
+    "texto": "Salvar webhook"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 740,
+    "x": 520,
+    "texto": "Enviar teste"
+   }
+  ]
+ },
+ "leads-board": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Ana Beatriz Souza para Qualifica",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.82)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Carlos Eduardo Lima para Qualifi",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Mariana Alves Rocha para Qualifi",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Rafael Nogueira para Novo",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Rafael Nogueira para Cliente",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Juliana Prado para Novo",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Juliana Prado para Cliente",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Thiago Marques para Novo",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Thiago Marques para Cliente",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Camila Ferraz para Qualificado",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Bruno Tavares para Qualificado",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Mover Larissa Moreira para Qualificado",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 190,
+    "x": 485,
+    "texto": "Mover Ana Beatriz Souza para Q"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 454,
+    "x": 485,
+    "texto": "Mover Carlos Eduardo Lima para"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 758,
+    "x": 485,
+    "texto": "Mover Mariana Alves Rocha para"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 174,
+    "x": 704,
+    "texto": "Mover Rafael Nogueira para Nov"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 174,
+    "x": 740,
+    "texto": "Mover Rafael Nogueira para Cli"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 415,
+    "x": 722,
+    "texto": "Mover Juliana Prado para Novo"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 415,
+    "x": 758,
+    "texto": "Mover Juliana Prado para Clien"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 696,
+    "x": 704,
+    "texto": "Mover Thiago Marques para Novo"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 696,
+    "x": 740,
+    "texto": "Mover Thiago Marques para Clie"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 167,
+    "x": 977,
+    "texto": "Mover Camila Ferraz para Quali"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 448,
+    "x": 977,
+    "texto": "Mover Bruno Tavares para Quali"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 712,
+    "x": 977,
+    "texto": "Mover Larissa Moreira para Qua"
+   }
+  ]
+ },
+ "inbox-whatsapp": {
+  "sequencia": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "h-9 w-full rounded-[var(--r-md)] border border-border bg-surface",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "AB Ana Beatriz Souza 14:12 Boa tarde! ",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-border/60 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "CE Carlos Eduardo Lima 12:40 Obrigado,",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-border/60 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "D( Desconhecido (numero novo) 09:05 Vo",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-border/60 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "JP Juliana Prado 16:22 Perfeito, ate q",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-border/60 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Oi! Recebi sua mensagem, ja te explico",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)] border ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Posso te enviar os horarios de consult",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)] border ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Quer que eu reserve uma avaliacao?",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)] border ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "texto": "Escreva a resposta para o contato",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Enviar template aprovado",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 303,
+    "x": 334,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 355,
+    "x": 326,
+    "texto": "AB Ana Beatriz Souza 14:12 Boa"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 471,
+    "x": 326,
+    "texto": "CE Carlos Eduardo Lima 12:40 O"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 563,
+    "x": 326,
+    "texto": "D( Desconhecido (numero novo) "
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 679,
+    "x": 326,
+    "texto": "JP Juliana Prado 16:22 Perfeit"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 600,
+    "x": 674,
+    "texto": "Oi! Recebi sua mensagem, ja te"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 638,
+    "x": 674,
+    "texto": "Posso te enviar os horarios de"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 676,
+    "x": 674,
+    "texto": "Quer que eu reserve uma avalia"
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "y": 720,
+    "x": 674,
+    "texto": "Escreva a resposta para o cont"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 750,
+    "x": 885,
+    "texto": "Enviar template aprovado"
+   }
+  ]
+ },
+ "consent-panel": {
+  "sequencia": [
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "WhatsApp Presencial Assinado em papel ",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Registrar consentimento",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "WhatsApp Presencial Assinado em papel ",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Registrar consentimento",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": 787,
+    "x": 342,
+    "texto": "WhatsApp Presencial Assinado e"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 835,
+    "x": 342,
+    "texto": "Registrar consentimento"
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": 787,
+    "x": 711,
+    "texto": "WhatsApp Presencial Assinado e"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 835,
+    "x": 711,
+    "texto": "Registrar consentimento"
+   }
+  ]
+ },
+ "channel-connections": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reconectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reconectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reconectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 325,
+    "x": 342,
+    "texto": "Reconectar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 325,
+    "x": 711,
+    "texto": "Reconectar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 748,
+    "x": 342,
+    "texto": "Reconectar"
+   }
+  ]
+ },
+ "patients-list": {
+  "sequencia": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "h-9 w-full rounded-[var(--r-md)] border border-border bg-surface",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Ana Beatriz Souza",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Carlos Eduardo Lim",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Juliana Prado",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Rafael Nogueira",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Mariana Alves Roch",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Thiago Marques",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Abrir prontuario de Larissa Moreira",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] t",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 282,
+    "x": 321,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 398,
+    "x": 998,
+    "texto": "Abrir prontuario de Ana Beatri"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 458,
+    "x": 998,
+    "texto": "Abrir prontuario de Carlos Edu"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 518,
+    "x": 998,
+    "texto": "Abrir prontuario de Juliana Pr"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 577,
+    "x": 998,
+    "texto": "Abrir prontuario de Rafael Nog"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 636,
+    "x": 998,
+    "texto": "Abrir prontuario de Mariana Al"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 696,
+    "x": 998,
+    "texto": "Abrir prontuario de Thiago Mar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 756,
+    "x": 998,
+    "texto": "Abrir prontuario de Larissa Mo"
+   }
+  ]
+ },
+ "patient-chart": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Prontuario do paciente patient-chart",
+    "cls": "w-full rounded-[var(--r-sm)] px-3 py-1.5 text-left text-[13px] t",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": null
+   }
+  ],
+  "dom": []
+ },
+ "clinical-entry": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Consulta",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[var(-",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Medida",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[var(-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "Marina Alencar — Nutricionista Pedro L",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Gravar registro",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "y": 473,
+    "x": 345,
+    "texto": "Consulta"
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "y": 473,
+    "x": 428,
+    "texto": "Medida"
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": 549,
+    "x": 342,
+    "texto": "Marina Alencar — Nutricionista"
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 549,
+    "x": 690,
+    "texto": ""
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "y": 630,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 781,
+    "x": 861,
+    "texto": "Gravar registro"
+   }
+  ]
+ },
+ "agenda-board": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "08:30 Joana Prado AVALIACAO INICIAL Co",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "08:00 Patricia Lemos AVALIACAO INICIAL",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "09:00 Bruno Sarmento CONSULTA DE ROTIN",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "10:00 Otavio Bezerra RETORNO Agendado",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "10:30 Renata Bastos AVALIACAO INICIAL ",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "11:30 Larissa Fontes AVALIACAO INICIAL",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "13:00 Marcelo Tavares CONSULTA DE ROTI",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "14:00 Camila Rezende CONSULTA DE ROTIN",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "15:00 Vinicius Andrada RETORNO Agendad",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "16:00 Eduardo Vilela RETORNO Cancelado",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border px-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(1, 105, 214, 1)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -279,
+    "x": 401,
+    "texto": "08:30 Joana Prado AVALIACAO IN"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -185,
+    "x": 401,
+    "texto": "08:00 Patricia Lemos AVALIACAO"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -77,
+    "x": 617,
+    "texto": "09:00 Bruno Sarmento CONSULTA "
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 31,
+    "x": 401,
+    "texto": "10:00 Otavio Bezerra RETORNO A"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 31,
+    "x": 833,
+    "texto": "10:30 Renata Bastos AVALIACAO "
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 139,
+    "x": 617,
+    "texto": "11:30 Larissa Fontes AVALIACAO"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 311,
+    "x": 617,
+    "texto": "13:00 Marcelo Tavares CONSULTA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 419,
+    "x": 401,
+    "texto": "14:00 Camila Rezende CONSULTA "
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 527,
+    "x": 401,
+    "texto": "15:00 Vinicius Andrada RETORNO"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 635,
+    "x": 833,
+    "texto": "16:00 Eduardo Vilela RETORNO C"
+   }
+  ]
+ },
+ "availability": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.6)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "FOLGA",
+    "cls": "bloco-micro flex min-h-8 w-full items-center justify-center gap-",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 466,
+    "x": 509,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 466,
+    "x": 663,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 466,
+    "x": 818,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 466,
+    "x": 972,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 575,
+    "x": 509,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 575,
+    "x": 740,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 575,
+    "x": 895,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 575,
+    "x": 972,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 648,
+    "x": 509,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 648,
+    "x": 586,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 648,
+    "x": 740,
+    "texto": "FOLGA"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 648,
+    "x": 895,
+    "texto": "FOLGA"
+   }
+  ]
+ },
+ "follow-up-tasks": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Eduardo Vilela",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Joana Prado",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Camila Rezende",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Marcelo Tavares",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Patricia Lemos",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Renata Bastos",
+    "cls": "inline-flex min-h-8 items-center py-2 text-left font-medium text",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Concluir",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reagendar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 337,
+    "x": 334,
+    "texto": "Eduardo Vilela"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 350,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 350,
+    "x": 981,
+    "texto": "Reagendar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 416,
+    "x": 334,
+    "texto": "Joana Prado"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 429,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 429,
+    "x": 981,
+    "texto": "Reagendar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 495,
+    "x": 334,
+    "texto": "Camila Rezende"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 508,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 508,
+    "x": 981,
+    "texto": "Reagendar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 574,
+    "x": 334,
+    "texto": "Marcelo Tavares"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 587,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 587,
+    "x": 981,
+    "texto": "Reagendar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 653,
+    "x": 334,
+    "texto": "Patricia Lemos"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 666,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 666,
+    "x": 981,
+    "texto": "Reagendar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 732,
+    "x": 334,
+    "texto": "Renata Bastos"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 745,
+    "x": 894,
+    "texto": "Concluir"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 745,
+    "x": 981,
+    "texto": "Reagendar"
+   }
+  ]
+ },
+ "packages-pricing": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Desativar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Desativar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Desativar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Desativar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Salvar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Ativar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 487,
+    "x": 342,
+    "texto": "Salvar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 487,
+    "x": 417,
+    "texto": "Desativar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 471,
+    "x": 587,
+    "texto": "Salvar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 471,
+    "x": 662,
+    "texto": "Desativar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 487,
+    "x": 831,
+    "texto": "Salvar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 487,
+    "x": 906,
+    "texto": "Desativar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 776,
+    "x": 342,
+    "texto": "Salvar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 776,
+    "x": 417,
+    "texto": "Desativar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 776,
+    "x": 587,
+    "texto": "Salvar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 776,
+    "x": 662,
+    "texto": "Ativar"
+   }
+  ]
+ },
+ "payments-checkout": {
+  "sequencia": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "Avaliacao inicial — R$ 280,00 (1 sesso",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "Pix Cartao de credito Cartao de debito",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Registrar pagamento",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 455,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": 536,
+    "x": 342,
+    "texto": "Avaliacao inicial — R$ 280,00 "
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": 617,
+    "x": 342,
+    "texto": "Pix Cartao de credito Cartao d"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 693,
+    "x": 825,
+    "texto": "Registrar pagamento"
+   }
+  ]
+ },
+ "finance-overview": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Exportar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 316,
+    "x": 941,
+    "texto": "Exportar"
+   }
+  ]
+ },
+ "reports-funnel": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Exportar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 316,
+    "x": 941,
+    "texto": "Exportar"
+   }
+  ]
+ },
+ "meta-conversion": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Exportar fila",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reenviar com erro",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 770,
+    "x": 321,
+    "texto": "Exportar fila"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 770,
+    "x": 435,
+    "texto": "Reenviar com erro"
+   }
+  ]
+ },
+ "social-accounts": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Conectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reconectar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 316,
+    "x": 924,
+    "texto": "Conectar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 718,
+    "x": 903,
+    "texto": "Reconectar"
+   }
+  ]
+ },
+ "social-composer": {
+  "sequencia": [
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "Post Carrossel Reels",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "texto": "@exemplo.nutricao — Consultorio Exempl",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] text-fg pla",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "texto": "",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "texto": "",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "texto": "",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(19, 116, 217, 0.996)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "texto": "",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "texto": "",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "texto": "",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Agendar publicacao",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Limpar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(4, 107, 215, 1)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": -298,
+    "x": 342,
+    "texto": "Post Carrossel Reels"
+   },
+   {
+    "tag": "SELECT",
+    "role": null,
+    "y": -195,
+    "x": 342,
+    "texto": "@exemplo.nutricao — Consultori"
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "y": -114,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 53,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "y": 165,
+    "x": 353,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "y": 221,
+    "x": 353,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "y": 277,
+    "x": 353,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "y": 333,
+    "x": 353,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "checkbox",
+    "y": 389,
+    "x": 353,
+    "texto": ""
+   },
+   {
+    "tag": "INPUT",
+    "role": null,
+    "y": 493,
+    "x": 342,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 617,
+    "x": 342,
+    "texto": "Agendar publicacao"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 617,
+    "x": 545,
+    "texto": "Limpar"
+   }
+  ]
+ },
+ "social-automations": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.82)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 409,
+    "x": 974,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 488,
+    "x": 974,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 565,
+    "x": 974,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 642,
+    "x": 974,
+    "texto": ""
+   }
+  ]
+ },
+ "social-logs": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reexecutar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Reexecutar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 211,
+    "x": 947,
+    "texto": "Reexecutar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 616,
+    "x": 947,
+    "texto": "Reexecutar"
+   }
+  ]
+ },
+ "webhooks-panel": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.82)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(249, 252, 254, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 435,
+    "x": 974,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 525,
+    "x": 974,
+    "texto": ""
+   },
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": 606,
+    "x": 974,
+    "texto": ""
+   }
+  ]
+ },
+ "agent-console": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "texto": "",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill)] transi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgba(255, 255, 255, 0.94)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "DIV",
+    "role": null,
+    "texto": "PACIENTEOi, tem horario para quinta de",
+    "cls": "bloco-scroll flex max-h-[420px] flex-col gap-3 overflow-y-auto",
+    "outlineDs": false,
+    "uaRing": true,
+    "shadow": false,
+    "outline": "auto 1px rgb(238, 238, 238)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "texto": "Mensagem para o agente",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/60 px-3 te",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 1px rgb(238, 238, 238)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "P",
+    "role": null,
+    "texto": "Voce e o assistente do consultorio. Re",
+    "cls": "bloco-mono block max-h-48 overflow-y-auto whitespace-pre-wrap ro",
+    "outlineDs": false,
+    "uaRing": true,
+    "shadow": false,
+    "outline": "auto 1px rgb(238, 238, 238)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": "switch",
+    "y": -97,
+    "x": 897,
+    "texto": ""
+   },
+   {
+    "tag": "TEXTAREA",
+    "role": null,
+    "y": 494,
+    "x": 342,
+    "texto": "Mensagem para o agente"
+   }
+  ]
+ },
+ "ops-health": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Rodar backup",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 360,
+    "x": 891,
+    "texto": "Rodar backup"
+   }
+  ]
+ },
+ "integration-manifest": {
+  "sequencia": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Provisionar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": false,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "none 3px rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Provisionar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "texto": "Provisionar",
+    "cls": "relative inline-flex items-center justify-center font-medium whi",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgb(0, 105, 214)",
+    "boxShadow": "none",
+    "dentroDoPalco": true,
+    "tabindex": null
+   },
+   {
+    "tag": "BUTTON",
+    "role": "tab",
+    "texto": "Acoes",
+    "cls": "group relative flex items-center gap-2 whitespace-nowrap px-3.5 ",
+    "outlineDs": true,
+    "uaRing": false,
+    "shadow": false,
+    "outline": "solid 2px rgba(1, 105, 214, 1)",
+    "boxShadow": "none",
+    "dentroDoPalco": false,
+    "tabindex": "0"
+   }
+  ],
+  "dom": [
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": -378,
+    "x": 709,
+    "texto": "Provisionar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 501,
+    "x": 342,
+    "texto": "Provisionar"
+   },
+   {
+    "tag": "BUTTON",
+    "role": null,
+    "y": 501,
+    "x": 709,
+    "texto": "Provisionar"
+   }
+  ]
+ }
+}

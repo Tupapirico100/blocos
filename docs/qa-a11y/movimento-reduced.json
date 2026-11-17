@@ -1,0 +1,1558 @@
+{
+ "reduced": {
+  "auth-login": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 558,
+   "texto": "Aurora Nutri Aurora Do primeiro contato no WhatsApp ao plano alimentar, com o consultorio no controle. Atendim"
+  },
+  "auth-two-factor": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 630,
+   "texto": "Aplicativo autenticador Aurora · TOTP Ativo Aponte a camera do aplicativo autenticador para este codigo. CHAVE"
+  },
+  "auth-recovery": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 363,
+   "texto": "AURORA Esqueci minha senha Informe o e-mail cadastrado e enviaremos o link de recuperacao. E-mail da conta* En"
+  },
+  "admin-platform": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 945,
+   "texto": "Painel do dono da plataforma Voce administra a plataforma inteira: todos os consultorios, membros e canais fic"
+  },
+  "office-team": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1063,
+   "texto": "O dono da plataforma tem acesso total a este consultorio. O acesso marcado como \"Acesso do dono da plataforma\""
+  },
+  "office-settings": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 2054,
+   "texto": "CONSULTÓRIO AURORA NUTRIÇÃO Configuracoes do consultorio Canais, provedor de WhatsApp, horario de atendimento "
+  },
+  "leads-board": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1003,
+   "texto": "Novo Chegou e ainda nao foi qualificado 3 Ana Beatriz Souza +55 (11) 98765-4321 Anuncio ATRIBUICAO DO PRIMEIRO"
+  },
+  "inbox-whatsapp": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 565,
+   "texto": "Buscar conversa AB Ana Beatriz Souza 14:12 Boa tarde! Gostaria de saber os horarios de avaliacao. 2 nova(s) Pe"
+  },
+  "consent-panel": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 674,
+   "texto": "Texto vigente do consultorio O consentimento guarda um snapshot do texto aceito. Registre apenas com o texto v"
+  },
+  "channel-connections": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 886,
+   "texto": "Configuracao do canal do consultorio — visivel apenas para o dono. Nenhum trafega pelo bloco. WhatsApp Cloud A"
+  },
+  "patients-list": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 586,
+   "texto": "Buscar paciente por nome 7 de 7 paciente(s) NOME CONTATO CONSENTIMENTO DE TRATAMENTO ULTIMA CONSULTA AB Ana Be"
+  },
+  "patient-chart": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1109,
+   "texto": "AB Ana Beatriz Souza +55 (11) 98765-4321 · nasc. em 20/07/1988 Consentimento de tratamento vigente Plano v3 EV"
+  },
+  "clinical-entry": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 583,
+   "texto": "Novo registro para Ana Beatriz Souza Anamnese, evolucao e orientacoes · consentimento tratamento-v3 Consentime"
+  },
+  "agenda-board": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1342,
+   "texto": "AGENDA Agenda de consultas Grade por profissional e por hora. Horarios em America/Sao_Paulo. Fuso America/Sao_"
+  },
+  "availability": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 466,
+   "texto": "AGENDA Horarios de atendimento Grade semanal por profissional, folgas e slots livres do dia. Tudo em America/S"
+  },
+  "follow-up-tasks": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 583,
+   "texto": "ACOMPANHAMENTO Tarefas de acompanhamento Retorno, resultado de exame e recuperacao — com prazo e responsavel p"
+  },
+  "packages-pricing": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 752,
+   "texto": "FINANCEIRO Pacotes e precos Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote"
+  },
+  "payments-checkout": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 580,
+   "texto": "FINANCEIRO Pagamento e recibo Valores em centavos exibidos em BRL. O estorno devolve o lead ao funil. Registra"
+  },
+  "finance-overview": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 542,
+   "texto": "FINANCEIRO Visao financeira Receita, ticket medio e comparecimento de marco de 2024. Valores em centavos, exib"
+  },
+  "reports-funnel": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 855,
+   "texto": "RELATORIOS Funil de conversao Pessoas por etapa em 01/03/2024 a 31/03/2024. Relatorio por origem conta PESSOAS"
+  },
+  "meta-conversion": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 892,
+   "texto": "RELATORIOS Fila de eventos da Meta Eventos de conversao prontos para envio a Meta, com chave deterministica de"
+  },
+  "social-accounts": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 963,
+   "texto": "AGENDADOR-INSTAGRAM Contas conectadas Cada conta usa um token de longa duracao do Instagram Graph API. A tela "
+  },
+  "social-composer": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1314,
+   "texto": "AGENDADOR-INSTAGRAM Composer de publicacao Monte o post (carrossel ou Reels), revise o preview e agende. Nada "
+  },
+  "social-automations": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 622,
+   "texto": "AGENDADOR-INSTAGRAM Automacoes de resposta Cada regra liga um gatilho a uma acao. Regras inativas ficam guarda"
+  },
+  "social-logs": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1106,
+   "texto": "AGENDADOR-INSTAGRAM Logs de publicacao e interacao Tudo que saiu para o Instagram, com nivel, conta, acao e ho"
+  },
+  "webhooks-panel": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 614,
+   "texto": "OPERACAO Webhooks de saida Eventos que o programa envia para fora. O segredo nunca aparece aqui: a interface m"
+  },
+  "agent-console": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1125,
+   "texto": "OPERACAO Console do agente O agente atende quem esta na lista de permitidos, dentro da janela de 24h, usando a"
+  },
+  "ops-health": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 976,
+   "texto": "OPERACAO Saude da operacao Instrumentacao, backup, filas e webhooks com falha — o suficiente para saber se o p"
+  },
+  "integration-manifest": {
+   "maxTrans": 1,
+   "maxAnim": 1,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 2697,
+   "texto": "PROGRAMA · AURORA Manifesto de conexoes Todo conector de que o programa precisa, quem pode provisionar e o que"
+  }
+ },
+ "normal": {
+  "auth-login": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 558,
+   "texto": "Aurora Nutri Aurora Do primeiro contato no WhatsApp ao plano alimentar, com o consultorio no controle. Atendim"
+  },
+  "auth-two-factor": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 630,
+   "texto": "Aplicativo autenticador Aurora · TOTP Ativo Aponte a camera do aplicativo autenticador para este codigo. CHAVE"
+  },
+  "auth-recovery": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 363,
+   "texto": "AURORA Esqueci minha senha Informe o e-mail cadastrado e enviaremos o link de recuperacao. E-mail da conta* En"
+  },
+  "admin-platform": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 945,
+   "texto": "Painel do dono da plataforma Voce administra a plataforma inteira: todos os consultorios, membros e canais fic"
+  },
+  "office-team": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1063,
+   "texto": "O dono da plataforma tem acesso total a este consultorio. O acesso marcado como \"Acesso do dono da plataforma\""
+  },
+  "office-settings": {
+   "maxTrans": 260,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 2054,
+   "texto": "CONSULTÓRIO AURORA NUTRIÇÃO Configuracoes do consultorio Canais, provedor de WhatsApp, horario de atendimento "
+  },
+  "leads-board": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1003,
+   "texto": "Novo Chegou e ainda nao foi qualificado 3 Ana Beatriz Souza +55 (11) 98765-4321 Anuncio ATRIBUICAO DO PRIMEIRO"
+  },
+  "inbox-whatsapp": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 565,
+   "texto": "Buscar conversa AB Ana Beatriz Souza 14:12 Boa tarde! Gostaria de saber os horarios de avaliacao. 2 nova(s) Pe"
+  },
+  "consent-panel": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 674,
+   "texto": "Texto vigente do consultorio O consentimento guarda um snapshot do texto aceito. Registre apenas com o texto v"
+  },
+  "channel-connections": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 886,
+   "texto": "Configuracao do canal do consultorio — visivel apenas para o dono. Nenhum trafega pelo bloco. WhatsApp Cloud A"
+  },
+  "patients-list": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 586,
+   "texto": "Buscar paciente por nome 7 de 7 paciente(s) NOME CONTATO CONSENTIMENTO DE TRATAMENTO ULTIMA CONSULTA AB Ana Be"
+  },
+  "patient-chart": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1109,
+   "texto": "AB Ana Beatriz Souza +55 (11) 98765-4321 · nasc. em 20/07/1988 Consentimento de tratamento vigente Plano v3 EV"
+  },
+  "clinical-entry": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 583,
+   "texto": "Novo registro para Ana Beatriz Souza Anamnese, evolucao e orientacoes · consentimento tratamento-v3 Consentime"
+  },
+  "agenda-board": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1342,
+   "texto": "AGENDA Agenda de consultas Grade por profissional e por hora. Horarios em America/Sao_Paulo. Fuso America/Sao_"
+  },
+  "availability": {
+   "maxTrans": 150,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 466,
+   "texto": "AGENDA Horarios de atendimento Grade semanal por profissional, folgas e slots livres do dia. Tudo em America/S"
+  },
+  "follow-up-tasks": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 583,
+   "texto": "ACOMPANHAMENTO Tarefas de acompanhamento Retorno, resultado de exame e recuperacao — com prazo e responsavel p"
+  },
+  "packages-pricing": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 752,
+   "texto": "FINANCEIRO Pacotes e precos Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote"
+  },
+  "payments-checkout": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 580,
+   "texto": "FINANCEIRO Pagamento e recibo Valores em centavos exibidos em BRL. O estorno devolve o lead ao funil. Registra"
+  },
+  "finance-overview": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 542,
+   "texto": "FINANCEIRO Visao financeira Receita, ticket medio e comparecimento de marco de 2024. Valores em centavos, exib"
+  },
+  "reports-funnel": {
+   "maxTrans": 420,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 855,
+   "texto": "RELATORIOS Funil de conversao Pessoas por etapa em 01/03/2024 a 31/03/2024. Relatorio por origem conta PESSOAS"
+  },
+  "meta-conversion": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 892,
+   "texto": "RELATORIOS Fila de eventos da Meta Eventos de conversao prontos para envio a Meta, com chave deterministica de"
+  },
+  "social-accounts": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 963,
+   "texto": "AGENDADOR-INSTAGRAM Contas conectadas Cada conta usa um token de longa duracao do Instagram Graph API. A tela "
+  },
+  "social-composer": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1314,
+   "texto": "AGENDADOR-INSTAGRAM Composer de publicacao Monte o post (carrossel ou Reels), revise o preview e agende. Nada "
+  },
+  "social-automations": {
+   "maxTrans": 260,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 622,
+   "texto": "AGENDADOR-INSTAGRAM Automacoes de resposta Cada regra liga um gatilho a uma acao. Regras inativas ficam guarda"
+  },
+  "social-logs": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1106,
+   "texto": "AGENDADOR-INSTAGRAM Logs de publicacao e interacao Tudo que saiu para o Instagram, com nivel, conta, acao e ho"
+  },
+  "webhooks-panel": {
+   "maxTrans": 260,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 614,
+   "texto": "OPERACAO Webhooks de saida Eventos que o programa envia para fora. O segredo nunca aparece aqui: a interface m"
+  },
+  "agent-console": {
+   "maxTrans": 260,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 1125,
+   "texto": "OPERACAO Console do agente O agente atende quem esta na lista de permitidos, dentro da janela de 24h, usando a"
+  },
+  "ops-health": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 976,
+   "texto": "OPERACAO Saude da operacao Instrumentacao, backup, filas e webhooks com falha — o suficiente para saber se o p"
+  },
+  "integration-manifest": {
+   "maxTrans": 180,
+   "maxAnim": 0,
+   "animInfinite": 0,
+   "animNames": [],
+   "altura": 2697,
+   "texto": "PROGRAMA · AURORA Manifesto de conexoes Todo conector de que o programa precisa, quem pode provisionar e o que"
+  }
+ },
+ "layout": {
+  "auth-login": {
+   "estados": [
+    [
+     "Normal",
+     558
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Dividida",
+     558
+    ],
+    [
+     "Centralizada",
+     555
+    ],
+    [
+     "Minima",
+     449
+    ]
+   ]
+  },
+  "auth-two-factor": {
+   "estados": [
+    [
+     "Normal",
+     630
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartões",
+     630
+    ],
+    [
+     "Coluna",
+     982
+    ],
+    [
+     "Passos",
+     715
+    ]
+   ]
+  },
+  "auth-recovery": {
+   "estados": [
+    [
+     "Normal",
+     363
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Formulário",
+     363
+    ],
+    [
+     "Passos",
+     372
+    ],
+    [
+     "Dividida",
+     354
+    ]
+   ]
+  },
+  "admin-platform": {
+   "estados": [
+    [
+     "Normal",
+     945
+    ],
+    [
+     "Carregando",
+     322
+    ],
+    [
+     "Vazio",
+     334
+    ],
+    [
+     "Erro",
+     162
+    ],
+    [
+     "Sem permissao",
+     162
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartões",
+     945
+    ],
+    [
+     "Tabela",
+     729
+    ],
+    [
+     "Dividida",
+     646
+    ]
+   ]
+  },
+  "office-team": {
+   "estados": [
+    [
+     "Normal",
+     1063
+    ],
+    [
+     "Carregando",
+     322
+    ],
+    [
+     "Vazio",
+     301
+    ],
+    [
+     "Erro",
+     162
+    ],
+    [
+     "Sem permissao",
+     162
+    ]
+   ],
+   "variantes": [
+    [
+     "Lista",
+     1063
+    ],
+    [
+     "Cartões",
+     1194
+    ],
+    [
+     "Tabela",
+     821
+    ]
+   ]
+  },
+  "office-settings": {
+   "estados": [
+    [
+     "Normal",
+     2054
+    ],
+    [
+     "Carregando",
+     322
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     162
+    ],
+    [
+     "Sem permissao",
+     162
+    ]
+   ],
+   "variantes": [
+    [
+     "Seções",
+     2054
+    ],
+    [
+     "Abas",
+     419
+    ],
+    [
+     "Cartões",
+     2063
+    ]
+   ]
+  },
+  "leads-board": {
+   "estados": [
+    [
+     "Normal",
+     1003
+    ],
+    [
+     "Carregando",
+     324
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Quadro",
+     1003
+    ],
+    [
+     "Tabela",
+     643
+    ],
+    [
+     "Timeline",
+     789
+    ]
+   ]
+  },
+  "inbox-whatsapp": {
+   "estados": [
+    [
+     "Normal",
+     565
+    ],
+    [
+     "Carregando",
+     348
+    ],
+    [
+     "Vazio",
+     301
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Dividido",
+     565
+    ],
+    [
+     "Empilhado",
+     750
+    ],
+    [
+     "Foco",
+     454
+    ]
+   ]
+  },
+  "consent-panel": {
+   "estados": [
+    [
+     "Normal",
+     674
+    ],
+    [
+     "Carregando",
+     264
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartoes",
+     674
+    ],
+    [
+     "Timeline",
+     747
+    ],
+    [
+     "Tabela",
+     617
+    ]
+   ]
+  },
+  "channel-connections": {
+   "estados": [
+    [
+     "Normal",
+     886
+    ],
+    [
+     "Carregando",
+     272
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartoes",
+     886
+    ],
+    [
+     "Tabela",
+     403
+    ]
+   ]
+  },
+  "patients-list": {
+   "estados": [
+    [
+     "Normal",
+     586
+    ],
+    [
+     "Carregando",
+     360
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Tabela",
+     586
+    ],
+    [
+     "Cartoes",
+     804
+    ],
+    [
+     "Grade",
+     389
+    ]
+   ]
+  },
+  "patient-chart": {
+   "estados": [
+    [
+     "Normal",
+     1109
+    ],
+    [
+     "Carregando",
+     338
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Timeline",
+     1109
+    ],
+    [
+     "Blocos",
+     1082
+    ],
+    [
+     "Abas",
+     678
+    ]
+   ]
+  },
+  "clinical-entry": {
+   "estados": [
+    [
+     "Normal",
+     583
+    ],
+    [
+     "Carregando",
+     370
+    ],
+    [
+     "Vazio",
+     162
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     238
+    ]
+   ],
+   "variantes": [
+    [
+     "Formulario",
+     583
+    ],
+    [
+     "Wizard",
+     439
+    ],
+    [
+     "Linha",
+     236
+    ]
+   ]
+  },
+  "agenda-board": {
+   "estados": [
+    [
+     "Normal",
+     1342
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Dia",
+     1342
+    ],
+    [
+     "Semana",
+     1270
+    ],
+    [
+     "Lista",
+     873
+    ]
+   ]
+  },
+  "availability": {
+   "estados": [
+    [
+     "Normal",
+     466
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Semana",
+     466
+    ],
+    [
+     "Lista",
+     918
+    ],
+    [
+     "Slots",
+     633
+    ]
+   ]
+  },
+  "follow-up-tasks": {
+   "estados": [
+    [
+     "Normal",
+     583
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Lista",
+     583
+    ],
+    [
+     "Calendario",
+     542
+    ],
+    [
+     "Quadro",
+     646
+    ]
+   ]
+  },
+  "packages-pricing": {
+   "estados": [
+    [
+     "Normal",
+     752
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cards",
+     752
+    ],
+    [
+     "Tabela",
+     520
+    ],
+    [
+     "Split",
+     516
+    ]
+   ]
+  },
+  "payments-checkout": {
+   "estados": [
+    [
+     "Normal",
+     580
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Formulario",
+     580
+    ],
+    [
+     "Recibo",
+     502
+    ],
+    [
+     "Split",
+     624
+    ]
+   ]
+  },
+  "finance-overview": {
+   "estados": [
+    [
+     "Normal",
+     542
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cards",
+     542
+    ],
+    [
+     "Grafico",
+     834
+    ],
+    [
+     "Tabela",
+     1074
+    ]
+   ]
+  },
+  "reports-funnel": {
+   "estados": [
+    [
+     "Normal",
+     855
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Funil",
+     855
+    ],
+    [
+     "Cards",
+     708
+    ],
+    [
+     "Tabela",
+     763
+    ]
+   ]
+  },
+  "meta-conversion": {
+   "estados": [
+    [
+     "Normal",
+     892
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Timeline",
+     892
+    ],
+    [
+     "Tabela",
+     633
+    ],
+    [
+     "Cards",
+     661
+    ]
+   ]
+  },
+  "social-accounts": {
+   "estados": [
+    [
+     "Normal",
+     963
+    ],
+    [
+     "Carregando",
+     226
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartoes",
+     963
+    ],
+    [
+     "Grade",
+     447
+    ]
+   ]
+  },
+  "social-composer": {
+   "estados": [
+    [
+     "Normal",
+     1314
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Composer",
+     1314
+    ],
+    [
+     "Dividido",
+     1314
+    ],
+    [
+     "So preview",
+     858
+    ]
+   ]
+  },
+  "social-automations": {
+   "estados": [
+    [
+     "Normal",
+     622
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Lista",
+     622
+    ],
+    [
+     "Cartoes",
+     800
+    ],
+    [
+     "Fluxo",
+     1006
+    ]
+   ]
+  },
+  "social-logs": {
+   "estados": [
+    [
+     "Normal",
+     1106
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Tabela",
+     1106
+    ],
+    [
+     "Linha do tempo",
+     898
+    ]
+   ]
+  },
+  "webhooks-panel": {
+   "estados": [
+    [
+     "Normal",
+     614
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Lista",
+     614
+    ],
+    [
+     "Fluxo",
+     953
+    ]
+   ]
+  },
+  "agent-console": {
+   "estados": [
+    [
+     "Normal",
+     1125
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Conversa",
+     1125
+    ],
+    [
+     "Cartoes",
+     914
+    ],
+    [
+     "Logs",
+     960
+    ]
+   ]
+  },
+  "ops-health": {
+   "estados": [
+    [
+     "Normal",
+     976
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartoes",
+     976
+    ],
+    [
+     "Tabela",
+     1025
+    ],
+    [
+     "Linha do tempo",
+     767
+    ]
+   ]
+  },
+  "integration-manifest": {
+   "estados": [
+    [
+     "Normal",
+     2697
+    ],
+    [
+     "Carregando",
+     314
+    ],
+    [
+     "Vazio",
+     226
+    ],
+    [
+     "Erro",
+     146
+    ],
+    [
+     "Sem permissao",
+     146
+    ]
+   ],
+   "variantes": [
+    [
+     "Cartoes",
+     2697
+    ],
+    [
+     "Tabela",
+     1922
+    ],
+    [
+     "Checklist",
+     2471
+    ]
+   ]
+  }
+ }
+}

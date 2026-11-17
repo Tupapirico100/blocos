@@ -1,0 +1,2126 @@
+{
+ "auth-login": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "-mx-1 inline-flex min-h-8 items-center rounded-[var(--r",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 558,
+  "largura": 788,
+  "scrollH": 556
+ },
+ "auth-two-factor": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 630,
+  "largura": 788,
+  "scrollH": 628
+ },
+ "auth-recovery": {
+  "transicoes": [
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 363,
+  "largura": 788,
+  "scrollH": 361
+ },
+ "admin-platform": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 945,
+  "largura": 788,
+  "scrollH": 943
+ },
+ "office-team": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1063,
+  "largura": 788,
+  "scrollH": 1061
+ },
+ "office-settings": {
+  "transicoes": [
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 2054,
+  "largura": 788,
+  "scrollH": 2052
+ },
+ "leads-board": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1003,
+  "largura": 788,
+  "scrollH": 1001
+ },
+ "inbox-whatsapp": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-b",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-b",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-b",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-b border-b",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var(--r-pill)",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 577,
+  "largura": 788,
+  "scrollH": 575
+ },
+ "consent-panel": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 674,
+  "largura": 788,
+  "scrollH": 672
+ },
+ "channel-connections": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 886,
+  "largura": 788,
+  "scrollH": 884
+ },
+ "patients-list": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(-",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(-",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(-",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center rounded-[var(-",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 586,
+  "largura": 788,
+  "scrollH": 584
+ },
+ "patient-chart": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1109,
+  "largura": 788,
+  "scrollH": 1107
+ },
+ "clinical-entry": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-all durati",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-all durati",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 583,
+  "largura": 788,
+  "scrollH": 581
+ },
+ "agenda-board": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] b",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1342,
+  "largura": 788,
+  "scrollH": 1340
+ },
+ "availability": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex w-full items-center justify-center gap",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 466,
+  "largura": 788,
+  "scrollH": 464
+ },
+ "follow-up-tasks": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 583,
+  "largura": 788,
+  "scrollH": 581
+ },
+ "packages-pricing": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 752,
+  "largura": 788,
+  "scrollH": 750
+ },
+ "payments-checkout": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 580,
+  "largura": 788,
+  "scrollH": 578
+ },
+ "finance-overview": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 542,
+  "largura": 788,
+  "scrollH": 540
+ },
+ "reports-funnel": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "h-full rounded-[var(--r-pill)] bg-accent transition-[wi",
+    "ms": 420,
+    "prop": "width",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "h-full rounded-[var(--r-pill)] bg-accent transition-[wi",
+    "ms": 420,
+    "prop": "width",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "h-full rounded-[var(--r-pill)] bg-accent transition-[wi",
+    "ms": 420,
+    "prop": "width",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 855,
+  "largura": 788,
+  "scrollH": 853
+ },
+ "meta-conversion": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 892,
+  "largura": 788,
+  "scrollH": 890
+ },
+ "social-accounts": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 963,
+  "largura": 788,
+  "scrollH": 961
+ },
+ "social-composer": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 text-[14px] te",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "flex items-center gap-2 rounded-[var(--r-sm)] border bo",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-center round",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "flex h-[18px] w-[18px] items-center justify-center roun",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "flex items-center gap-2 rounded-[var(--r-sm)] border bo",
+    "ms": 150,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1314,
+  "largura": 788,
+  "scrollH": 1312
+ },
+ "social-automations": {
+  "transicoes": [
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute left-0.5 top-1 h-6 w-10 rounded-[var(--r-pill)",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute left-0.5 top-1 h-6 w-10 rounded-[var(--r-pill)",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 622,
+  "largura": 788,
+  "scrollH": 620
+ },
+ "social-logs": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1106,
+  "largura": 788,
+  "scrollH": 1104
+ },
+ "webhooks-panel": {
+  "transicoes": [
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute left-0.5 top-1 h-6 w-10 rounded-[var(--r-pill)",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute left-0.5 top-1 h-6 w-10 rounded-[var(--r-pill)",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-border/60 transition-colors duration-[v",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 614,
+  "largura": 788,
+  "scrollH": 612
+ },
+ "agent-console": {
+  "transicoes": [
+   {
+    "tag": "SPAN",
+    "cls": "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm ",
+    "ms": 260,
+    "prop": "transform, translate, scale, rotate",
+    "timing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[var(--r-pill",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "absolute left-0.5 top-1 h-6 w-10 rounded-[var(--r-pill)",
+    "ms": 180,
+    "prop": "color, background-color, border-color, outline-col",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surface-strong/6",
+    "ms": 180,
+    "prop": "border-color, box-shadow, background-color",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 1125,
+  "largura": 788,
+  "scrollH": 1123
+ },
+ "ops-health": {
+  "transicoes": [
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "rounded-[var(--r-lg)] border border-border bg-surface/6",
+    "ms": 180,
+    "prop": "all",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 976,
+  "largura": 788,
+  "scrollH": 974
+ },
+ "integration-manifest": {
+  "transicoes": [
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transition-[tran",
+    "ms": 180,
+    "prop": "transform, box-shadow, background-color",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-center font-m",
+    "ms": 180,
+    "prop": "background-color, border-color, color, transform, ",
+    "timing": "cubic-bezier(0.32, 0.72, 0, 1)"
+   }
+  ],
+  "nTransOver420": 0,
+  "animacoes": [],
+  "animacoesLongas": [],
+  "altura": 2697,
+  "largura": 788,
+  "scrollH": 2695
+ }
+}
