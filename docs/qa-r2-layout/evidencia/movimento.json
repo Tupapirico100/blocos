@@ -1,0 +1,136 @@
+{
+ "duracoes": {
+  "bad": [],
+  "badCount": 0,
+  "durations": [
+   "150ms",
+   "180ms",
+   "260ms"
+  ],
+  "easings": [
+   "cubic-bezier(0.4, 0, 0.2, 1)",
+   "cubic-bezier(0.32, 0.72, 0, 1)"
+  ]
+ },
+ "drawer_normal": {
+  "samples": [
+   {
+    "left": 93,
+    "w": 390,
+    "top": 844,
+    "anims": [
+     "?"
+    ]
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   }
+  ],
+  "fechado_com_esc": true,
+  "foco_apos_esc": "BODY:Blocos\n\nBiblioteca de blocos r"
+ },
+ "focus_trap": [
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro",
+  "dentro"
+ ],
+ "duracoes_reduced": {
+  "bad": [],
+  "badCount": 0,
+  "durations": [
+   "1ms"
+  ],
+  "easings": [
+   "ANIM:ease",
+   "cubic-bezier(0.4, 0, 0.2, 1)",
+   "cubic-bezier(0.32, 0.72, 0, 1)"
+  ]
+ },
+ "drawer_reduced": {
+  "samples": [
+   {
+    "left": 390,
+    "w": 390,
+    "top": 844,
+    "anims": [
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color",
+     "scrollbar-color"
+    ]
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": [
+     "scrollbar-color",
+     "scrollbar-color",
+     "?"
+    ]
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   },
+   {
+    "left": 0,
+    "w": 390,
+    "top": 844,
+    "anims": []
+   }
+  ],
+  "fechado_com_esc": true,
+  "foco_apos_esc": "BODY:Blocos\n\nBiblioteca de blocos r"
+ },
+ "css_reduced": {
+  "trans": "0.001s",
+  "anim": "0.001s",
+  "mq": true
+ },
+ "cls_troca_blocos": 0.8219551944015775,
+ "cls_troca_variante": 1.0210581399632417,
+ "cls_entries": []
+}

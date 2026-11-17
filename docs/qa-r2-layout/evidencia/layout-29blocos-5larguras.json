@@ -1,0 +1,6216 @@
+[
+ {
+  "w": 390,
+  "block": "auth-login",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Consentimento registrado antes do prontu",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 30,
+    "box": [
+     57,
+     10
+    ]
+   },
+   {
+    "a": "SPAN|Consentimento registrado antes do prontu",
+    "b": "CODE|—",
+    "overlapPct": 61,
+    "box": [
+     7,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:24px": 1,
+   "rowGap:24px": 1,
+   "columnGap:24px": 1,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:10px": 5,
+   "rowGap:10px": 5,
+   "columnGap:10px": 5,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 390,
+  "block": "auth-two-factor",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|CHAVE DE CONFIGURACAO",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 53,
+    "box": [
+     83,
+     12
+    ]
+   },
+   {
+    "a": "P|CHAVE DE CONFIGURACAO",
+    "b": "CODE|—",
+    "overlapPct": 73,
+    "box": [
+     7,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 5,
+   "rowGap:16px": 5,
+   "columnGap:16px": 5,
+   "gap:12px": 11,
+   "rowGap:12px": 11,
+   "columnGap:12px": 11,
+   "gap:4px": 7,
+   "rowGap:4px": 7,
+   "columnGap:4px": 7,
+   "gap:6px": 11,
+   "rowGap:6px": 11,
+   "columnGap:6px": 11,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "auth-recovery",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "admin-platform",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|PLATAFORMA",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 48,
+    "box": [
+     108,
+     8
+    ]
+   },
+   {
+    "a": "DIV|PLATAFORMA",
+    "b": "CODE|—",
+    "overlapPct": 51,
+    "box": [
+     7,
+     8
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 16,
+   "rowGap:12px": 16,
+   "columnGap:12px": 16,
+   "gap:4px": 12,
+   "rowGap:4px": 12,
+   "columnGap:4px": 12,
+   "gap:8px": 15,
+   "rowGap:8px": 15,
+   "columnGap:8px": 15
+  }
+ },
+ {
+  "w": 390,
+  "block": "office-team",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|MA",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 45,
+    "box": [
+     36,
+     16
+    ]
+   },
+   {
+    "a": "P|Mariana Albuquerque",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 34,
+    "box": [
+     43,
+     15
+    ]
+   },
+   {
+    "a": "P|Mariana Albuquerque",
+    "b": "CODE|—",
+    "overlapPct": 90,
+    "box": [
+     7,
+     15
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 15,
+   "rowGap:12px": 15,
+   "columnGap:12px": 15,
+   "gap:8px": 18,
+   "rowGap:8px": 18,
+   "columnGap:8px": 18,
+   "gap:4px": 23,
+   "rowGap:4px": 23,
+   "columnGap:4px": 23,
+   "gap:6px": 24,
+   "rowGap:6px": 24,
+   "columnGap:6px": 24
+  }
+ },
+ {
+  "w": 390,
+  "block": "office-settings",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Desconectar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 76,
+    "box": [
+     87,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|Desconectar",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:12px": 39,
+   "rowGap:12px": 39,
+   "columnGap:12px": 39,
+   "gap:24px": 1,
+   "rowGap:24px": 1,
+   "columnGap:24px": 1,
+   "gap:4px": 4,
+   "rowGap:4px": 4,
+   "columnGap:4px": 4,
+   "gap:6px": 5,
+   "rowGap:6px": 5,
+   "columnGap:6px": 5,
+   "gap:8px": 20,
+   "rowGap:8px": 20,
+   "columnGap:8px": 20
+  }
+ },
+ {
+  "w": 390,
+  "block": "leads-board",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|Carlos Eduardo Lima",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 64,
+    "box": [
+     74,
+     16
+    ]
+   },
+   {
+    "a": "P|Carlos Eduardo Lima",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 24,
+   "rowGap:8px": 24,
+   "columnGap:8px": 24,
+   "gap:4px": 21,
+   "rowGap:4px": 21,
+   "columnGap:4px": 21
+  }
+ },
+ {
+  "w": 390,
+  "block": "inbox-whatsapp",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|D(\nDesconhecido (numero novo)\n09:05\nVoce",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 90,
+    "box": [
+     103,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|D(\nDesconhecido (numero novo)\n09:05\nVoce",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|D(",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 34,
+    "box": [
+     34,
+     12
+    ]
+   },
+   {
+    "a": "SPAN|Voce vende esse produto? Quero revender.",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 33,
+    "box": [
+     45,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|Voce vende esse produto? Quero revender.",
+    "b": "CODE|—",
+    "overlapPct": 84,
+    "box": [
+     7,
+     14
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:4px": 16,
+   "rowGap:4px": 16,
+   "columnGap:4px": 16,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 390,
+  "block": "consent-panel",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 5,
+   "rowGap:8px": 5,
+   "columnGap:8px": 5,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:4px": 2,
+   "rowGap:4px": 2,
+   "columnGap:4px": 2,
+   "gap:6px": 6,
+   "rowGap:6px": 6,
+   "columnGap:6px": 6
+  }
+ },
+ {
+  "w": 390,
+  "block": "channel-connections",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|Provedor oficial: nao exige aceite de ri",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 76,
+    "box": [
+     87,
+     16
+    ]
+   },
+   {
+    "a": "P|Provedor oficial: nao exige aceite de ri",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3,
+   "gap:4px": 8,
+   "rowGap:4px": 8,
+   "columnGap:4px": 8,
+   "gap:6px": 13,
+   "rowGap:6px": 13,
+   "columnGap:6px": 13
+  }
+ },
+ {
+  "w": 390,
+  "block": "patients-list",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1,
+   "gap:10px": 7,
+   "rowGap:10px": 7,
+   "columnGap:10px": 7,
+   "gap:4px": 7,
+   "rowGap:4px": 7,
+   "columnGap:4px": 7
+  }
+ },
+ {
+  "w": 390,
+  "block": "patient-chart",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|80.8 kg · 28.7% gordura · 88 cm cintura",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 58,
+    "box": [
+     66,
+     16
+    ]
+   },
+   {
+    "a": "P|80.8 kg · 28.7% gordura · 88 cm cintura",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 3,
+   "columnGap:16px": 2,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 10,
+   "rowGap:8px": 10,
+   "columnGap:8px": 10,
+   "gap:4px": 11,
+   "rowGap:4px": 11,
+   "columnGap:4px": 11,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2,
+   "gap:16px 24px": 1,
+   "columnGap:24px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "clinical-entry",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SELECT|Marina Alencar — Nutricionista\nPedro Lin",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 49,
+    "box": [
+     87,
+     10
+    ]
+   },
+   {
+    "a": "SELECT|Marina Alencar — Nutricionista\nPedro Lin",
+    "b": "CODE|—",
+    "overlapPct": 64,
+    "box": [
+     7,
+     11
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:4px": 1,
+   "rowGap:4px": 1,
+   "columnGap:4px": 1,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4,
+   "gap:2px": 1,
+   "rowGap:2px": 1,
+   "columnGap:2px": 1,
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3
+  }
+ },
+ {
+  "w": 390,
+  "block": "agenda-board",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|08:30\nJoana Prado\nAVALIACAO INICIAL\nConf",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|Confirmado",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1,
+   "gap:8px": 2,
+   "rowGap:8px": 2,
+   "columnGap:8px": 2,
+   "gap:4px": 26,
+   "rowGap:4px": 26,
+   "columnGap:4px": 26,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:1px": 1,
+   "rowGap:1px": 1,
+   "columnGap:1px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "availability",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|NUTRICAO ESPORTIVA",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 73,
+    "box": [
+     95,
+     14
+    ]
+   },
+   {
+    "a": "P|NUTRICAO ESPORTIVA",
+    "b": "CODE|—",
+    "overlapPct": 87,
+    "box": [
+     7,
+     14
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 13,
+   "rowGap:4px": 13,
+   "columnGap:4px": 13,
+   "gap:1px": 1,
+   "rowGap:1px": 1,
+   "columnGap:1px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "follow-up-tasks",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Joana Prado",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 56,
+    "box": [
+     65,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Retorno",
+    "b": "CODE|—",
+    "overlapPct": 86,
+    "box": [
+     7,
+     14
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1,
+   "gap:8px": 7,
+   "rowGap:8px": 7,
+   "columnGap:8px": 7,
+   "gap:4px": 13,
+   "rowGap:4px": 13,
+   "columnGap:4px": 13,
+   "gap:6px": 24,
+   "rowGap:6px": 24,
+   "columnGap:6px": 24
+  }
+ },
+ {
+  "w": 390,
+  "block": "packages-pricing",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Salvar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 42,
+    "box": [
+     67,
+     12
+    ]
+   },
+   {
+    "a": "BUTTON|Desativar",
+    "b": "CODE|—",
+    "overlapPct": 72,
+    "box": [
+     7,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 17,
+   "rowGap:12px": 17,
+   "columnGap:12px": 17,
+   "gap:4px": 5,
+   "rowGap:4px": 5,
+   "columnGap:4px": 5,
+   "gap:8px": 5,
+   "rowGap:8px": 5,
+   "columnGap:8px": 5,
+   "gap:6px": 20,
+   "rowGap:6px": 20,
+   "columnGap:6px": 20
+  }
+ },
+ {
+  "w": 390,
+  "block": "payments-checkout",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:12px": 5,
+   "rowGap:12px": 5,
+   "columnGap:12px": 5,
+   "gap:6px": 3,
+   "rowGap:6px": 3,
+   "columnGap:6px": 3,
+   "gap:8px": 2,
+   "rowGap:8px": 2,
+   "columnGap:8px": 2
+  }
+ },
+ {
+  "w": 390,
+  "block": "finance-overview",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 2,
+   "rowGap:12px": 2,
+   "columnGap:12px": 2,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 390,
+  "block": "reports-funnel",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:8px": 11,
+   "rowGap:8px": 11,
+   "columnGap:8px": 11,
+   "gap:6px": 5,
+   "rowGap:6px": 5,
+   "columnGap:6px": 5,
+   "gap:4px": 3,
+   "rowGap:4px": 3,
+   "columnGap:4px": 3
+  }
+ },
+ {
+  "w": 390,
+  "block": "meta-conversion",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 8,
+   "rowGap:12px": 8,
+   "columnGap:12px": 8,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:4px": 20,
+   "rowGap:4px": 20,
+   "columnGap:4px": 20,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4
+  }
+ },
+ {
+  "w": 390,
+  "block": "social-accounts",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|18/04/2026, 18:00",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 43,
+    "box": [
+     87,
+     9
+    ]
+   },
+   {
+    "a": "SPAN|18/04/2026, 18:00",
+    "b": "CODE|—",
+    "overlapPct": 56,
+    "box": [
+     7,
+     9
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 5,
+   "columnGap:16px": 1,
+   "gap:12px": 11,
+   "rowGap:12px": 11,
+   "columnGap:12px": 11,
+   "gap:8px": 11,
+   "rowGap:8px": 11,
+   "columnGap:8px": 11,
+   "gap:4px": 4,
+   "rowGap:4px": 4,
+   "columnGap:4px": 4,
+   "gap:16px 24px": 4,
+   "columnGap:24px": 4,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 390,
+  "block": "social-composer",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|prato-colorido.jpg",
+    "b": "SPAN|IMAGEM · 1,2 MB",
+    "overlapPct": 29,
+    "box": [
+     35,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|mesa-consultorio.jpg",
+    "b": "SPAN|IMAGEM · 980 KB",
+    "overlapPct": 47,
+    "box": [
+     57,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|card-agenda.png",
+    "b": "SPAN|IMAGEM · 420 KB",
+    "overlapPct": 26,
+    "box": [
+     31,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|detalhe-armario.jpg",
+    "b": "SPAN|IMAGEM · 760 KB",
+    "overlapPct": 40,
+    "box": [
+     49,
+     14
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:12px": 9,
+   "rowGap:12px": 9,
+   "columnGap:12px": 9,
+   "gap:6px": 7,
+   "rowGap:6px": 7,
+   "columnGap:6px": 7,
+   "gap:8px": 16,
+   "rowGap:8px": 16,
+   "columnGap:8px": 16,
+   "gap:2px": 1,
+   "rowGap:2px": 1,
+   "columnGap:2px": 1,
+   "gap:4px": 1,
+   "rowGap:4px": 1,
+   "columnGap:4px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "social-automations",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|@exemplo.nutricao",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 82,
+    "box": [
+     95,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|@exemplo.nutricao",
+    "b": "CODE|—",
+    "overlapPct": 98,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "SPAN",
+    "txt": "*",
+    "cls": "bloco-mono truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:6px": 8,
+   "rowGap:6px": 8,
+   "columnGap:6px": 8
+  }
+ },
+ {
+  "w": 390,
+  "block": "social-logs",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Token proximo do limite",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 2,
+   "rowGap:12px": 2,
+   "columnGap:12px": 2,
+   "gap:4px": 12,
+   "rowGap:4px": 12,
+   "columnGap:4px": 12,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4
+  }
+ },
+ {
+  "w": 390,
+  "block": "webhooks-panel",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 7,
+   "rowGap:12px": 7,
+   "columnGap:12px": 7,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 16,
+   "rowGap:4px": 16,
+   "columnGap:4px": 16,
+   "gap:6px": 6,
+   "rowGap:6px": 6,
+   "columnGap:6px": 6
+  }
+ },
+ {
+  "w": 390,
+  "block": "agent-console",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|Oi, tem horario para quinta de manha?",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 60,
+    "box": [
+     35,
+     12
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "CODE|—",
+    "overlapPct": 74,
+    "box": [
+     7,
+     12
+    ]
+   },
+   {
+    "a": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 30,
+    "box": [
+     35,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|10h30 funciona.",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "b": "LABEL|Mensagem para o agente",
+    "overlapPct": 68,
+    "box": [
+     114,
+     19
+    ]
+   },
+   {
+    "a": "SPAN|05/03/2026, 09:29",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 100,
+    "box": [
+     191,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "SPAN|Atendimento registrado. Lead permanece e",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 3,
+   "columnGap:16px": 2,
+   "gap:12px": 9,
+   "rowGap:12px": 9,
+   "columnGap:12px": 9,
+   "gap:8px": 8,
+   "rowGap:8px": 8,
+   "columnGap:8px": 8,
+   "gap:4px": 3,
+   "rowGap:4px": 3,
+   "columnGap:4px": 3,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:10px": 4,
+   "rowGap:10px": 4,
+   "columnGap:10px": 4,
+   "gap:16px 24px": 1,
+   "columnGap:24px": 1
+  }
+ },
+ {
+  "w": 390,
+  "block": "ops-health",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:12px": 7,
+   "rowGap:12px": 7,
+   "columnGap:12px": 7,
+   "gap:8px": 19,
+   "rowGap:8px": 19,
+   "columnGap:8px": 19,
+   "gap:4px": 15,
+   "rowGap:4px": 15,
+   "columnGap:4px": 15
+  }
+ },
+ {
+  "w": 390,
+  "block": "integration-manifest",
+  "vw": 390,
+  "docScrollW": 390,
+  "docClientW": 390,
+  "bodyScrollW": 390,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|Ninguem mais provisiona conector. O dono",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 55,
+    "box": [
+     63,
+     16
+    ]
+   },
+   {
+    "a": "DIV|Ninguem mais provisiona conector. O dono",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "P",
+    "txt": "PDF",
+    "cls": "bloco-title3 truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 10,
+   "columnGap:16px": 1,
+   "gap:12px": 23,
+   "rowGap:12px": 23,
+   "columnGap:12px": 23,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 31,
+   "rowGap:4px": 31,
+   "columnGap:4px": 31,
+   "gap:16px 24px": 9,
+   "columnGap:24px": 9,
+   "gap:6px": 47,
+   "rowGap:6px": 47,
+   "columnGap:6px": 47
+  }
+ },
+ {
+  "w": 768,
+  "block": "auth-login",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "auth-two-factor",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Remover fator",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 38,
+    "box": [
+     79,
+     9
+    ]
+   },
+   {
+    "a": "BUTTON|Remover fator",
+    "b": "CODE|—",
+    "overlapPct": 56,
+    "box": [
+     7,
+     9
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "auth-recovery",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "admin-platform",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|CONSULTORIOS ATIVOS",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 43,
+    "box": [
+     87,
+     9
+    ]
+   },
+   {
+    "a": "SPAN|CONSULTORIOS ATIVOS",
+    "b": "CODE|—",
+    "overlapPct": 57,
+    "box": [
+     7,
+     9
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 82,
+    "cw": 68,
+    "txt": "Belo Horizonte/MG"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "office-team",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|RN",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 32,
+    "box": [
+     36,
+     11
+    ]
+   },
+   {
+    "a": "P|Rafael Nogueira",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 25,
+    "box": [
+     39,
+     12
+    ]
+   },
+   {
+    "a": "P|Rafael Nogueira",
+    "b": "CODE|—",
+    "overlapPct": 74,
+    "box": [
+     7,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "office-settings",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "H2|Provedor de WhatsApp",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 80,
+    "box": [
+     104,
+     14
+    ]
+   },
+   {
+    "a": "H2|Provedor de WhatsApp",
+    "b": "CODE|—",
+    "overlapPct": 88,
+    "box": [
+     7,
+     15
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "leads-board",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "inbox-whatsapp",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|JP\nJuliana Prado\n16:22\nPerfeito, ate qui",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 86,
+    "box": [
+     99,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|JP\nJuliana Prado\n16:22\nPerfeito, ate qui",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|JP",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 30,
+    "box": [
+     34,
+     10
+    ]
+   },
+   {
+    "a": "SPAN|Perfeito, ate quinta!",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 33,
+    "box": [
+     41,
+     15
+    ]
+   },
+   {
+    "a": "SPAN|Perfeito, ate quinta!",
+    "b": "CODE|—",
+    "overlapPct": 93,
+    "box": [
+     7,
+     15
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "consent-panel",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "FIGCAPTION|SNAPSHOT DO TEXTO ACEITO (TRATAMENTO-V3)",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 41,
+    "box": [
+     70,
+     11
+    ]
+   },
+   {
+    "a": "FIGCAPTION|SNAPSHOT DO TEXTO ACEITO (TRATAMENTO-V3)",
+    "b": "CODE|—",
+    "overlapPct": 67,
+    "box": [
+     7,
+     11
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "channel-connections",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Reconectar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|Reconectar",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|Reconectar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 76,
+    "box": [
+     71,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Reconectar",
+    "b": "CODE|—",
+    "overlapPct": 95,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "patients-list",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|MA",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 36,
+    "box": [
+     28,
+     10
+    ]
+   },
+   {
+    "a": "P|Mariana Alves Rocha",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 45,
+    "box": [
+     53,
+     16
+    ]
+   },
+   {
+    "a": "P|Mariana Alves Rocha",
+    "b": "CODE|—",
+    "overlapPct": 97,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "patient-chart",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Medida",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 69,
+    "box": [
+     58,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|20/02/2025, 11:05",
+    "b": "CODE|—",
+    "overlapPct": 73,
+    "box": [
+     7,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "clinical-entry",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TEXTAREA|",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 68,
+    "box": [
+     83,
+     15
+    ]
+   },
+   {
+    "a": "TEXTAREA|",
+    "b": "CODE|—",
+    "overlapPct": 93,
+    "box": [
+     7,
+     15
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "agenda-board",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "availability",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "follow-up-tasks",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Camila Rezende",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 56,
+    "box": [
+     65,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Resultado de exame",
+    "b": "CODE|—",
+    "overlapPct": 56,
+    "box": [
+     7,
+     9
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "packages-pricing",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Salvar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 45,
+    "box": [
+     67,
+     12
+    ]
+   },
+   {
+    "a": "SPAN|Salvar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 27,
+    "box": [
+     41,
+     4
+    ]
+   },
+   {
+    "a": "BUTTON|Desativar",
+    "b": "CODE|—",
+    "overlapPct": 77,
+    "box": [
+     7,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|Desativar",
+    "b": "CODE|—",
+    "overlapPct": 27,
+    "box": [
+     7,
+     4
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 175,
+    "cw": 147,
+    "txt": "R$ 280,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption mt-0.5 text-fg-muted",
+    "sw": 113,
+    "cw": 89,
+    "txt": "Quatro sessoes de acompanhamento."
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 175,
+    "cw": 147,
+    "txt": "R$ 960,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 147,
+    "txt": "R$ 1.760,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 147,
+    "txt": "R$ 2.400,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption mt-0.5 text-fg-muted",
+    "sw": 92,
+    "cw": 79,
+    "txt": "Plano corporativo descontinuado."
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 147,
+    "txt": "R$ 3.200,00"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "payments-checkout",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SELECT|Pix\nCartao de credito\nCartao de debito\nD",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 49,
+    "box": [
+     83,
+     11
+    ]
+   },
+   {
+    "a": "SELECT|Pix\nCartao de credito\nCartao de debito\nD",
+    "b": "CODE|—",
+    "overlapPct": 68,
+    "box": [
+     7,
+     11
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "finance-overview",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "SPAN|R$ 2.141,00",
+    "overlapPct": 26,
+    "box": [
+     45,
+     18
+    ]
+   },
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "DIV|por atendimento pago",
+    "overlapPct": 29,
+    "box": [
+     45,
+     16
+    ]
+   },
+   {
+    "a": "DIV|71 sessoes agendadas",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 59,
+    "box": [
+     87,
+     13
+    ]
+   },
+   {
+    "a": "DIV|71 sessoes agendadas",
+    "b": "CODE|—",
+    "overlapPct": 78,
+    "box": [
+     7,
+     13
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "reports-funnel",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "meta-conversion",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Contato",
+    "b": "CODE|—",
+    "overlapPct": 34,
+    "box": [
+     7,
+     6
+    ]
+   },
+   {
+    "a": "P|13/03/2024, 09:12:00 · origem Instagram",
+    "b": "CODE|—",
+    "overlapPct": 42,
+    "box": [
+     7,
+     7
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "social-accounts",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Expirou ha 212 dia(s)",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 52,
+    "box": [
+     62,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Carrossel · 28/03/2026, 10:30",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 62,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 62,
+    "txt": "18/04/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 62,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "bloco-caption",
+    "sw": 73,
+    "cw": 62,
+    "txt": "Carrossel · 28/03/2026, 10:30"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 62,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 62,
+    "txt": "08/03/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 62,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "bloco-caption",
+    "sw": 73,
+    "cw": 62,
+    "txt": "Reels · 02/03/2026, 16:45"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 62,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 62,
+    "txt": "20/02/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 62,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 62,
+    "txt": "EXPIRACAO DO TOKEN"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "social-composer",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TEXTAREA|",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "TEXTAREA|",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "social-automations",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "SPAN",
+    "txt": "*",
+    "cls": "bloco-mono truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "social-logs",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "webhooks-panel",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "agent-console",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|Oi, tem horario para quinta de manha?",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "CODE|—",
+    "overlapPct": 61,
+    "box": [
+     7,
+     10
+    ]
+   },
+   {
+    "a": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "b": "CODE|—",
+    "overlapPct": 85,
+    "box": [
+     7,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "SPAN|Atendimento registrado. Lead permanece e",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 84,
+    "box": [
+     59,
+     11
+    ]
+   },
+   {
+    "a": "SPAN|Atendimento registrado. Lead permanece e",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 90,
+    "box": [
+     290,
+     57
+    ]
+   },
+   {
+    "a": "SPAN|05/03/2026, 09:31",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 100,
+    "box": [
+     322,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "ops-health",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|WEBHOOKS COM FALHA",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 37,
+    "box": [
+     87,
+     8
+    ]
+   },
+   {
+    "a": "SPAN|WEBHOOKS COM FALHA",
+    "b": "CODE|—",
+    "overlapPct": 49,
+    "box": [
+     7,
+     8
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 768,
+  "block": "integration-manifest",
+  "vw": 768,
+  "docScrollW": 768,
+  "docClientW": 768,
+  "bodyScrollW": 768,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|Ninguem mais provisiona conector. O dono",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 51,
+    "box": [
+     59,
+     16
+    ]
+   },
+   {
+    "a": "DIV|Ninguem mais provisiona conector. O dono",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "SPAN",
+    "cls": "bloco-title3",
+    "sw": 122,
+    "cw": 104,
+    "txt": "Dono da plataforma"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "P",
+    "txt": "PDF",
+    "cls": "bloco-title3 truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "auth-login",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "auth-two-factor",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-callout text-fg-secondary",
+    "sw": 83,
+    "cw": 47,
+    "txt": "Aponte a camera do aplicativo autenticador para este codigo."
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-micro text-fg-muted",
+    "sw": 107,
+    "cw": 47,
+    "txt": "CHAVE DE CONFIGURACAO"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "auth-recovery",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "admin-platform",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|Consultório Aurora Nutrição\n\nSão Paulo/S",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 90,
+    "box": [
+     104,
+     16
+    ]
+   },
+   {
+    "a": "DIV|Consultório Aurora Nutrição\n\nSão Paulo/S",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "DT",
+    "cls": "bloco-micro text-fg-muted",
+    "sw": 68,
+    "cw": 63,
+    "txt": "MEMBROS"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro text-fg-muted",
+    "sw": 68,
+    "cw": 63,
+    "txt": "MEMBROS"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 82,
+    "cw": 58,
+    "txt": "Belo Horizonte/MG"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro text-fg-muted",
+    "sw": 68,
+    "cw": 63,
+    "txt": "MEMBROS"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro text-fg-muted",
+    "sw": 68,
+    "cw": 63,
+    "txt": "MEMBROS"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "office-team",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Recepcionista",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 76,
+    "box": [
+     87,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "office-settings",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|Provedores nao oficiais podem quebrar se",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 33,
+    "box": [
+     38,
+     16
+    ]
+   },
+   {
+    "a": "DIV|Provedores nao oficiais podem quebrar se",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "leads-board",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|Marina Alencar · WhatsApp · 12/03/2025, ",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 61,
+    "box": [
+     70,
+     16
+    ]
+   },
+   {
+    "a": "P|Marina Alencar · WhatsApp · 12/03/2025, ",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 22,
+    "txt": "+55 (11) 98765-4321"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 17,
+    "txt": "+55 (21) 99887-7665"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-headline break-words",
+    "sw": 17,
+    "cw": 14,
+    "txt": "Mariana Alves Rocha"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 14,
+    "txt": "+55 (31) 98765-4322"
+   },
+   {
+    "tag": "H3",
+    "cls": "bloco-title3",
+    "sw": 125,
+    "cw": 102,
+    "txt": "Qualificado"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 22,
+    "txt": "+55 (41) 99998-8776"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 17,
+    "txt": "+55 (16) 99912-3456"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-headline break-words",
+    "sw": 17,
+    "cw": 14,
+    "txt": "Thiago Marques"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 14,
+    "txt": "+55 (35) 99887-7664"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 22,
+    "txt": "+55 (21) 98877-6655"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 14,
+    "txt": "+55 (34) 88776-6554"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption text-fg-muted",
+    "sw": 43,
+    "cw": 17,
+    "txt": "+55 (17) 98765-4323"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "inbox-whatsapp",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "consent-panel",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BLOCKQUOTE|Autorizo o tratamento dos meus dados de ",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 38,
+    "box": [
+     70,
+     10
+    ]
+   },
+   {
+    "a": "BLOCKQUOTE|Autorizo o tratamento dos meus dados de ",
+    "b": "CODE|—",
+    "overlapPct": 61,
+    "box": [
+     7,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "channel-connections",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "H3|Canal hospedado por terceiro",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 68,
+    "box": [
+     83,
+     15
+    ]
+   },
+   {
+    "a": "H3|Canal hospedado por terceiro",
+    "b": "CODE|—",
+    "overlapPct": 93,
+    "box": [
+     7,
+     15
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "patients-list",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TH|ULTIMA CONSULTA",
+    "b": "SPAN|employee",
+    "overlapPct": 100,
+    "box": [
+     72,
+     20
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "patient-chart",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Medida",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 57,
+    "box": [
+     58,
+     11
+    ]
+   },
+   {
+    "a": "SPAN|03/02/2025, 10:35",
+    "b": "CODE|—",
+    "overlapPct": 59,
+    "box": [
+     7,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "clinical-entry",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "agenda-board",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "availability",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|SAB",
+    "b": "CODE|availability.block",
+    "overlapPct": 100,
+    "box": [
+     27,
+     13
+    ]
+   },
+   {
+    "a": "BUTTON|FOLGA",
+    "b": "P|Bloquear horario",
+    "overlapPct": 29,
+    "box": [
+     64,
+     9
+    ]
+   },
+   {
+    "a": "BUTTON|FOLGA",
+    "b": "P|Bloqueia um intervalo de agenda (ferias,",
+    "overlapPct": 58,
+    "box": [
+     64,
+     19
+    ]
+   },
+   {
+    "a": "BUTTON|FOLGA",
+    "b": "SPAN|employee",
+    "overlapPct": 88,
+    "box": [
+     64,
+     20
+    ]
+   },
+   {
+    "a": "SPAN|08:00–12:00",
+    "b": "P|Liberar bloqueio",
+    "overlapPct": 43,
+    "box": [
+     64,
+     19
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "follow-up-tasks",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TH|ACOES",
+    "b": "CODE|task.reschedule",
+    "overlapPct": 100,
+    "box": [
+     108,
+     18
+    ]
+   },
+   {
+    "a": "BUTTON|Reagendar",
+    "b": "P|Muda o prazo da tarefa de acompanhamento",
+    "overlapPct": 91,
+    "box": [
+     96,
+     29
+    ]
+   },
+   {
+    "a": "SPAN|Reagendar",
+    "b": "P|Muda o prazo da tarefa de acompanhamento",
+    "overlapPct": 100,
+    "box": [
+     70,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|Reagendar",
+    "b": "SPAN|employee",
+    "overlapPct": 85,
+    "box": [
+     62,
+     20
+    ]
+   },
+   {
+    "a": "SPAN|Reagendar",
+    "b": "SPAN|employee",
+    "overlapPct": 69,
+    "box": [
+     49,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "packages-pricing",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|Ciclo completo de trimestre.",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 69,
+    "box": [
+     79,
+     16
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 175,
+    "cw": 137,
+    "txt": "R$ 280,00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 67,
+    "cw": 63,
+    "txt": "VALIDADE"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption mt-0.5 text-fg-muted",
+    "sw": 113,
+    "cw": 79,
+    "txt": "Quatro sessoes de acompanhamento."
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 175,
+    "cw": 137,
+    "txt": "R$ 960,00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 67,
+    "cw": 63,
+    "txt": "VALIDADE"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 137,
+    "txt": "R$ 1.760,00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 67,
+    "cw": 63,
+    "txt": "VALIDADE"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 137,
+    "txt": "R$ 2.400,00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 67,
+    "cw": 63,
+    "txt": "VALIDADE"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-caption mt-0.5 text-fg-muted",
+    "sw": 92,
+    "cw": 70,
+    "txt": "Plano corporativo descontinuado."
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 137,
+    "txt": "R$ 3.200,00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 67,
+    "cw": 63,
+    "txt": "VALIDADE"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "payments-checkout",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "finance-overview",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|R$ 128.460,00",
+    "b": "SPAN|R$ 2.141,00",
+    "overlapPct": 29,
+    "box": [
+     46,
+     28
+    ]
+   },
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "SPAN|R$ 2.141,00",
+    "overlapPct": 28,
+    "box": [
+     48,
+     18
+    ]
+   },
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "DIV|por atendimento pago",
+    "overlapPct": 56,
+    "box": [
+     43,
+     40
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "reports-funnel",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "meta-conversion",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "social-accounts",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|BE",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 40,
+    "box": [
+     40,
+     16
+    ]
+   },
+   {
+    "a": "P|Bem-estar Exemplo",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 27,
+    "box": [
+     31,
+     16
+    ]
+   },
+   {
+    "a": "P|Bem-estar Exemplo",
+    "b": "CODE|—",
+    "overlapPct": 98,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 57,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 57,
+    "txt": "18/04/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 57,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "bloco-caption",
+    "sw": 73,
+    "cw": 57,
+    "txt": "Carrossel · 28/03/2026, 10:30"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 57,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 57,
+    "txt": "08/03/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 57,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "bloco-caption",
+    "sw": 73,
+    "cw": 57,
+    "txt": "Reels · 02/03/2026, 16:45"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 57,
+    "txt": "EXPIRACAO DO TOKEN"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 57,
+    "txt": "20/02/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 57,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 77,
+    "cw": 57,
+    "txt": "EXPIRACAO DO TOKEN"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "social-composer",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|A legenda nao substitui consentimento de",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 30,
+    "box": [
+     83,
+     7
+    ]
+   },
+   {
+    "a": "P|A legenda nao substitui consentimento de",
+    "b": "CODE|—",
+    "overlapPct": 42,
+    "box": [
+     7,
+     7
+    ]
+   },
+   {
+    "a": "SPAN|prato-colorido.jpg",
+    "b": "SPAN|IMAGEM · 1,2 MB",
+    "overlapPct": 45,
+    "box": [
+     54,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|mesa-consultorio.jpg",
+    "b": "SPAN|IMAGEM · 980 KB",
+    "overlapPct": 62,
+    "box": [
+     76,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|card-agenda.png",
+    "b": "SPAN|IMAGEM · 420 KB",
+    "overlapPct": 42,
+    "box": [
+     50,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|roteiro-almoco.mp4",
+    "b": "SPAN|VIDEO · 38 S",
+    "overlapPct": 41,
+    "box": [
+     37,
+     14
+    ]
+   },
+   {
+    "a": "SPAN|detalhe-armario.jpg",
+    "b": "SPAN|IMAGEM · 760 KB",
+    "overlapPct": 56,
+    "box": [
+     68,
+     14
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "social-automations",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|A automacao so responde para quem esta n",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 51,
+    "box": [
+     59,
+     16
+    ]
+   },
+   {
+    "a": "DIV|A automacao so responde para quem esta n",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "SPAN",
+    "txt": "*",
+    "cls": "bloco-mono truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "social-logs",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "webhooks-panel",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|So aceitamos endpoint HTTPS que resolve ",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 51,
+    "box": [
+     59,
+     16
+    ]
+   },
+   {
+    "a": "DIV|So aceitamos endpoint HTTPS que resolve ",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "agent-console",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|Oi, tem horario para quinta de manha?",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|10h30 funciona.",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|10h30 funciona.",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 59,
+    "box": [
+     68,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|10h30 funciona.",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 67,
+    "box": [
+     53,
+     9
+    ]
+   },
+   {
+    "a": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 78,
+    "box": [
+     147,
+     88
+    ]
+   },
+   {
+    "a": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "b": "BUTTON|Enviar",
+    "overlapPct": 100,
+    "box": [
+     100,
+     40
+    ]
+   },
+   {
+    "a": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "b": "SPAN|Enviar",
+    "overlapPct": 100,
+    "box": [
+     68,
+     18
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "SPAN|Atendimento registrado. Lead permanece e",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "ops-health",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|05/03/2026, 00:00",
+    "b": "SPAN|19",
+    "overlapPct": 37,
+    "box": [
+     12,
+     28
+    ]
+   },
+   {
+    "a": "SPAN|durationMs",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|durationMs",
+    "b": "CODE|—",
+    "overlapPct": 63,
+    "box": [
+     4,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1280,
+  "block": "integration-manifest",
+  "vw": 1280,
+  "docScrollW": 1280,
+  "docClientW": 1280,
+  "bodyScrollW": 1280,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Dono da plataforma",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|Dono da plataforma",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "P",
+    "txt": "PDF",
+    "cls": "bloco-title3 truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1440,
+  "block": "auth-login",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:24px": 1,
+   "rowGap:24px": 1,
+   "columnGap:24px": 1,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:10px": 5,
+   "rowGap:10px": 5,
+   "columnGap:10px": 5,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 1440,
+  "block": "auth-two-factor",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 4,
+   "rowGap:16px": 4,
+   "columnGap:16px": 4,
+   "gap:12px": 11,
+   "rowGap:12px": 11,
+   "columnGap:12px": 11,
+   "gap:4px": 7,
+   "rowGap:4px": 7,
+   "columnGap:4px": 7,
+   "gap:6px": 11,
+   "rowGap:6px": 11,
+   "columnGap:6px": 11,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "auth-recovery",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "admin-platform",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DIV|Consultório Aurora Nutrição\n\nSão Paulo/S",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 90,
+    "box": [
+     104,
+     16
+    ]
+   },
+   {
+    "a": "DIV|Consultório Aurora Nutrição\n\nSão Paulo/S",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "DT|MEMBROS",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 40,
+    "box": [
+     83,
+     6
+    ]
+   },
+   {
+    "a": "DD|6",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 45,
+    "box": [
+     83,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:12px": 15,
+   "rowGap:12px": 15,
+   "columnGap:12px": 15,
+   "gap:4px": 12,
+   "rowGap:4px": 12,
+   "columnGap:4px": 12,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:8px": 15,
+   "rowGap:8px": 15,
+   "columnGap:8px": 15
+  }
+ },
+ {
+  "w": 1440,
+  "block": "office-team",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|Rebaixar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 76,
+    "box": [
+     87,
+     16
+    ]
+   },
+   {
+    "a": "BUTTON|Rebaixar",
+    "b": "CODE|—",
+    "overlapPct": 90,
+    "box": [
+     6,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|Rebaixar",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 71,
+    "box": [
+     75,
+     11
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:12px": 14,
+   "rowGap:12px": 14,
+   "columnGap:12px": 14,
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:8px": 18,
+   "rowGap:8px": 18,
+   "columnGap:8px": 18,
+   "gap:4px": 23,
+   "rowGap:4px": 23,
+   "columnGap:4px": 23,
+   "gap:6px": 24,
+   "rowGap:6px": 24,
+   "columnGap:6px": 24
+  }
+ },
+ {
+  "w": 1440,
+  "block": "office-settings",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|RISCO ACEITO",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 38,
+    "box": [
+     70,
+     10
+    ]
+   },
+   {
+    "a": "P|RISCO ACEITO",
+    "b": "CODE|—",
+    "overlapPct": 61,
+    "box": [
+     7,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 7,
+   "rowGap:16px": 7,
+   "columnGap:16px": 7,
+   "gap:24px": 1,
+   "rowGap:24px": 1,
+   "columnGap:24px": 1,
+   "gap:12px": 34,
+   "rowGap:12px": 34,
+   "columnGap:12px": 34,
+   "gap:4px": 4,
+   "rowGap:4px": 4,
+   "columnGap:4px": 4,
+   "gap:6px": 5,
+   "rowGap:6px": 5,
+   "columnGap:6px": 5,
+   "gap:8px": 20,
+   "rowGap:8px": 20,
+   "columnGap:8px": 20
+  }
+ },
+ {
+  "w": 1440,
+  "block": "leads-board",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|ATRIBUICAO DO PRIMEIRO TOQUE",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 42,
+    "box": [
+     70,
+     11
+    ]
+   },
+   {
+    "a": "P|ATRIBUICAO DO PRIMEIRO TOQUE",
+    "b": "CODE|—",
+    "overlapPct": 69,
+    "box": [
+     7,
+     11
+    ]
+   },
+   {
+    "a": "P|Pedro Lins · Instagram · 13/03/2025, 06:",
+    "b": "CODE|—",
+    "overlapPct": 31,
+    "box": [
+     7,
+     5
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 24,
+   "rowGap:8px": 24,
+   "columnGap:8px": 24,
+   "gap:4px": 21,
+   "rowGap:4px": 21,
+   "columnGap:4px": 21
+  }
+ },
+ {
+  "w": 1440,
+  "block": "inbox-whatsapp",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:4px": 16,
+   "rowGap:4px": 16,
+   "columnGap:4px": 16,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 1440,
+  "block": "consent-panel",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SELECT|WhatsApp\nPresencial\nAssinado em papel\nE-",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "SELECT|WhatsApp\nPresencial\nAssinado em papel\nE-",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 5,
+   "rowGap:8px": 5,
+   "columnGap:8px": 5,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:4px": 2,
+   "rowGap:4px": 2,
+   "columnGap:4px": 2,
+   "gap:6px": 6,
+   "rowGap:6px": 6,
+   "columnGap:6px": 6
+  }
+ },
+ {
+  "w": 1440,
+  "block": "channel-connections",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|Agendamento Aurora",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 47,
+    "box": [
+     70,
+     12
+    ]
+   },
+   {
+    "a": "P|Agendamento Aurora",
+    "b": "CODE|—",
+    "overlapPct": 76,
+    "box": [
+     7,
+     13
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3,
+   "gap:4px": 8,
+   "rowGap:4px": 8,
+   "columnGap:4px": 8,
+   "gap:6px": 13,
+   "rowGap:6px": 13,
+   "columnGap:6px": 13
+  }
+ },
+ {
+  "w": 1440,
+  "block": "patients-list",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 1,
+   "rowGap:16px": 1,
+   "columnGap:16px": 1,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1,
+   "gap:10px": 7,
+   "rowGap:10px": 7,
+   "columnGap:10px": 7,
+   "gap:4px": 7,
+   "rowGap:4px": 7,
+   "columnGap:4px": 7
+  }
+ },
+ {
+  "w": 1440,
+  "block": "patient-chart",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "P|82.6 kg · 30.2% gordura · 90 cm cintura",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 38,
+    "box": [
+     62,
+     11
+    ]
+   },
+   {
+    "a": "P|82.6 kg · 30.2% gordura · 90 cm cintura",
+    "b": "CODE|—",
+    "overlapPct": 70,
+    "box": [
+     7,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 3,
+   "columnGap:16px": 2,
+   "gap:12px": 3,
+   "rowGap:12px": 3,
+   "columnGap:12px": 3,
+   "gap:8px": 10,
+   "rowGap:8px": 10,
+   "columnGap:8px": 10,
+   "gap:4px": 11,
+   "rowGap:4px": 11,
+   "columnGap:4px": 11,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2,
+   "gap:16px 24px": 1,
+   "columnGap:24px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "clinical-entry",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:4px": 1,
+   "rowGap:4px": 1,
+   "columnGap:4px": 1,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4,
+   "gap:2px": 1,
+   "rowGap:2px": 1,
+   "columnGap:2px": 1,
+   "gap:8px": 3,
+   "rowGap:8px": 3,
+   "columnGap:8px": 3
+  }
+ },
+ {
+  "w": 1440,
+  "block": "agenda-board",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "BUTTON|10:00\nOtavio Bezerra\nRETORNO\nAgendado",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   },
+   {
+    "a": "SPAN|Otavio Bezerra",
+    "b": "CODE|—",
+    "overlapPct": 58,
+    "box": [
+     7,
+     10
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 2,
+   "rowGap:8px": 2,
+   "columnGap:8px": 2,
+   "gap:4px": 26,
+   "rowGap:4px": 26,
+   "columnGap:4px": 26,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:1px": 1,
+   "rowGap:1px": 1,
+   "columnGap:1px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "availability",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 13,
+   "rowGap:4px": 13,
+   "columnGap:4px": 13,
+   "gap:1px": 1,
+   "rowGap:1px": 1,
+   "columnGap:1px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "follow-up-tasks",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 7,
+   "rowGap:8px": 7,
+   "columnGap:8px": 7,
+   "gap:4px": 13,
+   "rowGap:4px": 13,
+   "columnGap:4px": 13,
+   "gap:6px": 24,
+   "rowGap:6px": 24,
+   "columnGap:6px": 24
+  }
+ },
+ {
+  "w": 1440,
+  "block": "packages-pricing",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DD|12",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 71,
+    "box": [
+     83,
+     16
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 191,
+    "txt": "R$ 1.760,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 191,
+    "txt": "R$ 2.400,00"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-title1 tabular-nums",
+    "sw": 208,
+    "cw": 191,
+    "txt": "R$ 3.200,00"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:12px": 16,
+   "rowGap:12px": 16,
+   "columnGap:12px": 16,
+   "gap:4px": 5,
+   "rowGap:4px": 5,
+   "columnGap:4px": 5,
+   "gap:8px": 5,
+   "rowGap:8px": 5,
+   "columnGap:8px": 5,
+   "gap:6px": 20,
+   "rowGap:6px": 20,
+   "columnGap:6px": 20
+  }
+ },
+ {
+  "w": 1440,
+  "block": "payments-checkout",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:6px": 3,
+   "rowGap:6px": 3,
+   "columnGap:6px": 3,
+   "gap:12px": 4,
+   "rowGap:12px": 4,
+   "columnGap:12px": 4,
+   "gap:8px": 2,
+   "rowGap:8px": 2,
+   "columnGap:8px": 2
+  }
+ },
+ {
+  "w": 1440,
+  "block": "finance-overview",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "SPAN|R$ 2.141,00",
+    "overlapPct": 28,
+    "box": [
+     48,
+     18
+    ]
+   },
+   {
+    "a": "SPAN|▲ +14,4% vs mes anterior",
+    "b": "DIV|por atendimento pago",
+    "overlapPct": 35,
+    "box": [
+     48,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "reports-funnel",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TH|ORIGEM",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 90,
+    "box": [
+     103,
+     16
+    ]
+   },
+   {
+    "a": "TH|ORIGEM",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 11,
+   "rowGap:8px": 11,
+   "columnGap:8px": 11,
+   "gap:6px": 5,
+   "rowGap:6px": 5,
+   "columnGap:6px": 5,
+   "gap:12px": 5,
+   "rowGap:12px": 5,
+   "columnGap:12px": 5,
+   "gap:4px": 3,
+   "rowGap:4px": 3,
+   "columnGap:4px": 3
+  }
+ },
+ {
+  "w": 1440,
+  "block": "meta-conversion",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Lead",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 71,
+    "box": [
+     45,
+     16
+    ]
+   },
+   {
+    "a": "SPAN|qualified",
+    "b": "CODE|—",
+    "overlapPct": 97,
+    "box": [
+     7,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 9,
+   "rowGap:8px": 9,
+   "columnGap:8px": 9,
+   "gap:4px": 20,
+   "rowGap:4px": 20,
+   "columnGap:4px": 20,
+   "gap:12px": 7,
+   "rowGap:12px": 7,
+   "columnGap:12px": 7,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4
+  }
+ },
+ {
+  "w": 1440,
+  "block": "social-accounts",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "DT|EXPIRACAO DO TOKEN",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 29,
+    "box": [
+     83,
+     6
+    ]
+   }
+  ],
+  "textOut": [
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 83,
+    "txt": "18/04/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 83,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 83,
+    "txt": "08/03/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 83,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 83,
+    "txt": "20/02/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 83,
+    "txt": "ULTIMA PUBLICACAO"
+   },
+   {
+    "tag": "SPAN",
+    "cls": "",
+    "sw": 91,
+    "cw": 83,
+    "txt": "02/05/2026, 18:00"
+   },
+   {
+    "tag": "DT",
+    "cls": "bloco-micro",
+    "sw": 86,
+    "cw": 83,
+    "txt": "ULTIMA PUBLICACAO"
+   }
+  ],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 6,
+   "columnGap:16px": 2,
+   "gap:8px": 11,
+   "rowGap:8px": 11,
+   "columnGap:8px": 11,
+   "gap:12px": 10,
+   "rowGap:12px": 10,
+   "columnGap:12px": 10,
+   "gap:4px": 4,
+   "rowGap:4px": 4,
+   "columnGap:4px": 4,
+   "gap:16px 24px": 4,
+   "columnGap:24px": 4,
+   "gap:6px": 2,
+   "rowGap:6px": 2,
+   "columnGap:6px": 2
+  }
+ },
+ {
+  "w": 1440,
+  "block": "social-composer",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "INPUT|",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 72,
+    "box": [
+     83,
+     16
+    ]
+   },
+   {
+    "a": "INPUT|",
+    "b": "CODE|—",
+    "overlapPct": 100,
+    "box": [
+     7,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 4,
+   "rowGap:16px": 4,
+   "columnGap:16px": 4,
+   "gap:6px": 7,
+   "rowGap:6px": 7,
+   "columnGap:6px": 7,
+   "gap:12px": 8,
+   "rowGap:12px": 8,
+   "columnGap:12px": 8,
+   "gap:8px": 16,
+   "rowGap:8px": 16,
+   "columnGap:8px": 16,
+   "gap:2px": 1,
+   "rowGap:2px": 1,
+   "columnGap:2px": 1,
+   "gap:4px": 1,
+   "rowGap:4px": 1,
+   "columnGap:4px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "social-automations",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "SPAN",
+    "txt": "*",
+    "cls": "bloco-mono truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:6px": 8,
+   "rowGap:6px": 8,
+   "columnGap:6px": 8,
+   "gap:12px": 5,
+   "rowGap:12px": 5,
+   "columnGap:12px": 5
+  }
+ },
+ {
+  "w": 1440,
+  "block": "social-logs",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|Comentario respondido",
+    "b": "CODE|—",
+    "overlapPct": 46,
+    "box": [
+     3,
+     17
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:4px": 12,
+   "rowGap:4px": 12,
+   "columnGap:4px": 12,
+   "gap:6px": 4,
+   "rowGap:6px": 4,
+   "columnGap:6px": 4,
+   "gap:12px": 1,
+   "rowGap:12px": 1,
+   "columnGap:12px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "webhooks-panel",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "TH|TENTATIVAS",
+    "b": "SPAN|owner",
+    "overlapPct": 68,
+    "box": [
+     35,
+     20
+    ]
+   },
+   {
+    "a": "TH|ULTIMA ENTREGA",
+    "b": "SPAN|PATCH /webhooks/:id",
+    "overlapPct": 43,
+    "box": [
+     97,
+     12
+    ]
+   },
+   {
+    "a": "TH|ULTIMA ENTREGA",
+    "b": "SPAN|owner",
+    "overlapPct": 32,
+    "box": [
+     17,
+     20
+    ]
+   },
+   {
+    "a": "TH|ATIVO",
+    "b": "SPAN|platform_owner",
+    "overlapPct": 45,
+    "box": [
+     80,
+     12
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 2,
+   "columnGap:16px": 2,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 16,
+   "rowGap:4px": 16,
+   "columnGap:4px": 16,
+   "gap:6px": 6,
+   "rowGap:6px": 6,
+   "columnGap:6px": 6,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6
+  }
+ },
+ {
+  "w": 1440,
+  "block": "agent-console",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|PACIENTE",
+    "b": "SPAN|Oi, tem horario para quinta de manha?",
+    "overlapPct": 100,
+    "box": [
+     65,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "b": "CODE|—",
+    "overlapPct": 80,
+    "box": [
+     7,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "SPAN|Atendimento registrado. Lead permanece e",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 84,
+    "box": [
+     59,
+     11
+    ]
+   },
+   {
+    "a": "SPAN|Atendimento registrado. Lead permanece e",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 90,
+    "box": [
+     290,
+     57
+    ]
+   },
+   {
+    "a": "SPAN|05/03/2026, 09:31",
+    "b": "TEXTAREA|Mensagem para o agente",
+    "overlapPct": 100,
+    "box": [
+     318,
+     16
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 4,
+   "columnGap:16px": 3,
+   "gap:8px": 8,
+   "rowGap:8px": 8,
+   "columnGap:8px": 8,
+   "gap:4px": 3,
+   "rowGap:4px": 3,
+   "columnGap:4px": 3,
+   "gap:12px": 8,
+   "rowGap:12px": 8,
+   "columnGap:12px": 8,
+   "gap:6px": 1,
+   "rowGap:6px": 1,
+   "columnGap:6px": 1,
+   "gap:10px": 4,
+   "rowGap:10px": 4,
+   "columnGap:10px": 4,
+   "gap:16px 24px": 1,
+   "columnGap:24px": 1
+  }
+ },
+ {
+  "w": 1440,
+  "block": "ops-health",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 3,
+   "rowGap:16px": 3,
+   "columnGap:16px": 3,
+   "gap:8px": 19,
+   "rowGap:8px": 19,
+   "columnGap:8px": 19,
+   "gap:12px": 6,
+   "rowGap:12px": 6,
+   "columnGap:12px": 6,
+   "gap:4px": 15,
+   "rowGap:4px": 15,
+   "columnGap:4px": 15
+  }
+ },
+ {
+  "w": 1440,
+  "block": "integration-manifest",
+  "vw": 1440,
+  "docScrollW": 1440,
+  "docClientW": 1440,
+  "bodyScrollW": 1440,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|WHATSAPP_ACCESS_TOKEN",
+    "b": "SPAN|Acao mais recente:",
+    "overlapPct": 40,
+    "box": [
+     83,
+     9
+    ]
+   },
+   {
+    "a": "SPAN|WHATSAPP_ACCESS_TOKEN",
+    "b": "CODE|—",
+    "overlapPct": 56,
+    "box": [
+     7,
+     9
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "P",
+    "txt": "PDF",
+    "cls": "bloco-title3 truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ],
+  "gaps": {
+   "gap:16px": 2,
+   "rowGap:16px": 11,
+   "columnGap:16px": 2,
+   "gap:8px": 1,
+   "rowGap:8px": 1,
+   "columnGap:8px": 1,
+   "gap:4px": 31,
+   "rowGap:4px": 31,
+   "columnGap:4px": 31,
+   "gap:12px": 22,
+   "rowGap:12px": 22,
+   "columnGap:12px": 22,
+   "gap:16px 24px": 9,
+   "columnGap:24px": 9,
+   "gap:6px": 47,
+   "rowGap:6px": 47,
+   "columnGap:6px": 47
+  }
+ },
+ {
+  "w": 1920,
+  "block": "auth-login",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "auth-two-factor",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "auth-recovery",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "admin-platform",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "office-team",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "office-settings",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "leads-board",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "inbox-whatsapp",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "consent-panel",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "channel-connections",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "patients-list",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "patient-chart",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "clinical-entry",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "agenda-board",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "availability",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "follow-up-tasks",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "packages-pricing",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "payments-checkout",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "finance-overview",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "reports-funnel",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "meta-conversion",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "social-accounts",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "social-composer",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "social-automations",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "SPAN",
+    "txt": "*",
+    "cls": "bloco-mono truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "social-logs",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "webhooks-panel",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "agent-console",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Oi! Para quinta de manha tenho 9h, 10h30",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|AGENTE",
+    "b": "SPAN|Combinado! Agendei para quinta as 10h30.",
+    "overlapPct": 100,
+    "box": [
+     53,
+     13
+    ]
+   },
+   {
+    "a": "SPAN|SISTEMA",
+    "b": "SPAN|Atendimento registrado. Lead permanece e",
+    "overlapPct": 100,
+    "box": [
+     59,
+     13
+    ]
+   }
+  ],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "ops-health",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ },
+ {
+  "w": 1920,
+  "block": "integration-manifest",
+  "vw": 1920,
+  "docScrollW": 1920,
+  "docClientW": 1920,
+  "bodyScrollW": 1920,
+  "overflowEls": [],
+  "overlaps": [],
+  "textOut": [],
+  "nomesCurtos": [
+   {
+    "tag": "P",
+    "txt": "PDF",
+    "cls": "bloco-title3 truncate"
+   },
+   {
+    "tag": "CODE",
+    "txt": "—",
+    "cls": "bloco-mono truncate text-[11px] text-fg-muted"
+   }
+  ]
+ }
+]

@@ -1,0 +1,148 @@
+{
+ "antes": "Receita",
+ "ao_abrir": {
+  "active": "BUTTON:Fechar",
+  "dentro": true
+ },
+ "apos_esc_50": "BODY:Blocos\n\nBiblioteca de blocos r",
+ "apos_esc_200": "BODY:Blocos\n\nBiblioteca de blocos r",
+ "apos_esc_600": "BODY:Blocos\n\nBiblioteca de blocos r",
+ "dialog_attrs": {
+  "ariaModal": null,
+  "dataState": "open",
+  "role": "dialog",
+  "labelledby": "radix-_r_7_",
+  "describedby": "radix-_r_8_",
+  "box": [
+   0,
+   844,
+   390,
+   844
+  ],
+  "bodyOverflow": "hidden"
+ },
+ "aria_hidden_fora": {
+  "appHidden": null,
+  "siblings": [
+   null
+  ]
+ },
+ "drawer_normal": {
+  "samples": [
+   [
+    0,
+    null
+   ],
+   [
+    509,
+    390
+   ],
+   [
+    529,
+    390
+   ],
+   [
+    580,
+    326
+   ],
+   [
+    615,
+    110
+   ],
+   [
+    713,
+    49
+   ],
+   [
+    799,
+    7
+   ],
+   [
+    897,
+    0
+   ],
+   [
+    1031,
+    0
+   ],
+   [
+    1181,
+    0
+   ],
+   [
+    1229,
+    0
+   ],
+   [
+    1301,
+    0
+   ],
+   [
+    1312,
+    0
+   ],
+   [
+    1369,
+    0
+   ]
+  ],
+  "anims": []
+ },
+ "drawer_reduced": {
+  "samples": [
+   [
+    0,
+    null
+   ],
+   [
+    712,
+    390
+   ],
+   [
+    742,
+    390
+   ],
+   [
+    810,
+    390
+   ],
+   [
+    826,
+    0
+   ],
+   [
+    934,
+    0
+   ],
+   [
+    1097,
+    0
+   ],
+   [
+    1302,
+    0
+   ],
+   [
+    1392,
+    0
+   ],
+   [
+    1414,
+    0
+   ],
+   [
+    1433,
+    0
+   ],
+   [
+    1469,
+    0
+   ],
+   [
+    1480,
+    0
+   ]
+  ],
+  "anims": []
+ }
+}
