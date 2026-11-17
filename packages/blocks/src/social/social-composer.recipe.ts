@@ -100,6 +100,7 @@ export const socialComposerRecipe = defineBlock({
     "O horario e sempre local do programa (America/Sao_Paulo); a conversao para UTC e feita em DUAS passagens por causa do DST.",
     "A legenda nao substitui consentimento de marketing e nunca carrega dado de paciente.",
   ],
+  emptyAction: { id: "post.schedule", label: "Publicar" },
   variants: [
     {
       id: "composer",

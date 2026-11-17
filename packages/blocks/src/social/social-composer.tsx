@@ -13,7 +13,8 @@ import {
   Textarea,
 } from "@blocos/ui";
 import { CalendarClock, Hash, Image, Instagram, Send, SquareStack, Video } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { socialComposerRecipe } from "./social-composer.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -88,15 +89,7 @@ const MAX_CAPTION = 2200;
 /* ------------------------------------------------------------------ */
 
 export function SocialComposer(props: BlockProps<SocialComposerData, SocialComposerVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "composer",
-    state = "success",
-    connectors = [],
-    onRequestConnector,
-    className,
-  } = props;
+  const { data, onAction, variant = "composer", state = "success", connectors = [], onRequestConnector, className } = props;
 
   const draft = data.draft;
 
@@ -217,19 +210,28 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
         ) : (
           <div className="flex flex-col gap-1.5">
             {data.media.map((item) => (
-              <label
+              <div
                 key={item.id}
-                className="flex cursor-pointer items-center gap-2 rounded-[var(--r-sm)] border border-border bg-surface/50 px-2.5 py-2 transition-colors hover:bg-surface-hover"
+                className="flex items-center gap-2 rounded-[var(--r-sm)] border border-border bg-surface/50 px-2.5 py-2 transition-colors hover:bg-surface-hover"
               >
+                {/* O nome do arquivo vira o rotulo do checkbox: cada midia tem nome acessivel proprio. */}
                 <Checkbox
+                  className="min-w-0 flex-1"
                   checked={mediaIds.includes(item.id)}
                   onCheckedChange={() => toggleMedia(item.id)}
+                  label={
+                    <span className="bloco-callout min-w-0 flex-1 truncate text-fg">
+                      {item.name}
+                      {/* Contexto para leitor de tela: o nome sozinho nao diz o que a midia e. */}
+                      <span className="sr-only"> — midia para publicar</span>
+                    </span>
+                  }
+                  ariaLabel={`Selecionar midia ${item.name}`}
                 />
-                <span className="bloco-callout min-w-0 flex-1 truncate text-fg">{item.name}</span>
-                <span className="bloco-micro">
+                <span className="bloco-micro shrink-0">
                   {item.kind === "video" ? "Video" : "Imagem"} · {item.meta}
                 </span>
-              </label>
+              </div>
             ))}
           </div>
         )}
@@ -279,7 +281,12 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
     <BlockFrame
       state={state}
       className={className}
-    >
+        recipe={socialComposerRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agendador-Instagram"
@@ -382,10 +389,10 @@ function PostPreview({
       }
     >
       <div className="flex items-center gap-2 border-b border-border px-3 py-2.5">
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent-soft text-accent">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent-soft text-accent-ink">
           <Instagram className="h-3.5 w-3.5" aria-hidden />
         </span>
-        <span className="bloco-callout font-medium text-fg">{handle}</span>
+        <span className="bloco-callout min-w-0 flex-1 truncate font-medium text-fg">{handle}</span>
         <span className="bloco-micro ml-auto">{FORMAT_INFO[format].label}</span>
       </div>
 
@@ -431,7 +438,7 @@ function PostPreview({
           {caption || "Sua legenda aparece aqui."}
         </p>
         {hashtags.length > 0 ? (
-          <p className="bloco-caption text-accent">{hashtags.map((t) => `#${t}`).join(" ")}</p>
+          <p className="bloco-caption text-accent-ink">{hashtags.map((t) => `#${t}`).join(" ")}</p>
         ) : null}
       </div>
     </div>

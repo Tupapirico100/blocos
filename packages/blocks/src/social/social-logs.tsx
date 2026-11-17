@@ -10,8 +10,9 @@ import {
   type Column,
 } from "@blocos/ui";
 import { CircleAlert, CircleCheckBig, Clock, RefreshCw, Terminal, TriangleAlert } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { formatSocialDateTime } from "./format.js";
+import { socialLogsRecipe } from "./social-logs.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -75,19 +76,26 @@ const levelDot: Record<SocialLogLevel, string> = {
 /* ------------------------------------------------------------------ */
 
 export function SocialLogs(props: BlockProps<SocialLogsData, SocialLogsVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "table",
-    state = "success",
-    className,
-  } = props;
+  const { data, onAction, variant = "table", state = "success", className, connectors, onRequestConnector } = props;
 
   const logs = data.logs;
   const hasLogs = logs.length > 0;
 
   return (
-    <BlockFrame state={state} className={className}>
+    <BlockFrame state={state} className={className}
+        recipe={socialLogsRecipe}
+
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<Terminal className="h-5 w-5" aria-hidden />}
+            title="Nenhum registro ainda"
+            description="Assim que houver publicacao ou interacao, o historico aparece aqui."
+          />
+        }
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Agendador-Instagram"
@@ -123,8 +131,9 @@ export function SocialLogs(props: BlockProps<SocialLogsData, SocialLogsVariant>)
                       <div>
                         <Button
                           size="sm"
-                          variant="outline"
+                          variant="secondary"
                           icon={<RefreshCw className="h-3.5 w-3.5" aria-hidden />}
+                          aria-label={`Reexecutar ${entry.action} em ${entry.accountHandle}`}
                           onClick={() => onAction?.("log.retry", { id: entry.id })}
                         >
                           Reexecutar
@@ -207,8 +216,9 @@ function logColumns(
         row.retryable ? (
           <Button
             size="sm"
-            variant="outline"
+            variant="secondary"
             icon={<RefreshCw className="h-3.5 w-3.5" aria-hidden />}
+            aria-label={`Reexecutar ${row.action} em ${row.accountHandle}`}
             onClick={() => onAction?.("log.retry", { id: row.id })}
           >
             Reexecutar
