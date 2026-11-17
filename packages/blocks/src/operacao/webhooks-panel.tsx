@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Badge,
   Callout,
+  ConfirmDialog,
   DataTable,
   EmptyState,
   Panel,
@@ -10,8 +11,9 @@ import {
   type Column,
 } from "@blocos/ui";
 import { ArrowRight, Clock, KeyRound, Lock, ShieldAlert, ShieldCheck, Webhook } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { formatOpsDateTime } from "./format.js";
+import { webhooksRecipe } from "./webhooks-panel.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -82,20 +84,38 @@ const deliveryLabel: Record<WebhookDeliveryStatus, string> = {
 /* ------------------------------------------------------------------ */
 
 export function WebhooksPanel(props: BlockProps<WebhooksData, WebhooksVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "list",
-    state = "success",
-    className,
-  } = props;
+  const { data, onAction, variant = "list", state = "success", className, connectors, onRequestConnector } = props;
 
   const webhooks = data.webhooks;
   const hasWebhooks = webhooks.length > 0;
   const schedule = data.backoffSchedule.length > 0 ? data.backoffSchedule : ["1m", "5m", "15m", "1h", "6h", "24h"];
 
+  /* Desativar um endpoint para o envio de eventos: passa por confirmacao. */
+  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(null);
+
+  const toggle = (webhook: WebhookEndpoint, active: boolean) => {
+    if (!active) {
+      setConfirmando({ acao: "webhook.toggle", payload: { id: webhook.id, active: false } });
+      return;
+    }
+    onAction?.("webhook.toggle", { id: webhook.id, active: true });
+  };
+
   return (
-    <BlockFrame state={state} className={className}>
+    <BlockFrame state={state} className={className}
+        recipe={webhooksRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+        empty={
+          <EmptyState
+            icon={<Webhook className="h-5 w-5" aria-hidden />}
+            title="Nenhum webhook configurado"
+            description="Os endpoints sao cadastrados no manifesto de integracoes; aqui aparece so o que ja esta ativo."
+          />
+        }
+      >
       <div className="flex flex-col gap-4">
         <SectionHeader
           eyebrow="Operacao"
@@ -125,7 +145,7 @@ export function WebhooksPanel(props: BlockProps<WebhooksData, WebhooksVariant>) 
             <DataTable<WebhookEndpoint>
               rowKey={(row) => row.id}
               rows={webhooks}
-              columns={webhookColumns(onAction)}
+              columns={webhookColumns(toggle)}
               empty={<EmptyState title="Nenhum webhook configurado" description="Cadastre um endpoint de saida." />}
             />
           </Panel>
@@ -146,6 +166,20 @@ export function WebhooksPanel(props: BlockProps<WebhooksData, WebhooksVariant>) 
             inspecao manual.
           </Callout>
         </div>
+
+        <ConfirmDialog
+          open={confirmando !== null}
+          onOpenChange={(open) => {
+            if (!open) setConfirmando(null);
+          }}
+          title="Desativar endpoint de webhook"
+          description="O programa deixa de enviar eventos para este endpoint. O segredo, a configuracao e o historico de entregas sao mantidos — a reativacao e imediata, a qualquer momento."
+          confirmLabel="Desativar"
+          tone="danger"
+          onConfirm={() => {
+            if (confirmando?.payload) onAction?.(confirmando.acao, confirmando.payload);
+          }}
+        />
       </div>
     </BlockFrame>
   );
@@ -156,7 +190,7 @@ export function WebhooksPanel(props: BlockProps<WebhooksData, WebhooksVariant>) 
 /* ------------------------------------------------------------------ */
 
 function webhookColumns(
-  onAction?: (action: string, payload?: unknown) => void | Promise<void>,
+  toggle: (webhook: WebhookEndpoint, active: boolean) => void,
 ): Array<Column<WebhookEndpoint>> {
   return [
     {
@@ -229,8 +263,9 @@ function webhookColumns(
       render: (row) => (
         <Switch
           checked={row.active}
-          onCheckedChange={() => onAction?.("webhook.toggle", { id: row.id, active: !row.active })}
-          label={<span className="sr-only">Ativar ou desativar o endpoint</span>}
+          onCheckedChange={() => toggle(row, !row.active)}
+          label={<span className="sr-only">Ativar ou desativar o endpoint {row.url}</span>}
+          ariaLabel={`Ativar ou desativar o endpoint ${row.url}`}
         />
       ),
     },
@@ -259,7 +294,7 @@ function WebhookFlow({ webhook, schedule }: { webhook: WebhookEndpoint; schedule
       </div>
 
       <div className="grid items-stretch gap-2 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
-        <div className="flex flex-col gap-1 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
+        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
           <span className="bloco-micro">Eventos assinados</span>
           <span className="flex flex-wrap gap-1">
             {webhook.events.map((event) => (
@@ -274,7 +309,7 @@ function WebhookFlow({ webhook, schedule }: { webhook: WebhookEndpoint; schedule
           <ArrowRight className="h-4 w-4 rotate-90 md:rotate-0" aria-hidden />
         </span>
 
-        <div className="flex flex-col gap-1 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
+        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
           <span className="bloco-micro">Segredo (por referencia)</span>
           <span className="bloco-mono truncate text-fg">{webhook.secretRef}</span>
           <span className="bloco-caption">O valor vive no cofre; nunca e exibido.</span>
@@ -284,7 +319,7 @@ function WebhookFlow({ webhook, schedule }: { webhook: WebhookEndpoint; schedule
           <ArrowRight className="h-4 w-4 rotate-90 md:rotate-0" aria-hidden />
         </span>
 
-        <div className="flex flex-col gap-1 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
+        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
           <span className="bloco-micro">Ultima entrega</span>
           <span className="bloco-callout text-fg">
             {deliveryLabel[webhook.delivery.lastStatus]} · {webhook.delivery.attempts} tentativa(s)

@@ -105,6 +105,7 @@ export const opsHealthRecipe = defineBlock({
     "Webhook que esgotou o backoff (1m -> 5m -> 15m -> 1h -> 6h -> 24h) vai para inspecao manual.",
     "Nenhuma tela de operacao mostra conteudo de prontuario, token ou chave de API.",
   ],
+  emptyAction: { id: "ops.backup.run", label: "Executar backup" },
   variants: [
     {
       id: "cards",

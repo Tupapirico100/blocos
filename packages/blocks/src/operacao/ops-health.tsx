@@ -21,8 +21,9 @@ import {
   TriangleAlert,
   Webhook,
 } from "lucide-react";
-import { BlockFrame, type BlockProps } from "../shared/index.js";
+import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { formatOpsDateTime, formatOpsDuration } from "./format.js";
+import { opsHealthRecipe } from "./ops-health.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
@@ -110,13 +111,7 @@ interface TimelineEvent {
 /* ------------------------------------------------------------------ */
 
 export function OpsHealth(props: BlockProps<OpsHealthData, OpsHealthVariant>) {
-  const {
-    data,
-    onAction,
-    variant = "cards",
-    state = "success",
-    className,
-  } = props;
+  const { data, onAction, variant = "cards", state = "success", className, connectors, onRequestConnector } = props;
 
   const { instrumentation, lastBackup, queues, failedWebhooks, checks } = data;
   const totalPending = queues.reduce((sum, q) => sum + q.pending, 0);
@@ -147,8 +142,14 @@ export function OpsHealth(props: BlockProps<OpsHealthData, OpsHealthVariant>) {
   ].sort((a, b) => b.at.localeCompare(a.at));
 
   return (
-    <BlockFrame state={state} className={className}>
-      <div className="flex flex-col gap-4">
+    <BlockFrame state={state} className={className}
+        recipe={opsHealthRecipe}
+        
+        connectors={connectors}
+        onRequestConnector={onRequestConnector}
+        onAction={onAction}
+      >
+      <div className="@container flex flex-col gap-4">
         <SectionHeader
           eyebrow="Operacao"
           title="Saude da operacao"
@@ -165,7 +166,7 @@ export function OpsHealth(props: BlockProps<OpsHealthData, OpsHealthVariant>) {
 
         {variant === "cards" ? (
           <div className="flex flex-col gap-4">
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-3 @[520px]:grid-cols-2 @[880px]:grid-cols-4">
               <Stat
                 label="Ultimo backup"
                 value={formatOpsDateTime(lastBackup.at)}
@@ -268,7 +269,7 @@ export function OpsHealth(props: BlockProps<OpsHealthData, OpsHealthVariant>) {
                         </Badge>
                         <span className="bloco-caption ml-auto">{formatOpsDateTime(event.at)}</span>
                       </div>
-                      <p className="bloco-callout text-fg-secondary">{event.detail}</p>
+                      <p className="bloco-callout break-words text-fg-secondary">{event.detail}</p>
                     </div>
                   </li>
                 ))}
