@@ -4,3 +4,7 @@ dist/
 .DS_Store
 .env
 .env.local
+
+# dumps brutos de medicao (dezenas de MB)
+docs/qa-cores/contraste-*.json
+docs/qa-a11y/evidencia/
