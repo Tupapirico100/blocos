@@ -70,6 +70,7 @@ export const financeOverviewRecipe = defineBlock({
     "O resumo nao carrega dado de saude: apenas valor, quantidade e status.",
     "O dono da plataforma tem acesso total ao consultorio; o dono do consultorio opera o operacional.",
   ],
+  defaultVariant: "chart",
   variants: [
     {
       id: "cards",

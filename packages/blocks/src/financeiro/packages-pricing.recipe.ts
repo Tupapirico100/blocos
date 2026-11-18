@@ -88,6 +88,7 @@ export const packagesPricingRecipe = defineBlock({
     "O preco do pacote nao carrega dado de saude em log, URL ou telemetria.",
   ],
   emptyAction: { id: "package.save", label: "Novo pacote" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

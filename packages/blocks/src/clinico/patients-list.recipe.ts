@@ -58,6 +58,7 @@ export const patientsListRecipe = defineBlock({
     "Dado de saude (consulta, medida, plano) nunca vai para log, URL ou telemetria.",
     "Todo mundo que fala com o paciente e employee; o dono do consultorio opera o operacional.",
   ],
+  defaultVariant: "table",
   variants: [
     {
       id: "table",
