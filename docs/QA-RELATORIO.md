@@ -129,6 +129,14 @@ no overflow em 5 larguras e no contraste por pixel. **Reprovou em 88/100** — a
 | Headings | sem salto, 1 h1 por documento |
 | Verificacao humana independente | **100/100** |
 
+### Regressao apos as escolhas do dono (2026-11-18)
+
+Com o tema Aurora e a `defaultVariant` fixada nos 29 blocos, o conteudo renderizado mudou
+(29 blocos x 3 temas x 5 estados). O QA inteiro foi refeito:
+`qa-automatic.py` 0 · `qa-variantes.py` 0 (o checker foi corrigido: ele assumia que a
+primeira variante era a inicial — agora clica em todas) · `qa-contraste.py` 0 ·
+`qa-contraste-pixel.py` 0 (**9.003** medicoes por pixel, 3 temas).
+
 ### Placar final
 
 | Checker | Rodada 1 | Rodada 2 | Rodada 3 |
