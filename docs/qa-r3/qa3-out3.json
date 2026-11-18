@@ -1,0 +1,826 @@
+{
+  "achados": [
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "inbox-whatsapp/split",
+      "detalhe": "{\"t\": \"Buscar conversa\", \"sw\": 132, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "inbox-whatsapp/stacked",
+      "detalhe": "{\"t\": \"Buscar conversa\", \"sw\": 132, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "patients-list/table",
+      "detalhe": "{\"t\": \"Buscar paciente por nome\", \"sw\": 211, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "patients-list/cards",
+      "detalhe": "{\"t\": \"Buscar paciente por nome\", \"sw\": 211, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "patients-list/grid",
+      "detalhe": "{\"t\": \"Buscar paciente por nome\", \"sw\": 211, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/composer",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/composer",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/composer",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/composer",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/composer",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/split",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/split",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/split",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/split",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    },
+    {
+      "tipo": "texto_cortado_sem_ellipsis_e_sem_title",
+      "bloco": "social-composer/split",
+      "detalhe": "{\"t\": \"— midia para publicar\", \"sw\": 143, \"cw\": 1, \"cls\": \"sr-only\", \"trunc\": false, \"isTable\": false, \"isField\": false, \"title\": null}"
+    }
+  ],
+  "overflow_por_largura": {
+    "390": [],
+    "768": [],
+    "1280": [],
+    "1440": [],
+    "1920": []
+  },
+  "resumo_blocos": {
+    "auth-login/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-login/centered": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-login/minimal": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-two-factor/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-two-factor/inline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-two-factor/steps": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-recovery/form": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-recovery/steps": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "auth-recovery/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "admin-platform/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 1,
+      "semTitle": 0
+    },
+    "admin-platform/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "admin-platform/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-team/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-team/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-team/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-settings/sections": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-settings/tabs": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "office-settings/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "leads-board/board": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2,
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "leads-board/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "leads-board/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "inbox-whatsapp/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 4,
+      "semTitle": 1
+    },
+    "inbox-whatsapp/stacked": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 1,
+      "semTitle": 1
+    },
+    "inbox-whatsapp/focus": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "consent-panel/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "consent-panel/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "consent-panel/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "channel-connections/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2,
+        2,
+        2
+      ],
+      "cortados": 3,
+      "semTitle": 0
+    },
+    "channel-connections/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "patients-list/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 1,
+      "semTitle": 1
+    },
+    "patients-list/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 1,
+      "semTitle": 1
+    },
+    "patients-list/grid": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [],
+      "cortados": 15,
+      "semTitle": 1
+    },
+    "patient-chart/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "patient-chart/sections": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "patient-chart/tabs": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "clinical-entry/form": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "clinical-entry/wizard": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "clinical-entry/inline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "agenda-board/day": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "agenda-board/week": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 3,
+      "semTitle": 0
+    },
+    "agenda-board/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "availability/week": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "availability/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "availability/slots": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "follow-up-tasks/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "follow-up-tasks/calendar": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "follow-up-tasks/board": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "packages-pricing/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 1,
+      "semTitle": 0
+    },
+    "packages-pricing/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "packages-pricing/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "payments-checkout/form": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "payments-checkout/receipt": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "payments-checkout/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "finance-overview/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "finance-overview/chart": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "finance-overview/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "reports-funnel/funnel": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "reports-funnel/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "reports-funnel/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "meta-conversion/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "meta-conversion/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "meta-conversion/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "social-accounts/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 14,
+      "semTitle": 0
+    },
+    "social-accounts/grid": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 4,
+      "semTitle": 0
+    },
+    "social-composer/composer": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 5,
+      "semTitle": 5
+    },
+    "social-composer/split": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 5,
+      "semTitle": 5
+    },
+    "social-composer/preview": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "social-automations/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 4,
+      "semTitle": 0
+    },
+    "social-automations/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 16,
+      "semTitle": 0
+    },
+    "social-automations/flow": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "social-logs/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "social-logs/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "webhooks-panel/list": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 3,
+      "semTitle": 0
+    },
+    "webhooks-panel/flow": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "agent-console/chat": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "agent-console/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "agent-console/logs": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "ops-health/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "ops-health/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "ops-health/timeline": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "integration-manifest/cards": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 4,
+      "semTitle": 0
+    },
+    "integration-manifest/table": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    },
+    "integration-manifest/checklist": {
+      "docOver": 0,
+      "h1": 0,
+      "headings": [
+        2
+      ],
+      "cortados": 0,
+      "semTitle": 0
+    }
+  },
+  "controles_sem_nome": [],
+  "erros_console": [],
+  "reduced_motion_animacoes_ativas": []
+}

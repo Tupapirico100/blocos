@@ -1,0 +1,719 @@
+{
+  "n_tab_triggers": 4,
+  "tabpanel_foco_apos_Tab": {
+    "tag": "DIV",
+    "role": "tabpanel",
+    "id": "radix-_r_h_-content-webhook",
+    "text": "Webhook de saida\n\nEventos enviados para ",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "outlineColor": "rgb(0, 105, 214)",
+    "outlineOffset": "2px",
+    "matchesFV": true,
+    "matchesF": true,
+    "accentVar": "#0069d6"
+  },
+  "tabpanel_scrollIntoView": {
+    "role": "tabpanel",
+    "id": "radix-_r_h_-content-webhook",
+    "tabindex": "0",
+    "w": 722,
+    "h": 481
+  },
+  "tab_trigger_foco_teclado": {
+    "tag": "BUTTON",
+    "role": "tab",
+    "id": "radix-_r_h_-trigger-canais",
+    "text": "Canais",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "outlineColor": "rgb(0, 105, 214)",
+    "outlineOffset": "2px",
+    "matchesFV": true,
+    "matchesF": true,
+    "accentVar": "#0069d6"
+  },
+  "reduced": {
+    "office-settings": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        }
+      ],
+      "spinners": []
+    },
+    "auth-login": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        }
+      ],
+      "spinners": []
+    },
+    "leads-board": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        }
+      ],
+      "spinners": []
+    },
+    "social-composer": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        }
+      ],
+      "spinners": []
+    },
+    "payments-checkout": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "transitionDuration": "0.001s"
+        }
+      ],
+      "spinners": []
+    }
+  },
+  "normal": {
+    "office-settings": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        }
+      ],
+      "spinners": []
+    },
+    "auth-login": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        }
+      ],
+      "spinners": []
+    },
+    "leads-board": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-24",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        }
+      ],
+      "spinners": []
+    },
+    "social-composer": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        }
+      ],
+      "spinners": []
+    },
+    "payments-checkout": {
+      "skeletons": [
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-8 w-8 rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-4 w-40",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-3 w-64",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-full rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[92%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-9 w-[78%] rounded-[var(--r-md)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        },
+        {
+          "tag": "DIV",
+          "cls": "bloco-skeleton h-24 w-full rounded-[var(--r-lg)]",
+          "animationName": "bloco-shimmer",
+          "animationDuration": "1.6s",
+          "animationIterationCount": "infinite",
+          "transitionDuration": "0s"
+        }
+      ],
+      "spinners": []
+    }
+  },
+  "inputs_crus": {
+    "patients-list": {
+      "n": 1,
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "",
+        "text": "",
+        "outlineStyle": "none",
+        "outlineWidth": "1px",
+        "outlineColor": "rgb(238, 238, 238)",
+        "outlineOffset": "0px",
+        "matchesFV": true,
+        "matchesF": true,
+        "accentVar": "#0069d6"
+      },
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.536011 -0.0435778 -0.181116 / 0.15) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+    },
+    "inbox-whatsapp": {
+      "n": 1,
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "",
+        "text": "",
+        "outlineStyle": "none",
+        "outlineWidth": "1px",
+        "outlineColor": "rgb(238, 238, 238)",
+        "outlineOffset": "0px",
+        "matchesFV": true,
+        "matchesF": true,
+        "accentVar": "#0069d6"
+      },
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.536011 -0.0435778 -0.181116 / 0.15) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+    },
+    "auth-two-factor": "seletor ausente"
+  }
+}

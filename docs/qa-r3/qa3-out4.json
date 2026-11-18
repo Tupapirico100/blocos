@@ -1,0 +1,65 @@
+{
+  "cortados_total": 85,
+  "cortados_sem_ellipsis_sem_table_sem_title": [],
+  "categorias": {
+    "truncate": 63,
+    "sr-only": 22
+  },
+  "tabpanels_visiveis_no_bloco": [
+    {
+      "id": "radix-_r_3n_-content-canais",
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent"
+    }
+  ],
+  "tabpanel_foco": {
+    "resultado": "nao-alcancou",
+    "medido": {
+      "tag": "BUTTON",
+      "role": null,
+      "id": "",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(0, 105, 214)",
+      "outlineOffset": "2px",
+      "matchesFV": true,
+      "matchesFocus": true,
+      "accentToken": "#0069d6"
+    }
+  },
+  "tab_trigger_foco": {
+    "resultado": "nao-alcancou",
+    "medido": {
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Pagamento e recibo\npayments-ch",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(0, 105, 214)",
+      "outlineOffset": "2px",
+      "matchesFV": true
+    }
+  },
+  "reduced_motion": {
+    "office-settings": {
+      "skeletons": [],
+      "spinners": []
+    },
+    "auth-login": {
+      "skeletons": [],
+      "spinners": []
+    },
+    "leads-board": {
+      "skeletons": [],
+      "spinners": []
+    },
+    "social-composer": {
+      "skeletons": [],
+      "spinners": []
+    }
+  },
+  "normal_motion": {
+    "skeletons": [],
+    "spinners": []
+  }
+}
