@@ -110,7 +110,8 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar por nome"
-              className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 bloco-control-sm text-fg placeholder:text-fg-faint focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15"
+              aria-label="Buscar paciente por nome"
+              className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 bloco-control-sm text-fg placeholder:text-fg-faint focus:border-accent focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent focus-visible:ring-4 focus-visible:ring-accent/15"
             />
           </label>
           <p className="bloco-caption text-fg-muted">
@@ -149,9 +150,9 @@ function PatientTable({
         <div className="flex min-w-0 items-center gap-2.5">
           <Avatar name={patient.name} size={28} />
           <div className="min-w-0">
-            <p className="bloco-headline truncate text-fg">{patient.name}</p>
+            <p className="bloco-headline truncate text-fg" title={patient.name}>{patient.name}</p>
             {patient.tags && patient.tags.length > 0 ? (
-              <p className="bloco-caption truncate text-fg-muted">{patient.tags.join(" · ")}</p>
+              <p className="bloco-caption truncate text-fg-muted" title={patient.tags.join(" · ")}>{patient.tags.join(" · ")}</p>
             ) : null}
           </div>
         </div>
@@ -163,9 +164,9 @@ function PatientTable({
       width: "220px",
       render: (patient) => (
         <div className="min-w-0">
-          <p className="truncate text-fg-secondary">{formatPhone(patient.phone)}</p>
+          <p className="truncate text-fg-secondary" title={formatPhone(patient.phone)}>{formatPhone(patient.phone)}</p>
           {patient.email ? (
-            <p className="bloco-caption truncate text-fg-muted">{patient.email}</p>
+            <p className="bloco-caption truncate text-fg-muted" title={patient.email}>{patient.email}</p>
           ) : null}
         </div>
       ),
@@ -250,7 +251,7 @@ function PatientCards({
           >
             <Avatar name={patient.name} size={38} />
             <span className="min-w-0 flex-1">
-              <span className="bloco-headline block truncate text-fg">{patient.name}</span>
+              <span className="bloco-headline block truncate text-fg" title={patient.name}>{patient.name}</span>
               <span className="bloco-caption block truncate text-fg-muted">
                 {formatPhone(patient.phone)}
                 {patient.email ? ` · ${patient.email}` : ""}
@@ -306,7 +307,7 @@ function PatientGrid({
             <span className="flex items-center gap-2">
               <Avatar name={patient.name} size={32} />
               <span className="min-w-0">
-                <span className="bloco-headline block truncate text-fg">{patient.name}</span>
+                <span className="bloco-headline block truncate text-fg" title={patient.name}>{patient.name}</span>
                 <span className="bloco-caption block truncate text-fg-muted">
                   {formatPhone(patient.phone)}
                 </span>
