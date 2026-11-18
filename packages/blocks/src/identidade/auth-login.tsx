@@ -19,6 +19,8 @@ export interface AuthLoginBrand {
   name: string;
   /** Frase de apoio da marca. */
   tagline?: string;
+  /** Simbolo do programa no lugar do icone padrao (decorativo: o nome ja aparece em texto). */
+  mark?: React.ReactNode;
 }
 
 export interface AuthLoginData {
@@ -39,6 +41,16 @@ export interface AuthLoginData {
   notice?: string;
   /** Link de suporte exibido no rodape do cartao. */
   support?: { label: string; href: string };
+  /** Painel de um operador so: pede apenas a senha (sem e-mail). Padrao: false. */
+  passwordOnly?: boolean;
+  /** Mostra "Esqueci minha senha". Padrao: true. */
+  allowRecovery?: boolean;
+  /** Frase abaixo do titulo (substitui a padrao). */
+  subtitle?: string;
+  /** Linha de rodape da variacao centralizada (substitui a padrao). */
+  footnote?: string;
+  /** Envio em andamento: trava o botao e mostra o spinner. */
+  busy?: boolean;
 }
 
 const MOTION = { duration: 0.24, ease: [0.32, 0.72, 0, 1] } as const;
@@ -75,7 +87,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
 
   const handleCredentialsSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    void onAction?.("auth.login", { email: email.trim(), password });
+    void onAction?.("auth.login", data.passwordOnly ? { password } : { email: email.trim(), password });
   };
 
   const handleCodeSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -100,8 +112,10 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
 
   /* ---- Campos (compartilhados entre as variacoes) ---- */
 
+  const allowRecovery = data.allowRecovery ?? true;
   const credentialsFields = (
     <>
+      {data.passwordOnly ? null : (
       <Field label="E-mail" htmlFor="auth-login-email" required>
         <Input
           id="auth-login-email"
@@ -113,11 +127,13 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           onChange={(event) => setEmail(event.target.value)}
         />
       </Field>
+      )}
       <Field
         label="Senha"
         htmlFor="auth-login-password"
         required
         aside={
+          allowRecovery ? (
           <button
             type="button"
             onClick={handleRecovery}
@@ -125,6 +141,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           >
             Esqueci minha senha
           </button>
+          ) : undefined
         }
       >
         <Input
@@ -134,6 +151,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           placeholder="Sua senha"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
+          autoFocus={data.passwordOnly || undefined}
         />
       </Field>
     </>
@@ -176,19 +194,23 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
       noValidate
     >
       {data.error ? (
-        <Callout tone="danger" title="Nao foi possivel entrar">
-          {data.error}
-        </Callout>
+        <div role="alert">
+          <Callout tone="danger" title="Não foi possível entrar">
+            {data.error}
+          </Callout>
+        </div>
       ) : null}
       {data.notice ? (
-        <Callout tone="success" title="Tudo certo">
-          {data.notice}
-        </Callout>
+        <div role="status">
+          <Callout tone="success" title="Tudo certo">
+            {data.notice}
+          </Callout>
+        </div>
       ) : null}
 
       {formFields}
 
-      <Button type="submit" size="lg" trailingIcon={<ArrowRight className="h-4 w-4" />}>
+      <Button type="submit" size="lg" loading={data.busy} trailingIcon={<ArrowRight className="h-4 w-4" aria-hidden />}>
         {submitLabel}
       </Button>
 
@@ -212,9 +234,15 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
     <div className="mb-5">
       {variant === "minimal" ? null : (
         <div className="mb-4 flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
-            <Sparkles className="h-4 w-4" aria-hidden />
-          </span>
+          {data.brand.mark ? (
+            <span className="flex shrink-0 items-center" aria-hidden>
+              {data.brand.mark}
+            </span>
+          ) : (
+            <span className="flex h-8 w-8 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
+              <Sparkles className="h-4 w-4" aria-hidden />
+            </span>
+          )}
           <span className="bloco-micro text-fg-muted">{brandName}</span>
         </div>
       )}
@@ -224,7 +252,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
       <p className="bloco-callout mt-1.5 text-fg-muted">
         {isTwoFactor
           ? "Como sua conta tem segundo fator ativo, precisamos de mais uma confirmacao."
-          : "Acesse os dados do seu consultorio e o painel de atendimento."}
+          : data.subtitle ?? "Acesse os dados do seu consultorio e o painel de atendimento."}
       </p>
     </div>
   );
@@ -312,7 +340,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
             {formBody}
           </Panel>
           <p className="bloco-caption mt-4 text-center text-fg-faint">
-            Aurora · acesso restrito a equipes autorizadas
+            {data.footnote ?? "Aurora · acesso restrito a equipes autorizadas"}
           </p>
         </motion.div>
       </div>

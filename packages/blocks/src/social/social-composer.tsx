@@ -20,7 +20,7 @@ import { socialComposerRecipe } from "./social-composer.recipe.js";
 /* Dados                                                               */
 /* ------------------------------------------------------------------ */
 
-export type SocialPostFormat = "post" | "carrossel" | "reels";
+export type SocialPostFormat = "post" | "carrossel" | "reels" | "story";
 
 export interface SocialComposerAccount {
   id: string;
@@ -64,21 +64,27 @@ const FORMAT_INFO: Record<
 > = {
   post: {
     label: "Post",
-    hint: "Uma imagem, ate 10 legendas",
+    hint: "Uma imagem, proporcao de 4:5 a 1,91:1",
     maxMedia: 1,
     icon: <Image className="h-3.5 w-3.5" aria-hidden />,
   },
   carrossel: {
     label: "Carrossel",
-    hint: "Ate 10 midias",
+    hint: "De 2 a 10 imagens",
     maxMedia: 10,
     icon: <SquareStack className="h-3.5 w-3.5" aria-hidden />,
   },
   reels: {
     label: "Reels",
-    hint: "Um video, ate 60s",
+    hint: "Um video de 3 s a 15 min",
     maxMedia: 1,
     icon: <Video className="h-3.5 w-3.5" aria-hidden />,
+  },
+  story: {
+    label: "Story",
+    hint: "Uma imagem 9:16 ou video de 3 a 60 s, sem legenda",
+    maxMedia: 1,
+    icon: <Image className="h-3.5 w-3.5" aria-hidden />,
   },
 };
 
@@ -179,7 +185,7 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
       <Field
         label="Legenda"
         htmlFor="social-composer-caption"
-        required={format !== "reels"}
+        required={format !== "reels" && format !== "story"}
         aside={`${caption.length}/${MAX_CAPTION}`}
         hint="A legenda nao substitui consentimento de marketing. Nao escreva dado de paciente."
       >
@@ -356,7 +362,7 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
         )}
 
         <Callout tone="info" icon={<Hash className="h-4 w-4" aria-hidden />} title="Limites que a interface respeita">
-          Carrossel aceita ate 10 midias, Reels aceita um video de ate 60s e a legenda vai ate {MAX_CAPTION} caracteres.
+          Carrossel aceita de 2 a 10 imagens, Reels aceita um video de 3 s a 15 min, Story nao tem legenda e a legenda vai ate {MAX_CAPTION} caracteres.
           Publicar nunca acontece no horario local do servidor — a conversao para UTC leva em conta o DST.
         </Callout>
       </div>
@@ -381,7 +387,7 @@ function PostPreview({
   hashtags: string[];
   media: SocialMediaItem[];
 }) {
-  const isReels = format === "reels";
+  const isReels = format === "reels" || format === "story";
 
   return (
     <div
@@ -460,7 +466,7 @@ function validate(input: {
   data: SocialComposerData;
 }): string | null {
   if (!input.accountId) return "Escolha a conta que vai publicar.";
-  if (input.format !== "reels" && input.caption.trim().length === 0) return "Escreva a legenda.";
+  if (input.format !== "reels" && input.format !== "story" && input.caption.trim().length === 0) return "Escreva a legenda.";
   if (input.mediaIds.length === 0) return "Selecione ao menos uma midia.";
   if (input.mediaIds.length > FORMAT_INFO[input.format].maxMedia) {
     return `${FORMAT_INFO[input.format].label} aceita ate ${FORMAT_INFO[input.format].maxMedia} midia(s).`;

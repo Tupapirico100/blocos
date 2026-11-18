@@ -76,10 +76,12 @@ programas — so o padrao do produto foi fixado.
 
 | Bloco | Variacao escolhida | Alternativas na biblioteca | Intent da escolhida |
 |---|---|---|---|
-| `social-automations` | **Fluxo** | Lista · Cartoes | Entender o encadeamento gatilho -> acao |
+| `social-agenda` | **Folha de rota** | Compacta | Cada dia é uma faixa com o número grande e os posts como linhas, com miniatura |
+| `social-automations` | **Fluxo** | Lista · Cartões | Ver o caminho: quem comenta, o que recebe no direct e a resposta pública |
 | `social-composer` | **Composer** | Dividido · So preview | Formulario e preview no mesmo eixo, para quem escreve |
-| `social-accounts` | **Cartoes** | Grade | Ver conta, expiracao e ultima publicacao com folga |
-| `social-logs` | **Tabela** | Linha do tempo | Varrer muitos registros e filtrar por nivel |
+| `social-accounts` | **Cartoes** | Grade | Uma conta por linha, com status e acoes a direita |
+| `social-post-detail` | **Página** | — | Ver e editar um post |
+| `social-logs` | **Tabela** | Linha do tempo | Comparar muitas respostas lado a lado |
 
 ### operacao
 

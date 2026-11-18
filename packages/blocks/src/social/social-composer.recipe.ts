@@ -8,7 +8,7 @@ import { z } from "zod";
  * e `Agendador-Instagram: src/components/MediaPicker.tsx`.
  */
 
-export const socialPostFormat = z.enum(["post", "carrossel", "reels"]);
+export const socialPostFormat = z.enum(["post", "carrossel", "reels", "story"]);
 
 export const postScheduleInput = z.object({
   accountId: z.string().min(1, "Escolha a conta que publica."),
@@ -94,7 +94,7 @@ export const socialComposerRecipe = defineBlock({
     },
   ],
   rules: [
-    "Carrossel aceita ate 10 midias; Reels aceita um video de ate 60s; a legenda vai ate 2200 caracteres.",
+    "Post unico: 1 imagem 4:5 a 1,91:1; carrossel: 2 a 10 imagens; Reels: 1 video de 3 s a 15 min; Story: 1 imagem ou video de 3 a 60 s, sem legenda; a legenda vai ate 2200 caracteres.",
     "A interface valida os limites antes de agendar — o agendador revalida no servidor.",
     "A publicacao nunca sai direto do composer: passa pelo agendador e vira uma tarefa com hora marcada.",
     "O horario e sempre local do programa (America/Sao_Paulo); a conversao para UTC e feita em DUAS passagens por causa do DST.",

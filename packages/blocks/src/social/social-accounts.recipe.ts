@@ -5,14 +5,16 @@ import { z } from "zod";
  * social-accounts — contas do Instagram conectadas.
  *
  * Extraido de `Agendador-Instagram: src/app/(app)/accounts/page.tsx`.
- * O bloco e owner-only: `requires={["instagram"]}` no BlockFrame.
+ * Nao trava sem o conector: esta e justamente a tela que conecta a primeira conta.
  */
 
 export const socialConnectInput = z.object({
   /** Conta a reconectar. Ausente = iniciar um novo fluxo de conexao. */
   accountId: z.string().optional(),
-  /** Login publico da conta quando a conexao ja vem autorizada. */
-  instagramUserId: z.string().optional(),
+});
+
+export const socialAccountInput = z.object({
+  accountId: z.string().uuid("Conta invalida."),
 });
 
 export const socialAccountsRecipe = defineBlock({
@@ -20,28 +22,16 @@ export const socialAccountsRecipe = defineBlock({
   name: "Contas do Instagram",
   domain: "social",
   summary:
-    "Contas do Instagram conectadas, com status e expiracao do token de longa duracao e a ultima publicacao de cada conta.",
-  origins: ["Agendador-Instagram: src/app/(app)/accounts/page.tsx"],
+    "Contas profissionais do Instagram conectadas pelo login da Meta, com validade do login, webhooks e o passo a passo do painel da Meta.",
+  origins: ["Agendador-Instagram: src/app/(app)/accounts/page.tsx", "Agendador-Instagram: src/app/(app)/accounts/actions.ts"],
   ports: [
     {
       id: "instagramAccounts",
       label: "Contas do Instagram",
       contract:
-        "Lista as contas conectadas com token, status e expiracao. Nunca devolve o valor do token — apenas a referencia (secretRef).",
-      methods: [
-        "list(officeId): SocialAccount[]",
-        "connect(input): SocialAccount",
-        "disconnect(accountId): void",
-      ],
-      connectors: ["instagram"],
-      mockable: true,
-    },
-    {
-      id: "instagramPosts",
-      label: "Ultimas publicacoes",
-      contract: "Ultima publicacao por conta, para contextualizar o estado do perfil.",
-      methods: ["lastByAccount(accountId): SocialPostSummary | null"],
-      connectors: ["instagram"],
+        "Lista as contas conectadas com status, validade do login e webhooks. Nunca devolve o token: ele fica cifrado no banco.",
+      methods: ["list(): SocialAccount[]", "subscribeWebhooks(accountId): void", "remove(accountId): void"],
+      connectors: ["instagram", "database", "storage"],
       mockable: true,
     },
   ],
@@ -50,12 +40,34 @@ export const socialAccountsRecipe = defineBlock({
       id: "social.connect",
       title: "Conectar conta do Instagram",
       description:
-        "Use quando o usuario pedir para conectar, reconectar ou autorizar uma conta do Instagram. Sem `accountId` inicia um novo fluxo de autorizacao; com `accountId` refaz a autorizacao da conta existente.",
+        "Use quando o usuario pedir para conectar ou reconectar uma conta. Leva ao login unificado da Meta (GET /api/instagram/connect); a volta cria ou atualiza a conta.",
       input: socialConnectInput,
-      http: { method: "POST", path: "/social/instagram/connect" },
-      permissions: ["platform_owner"],
+      http: { method: "GET", path: "/api/instagram/connect" },
+      permissions: ["owner"],
       connectors: ["instagram"],
-      states: ["success", "error", "forbidden"],
+      states: ["success", "error"],
+    },
+    {
+      id: "social.subscribe",
+      title: "Ativar webhooks",
+      description:
+        "Use quando os webhooks de uma conta estiverem desligados. Assina comments e messages (POST /{ig}/subscribed_apps) para as automacoes receberem os eventos.",
+      input: socialAccountInput,
+      http: { method: "POST", path: "/accounts/:accountId/subscribe" },
+      permissions: ["owner"],
+      connectors: ["instagram"],
+      states: ["success", "error"],
+    },
+    {
+      id: "social.remove",
+      title: "Remover conta",
+      description:
+        "Use quando o usuario confirmar a remocao de uma conta. Apaga os arquivos da conta no storage; posts, automacoes e registros saem em cascata.",
+      input: socialAccountInput,
+      http: { method: "DELETE", path: "/accounts/:accountId" },
+      permissions: ["owner"],
+      connectors: ["database", "storage"],
+      states: ["success", "error"],
     },
   ],
   connectors: [
@@ -63,38 +75,37 @@ export const socialAccountsRecipe = defineBlock({
       id: "instagram",
       label: "Instagram Graph API",
       kind: "api",
-      description:
-        "Contas do Instagram usadas para publicar. O dono da plataforma faz a autorizacao e guarda o token de longa duracao.",
-      env: ["INSTAGRAM_APP_ID", "INSTAGRAM_APP_SECRET", "INSTAGRAM_REDIRECT_URI"],
+      description: "Login unificado da Meta (Facebook Login for Business com config_id) em graph.facebook.com.",
+      env: ["INSTAGRAM_APP_ID", "INSTAGRAM_APP_SECRET", "INSTAGRAM_LOGIN_CONFIG_ID"],
       howTo:
-        "Registre o app na Meta, configure o redirect URI e autorize cada conta pelo fluxo OAuth. O token resultante fica no cofre; a interface so enxerga a referencia.",
+        "Crie o app na Meta com o caso de uso de mensagens e conteudo no Instagram, registre o redirect /api/instagram/callback e preencha as variaveis.",
       ownerOnly: true,
-      riskVersion: "v1",
     },
+    { id: "database", label: "Banco de dados", kind: "database", description: "Postgres (Supabase), so a service role.", ownerOnly: true },
+    { id: "storage", label: "Storage", kind: "storage", description: "Bucket com as midias de cada conta.", ownerOnly: true },
   ],
   rules: [
-    "Somente o dono da plataforma conecta contas: a interface pede acesso, nunca provisiona.",
-    "O token de longa duracao do Instagram expira em cerca de 60 dias — a UI avisa antes da expiracao.",
-    "Desconectar uma conta nao apaga o historico de publicacoes nem os logs.",
-    "Nenhum token, secret ou valor de credencial aparece na tela, no log ou na URL — apenas `tokenRef`.",
-    "Reconectar uma conta expirada nao cria uma conta duplicada: reaproveita o mesmo registro.",
+    "Remover conta sempre passa por confirmacao: posts, automacoes e arquivos da conta saem junto.",
+    "Token de usuario do sistema nao vence (tokenDaysLeft null); conta recusada pela Meta vira `reauth` e pede Reconectar.",
+    "Webhooks desligados = automacoes sem comentarios: a tela diz isso em texto, nao so em cor.",
+    "Nenhum token ou segredo aparece na tela, no log ou na URL.",
   ],
-  emptyAction: { id: "social.connect", label: "Conectar conta" },
+  emptyAction: { id: "social.connect", label: "Conectar conta do Instagram" },
   defaultVariant: "cards",
   variants: [
     {
       id: "cards",
       label: "Cartoes",
-      intent: "Ver conta, expiracao e ultima publicacao com folga",
-      tradeoff: "Ocupa bastante altura; mostra menos contas por tela",
+      intent: "Uma conta por linha, com status e acoes a direita",
+      tradeoff: "Ocupa mais altura com muitas contas",
     },
     {
       id: "grid",
       label: "Grade",
-      intent: "Varrer muitas contas de uma vez",
-      tradeoff: "Cada conta perde o detalhe do ultimo post",
+      intent: "Varrer muitas contas de clientes de uma vez",
+      tradeoff: "Cada cartao fica mais estreito",
     },
   ],
-  states: ["loading", "success", "empty", "error", "forbidden", "not-provisioned"],
+  states: ["loading", "success", "empty", "error", "forbidden"],
   sensitive: true,
 });

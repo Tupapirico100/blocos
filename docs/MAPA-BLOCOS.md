@@ -4,7 +4,7 @@
 > Cada bloco e uma receita: acoes (UI + HTTP + agente), portas de logica,
 > conectores owner-only, regras e variacoes de UI.
 
-**29 blocos · 62 acoes · 83 variacoes de UI**
+**31 blocos · 74 acoes · 86 variacoes de UI**
 
 ## 1. Blocos por repositorio de origem
 
@@ -23,7 +23,7 @@ Onde cada bloco nasceu. Este e o rastreio do que ja existe pronto.
 | `reports-funnel` | Relatorios | Funil new -> qualified -> customer contando PESSOAS, com origem atribuida pelo primeiro toque. | `report.export` |
 | `availability` | Agenda | Grade semanal de atendimento, folgas e slots livres — bloqueios sempre vencem o horario livre. | `availability.setHours` |
 | `patients-list` | Clinico | Pacientes do consultorio com busca por nome, contato, situacao do consentimento de tratamento e ultima consulta. | `patient.open` |
-| `auth-login` | Identidade | Entrada por e-mail e senha, com desafio de segundo fator em 6 digitos. | `auth.login` |
+| `auth-login` | Identidade | Entrada por e-mail e senha (ou so senha, em painel de um operador), com desafio de segundo fator em 6 digitos. | `auth.login` |
 | `integration-manifest` | Operacao | Todos os conectores do programa, com status, quem pode provisionar, as variaveis de ambiente esperadas (nome) e o que cada um destrava. | `connector.provision` |
 | `admin-platform` | Administracao | Visao do dono da plataforma sobre consultorios, membros, leads e conversas. | `admin.office.create` |
 | `consent-panel` | Atendimento | Consentimentos de tratamento e marketing do paciente, com versao do texto aceito, canal e data da concessao. | `consent.grant` |
@@ -35,6 +35,18 @@ Onde cada bloco nasceu. Este e o rastreio do que ja existe pronto.
 | `auth-two-factor` | Identidade | Painel do segundo fator TOTP, codigos de recuperacao e remocao do fator. | `auth.twoFactor.verify` |
 | `finance-overview` | Financeiro | Receita do mes, ticket medio e taxa de comparecimento em centavos, no formato BRL. | `finance.export` |
 | `webhooks-panel` | Operacao | Endpoints de saida do programa, com eventos assinados, segredo por referencia, tentativas, backoff e status da ultima entrega. | `webhook.toggle` |
+
+### Agendador-Instagram (7 blocos)
+
+| Bloco | Dominio | O que faz | Acao principal |
+|---|---|---|---|
+| `social-agenda` | Social | Fila de posts do Instagram por dia, com hora, conta, formato, miniatura e estado, ações por estado (publicar agora, tentar de novo, cancelar, excluir) e o histórico recente. | `post.publishNow` |
+| `social-automations` | Social | Automações que respondem no direct quem comenta uma palavra-chave (ou escreve no direct), com palavras de exclusão, respostas públicas em rodízio, números por automação e pausar/excluir. | `automation.toggle` |
+| `social-composer` | Social | Escreve a legenda, escolhe hashtags e midia, ve o preview do post e agenda a publicacao no Instagram. | `post.schedule` |
+| `social-accounts` | Social | Contas profissionais do Instagram conectadas pelo login da Meta, com validade do login, webhooks e o passo a passo do painel da Meta. | `social.connect` |
+| `social-post-detail` | Social | Um post do Instagram: arquivos, formato, horário, link publicado, status na Meta, tentativas, automação ligada, ações por estado e edição de legenda e horário. | `post.update` |
+| `auth-login` | Identidade | Entrada por e-mail e senha (ou so senha, em painel de um operador), com desafio de segundo fator em 6 digitos. | `auth.login` |
+| `social-logs` | Social | Ultimas respostas automaticas: quando, conta, automacao, quem escreveu, o texto recebido e o resultado (enviada, ignorada, em andamento ou erro). | — |
 
 ### CRM-HOF (15 blocos)
 
@@ -56,29 +68,20 @@ Onde cada bloco nasceu. Este e o rastreio do que ja existe pronto.
 | `follow-up-tasks` | Agenda | Fila de acompanhamento com prazo e responsavel por tarefa, em lista, calendario ou quadro por status. | `task.complete` |
 | `webhooks-panel` | Operacao | Endpoints de saida do programa, com eventos assinados, segredo por referencia, tentativas, backoff e status da ultima entrega. | `webhook.toggle` |
 
-### Agendador-Instagram (4 blocos)
-
-| Bloco | Dominio | O que faz | Acao principal |
-|---|---|---|---|
-| `social-automations` | Social | Regras que ligam um gatilho (comentario, palavra-chave ou mencao) a uma acao (responder, marcar ou agendar), com liga/desliga por regra. | `automation.toggle` |
-| `social-composer` | Social | Escreve a legenda, escolhe hashtags e midia, ve o preview do post e agenda a publicacao no Instagram. | `post.schedule` |
-| `social-accounts` | Social | Contas do Instagram conectadas, com status e expiracao do token de longa duracao e a ultima publicacao de cada conta. | `social.connect` |
-| `social-logs` | Social | Historico de publicacoes e interacoes do Instagram, com nivel, conta, acao, status e data, e reexecucao de falhas. | `log.retry` |
-
 ## 2. Blocos por dominio
 
 ### Identidade
 
 #### `auth-login` — Login
 
-Entrada por e-mail e senha, com desafio de segundo fator em 6 digitos.
+Entrada por e-mail e senha (ou so senha, em painel de um operador), com desafio de segundo fator em 6 digitos.
 
 **Variacoes de UI:** `split` (Dividida) · `centered` (Centralizada) · `minimal` (Minima)
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
 - `auth.login` — Entrar — `POST /auth/login` — papeis: owner, employee — conectores: database
-  - Use quando o usuario enviar e-mail e senha no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.
+  - Use quando o usuario enviar e-mail e senha (ou so a senha, com data.passwordOnly) no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.
 - `auth.twoFactor.verify` — Verificar codigo de 2FA — `POST /auth/two-factor/verify` — papeis: owner, employee — conectores: database
   - Use quando o usuario informar o codigo de 6 digitos do segundo fator. Consome o desafio pendente e conclui o login; codigo invalido devolve erro sem revelar se o fator existe.
 - `auth.twoFactor.resend` — Reenviar codigo de 2FA — `POST /auth/two-factor/resend` — papeis: owner, employee — conectores: database, email
@@ -108,8 +111,9 @@ Entrada por e-mail e senha, com desafio de segundo fator em 6 digitos.
 - Senha, codigo de 2FA e token de sessao nunca aparecem em log, URL ou telemetria.
 - Desafio de 2FA tem validade curta e uso unico; um codigo verificado nao pode ser reaproveitado.
 - Nenhum dado de saude (consulta, medida, plano alimentar) trafega pela tela de login.
+- Com data.passwordOnly o payload de auth.login leva so { password }; o servidor aplica limite de tentativas por IP.
 
-**Origem:** `CRM-Nutricionista: src/app/[locale]/login/page.tsx`
+**Origem:** `CRM-Nutricionista: src/app/[locale]/login/page.tsx` · `Agendador-Instagram: src/app/login/page.tsx`
 
 #### `auth-recovery` — Recuperação de senha
 
@@ -851,38 +855,79 @@ Funil new -> qualified -> customer contando PESSOAS, com origem atribuida pelo p
 
 ### Social
 
-#### `social-automations` — Automacoes de resposta
+#### `social-agenda` — Agenda de posts
 
-Regras que ligam um gatilho (comentario, palavra-chave ou mencao) a uma acao (responder, marcar ou agendar), com liga/desliga por regra.
+Fila de posts do Instagram por dia, com hora, conta, formato, miniatura e estado, ações por estado (publicar agora, tentar de novo, cancelar, excluir) e o histórico recente.
 
-**Variacoes de UI:** `list` (Lista) · `cards` (Cartoes) · `flow` (Fluxo)
+**Variacoes de UI:** `route` (Folha de rota) · `compact` (Compacta)
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `automation.toggle` — Ligar ou desligar automacao — `PATCH /social/automations/:id` — papeis: owner, nutritionist, receptionist
-  - Use quando o usuario quiser ativar ou pausar uma regra de resposta automatica. Desligar mantem a regra guardada e apenas impede novas respostas.
+- `post.publishNow` — Publicar agora — `POST /posts/:id/publish-now` — papeis: owner — conectores: instagram
+  - Use quando o usuario quiser publicar um post agendado sem esperar o horário.
+- `post.retry` — Tentar de novo — `POST /posts/:id/retry` — papeis: owner — conectores: instagram
+  - Use quando um post estiver com erro. Reaproveita o container se ele ainda existir; se o erro foi depois do media_publish, confira o Instagram antes (pode já ter publicado).
+- `post.cancel` — Cancelar post — `POST /posts/:id/cancel` — papeis: owner — conectores: database
+  - Use quando o usuario confirmar que quer tirar um post agendado da fila.
+- `post.delete` — Excluir post — `DELETE /posts/:id` — papeis: owner — conectores: database, storage
+  - Use quando o usuario confirmar a exclusão de um post com erro ou cancelado (e dos arquivos dele).
 
 **Portas de logica:**
 
-- `automationsRepository` — Repositorio de automacoes: CRUD das regras por conta. Uma regra por (conta, gatilho).
-  - `listByAccount(accountId): SocialAutomation[]`
-  - `toggle(id, active): SocialAutomation`
-  - `upsert(rule): SocialAutomation`
-- `automationRunner` — Executor de automacoes: Avalia o gatilho e aplica a acao. Retorna contagem de execucoes; nunca guarda a mensagem original do paciente.
-  - `evaluate(accountId, event): AutomationResult | null`
+- `postsRepository` — Posts: Até 100 posts na fila (agendado, processando, publicando, erro) em ordem de horário e os 30 últimos publicados/cancelados, agrupados por dia em America/Sao_Paulo.
+  - `listUpcoming(accountId?): Post[]`
+  - `listHistory(accountId?): Post[]`
+- `scheduler` — Agendador: Publicar agora e tentar de novo rodam o tick dentro da ação; media_publish nunca é repetido sozinho.
+  - `publishNow(id): void`
+  - `retry(id): void`
+  - `cancel(id): void`
+  - `remove(id): void`
 
-**Conectores:** `instagram` (somente dono) · `database` (somente dono)
+**Conectores:** `instagram` (somente dono) · `database` (somente dono) · `storage` (somente dono)
 
 **Regras que a implementacao DEVE respeitar:**
 
-- Regra 11: so respondemos a quem esta na lista de permitidos — a automacao nunca inicia conversa nova.
-- Janela de 24h: fora da janela, somente template aprovado.
-- Marcar cria LEAD, nao paciente: a automacao nao grava dado de saude.
-- Uma regra por conta e gatilho; quando duas regras casam, vence a mais especifica.
-- Regra desativada e preservada: religar nao perde historico de execucoes.
-- O texto exato do comentario do paciente nao e persistido — a execucao guarda apenas contadores.
+- Cancelar e excluir sempre pedem confirmação.
+- Ações por estado: agendado (publicar agora, editar, cancelar); erro (tentar de novo, editar, excluir); cancelado (reagendar, excluir); publicado (detalhes).
+- Horários sempre em America/Sao_Paulo.
+- Link 'Ver no Instagram' só aparece para https://www.instagram.com/.
+- Estado sempre em texto + bolinha, nunca só cor.
 
-**Origem:** `Agendador-Instagram: src/app/(app)/automations/page.tsx` · `Agendador-Instagram: src/lib/automations/handle.ts`
+**Origem:** `Agendador-Instagram: src/app/(app)/posts/page.tsx` · `Agendador-Instagram: src/app/(app)/posts/actions.ts`
+
+#### `social-automations` — Automações de resposta
+
+Automações que respondem no direct quem comenta uma palavra-chave (ou escreve no direct), com palavras de exclusão, respostas públicas em rodízio, números por automação e pausar/excluir.
+
+**Variacoes de UI:** `list` (Lista) · `cards` (Cartões) · `flow` (Fluxo)
+
+**Acoes (uma acao = tela + HTTP + tool de agente):**
+
+- `automation.toggle` — Pausar ou ativar automação — `POST /automations/:id/active` — papeis: owner — conectores: database
+  - Use quando o usuario pedir para pausar ou religar uma automação. Pausada, ela nao responde ninguem; os registros ficam.
+- `automation.delete` — Excluir automação — `DELETE /automations/:id` — papeis: owner — conectores: database
+  - Use quando o usuario confirmar a exclusao de uma automação. Sempre passa por confirmacao.
+- `automation.create` — Nova automação — papeis: owner — conectores: database
+  - Use quando o usuario quiser criar uma automação: leva ao formulario de criacao do app.
+
+**Portas de logica:**
+
+- `automationsRepository` — Automações: Automações por conta, com contadores agregados de automation_logs (casaram, enviadas, ignoradas, erro).
+  - `list(): SocialAutomation[]`
+  - `setActive(id, active): void`
+  - `remove(id): void`
+
+**Conectores:** `database` (somente dono)
+
+**Regras que a implementacao DEVE respeitar:**
+
+- Cada pessoa recebe a mesma automação uma vez so (as repetições contam como 'já tinham recebido').
+- Só 1 resposta privada por comentário (regra da Meta): com várias automações valendo, ganha a do post específico, depois a mais antiga.
+- Palavras de exclusão deixam o comentário para resposta pessoal.
+- Várias respostas públicas são sorteadas a cada comentário (respostas sempre iguais a Meta marca como spam).
+- Excluir sempre pede confirmação; pausar é reversível.
+
+**Origem:** `Agendador-Instagram: src/app/(app)/automations/page.tsx` · `Agendador-Instagram: src/lib/automations/handle.ts` · `Agendador-Instagram: src/lib/automations/stats.ts`
 
 #### `social-composer` — Composer de publicacao
 
@@ -910,7 +955,7 @@ Escreve a legenda, escolhe hashtags e midia, ve o preview do post e agenda a pub
 
 **Regras que a implementacao DEVE respeitar:**
 
-- Carrossel aceita ate 10 midias; Reels aceita um video de ate 60s; a legenda vai ate 2200 caracteres.
+- Post unico: 1 imagem 4:5 a 1,91:1; carrossel: 2 a 10 imagens; Reels: 1 video de 3 s a 15 min; Story: 1 imagem ou video de 3 a 60 s, sem legenda; a legenda vai ate 2200 caracteres.
 - A interface valida os limites antes de agendar — o agendador revalida no servidor.
 - A publicacao nunca sai direto do composer: passa pelo agendador e vira uma tarefa com hora marcada.
 - O horario e sempre local do programa (America/Sao_Paulo); a conversao para UTC e feita em DUAS passagens por causa do DST.
@@ -920,65 +965,92 @@ Escreve a legenda, escolhe hashtags e midia, ve o preview do post e agenda a pub
 
 #### `social-accounts` — Contas do Instagram
 
-Contas do Instagram conectadas, com status e expiracao do token de longa duracao e a ultima publicacao de cada conta.
+Contas profissionais do Instagram conectadas pelo login da Meta, com validade do login, webhooks e o passo a passo do painel da Meta.
 
 **Variacoes de UI:** `cards` (Cartoes) · `grid` (Grade)
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `social.connect` — Conectar conta do Instagram — `POST /social/instagram/connect` — papeis: platform_owner — conectores: instagram
-  - Use quando o usuario pedir para conectar, reconectar ou autorizar uma conta do Instagram. Sem `accountId` inicia um novo fluxo de autorizacao; com `accountId` refaz a autorizacao da conta existente.
+- `social.connect` — Conectar conta do Instagram — `GET /api/instagram/connect` — papeis: owner — conectores: instagram
+  - Use quando o usuario pedir para conectar ou reconectar uma conta. Leva ao login unificado da Meta (GET /api/instagram/connect); a volta cria ou atualiza a conta.
+- `social.subscribe` — Ativar webhooks — `POST /accounts/:accountId/subscribe` — papeis: owner — conectores: instagram
+  - Use quando os webhooks de uma conta estiverem desligados. Assina comments e messages (POST /{ig}/subscribed_apps) para as automacoes receberem os eventos.
+- `social.remove` — Remover conta — `DELETE /accounts/:accountId` — papeis: owner — conectores: database, storage
+  - Use quando o usuario confirmar a remocao de uma conta. Apaga os arquivos da conta no storage; posts, automacoes e registros saem em cascata.
 
 **Portas de logica:**
 
-- `instagramAccounts` — Contas do Instagram: Lista as contas conectadas com token, status e expiracao. Nunca devolve o valor do token — apenas a referencia (secretRef).
-  - `list(officeId): SocialAccount[]`
-  - `connect(input): SocialAccount`
-  - `disconnect(accountId): void`
-- `instagramPosts` — Ultimas publicacoes: Ultima publicacao por conta, para contextualizar o estado do perfil.
-  - `lastByAccount(accountId): SocialPostSummary | null`
+- `instagramAccounts` — Contas do Instagram: Lista as contas conectadas com status, validade do login e webhooks. Nunca devolve o token: ele fica cifrado no banco.
+  - `list(): SocialAccount[]`
+  - `subscribeWebhooks(accountId): void`
+  - `remove(accountId): void`
 
-**Conectores:** `instagram` (somente dono)
+**Conectores:** `instagram` (somente dono) · `database` (somente dono) · `storage` (somente dono)
 
 **Regras que a implementacao DEVE respeitar:**
 
-- Somente o dono da plataforma conecta contas: a interface pede acesso, nunca provisiona.
-- O token de longa duracao do Instagram expira em cerca de 60 dias — a UI avisa antes da expiracao.
-- Desconectar uma conta nao apaga o historico de publicacoes nem os logs.
-- Nenhum token, secret ou valor de credencial aparece na tela, no log ou na URL — apenas `tokenRef`.
-- Reconectar uma conta expirada nao cria uma conta duplicada: reaproveita o mesmo registro.
+- Remover conta sempre passa por confirmacao: posts, automacoes e arquivos da conta saem junto.
+- Token de usuario do sistema nao vence (tokenDaysLeft null); conta recusada pela Meta vira `reauth` e pede Reconectar.
+- Webhooks desligados = automacoes sem comentarios: a tela diz isso em texto, nao so em cor.
+- Nenhum token ou segredo aparece na tela, no log ou na URL.
 
-**Origem:** `Agendador-Instagram: src/app/(app)/accounts/page.tsx`
+**Origem:** `Agendador-Instagram: src/app/(app)/accounts/page.tsx` · `Agendador-Instagram: src/app/(app)/accounts/actions.ts`
 
-#### `social-logs` — Logs de publicacao
+#### `social-post-detail` — Detalhe do post
 
-Historico de publicacoes e interacoes do Instagram, com nivel, conta, acao, status e data, e reexecucao de falhas.
+Um post do Instagram: arquivos, formato, horário, link publicado, status na Meta, tentativas, automação ligada, ações por estado e edição de legenda e horário.
 
-**Variacoes de UI:** `table` (Tabela) · `timeline` (Linha do tempo)
+**Variacoes de UI:** `page` (Página)
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `log.retry` — Reexecutar publicacao — `POST /social/logs/:id/retry` — papeis: owner, nutritionist, receptionist — conectores: instagram
-  - Use quando o usuario pedir para reexecutar uma publicacao ou interacao que falhou. A reexecucao usa a mesma chave de dedup, entao nao duplica entrega.
+- `post.update` — Salvar e reagendar — `POST /posts/:id` — papeis: owner — conectores: database
+  - Use quando o usuario mudar a legenda ou o horário de um post agendado, com erro ou cancelado. O post volta para a fila com o novo horário; os arquivos não mudam.
+- `post.publishNow` — Publicar agora — `POST /posts/:id/publish-now` — papeis: owner — conectores: instagram
+  - Use quando o usuario quiser publicar este post agendado sem esperar o horário.
+- `post.retry` — Tentar de novo — `POST /posts/:id/retry` — papeis: owner — conectores: instagram
+  - Use quando o post estiver com erro.
+- `post.cancel` — Cancelar post — `POST /posts/:id/cancel` — papeis: owner — conectores: database
+  - Use quando o usuario confirmar que quer tirar o post da fila.
+- `post.delete` — Excluir post — `DELETE /posts/:id` — papeis: owner — conectores: database, storage
+  - Use quando o usuario confirmar a exclusão do post e dos arquivos dele (não apaga do Instagram).
 
 **Portas de logica:**
 
-- `socialLogsRepository` — Repositorio de logs: Historico paginado por conta e nivel. Nao devolve token, legenda completa nem dado de paciente.
-  - `list(filter): SocialLogEntry[]`
-  - `retry(id): SocialLogEntry`
-- `publishQueue` — Fila de publicacao: Reexecuta uma publicacao que falhou, respeitando a chave deterministica de dedup da Meta.
-  - `enqueue(accountId, postId): Task`
-  - `findById(taskId): Task | null`
+- `postsRepository` — Posts: Um post com arquivos (URL pública) e automações ligadas a ele.
+  - `get(id): Post | null`
+  - `update(id, caption, scheduledAt): void`
 
-**Conectores:** `instagram` (somente dono) · `database` (somente dono)
+**Conectores:** `instagram` (somente dono) · `database` (somente dono) · `storage` (somente dono)
 
 **Regras que a implementacao DEVE respeitar:**
 
-- Log nunca carrega token, legenda completa, mensagem de paciente ou dado de saude.
-- A fila de eventos da Meta usa chave deterministica (dedup): reexecutar nao cria publicacao duplicada.
-- Nivel `error` e aviso de operacao; `warn` e informativo e nao interrompe o fluxo.
-- Somente registros com falha sao reexecutaveis — a interface nao oferece retry em sucesso.
-- Toda entrada tem data ISO para correlacao com a fila e com o console do agente.
+- Só agendado, com erro ou cancelado pode ser editado; processando e publicando não podem ser excluídos.
+- Legenda até 2200 caracteres e 30 hashtags (o servidor revalida). Story não tem legenda.
+- Post com horário já passado sugere daqui a 1 h ao reagendar.
+- Cancelar e excluir sempre pedem confirmação.
+
+**Origem:** `Agendador-Instagram: src/app/(app)/posts/[id]/page.tsx` · `Agendador-Instagram: src/components/EditPostForm.tsx`
+
+#### `social-logs` — Registros de respostas
+
+Ultimas respostas automaticas: quando, conta, automacao, quem escreveu, o texto recebido e o resultado (enviada, ignorada, em andamento ou erro).
+
+**Variacoes de UI:** `table` (Tabela) · `timeline` (Linha do tempo)
+
+**Portas de logica:**
+
+- `automationLogs` — Registros das automacoes: As 100 ultimas linhas de automation_logs com o nome da automacao e o @ da conta. Erro ja vem tratado, sem token nem corpo cru da Meta.
+  - `listRecent(limit): SocialLogEntry[]`
+
+**Conectores:** `database` (somente dono)
+
+**Regras que a implementacao DEVE respeitar:**
+
+- Somente leitura: nao existe reenviar. A Meta aceita 1 resposta privada por comentario e repetir vira spam.
+- `skipped` = a pessoa ja tinha recebido esta automacao (1 direct por pessoa por automacao).
+- Guarda @ e texto de quem comentou (dado pessoal): a retencao e responsabilidade do servidor.
+- Estado sempre em texto + bolinha, nunca so cor.
 
 **Origem:** `Agendador-Instagram: src/app/(app)/logs/page.tsx`
 

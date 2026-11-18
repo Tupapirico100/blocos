@@ -1,306 +1,262 @@
 import * as React from "react";
-import {
-  Avatar,
-  Badge,
-  Button,
-  Callout,
-  EmptyState,
-  KeyValue,
-  Panel,
-  SectionHeader,
-} from "@blocos/ui";
-import { CalendarClock, Instagram, KeyRound, Link2, Plus, ShieldCheck, TriangleAlert } from "lucide-react";
-import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
-import { daysUntilSocial, formatSocialDateTime } from "./format.js";
+import { Badge, Button, Callout, ConfirmDialog, EmptyState, Panel, SectionHeader } from "@blocos/ui";
+import { AtSign, Instagram, Link2, Plug, RefreshCw, Trash2, Webhook } from "lucide-react";
+import { BlockFrame, type BlockProps } from "../shared/index.js";
 import { socialAccountsRecipe } from "./social-accounts.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
 /* ------------------------------------------------------------------ */
 
-export type SocialTokenStatus = "valid" | "expiring" | "expired" | "revoked";
-
-export interface SocialPostSummary {
-  id: string;
-  title: string;
-  format: "post" | "carrossel" | "reels";
-  publishedAt: string;
-}
+export type SocialAccountStatus = "active" | "reauth";
 
 export interface SocialAccount {
   id: string;
-  /** Handle publico da conta (ex.: @exemplo.clinica). */
-  handle: string;
-  displayName: string;
-  avatarUrl?: string;
-  /** Estado do token de longa duracao do Instagram. */
-  tokenStatus: SocialTokenStatus;
-  /** ISO — expiracao do token. */
-  tokenExpiresAt: string;
-  /** Nome da variavel de ambiente que guarda o token. NUNCA o token. */
-  tokenRef: string;
-  connectedAt: string;
-  followers?: number;
-  lastPost?: SocialPostSummary;
+  /** Sem o "@". */
+  username: string;
+  /** "Comercial", "Criador de conteudo"... */
+  accountType?: string | null;
+  /** `reauth` = a Meta recusou o login: precisa reconectar. */
+  status: SocialAccountStatus;
+  /** Dias ate o login vencer. `null` = sem prazo (token de usuario do sistema). */
+  tokenDaysLeft: number | null;
+  /** Webhooks de comentario e direct assinados para a conta. */
+  webhooksSubscribed: boolean;
 }
 
 export interface SocialAccountsData {
   accounts: SocialAccount[];
+  /** URLs para o passo a passo do painel da Meta. Ausente = passo a passo escondido. */
+  setup?: { callbackUrl: string | null; webhookUrl: string | null };
 }
 
 export type SocialAccountsVariant = "cards" | "grid";
 
-/* ------------------------------------------------------------------ */
-/* Helpers de apresentacao                                             */
-/* ------------------------------------------------------------------ */
-
-const tokenLabel: Record<SocialTokenStatus, string> = {
-  valid: "Token valido",
-  expiring: "Expirando",
-  expired: "Expirado",
-  revoked: "Revogado",
-};
-
-const tokenTone: Record<SocialTokenStatus, "success" | "warn" | "danger"> = {
-  valid: "success",
-  expiring: "warn",
-  expired: "danger",
-  revoked: "danger",
-};
-
-const formatLabel: Record<SocialPostSummary["format"], string> = {
-  post: "Post",
-  carrossel: "Carrossel",
-  reels: "Reels",
-};
-
-function expiryHint(account: SocialAccount): string {
-  const days = daysUntilSocial(account.tokenExpiresAt);
-  if (days === null) return "Expiracao desconhecida";
-  if (days < 0) return `Expirou ha ${Math.abs(days)} dia(s)`;
-  if (days === 0) return "Expira hoje";
-  if (days === 1) return "Expira amanha";
-  return `Expira em ${days} dias`;
-}
+/** Acima disso o login e tratado como "sem prazo" (token sem validade). */
+const NO_EXPIRY_DAYS = 3650;
 
 /* ------------------------------------------------------------------ */
 /* Bloco                                                               */
 /* ------------------------------------------------------------------ */
 
 export function SocialAccounts(props: BlockProps<SocialAccountsData, SocialAccountsVariant>) {
-  const { data, onAction, variant = "cards", state = "success", connectors = [], onRequestConnector, className } = props;
+  const { data, onAction, variant = "cards", state = "success", connectors, onRequestConnector, className } = props;
+  const [removing, setRemoving] = React.useState<SocialAccount | null>(null);
 
-  const accounts = data.accounts;
-  const hasAccounts = accounts.length > 0;
+  const connect = () => void onAction?.("social.connect", {});
 
   return (
     <BlockFrame
+      recipe={socialAccountsRecipe}
+      onAction={onAction}
+      requires={[]}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       state={state}
       className={className}
-      loading={
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="bloco-skeleton h-40 w-full" />
-          <div className="bloco-skeleton h-40 w-full" />
-        </div>
-      }
-        recipe={socialAccountsRecipe}
-        onAction={onAction}
-      >
-      <div className="flex flex-col gap-4">
-        <SectionHeader
-          eyebrow="Agendador-Instagram"
-          title="Contas conectadas"
-          description="Cada conta usa um token de longa duracao do Instagram Graph API. A tela nunca mostra o token — apenas a referencia da variavel de ambiente e a data de expiracao."
-          actions={
-            <Button
-              variant="primary"
-              size="md"
-              icon={<Plus className="h-4 w-4" aria-hidden />}
-              onClick={() => onAction?.("social.connect", {})}
-            >
-              Conectar
-            </Button>
-          }
-        />
-
-        {!hasAccounts ? (
+    >
+      <div className="flex flex-col gap-5">
+        {data.accounts.length === 0 ? (
           <EmptyState
             icon={<Instagram className="h-5 w-5" aria-hidden />}
             title="Nenhuma conta conectada"
-            description="Conecte uma conta do Instagram para publicar e automatizar respostas."
+            description="A conta precisa ser Comercial ou Criador de conteúdo e, enquanto o app da Meta estiver em desenvolvimento, estar adicionada como testadora."
             action={
-              /* O CTA principal da tela ja e o botao "Conectar" do cabecalho. */
-              <Button
-                variant="secondary"
-                size="md"
-                icon={<Link2 className="h-4 w-4" aria-hidden />}
-                onClick={() => onAction?.("social.connect", {})}
-              >
-                Conectar conta
+              <Button icon={<Plug className="h-4 w-4" aria-hidden />} onClick={connect}>
+                Conectar conta do Instagram
               </Button>
             }
           />
-        ) : variant === "cards" ? (
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {accounts.map((account) => (
-              <AccountCard key={account.id} account={account} onAction={onAction} />
-            ))}
-          </div>
         ) : (
-          <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
-            {accounts.map((account) => (
-              <AccountTile key={account.id} account={account} onAction={onAction} />
-            ))}
+          <div className={variant === "grid" ? "@container" : undefined}>
+            <ul
+              className={
+                variant === "grid"
+                  ? "grid grid-cols-1 gap-3 @[560px]:grid-cols-2 @[880px]:grid-cols-3"
+                  : "flex flex-col gap-3"
+              }
+            >
+              {data.accounts.map((account) => (
+                <li key={account.id}>
+                  <AccountCard
+                    account={account}
+                    compact={variant === "grid"}
+                    onAction={onAction}
+                    onRemove={() => setRemoving(account)}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 
-        <Callout
-          tone="info"
-          icon={<ShieldCheck className="h-4 w-4" aria-hidden />}
-          title="Credencial por referencia"
-        >
-          A tela expoe apenas <span className="bloco-mono">tokenRef</span> (nome da variavel de ambiente). O valor do
-          token vive no cofre do dono da plataforma e nunca trafega pela interface, por log ou por URL.
-        </Callout>
+        {data.setup ? <MetaSetup callbackUrl={data.setup.callbackUrl} webhookUrl={data.setup.webhookUrl} /> : null}
       </div>
+
+      <ConfirmDialog
+        open={removing !== null}
+        onOpenChange={(open) => (open ? null : setRemoving(null))}
+        title={removing ? `Remover @${removing.username}?` : "Remover conta"}
+        description="Os posts, as automações e os arquivos dessa conta também saem. Para voltar, conecte de novo."
+        confirmLabel="Remover conta"
+        onConfirm={() => {
+          if (removing) void onAction?.("social.remove", { accountId: removing.id });
+          setRemoving(null);
+        }}
+      />
     </BlockFrame>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/* Variacoes                                                           */
+/* Cartao da conta                                                     */
 /* ------------------------------------------------------------------ */
+
+function loginText(account: SocialAccount): string {
+  if (account.status !== "active") return "Precisa reconectar";
+  if (account.tokenDaysLeft === null || account.tokenDaysLeft > NO_EXPIRY_DAYS) return "Login sem prazo de validade";
+  return `Login vence em ${Math.max(account.tokenDaysLeft, 0)} dias (reconecte antes)`;
+}
 
 function AccountCard({
   account,
+  compact,
   onAction,
+  onRemove,
 }: {
   account: SocialAccount;
-  onAction?: (action: string, payload?: unknown) => void | Promise<void>;
+  compact: boolean;
+  onAction?: BlockProps<SocialAccountsData>["onAction"];
+  onRemove: () => void;
 }) {
-  const needsReconnect = account.tokenStatus === "expired" || account.tokenStatus === "revoked";
+  const handle = `@${account.username}`;
+  const needsReauth = account.status !== "active";
+  const expiring =
+    !needsReauth && account.tokenDaysLeft !== null && account.tokenDaysLeft <= 7 && account.tokenDaysLeft <= NO_EXPIRY_DAYS;
 
   return (
-    <Panel tone="glass" padding="md" className="flex flex-col gap-3">
-      <div className="flex items-start gap-3">
-        <Avatar name={account.displayName} src={account.avatarUrl} size={40} />
-        <div className="min-w-0 flex-1">
-          <p className="bloco-headline truncate" title={account.displayName}>{account.displayName}</p>
-          <p className="bloco-caption truncate" title={account.handle}>{account.handle}</p>
+    <Panel tone="solid" padding="md" className="flex h-full flex-col gap-3">
+      <div className={compact ? "flex flex-col gap-3" : "flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"}>
+        <div className="flex min-w-0 items-start gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-ink">
+            <AtSign className="h-4 w-4" aria-hidden />
+          </span>
+          <div className="min-w-0">
+            <p className="bloco-headline inline-block max-w-full truncate" title={handle}>
+              {handle}
+            </p>
+            <p className="bloco-caption text-fg-muted">{account.accountType || "Conta profissional"}</p>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          {needsReauth ? (
+            <Badge tone="danger">Reconectar</Badge>
+          ) : expiring ? (
+            <Badge tone="warn">Login vencendo</Badge>
+          ) : (
+            <Badge tone="success">Ativa</Badge>
+          )}
+          <Badge tone={account.webhooksSubscribed ? "info" : "outline"}>
+            {account.webhooksSubscribed ? "Webhooks ativos" : "Webhooks desligados"}
+          </Badge>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <Badge tone={tokenTone[account.tokenStatus]} icon={<KeyRound className="h-3 w-3" aria-hidden />}>
-          {tokenLabel[account.tokenStatus]}
-        </Badge>
-        {needsReconnect ? (
-          <span className="bloco-caption">Token expirado — reconecte a conta.</span>
+      <ul className="flex flex-col gap-1">
+        <li className="bloco-callout text-fg-secondary">{loginText(account)}</li>
+        {!account.webhooksSubscribed ? (
+          <li className="bloco-callout text-fg-secondary">As automações não recebem comentários enquanto os webhooks estiverem desligados.</li>
         ) : null}
-      </div>
+      </ul>
 
-      <KeyValue
-        columns={2}
-        items={[
-          {
-            /* O rotulo pode cair em coluna estreita: break-words evita que a
-               palavra mais longa atravesse a borda da coluna. */
-            label: <span className="break-words">Expiracao do token</span>,
-            value: (
-              <span className="flex min-w-0 flex-col break-words">
-                <span className="break-words">{formatSocialDateTime(account.tokenExpiresAt)}</span>
-                <span className="bloco-caption break-words">{expiryHint(account)}</span>
-              </span>
-            ),
-          },
-          {
-            label: <span className="break-words">Ultima publicacao</span>,
-            value: account.lastPost ? (
-              <span className="flex min-w-0 flex-col break-words">
-                <span className="truncate" title={account.lastPost.title}>
-                  {account.lastPost.title}
-                </span>
-                <span className="bloco-caption break-words">
-                  {formatLabel[account.lastPost.format]} · {formatSocialDateTime(account.lastPost.publishedAt)}
-                </span>
-              </span>
-            ) : (
-              <span className="bloco-caption break-words">Nenhuma publicacao ainda</span>
-            ),
-          },
-        ]}
-      />
+      {needsReauth ? (
+        <div role="alert">
+          <Callout tone="danger">A Meta recusou o login desta conta. Clique em Reconectar.</Callout>
+        </div>
+      ) : null}
 
-      <div className="mt-auto flex items-center justify-between gap-2 border-t border-border pt-3">
-        <span className="bloco-micro truncate" title={account.tokenRef}>
-          {account.tokenRef}
-        </span>
-        {needsReconnect ? (
+      <div className="mt-auto flex flex-wrap items-center gap-2 border-t border-border pt-3">
+        {needsReauth ? (
           <Button
             size="sm"
-            variant="secondary"
-            icon={<Link2 className="h-3.5 w-3.5" aria-hidden />}
-            onClick={() => onAction?.("social.connect", { accountId: account.id })}
+            icon={<RefreshCw className="h-3.5 w-3.5" aria-hidden />}
+            onClick={() => void onAction?.("social.connect", { accountId: account.id })}
+            aria-label={`Reconectar ${handle}`}
           >
             Reconectar
           </Button>
-        ) : (
-          <span className="bloco-caption min-w-0 truncate" title={`Conectada em ${formatSocialDateTime(account.connectedAt)}`}>
-            Conectada em {formatSocialDateTime(account.connectedAt)}
-          </span>
-        )}
+        ) : null}
+        {!needsReauth && !account.webhooksSubscribed ? (
+          <Button
+            size="sm"
+            variant="secondary"
+            icon={<Webhook className="h-3.5 w-3.5" aria-hidden />}
+            onClick={() => void onAction?.("social.subscribe", { accountId: account.id })}
+            aria-label={`Ativar webhooks de ${handle}`}
+          >
+            Ativar webhooks
+          </Button>
+        ) : null}
+        <Button
+          size="sm"
+          variant="danger-ghost"
+          icon={<Trash2 className="h-3.5 w-3.5" aria-hidden />}
+          onClick={onRemove}
+          aria-label={`Remover ${handle}`}
+        >
+          Remover
+        </Button>
       </div>
     </Panel>
   );
 }
 
-function AccountTile({
-  account,
-  onAction,
-}: {
-  account: SocialAccount;
-  onAction?: (action: string, payload?: unknown) => void | Promise<void>;
-}) {
-  const needsReconnect = account.tokenStatus === "expired" || account.tokenStatus === "revoked";
+/* ------------------------------------------------------------------ */
+/* Passo a passo da Meta                                               */
+/* ------------------------------------------------------------------ */
 
+function Code({ children }: { children: React.ReactNode }) {
+  return <code className="bloco-mono rounded-[var(--r-sm)] bg-surface-active px-1.5 py-0.5 break-all text-fg">{children}</code>;
+}
+
+function MetaSetup({ callbackUrl, webhookUrl }: { callbackUrl: string | null; webhookUrl: string | null }) {
+  const missing = "defina APP_URL primeiro";
   return (
-    <Panel tone="outline" padding="sm" className="flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <Avatar name={account.displayName} src={account.avatarUrl} size={28} />
-        <span className="bloco-callout min-w-0 flex-1 truncate font-medium text-fg" title={account.handle}>{account.handle}</span>
-        <span
-          aria-hidden
-          className={
-            account.tokenStatus === "valid"
-              ? "h-2 w-2 rounded-full bg-success"
-              : account.tokenStatus === "expiring"
-                ? "h-2 w-2 rounded-full bg-warn"
-                : "h-2 w-2 rounded-full bg-danger"
-          }
-        />
-      </div>
-
-      <span className="bloco-micro">
-        {account.tokenStatus === "valid" ? "Token valido" : tokenLabel[account.tokenStatus]} · {expiryHint(account)}
-      </span>
-
-      <span className="bloco-caption truncate">
-        <CalendarClock className="mr-1 inline h-3 w-3" aria-hidden />
-        {account.lastPost ? `${formatLabel[account.lastPost.format]} · ${formatSocialDateTime(account.lastPost.publishedAt)}` : "Sem publicacoes"}
-      </span>
-
-      {needsReconnect ? (
-        <Button
-          size="sm"
-          variant="secondary"
-          icon={<TriangleAlert className="h-3.5 w-3.5" aria-hidden />}
-          onClick={() => onAction?.("social.connect", { accountId: account.id })}
-        >
-          Reconectar
-        </Button>
-      ) : null}
+    <Panel tone="outline" padding="md">
+      <details className="group">
+        <summary className="flex min-h-8 cursor-pointer list-none items-center gap-2 rounded-[var(--r-sm)] bloco-headline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <Link2 className="h-4 w-4 text-fg-muted" aria-hidden />
+          Configuração no painel da Meta
+          <span className="bloco-caption ml-auto text-fg-muted group-open:hidden">mostrar</span>
+          <span className="bloco-caption ml-auto hidden text-fg-muted group-open:inline">esconder</span>
+        </summary>
+        <div className="mt-4">
+          <SectionHeader
+            title="Passo a passo"
+            description="Feito uma vez por app. Contas novas só precisam do botão Conectar."
+          />
+          <ol className="mt-3 flex list-decimal flex-col gap-2.5 pl-5 bloco-callout text-fg-secondary">
+            <li>
+              Em developers.facebook.com, crie um app com o caso de uso <strong className="text-fg">Administrar mensagens e conteúdo no Instagram</strong>. Apps novos usam o login unificado.
+            </li>
+            <li>
+              Na configuração da API com login unificado, registre a URL de redirecionamento: <Code>{callbackUrl ?? missing}</Code>
+            </li>
+            <li>
+              Copie o Identificador de configuração para <Code>INSTAGRAM_LOGIN_CONFIG_ID</Code>, o ID do app para <Code>INSTAGRAM_APP_ID</Code> e a chave secreta do app (Configurações &gt; Básico) para <Code>INSTAGRAM_APP_SECRET</Code>.
+            </li>
+            <li>
+              Se o login não trouxer nenhuma conta, adicione o produto Facebook Login for Business e inclua <Code>business_management</Code> na configuração de login.
+            </li>
+            <li>
+              Em Webhooks (objeto Instagram), use a URL <Code>{webhookUrl ?? missing}</Code> e o mesmo token da variável <Code>INSTAGRAM_WEBHOOK_VERIFY_TOKEN</Code>. Ative <Code>comments</Code> e <Code>messages</Code>.
+            </li>
+            <li>
+              Em modo de desenvolvimento, só contas com papel no app (testadoras) funcionam. Para contas de clientes, o app precisa de App Review e do modo <strong className="text-fg">Live</strong>.
+            </li>
+          </ol>
+        </div>
+      </details>
     </Panel>
   );
 }

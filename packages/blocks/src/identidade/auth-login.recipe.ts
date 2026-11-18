@@ -10,8 +10,8 @@ export const authLoginRecipe = defineBlock({
   id: "auth-login",
   name: "Login",
   domain: "identidade",
-  summary: "Entrada por e-mail e senha, com desafio de segundo fator em 6 digitos.",
-  origins: ["CRM-Nutricionista: src/app/[locale]/login/page.tsx"],
+  summary: "Entrada por e-mail e senha (ou so senha, em painel de um operador), com desafio de segundo fator em 6 digitos.",
+  origins: ["CRM-Nutricionista: src/app/[locale]/login/page.tsx", "Agendador-Instagram: src/app/login/page.tsx"],
   ports: [
     {
       id: "identityRepository",
@@ -43,7 +43,7 @@ export const authLoginRecipe = defineBlock({
       id: "auth.login",
       title: "Entrar",
       description:
-        "Use quando o usuario enviar e-mail e senha no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.",
+        "Use quando o usuario enviar e-mail e senha (ou so a senha, com data.passwordOnly) no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.",
       http: { method: "POST", path: "/auth/login" },
       permissions: ["owner", "employee"],
       connectors: ["database"],
@@ -113,6 +113,7 @@ export const authLoginRecipe = defineBlock({
     "Senha, codigo de 2FA e token de sessao nunca aparecem em log, URL ou telemetria.",
     "Desafio de 2FA tem validade curta e uso unico; um codigo verificado nao pode ser reaproveitado.",
     "Nenhum dado de saude (consulta, medida, plano alimentar) trafega pela tela de login.",
+    "Com data.passwordOnly o payload de auth.login leva so { password }; o servidor aplica limite de tentativas por IP.",
   ],
   defaultVariant: "centered",
   variants: [

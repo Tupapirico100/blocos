@@ -1,48 +1,41 @@
 import * as React from "react";
-import {
-  Badge,
-  Button,
-  Callout,
-  ConfirmDialog,
-  DataTable,
-  EmptyState,
-  Panel,
-  SectionHeader,
-  Switch,
-  type Column,
-} from "@blocos/ui";
-import { ArrowRight, AtSign, Hash, ListChecks, MessageCircle, Play, Zap } from "lucide-react";
-import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
-import { formatSocialDateTime } from "./format.js";
+import { Badge, Button, ConfirmDialog, EmptyState, Panel } from "@blocos/ui";
+import { ArrowDown, ArrowRight, Ban, MessageCircle, MessageSquareText, Pause, Play, Trash2, Zap } from "lucide-react";
+import { BlockFrame, type BlockProps } from "../shared/index.js";
 import { socialAutomationsRecipe } from "./social-automations.recipe.js";
 
 /* ------------------------------------------------------------------ */
 /* Dados                                                               */
 /* ------------------------------------------------------------------ */
 
-export type AutomationTriggerType = "comentario" | "palavra-chave" | "mencao";
-export type AutomationActionType = "responder" | "marcar" | "agendar";
+export type AutomationTrigger = "comment" | "dm";
+export type AutomationMatchMode = "contains" | "exact";
+
+export interface SocialAutomationStats {
+  /** Comentarios/mensagens que casaram com a palavra-chave. */
+  matched: number;
+  sent: number;
+  /** A pessoa ja tinha recebido (1 direct por pessoa por automacao). */
+  skipped: number;
+  error: number;
+}
 
 export interface SocialAutomation {
   id: string;
   name: string;
   active: boolean;
-  accountHandle: string;
-  trigger: {
-    type: AutomationTriggerType;
-    /** Termo, palavra ou "@conta" que dispara a regra. */
-    value: string;
-    match?: "exata" | "contem";
-  };
-  action: {
-    type: AutomationActionType;
-    /** Texto da resposta, etiqueta aplicada ou formato de agendamento. */
-    value: string;
-  };
-  createdAt: string;
-  /** Quantas vezes a regra disparou. */
-  hits: number;
-  lastTriggeredAt?: string;
+  /** Sem o "@". `null` = conta removida. */
+  account: string | null;
+  trigger: AutomationTrigger;
+  /** Onde vale, ja em texto: "todos os posts", "post agendado (comeca quando for publicado)"... */
+  scopeText: string;
+  matchMode: AutomationMatchMode;
+  keywords: string[];
+  excludeKeywords: string[];
+  dmText: string;
+  /** Quantas respostas publicas em rodizio (0 = nenhuma). */
+  publicReplies: number;
+  stats: SocialAutomationStats;
 }
 
 export interface SocialAutomationsData {
@@ -51,292 +44,238 @@ export interface SocialAutomationsData {
 
 export type SocialAutomationsVariant = "list" | "cards" | "flow";
 
-/* ------------------------------------------------------------------ */
-/* Helpers de apresentacao                                             */
-/* ------------------------------------------------------------------ */
-
-const triggerLabel: Record<AutomationTriggerType, string> = {
-  comentario: "Comentario",
-  "palavra-chave": "Palavra-chave",
-  mencao: "Mencao",
-};
-
-const triggerIcon: Record<AutomationTriggerType, React.ReactNode> = {
-  comentario: <MessageCircle className="h-3.5 w-3.5" aria-hidden />,
-  "palavra-chave": <Hash className="h-3.5 w-3.5" aria-hidden />,
-  mencao: <AtSign className="h-3.5 w-3.5" aria-hidden />,
-};
-
-const actionLabel: Record<AutomationActionType, string> = {
-  responder: "Responder",
-  marcar: "Marcar",
-  agendar: "Agendar",
-};
-
-const actionIcon: Record<AutomationActionType, React.ReactNode> = {
-  responder: <Play className="h-3.5 w-3.5" aria-hidden />,
-  marcar: <ListChecks className="h-3.5 w-3.5" aria-hidden />,
-  agendar: <Zap className="h-3.5 w-3.5" aria-hidden />,
-};
+const DM_PREVIEW = 140;
 
 /* ------------------------------------------------------------------ */
 /* Bloco                                                               */
 /* ------------------------------------------------------------------ */
 
 export function SocialAutomations(props: BlockProps<SocialAutomationsData, SocialAutomationsVariant>) {
-  const { data, onAction, variant = "list", state = "success", className, connectors, onRequestConnector } = props;
-
-  const automations = data.automations;
-  const hasRules = automations.length > 0;
-
-  /* Desativar uma regra interrompe as respostas automaticas: passa por confirmacao. */
-  const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(null);
-
-  const toggle = (automation: SocialAutomation) => {
-    const nextActive = !automation.active;
-    if (!nextActive) {
-      setConfirmando({ acao: "automation.toggle", payload: { id: automation.id, active: false } });
-      return;
-    }
-    onAction?.("automation.toggle", { id: automation.id, active: true });
-  };
+  const { data, onAction, variant = "flow", state = "success", connectors, onRequestConnector, className } = props;
+  const [deleting, setDeleting] = React.useState<SocialAutomation | null>(null);
 
   return (
-    <BlockFrame state={state} className={className}
-        recipe={socialAutomationsRecipe}
-        
-        connectors={connectors}
-        onRequestConnector={onRequestConnector}
-        onAction={onAction}
-      >
-      <div className="flex flex-col gap-4">
-        <SectionHeader
-          eyebrow="Agendador-Instagram"
-          title="Automacoes de resposta"
-          description="Cada regra liga um gatilho a uma acao. Regras inativas ficam guardadas, mas nao respondem a ninguem."
+    <BlockFrame
+      recipe={socialAutomationsRecipe}
+      onAction={onAction}
+      requires={[]}
+      connectors={connectors}
+      onRequestConnector={onRequestConnector}
+      state={state}
+      className={className}
+    >
+      {data.automations.length === 0 ? (
+        <EmptyState
+          icon={<Zap className="h-5 w-5" aria-hidden />}
+          title="Nenhuma automação ainda"
+          description="Crie a primeira: quem comentar a palavra-chave recebe a mensagem no direct."
+          action={
+            onAction ? (
+              <Button onClick={() => void onAction("automation.create")}>Nova automação</Button>
+            ) : undefined
+          }
         />
+      ) : variant === "list" ? (
+        <ul className="flex flex-col">
+          {data.automations.map((a) => (
+            <li key={a.id} className="flex flex-col gap-2 border-b border-border py-3 last:border-0 sm:flex-row sm:items-center sm:justify-between">
+              <div className="min-w-0">
+                <p className="bloco-headline inline-block max-w-full truncate" title={a.name}>
+                  {a.name}
+                  {a.active ? null : <span className="bloco-caption ml-2 text-fg-muted">(pausada)</span>}
+                </p>
+                <p className="bloco-caption text-fg-muted">
+                  {a.account ? `@${a.account}` : "conta removida"} · {triggerText(a)} · {a.keywords.join(", ")}
+                </p>
+                <Stats stats={a.stats} compact />
+              </div>
+              <RowActions automation={a} onAction={onAction} onDelete={() => setDeleting(a)} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="flex flex-col gap-3">
+          {data.automations.map((a) => (
+            <li key={a.id}>
+              <AutomationCard automation={a} flow={variant === "flow"} onAction={onAction} onDelete={() => setDeleting(a)} />
+            </li>
+          ))}
+        </ul>
+      )}
 
-        {!hasRules ? (
-          <EmptyState
-            icon={<Zap className="h-5 w-5" aria-hidden />}
-            title="Nenhuma regra criada"
-            description="Crie uma regra para responder comentario, palavra-chave ou mencao automaticamente."
-          />
-        ) : variant === "cards" ? (
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {automations.map((automation) => (
-              <AutomationCard key={automation.id} automation={automation} onToggle={() => toggle(automation)} />
-            ))}
-          </div>
-        ) : variant === "flow" ? (
-          <div className="flex flex-col gap-3">
-            {automations.map((automation) => (
-              <AutomationFlow key={automation.id} automation={automation} onToggle={() => toggle(automation)} />
-            ))}
-          </div>
-        ) : (
-          <Panel tone="outline" padding="none">
-            <DataTable<SocialAutomation>
-              rowKey={(row) => row.id}
-              rows={automations}
-              columns={automationColumns(toggle)}
-              empty={
-                <EmptyState title="Nenhuma regra criada" description="Crie uma regra para automatizar respostas." />
-              }
-            />
-          </Panel>
-        )}
-
-        <Callout tone="info" icon={<Zap className="h-4 w-4" aria-hidden />} title="Regras que respeitam a lista de permitidos">
-          A automacao so responde para quem esta na lista de permitidos e so dentro da janela de 24h — fora dela, entra
-          somente template aprovado. Marcar cria lead; nunca grava dado de saude.
-        </Callout>
-
-        <ConfirmDialog
-          open={confirmando !== null}
-          onOpenChange={(open) => {
-            if (!open) setConfirmando(null);
-          }}
-          title="Desativar regra de automacao"
-          description="A regra para de responder comentarios, palavra-chave e mencoes. Ela continua guardada e pode ser reativada a qualquer momento."
-          confirmLabel="Desativar"
-          tone="danger"
-          onConfirm={() => {
-            if (confirmando?.payload) onAction?.(confirmando.acao, confirmando.payload);
-          }}
-        />
-      </div>
+      <ConfirmDialog
+        open={deleting !== null}
+        onOpenChange={(open) => (open ? null : setDeleting(null))}
+        title={deleting ? `Excluir “${deleting.name}”?` : "Excluir automação"}
+        description="Ela para de responder na hora. Os registros já feitos continuam em Registros."
+        confirmLabel="Excluir automação"
+        onConfirm={() => {
+          if (deleting) void onAction?.("automation.delete", { id: deleting.id });
+          setDeleting(null);
+        }}
+      />
     </BlockFrame>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/* Variacoes                                                           */
+/* Partes                                                              */
 /* ------------------------------------------------------------------ */
 
-function automationColumns(
-  toggle: (automation: SocialAutomation) => void,
-): Array<Column<SocialAutomation>> {
-  return [
-    {
-      key: "rule",
-      header: "Regra",
-      render: (row) => (
-        <span className="flex flex-col">
-          <span className="font-medium text-fg">{row.name}</span>
-          <span className="bloco-caption">{row.accountHandle}</span>
-        </span>
-      ),
-    },
-    {
-      key: "trigger",
-      header: "Gatilho",
-      render: (row) => (
-        <span className="flex items-center gap-1.5">
-          <span className="text-fg-muted">{triggerIcon[row.trigger.type]}</span>
-          <span className="bloco-mono truncate" title={row.trigger.value}>{row.trigger.value}</span>
-          <span className="bloco-caption">({triggerLabel[row.trigger.type]})</span>
-        </span>
-      ),
-    },
-    {
-      key: "action",
-      header: "Acao",
-      render: (row) => (
-        <span className="flex items-center gap-1.5">
-          <span className="text-fg-muted">{actionIcon[row.action.type]}</span>
-          <span>{actionLabel[row.action.type]}</span>
-        </span>
-      ),
-    },
-    {
-      key: "hits",
-      header: "Execucoes",
-      align: "right",
-      render: (row) => (
-        <span className="flex flex-col">
-          <span className="tabular-nums">{row.hits}</span>
-          <span className="bloco-caption">
-            {row.lastTriggeredAt ? formatSocialDateTime(row.lastTriggeredAt) : "nunca executada"}
-          </span>
-        </span>
-      ),
-    },
-    {
-      key: "active",
-      header: "Ativa",
-      align: "right",
-      render: (row) => (
-        <Switch
-          checked={row.active}
-          onCheckedChange={() => toggle(row)}
-          label={<span className="sr-only">Alternar regra {row.name}</span>}
-          ariaLabel={`Alternar regra ${row.name}`}
-        />
-      ),
-    },
-  ];
+function triggerText(a: SocialAutomation): string {
+  return `${a.trigger === "comment" ? "comentário" : "direct"} em ${a.scopeText}`;
 }
 
-function AutomationCard({
-  automation,
-  onToggle,
-}: {
-  automation: SocialAutomation;
-  onToggle: () => void;
-}) {
+function Keywords({ words, tone = "accent" }: { words: string[]; tone?: "accent" | "outline" }) {
   return (
-    <Panel tone="glass" padding="md" className="flex flex-col gap-3">
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="bloco-headline truncate" title={automation.name}>{automation.name}</p>
-          <p className="bloco-caption">{automation.accountHandle}</p>
-        </div>
-        <Badge tone={automation.active ? "success" : "neutral"}>
-          {automation.active ? "Ativa" : "Inativa"}
+    <span className="flex flex-wrap gap-1.5">
+      {words.map((w) => (
+        <Badge key={w} tone={tone}>
+          {w}
         </Badge>
-      </div>
-
-      <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2">
-        <span className="text-fg-muted">{triggerIcon[automation.trigger.type]}</span>
-        <span className="bloco-callout min-w-0 truncate" title={triggerLabel[automation.trigger.type]}>{triggerLabel[automation.trigger.type]}</span>
-        <span className="bloco-mono truncate text-fg" title={automation.trigger.value}>{automation.trigger.value}</span>
-      </div>
-
-      <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2">
-        <span className="text-fg-muted">{actionIcon[automation.action.type]}</span>
-        <span className="bloco-callout min-w-0 truncate" title={actionLabel[automation.action.type]}>{actionLabel[automation.action.type]}</span>
-        <span className="bloco-caption truncate" title={automation.action.value}>{automation.action.value}</span>
-      </div>
-
-      <div className="mt-auto flex items-center justify-between gap-2 border-t border-border pt-3">
-        <span className="bloco-caption">
-          {automation.hits} execucao(oes)
-          {automation.lastTriggeredAt ? ` · ${formatSocialDateTime(automation.lastTriggeredAt)}` : ""}
-        </span>
-        <Button
-          size="sm"
-          variant="outline"
-          aria-label={`${automation.active ? "Desativar" : "Ativar"} ${automation.name}`}
-          onClick={onToggle}
-        >
-          {automation.active ? "Desativar" : "Ativar"}
-        </Button>
-      </div>
-    </Panel>
+      ))}
+    </span>
   );
 }
 
-function AutomationFlow({
+function Stats({ stats, compact }: { stats: SocialAutomationStats; compact?: boolean }) {
+  const items = [
+    { n: stats.matched, label: "casaram" },
+    { n: stats.sent, label: "DMs enviadas" },
+    { n: stats.skipped, label: "já tinham recebido" },
+    { n: stats.error, label: "falharam", bad: stats.error > 0 },
+  ];
+  return (
+    <p className={compact ? "mt-1 flex flex-wrap gap-x-3 gap-y-0.5 bloco-caption" : "flex flex-wrap gap-x-4 gap-y-1 bloco-callout"} aria-label="Resultados desta automação">
+      {items.map((it) => (
+        <span key={it.label} className={it.bad ? "text-danger" : "text-fg-muted"}>
+          <strong className={it.bad ? "font-semibold text-danger tabular-nums" : "font-semibold text-fg tabular-nums"}>{it.n}</strong> {it.label}
+        </span>
+      ))}
+    </p>
+  );
+}
+
+function RowActions({
   automation,
-  onToggle,
+  onAction,
+  onDelete,
 }: {
   automation: SocialAutomation;
-  onToggle: () => void;
+  onAction?: BlockProps<SocialAutomationsData>["onAction"];
+  onDelete: () => void;
 }) {
   return (
-    <Panel tone="outline" padding="md" className="flex flex-col gap-3">
-      <div className="flex items-center justify-between gap-3">
-        <p className="bloco-headline truncate" title={automation.name}>{automation.name}</p>
-        <div className="flex items-center gap-2">
-          <Badge tone={automation.active ? "success" : "neutral"}>
-            {automation.active ? "Ativa" : "Inativa"}
-          </Badge>
-          <Button
-            size="sm"
-            variant="outline"
-            aria-label={`${automation.active ? "Desativar" : "Ativar"} ${automation.name}`}
-            onClick={onToggle}
-          >
-            {automation.active ? "Desativar" : "Ativar"}
-          </Button>
+    <div className="flex shrink-0 flex-wrap items-center gap-2">
+      <Button
+        size="sm"
+        variant="secondary"
+        icon={automation.active ? <Pause className="h-3.5 w-3.5" aria-hidden /> : <Play className="h-3.5 w-3.5" aria-hidden />}
+        onClick={() => void onAction?.("automation.toggle", { id: automation.id, active: !automation.active })}
+        aria-label={`${automation.active ? "Pausar" : "Ativar"} a automação ${automation.name}`}
+      >
+        {automation.active ? "Pausar" : "Ativar"}
+      </Button>
+      <Button
+        size="sm"
+        variant="danger-ghost"
+        icon={<Trash2 className="h-3.5 w-3.5" aria-hidden />}
+        onClick={onDelete}
+        aria-label={`Excluir a automação ${automation.name}`}
+      >
+        Excluir
+      </Button>
+    </div>
+  );
+}
+
+function Step({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) {
+  return (
+    <div className="flex min-w-0 flex-1 flex-col gap-1.5 rounded-[var(--r-md)] border border-border bg-surface/60 p-3">
+      <span className="flex items-center gap-1.5 bloco-label font-semibold text-fg-secondary">
+        {icon}
+        {title}
+      </span>
+      <div className="bloco-callout min-w-0 break-words text-fg">{children}</div>
+    </div>
+  );
+}
+
+function AutomationCard({
+  automation: a,
+  flow,
+  onAction,
+  onDelete,
+}: {
+  automation: SocialAutomation;
+  flow: boolean;
+  onAction?: BlockProps<SocialAutomationsData>["onAction"];
+  onDelete: () => void;
+}) {
+  const dm = a.dmText.length > DM_PREVIEW ? `${a.dmText.slice(0, DM_PREVIEW)}…` : a.dmText;
+  const arrow = (
+    <span className="flex items-center justify-center text-fg-muted" aria-hidden>
+      <ArrowRight className="hidden h-4 w-4 @[640px]:block" />
+      <ArrowDown className="h-4 w-4 @[640px]:hidden" />
+    </span>
+  );
+
+  return (
+    <Panel tone="solid" padding="md" className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="bloco-headline inline-block max-w-full truncate" title={a.name}>
+              {a.name}
+            </p>
+            <Badge tone={a.active ? "success" : "outline"}>{a.active ? "Ativa" : "Pausada"}</Badge>
+          </div>
+          <p className="bloco-caption text-fg-muted">
+            {a.account ? `@${a.account}` : "conta removida"} · {triggerText(a)} · {a.matchMode === "exact" ? "texto exato" : "contém"}
+          </p>
         </div>
+        <RowActions automation={a} onAction={onAction} onDelete={onDelete} />
       </div>
 
-      <div className="grid items-center gap-2 md:grid-cols-[1fr_auto_1fr]">
-        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
-          <span className="bloco-micro flex items-center gap-1.5">
-            {triggerIcon[automation.trigger.type]} Gatilho · {triggerLabel[automation.trigger.type]}
-          </span>
-          <span className="bloco-mono truncate text-fg" title={automation.trigger.value}>{automation.trigger.value}</span>
-          {automation.trigger.match ? (
-            <span className="bloco-caption">Correspondencia: {automation.trigger.match}</span>
+      {flow ? (
+        <div className="@container">
+          <div className="flex flex-col items-stretch gap-2 @[640px]:flex-row">
+            <Step icon={<MessageCircle className="h-3.5 w-3.5" aria-hidden />} title={a.trigger === "comment" ? "Quem comentar" : "Quem mandar no direct"}>
+              <Keywords words={a.keywords} />
+              {a.excludeKeywords.length > 0 ? (
+                <span className="mt-2 flex items-start gap-1.5 bloco-caption text-fg-muted">
+                  <Ban className="mt-0.5 h-3 w-3 shrink-0" aria-hidden />
+                  Não responde se tiver: {a.excludeKeywords.join(", ")}
+                </span>
+              ) : null}
+            </Step>
+            {arrow}
+            <Step icon={<MessageSquareText className="h-3.5 w-3.5" aria-hidden />} title="Recebe no direct">
+              <span className="whitespace-pre-line">{dm}</span>
+            </Step>
+            {a.trigger === "comment" && a.publicReplies > 0 ? (
+              <>
+                {arrow}
+                <Step icon={<MessageCircle className="h-3.5 w-3.5" aria-hidden />} title="Resposta pública">
+                  {a.publicReplies === 1 ? "1 resposta embaixo do comentário" : `${a.publicReplies} respostas em rodízio`}
+                </Step>
+              </>
+            ) : null}
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-2">
+          <Keywords words={a.keywords} />
+          {a.excludeKeywords.length > 0 ? (
+            <p className="bloco-caption text-fg-muted">Não responde se tiver: {a.excludeKeywords.join(", ")}</p>
           ) : null}
+          {a.publicReplies > 1 ? <p className="bloco-caption text-fg-muted">{a.publicReplies} respostas públicas em rodízio</p> : null}
+          <p className="bloco-callout whitespace-pre-line break-words text-fg-secondary">{dm}</p>
         </div>
+      )}
 
-        <span className="flex items-center justify-center text-fg-faint">
-          <ArrowRight className="h-4 w-4 rotate-90 md:rotate-0" aria-hidden />
-        </span>
-
-        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
-          <span className="bloco-micro flex items-center gap-1.5">
-            {actionIcon[automation.action.type]} Acao · {actionLabel[automation.action.type]}
-          </span>
-          <span className="bloco-callout truncate text-fg" title={automation.action.value}>{automation.action.value}</span>
-          <span className="bloco-caption">
-            {automation.hits} execucao(oes) · {automation.accountHandle}
-          </span>
-        </div>
+      <div className="border-t border-border pt-3">
+        <Stats stats={a.stats} />
       </div>
     </Panel>
   );

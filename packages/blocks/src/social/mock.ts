@@ -1,11 +1,13 @@
 import type { SocialAccountsData } from "./social-accounts.js";
+import type { SocialAgendaData } from "./social-agenda.js";
 import type { SocialAutomationsData } from "./social-automations.js";
 import type { SocialComposerData } from "./social-composer.js";
 import type { SocialLogsData } from "./social-logs.js";
+import type { SocialPostDetailData } from "./social-post-detail.js";
 
 /**
  * Dados ficticios do dominio social (Agendador-Instagram).
- * Nomes de exemplo, datas ISO, nada real de paciente.
+ * Contas e pessoas de exemplo, datas ISO, nada real.
  */
 
 /* ------------------------------------------------------------------ */
@@ -14,65 +16,14 @@ import type { SocialLogsData } from "./social-logs.js";
 
 export const socialAccountsMock: SocialAccountsData = {
   accounts: [
-    {
-      id: "acc_01",
-      handle: "@exemplo.nutricao",
-      displayName: "Consultorio Exemplo",
-      tokenStatus: "valid",
-      tokenExpiresAt: "2026-04-18T21:00:00.000Z",
-      tokenRef: "INSTAGRAM_TOKEN_EXEMPLO_01",
-      connectedAt: "2026-01-18T21:00:00.000Z",
-      followers: 2480,
-      lastPost: {
-        id: "post_91",
-        title: "Como montar um prato com 3 cores",
-        format: "carrossel",
-        publishedAt: "2026-03-28T13:30:00.000Z",
-      },
-    },
-    {
-      id: "acc_02",
-      handle: "@exemplo.clinica",
-      displayName: "Clinica Exemplo Pilates",
-      tokenStatus: "expiring",
-      tokenExpiresAt: "2026-03-08T21:00:00.000Z",
-      tokenRef: "INSTAGRAM_TOKEN_EXEMPLO_02",
-      connectedAt: "2025-11-08T21:00:00.000Z",
-      followers: 940,
-      lastPost: {
-        id: "post_88",
-        title: "Agendamento aberto para a semana que vem",
-        format: "reels",
-        publishedAt: "2026-03-02T19:45:00.000Z",
-      },
-    },
-    {
-      id: "acc_03",
-      handle: "@exemplo.receitas",
-      displayName: "Receitas Exemplo",
-      tokenStatus: "expired",
-      tokenExpiresAt: "2026-02-20T21:00:00.000Z",
-      tokenRef: "INSTAGRAM_TOKEN_EXEMPLO_03",
-      connectedAt: "2025-09-20T21:00:00.000Z",
-      followers: 512,
-    },
-    {
-      id: "acc_04",
-      handle: "@exemplo.bemestar",
-      displayName: "Bem-estar Exemplo",
-      tokenStatus: "valid",
-      tokenExpiresAt: "2026-05-02T21:00:00.000Z",
-      tokenRef: "INSTAGRAM_TOKEN_EXEMPLO_04",
-      connectedAt: "2026-02-02T21:00:00.000Z",
-      followers: 3180,
-      lastPost: {
-        id: "post_85",
-        title: "Cinco itens que sempre levamos na consulta",
-        format: "post",
-        publishedAt: "2026-03-01T12:00:00.000Z",
-      },
-    },
+    { id: "acc_01", username: "exemplo.agencia", accountType: "Comercial", status: "active", tokenDaysLeft: null, webhooksSubscribed: true },
+    { id: "acc_02", username: "exemplo.clinica", accountType: "Comercial", status: "active", tokenDaysLeft: 5, webhooksSubscribed: false },
+    { id: "acc_03", username: "exemplo.estetica.harmonizacao", accountType: "Criador de conteúdo", status: "reauth", tokenDaysLeft: null, webhooksSubscribed: true },
   ],
+  setup: {
+    callbackUrl: "https://exemplo.vercel.app/api/instagram/callback",
+    webhookUrl: "https://exemplo.vercel.app/api/instagram/webhook",
+  },
 };
 
 /* ------------------------------------------------------------------ */
@@ -111,47 +62,45 @@ export const socialAutomationsMock: SocialAutomationsData = {
   automations: [
     {
       id: "aut_01",
-      name: "Boas-vindas em comentario",
+      name: "Link da avaliação",
       active: true,
-      accountHandle: "@exemplo.nutricao",
-      trigger: { type: "comentario", value: "*", match: "contem" },
-      action: { type: "responder", value: "Ola! Obrigado por escrever. Nos falamos por aqui." },
-      createdAt: "2026-01-20T14:00:00.000Z",
-      hits: 132,
-      lastTriggeredAt: "2026-03-05T18:20:00.000Z",
+      account: "exemplo.clinica",
+      trigger: "comment",
+      scopeText: "todos os posts",
+      matchMode: "contains",
+      keywords: ["quero", "valor", "agenda"],
+      excludeKeywords: ["golpe", "caro"],
+      dmText: "Oi {usuario}! Aqui está o link para agendar sua avaliação: https://exemplo.com/agenda. Qualquer dúvida, é só responder esta mensagem.",
+      publicReplies: 3,
+      stats: { matched: 48, sent: 41, skipped: 6, error: 1 },
     },
     {
       id: "aut_02",
-      name: "Duvida sobre agenda",
-      active: true,
-      accountHandle: "@exemplo.nutricao",
-      trigger: { type: "palavra-chave", value: "agenda", match: "contem" },
-      action: { type: "agendar", value: "Consultorio abre as agendas de terca a sexta, das 8h as 18h." },
-      createdAt: "2026-02-02T10:30:00.000Z",
-      hits: 47,
-      lastTriggeredAt: "2026-03-04T16:05:00.000Z",
+      name: "Guia gratuito",
+      active: false,
+      account: "exemplo.agencia",
+      trigger: "comment",
+      scopeText: "post agendado (começa quando for publicado)",
+      matchMode: "exact",
+      keywords: ["guia"],
+      excludeKeywords: [],
+      dmText: "Prontinho! Segue o guia em PDF.",
+      publicReplies: 0,
+      stats: { matched: 0, sent: 0, skipped: 0, error: 0 },
     },
     {
       id: "aut_03",
-      name: "Mencao vira lead",
+      name: "Resposta do direct",
       active: true,
-      accountHandle: "@exemplo.clinica",
-      trigger: { type: "mencao", value: "@exemplo.nutricao", match: "exata" },
-      action: { type: "marcar", value: "lead" },
-      createdAt: "2026-02-11T09:15:00.000Z",
-      hits: 8,
-      lastTriggeredAt: "2026-03-01T11:40:00.000Z",
-    },
-    {
-      id: "aut_04",
-      name: "Confirmacao de agendamento",
-      active: false,
-      accountHandle: "@exemplo.bemestar",
-      trigger: { type: "palavra-chave", value: "confirmo", match: "exata" },
-      action: { type: "responder", value: "Agendamento confirmado. ate breve!" },
-      createdAt: "2025-12-05T17:45:00.000Z",
-      hits: 21,
-      lastTriggeredAt: "2026-01-30T20:10:00.000Z",
+      account: "exemplo.clinica",
+      trigger: "dm",
+      scopeText: "mensagens diretas",
+      matchMode: "contains",
+      keywords: ["horário", "endereço"],
+      excludeKeywords: [],
+      dmText: "Atendemos de segunda a sexta, das 9h às 18h. Endereço: Rua Exemplo, 123.",
+      publicReplies: 0,
+      stats: { matched: 12, sent: 12, skipped: 0, error: 0 },
     },
   ],
 };
@@ -161,68 +110,85 @@ export const socialAutomationsMock: SocialAutomationsData = {
 /* ------------------------------------------------------------------ */
 
 export const socialLogsMock: SocialLogsData = {
-  logs: [
+  entries: [
+    { id: "log_01", at: "2026-11-18T14:12:00.000Z", account: "exemplo.clinica", automation: "Link da avaliação", from: "maria.exemplo", fromIsUsername: true, text: "Quero saber o valor", status: "sent" },
+    { id: "log_02", at: "2026-11-18T13:40:00.000Z", account: "exemplo.clinica", automation: "Link da avaliação", from: "maria.exemplo", fromIsUsername: true, text: "quero!!", status: "skipped" },
+    { id: "log_03", at: "2026-11-18T12:05:00.000Z", account: "exemplo.clinica", automation: "Resposta do direct", from: "17841400000000001", fromIsUsername: false, text: "Qual o horário de vocês?", status: "pending" },
+    { id: "log_04", at: "2026-11-17T22:31:00.000Z", account: "exemplo.agencia", automation: null, from: "joao.exemplo", fromIsUsername: true, text: "agenda", status: "error", error: "A Meta recusou a mensagem: passou o prazo de 7 dias do comentário." },
+  ],
+};
+
+/* ------------------------------------------------------------------ */
+/* social-agenda                                                        */
+/* ------------------------------------------------------------------ */
+
+export const socialAgendaMock: SocialAgendaData = {
+  accounts: [
+    { id: "acc_01", username: "exemplo.agencia", href: "#conta-1" },
+    { id: "acc_02", username: "exemplo.clinica", href: "#conta-2" },
+  ],
+  activeAccountId: null,
+  allAccountsHref: "#todas",
+  newPostHref: "#novo",
+  accountsHref: "#contas",
+  upcoming: [
     {
-      id: "log_501",
-      level: "info",
-      accountHandle: "@exemplo.nutricao",
-      action: "Publicacao agendada",
-      message: "Carrossel de 2 midias agendado para 10/03 as 09:00.",
-      createdAt: "2026-03-05T12:04:00.000Z",
-      status: "concluido",
+      key: "2026-11-19",
+      day: "19",
+      weekday: "qui",
+      month: "nov",
+      posts: [
+        { id: "p1", href: "#p1", time: "09:00", account: "exemplo.clinica", formatLabel: "Carrossel · 4 imagens", caption: "Cinco cuidados antes da sua primeira avaliação", thumb: null, mediaCount: 4, status: "scheduled" },
+        { id: "p2", href: "#p2", time: "18:30", account: "exemplo.agencia", formatLabel: "Reels (também no feed)", caption: "Bastidores da sessão de fotos do mês", thumb: null, mediaCount: 1, status: "processing" },
+      ],
     },
     {
-      id: "log_502",
-      level: "warn",
-      accountHandle: "@exemplo.clinica",
-      action: "Token proximo do limite",
-      message: "O token desta conta expira em poucos dias. Reconecte para nao perder publicacoes.",
-      createdAt: "2026-03-05T09:12:00.000Z",
-      status: "pendente",
+      key: "2026-11-20",
+      day: "20",
+      weekday: "sex",
+      month: "nov",
+      posts: [
+        { id: "p3", href: "#p3", time: "12:00", account: "exemplo.clinica", formatLabel: "Post único", caption: "Agenda aberta para dezembro", thumb: null, mediaCount: 1, status: "error", message: "A imagem tem proporção 9:16, que o feed não aceita. Use Story ou recorte para 4:5." },
+        { id: "p4", href: "#p4", time: "20:00", account: "exemplo.clinica", formatLabel: "Story (imagem)", caption: "", isStory: true, thumb: null, mediaCount: 1, status: "scheduled", message: "Aguardando a cota diária da Meta." },
+      ],
     },
+  ],
+  history: [
     {
-      id: "log_503",
-      level: "error",
-      accountHandle: "@exemplo.receitas",
-      action: "Publicacao rejeitada",
-      message: "A API recusou o upload da midia. Reexecute depois de conferir o formato do arquivo.",
-      createdAt: "2026-03-04T15:48:00.000Z",
-      status: "falhou",
-      retryable: true,
-    },
-    {
-      id: "log_504",
-      level: "info",
-      accountHandle: "@exemplo.bemestar",
-      action: "Comentario respondido",
-      message: "Regra de boas-vindas respondeu um comentario em @exemplo.bemestar.",
-      createdAt: "2026-03-04T11:03:00.000Z",
-      status: "concluido",
-    },
-    {
-      id: "log_505",
-      level: "warn",
-      accountHandle: "@exemplo.nutricao",
-      action: "Fila de publicacao lenta",
-      message: "A fila de publicacao passou de 20 tarefas. O agendador vai processar em ordem.",
-      createdAt: "2026-03-03T18:22:00.000Z",
-      status: "pendente",
-    },
-    {
-      id: "log_506",
-      level: "error",
-      accountHandle: "@exemplo.nutricao",
-      action: "Reels rejeitado",
-      message: "O video excede o limite de 60 segundos.",
-      createdAt: "2026-03-02T20:31:00.000Z",
-      status: "falhou",
-      retryable: true,
+      key: "2026-11-17",
+      day: "17",
+      weekday: "ter",
+      month: "nov",
+      posts: [
+        { id: "p5", href: "#p5", time: "10:00", account: "exemplo.agencia", formatLabel: "Carrossel · 6 imagens", caption: "Como montamos uma identidade visual em 4 semanas", thumb: null, mediaCount: 6, status: "published", permalink: "https://www.instagram.com/p/EXEMPLO/" },
+        { id: "p6", href: "#p6", time: "15:00", account: "exemplo.clinica", formatLabel: "Post único", caption: "Feriado: não teremos atendimento", thumb: null, mediaCount: 1, status: "canceled" },
+      ],
     },
   ],
 };
 
 /* ------------------------------------------------------------------ */
-/* Pacote                                                              */
+/* social-post-detail                                                   */
+/* ------------------------------------------------------------------ */
+
+export const socialPostDetailMock: SocialPostDetailData = {
+  post: {
+    id: "8d7b2a52-0c1e-4b8a-9f00-000000000001",
+    account: "exemplo.clinica",
+    status: "error",
+    formatLabel: "Carrossel · 3 imagens",
+    scheduledAt: "2026-11-20T15:00:00.000Z",
+    attempts: 2,
+    containerStatus: "ERROR",
+    message: "A Meta não conseguiu baixar a imagem 2. Confira se o arquivo ainda existe e tente de novo.",
+    caption: "Cinco cuidados antes da sua primeira avaliação.\n\n#estetica #avaliacao",
+    media: [],
+    automations: ["quero, valor (começa quando o post for publicado)"],
+  },
+};
+
+/* ------------------------------------------------------------------ */
+/* Agregado                                                             */
 /* ------------------------------------------------------------------ */
 
 export const socialMock = {
@@ -230,4 +196,6 @@ export const socialMock = {
   composer: socialComposerMock,
   automations: socialAutomationsMock,
   logs: socialLogsMock,
+  agenda: socialAgendaMock,
+  postDetail: socialPostDetailMock,
 };

@@ -39,6 +39,8 @@ import { SocialAccounts } from "./social/social-accounts.js";
 import { SocialComposer } from "./social/social-composer.js";
 import { SocialAutomations } from "./social/social-automations.js";
 import { SocialLogs } from "./social/social-logs.js";
+import { SocialAgenda } from "./social/social-agenda.js";
+import { SocialPostDetail } from "./social/social-post-detail.js";
 import { WebhooksPanel } from "./operacao/webhooks-panel.js";
 import { AgentConsole } from "./operacao/agent-console.js";
 import { OpsHealth } from "./operacao/ops-health.js";
@@ -72,6 +74,8 @@ import { socialAccountsRecipe } from "./social/social-accounts.recipe.js";
 import { socialComposerRecipe } from "./social/social-composer.recipe.js";
 import { socialAutomationsRecipe } from "./social/social-automations.recipe.js";
 import { socialLogsRecipe } from "./social/social-logs.recipe.js";
+import { socialAgendaRecipe } from "./social/social-agenda.recipe.js";
+import { socialPostDetailRecipe } from "./social/social-post-detail.recipe.js";
 import { webhooksRecipe } from "./operacao/webhooks-panel.recipe.js";
 import { agentConsoleRecipe } from "./operacao/agent-console.recipe.js";
 import { opsHealthRecipe } from "./operacao/ops-health.recipe.js";
@@ -98,6 +102,8 @@ import {
   socialComposerMock,
   socialAutomationsMock,
   socialLogsMock,
+  socialAgendaMock,
+  socialPostDetailMock,
 } from "./social/mock.js";
 import {
   webhooksMock,
@@ -134,6 +140,8 @@ export const allRecipes = [
   socialComposerRecipe,
   socialAutomationsRecipe,
   socialLogsRecipe,
+  socialAgendaRecipe,
+  socialPostDetailRecipe,
   webhooksRecipe,
   agentConsoleRecipe,
   opsHealthRecipe,
@@ -163,7 +171,9 @@ export const BLOCO_CATALOG: BlockCatalogEntry[] = [
   { id: "finance-overview", recipe: financeOverviewRecipe, Component: FinanceOverview, mockData: financeOverviewMock },
   { id: "reports-funnel", recipe: reportsFunnelRecipe, Component: ReportsFunnel, mockData: reportsFunnelMock },
   { id: "meta-conversion", recipe: metaConversionRecipe, Component: MetaConversion, mockData: metaConversionMock, requires: ["meta_ads"] },
-  { id: "social-accounts", recipe: socialAccountsRecipe, Component: SocialAccounts, mockData: socialAccountsMock, requires: ["instagram"] },
+  { id: "social-accounts", recipe: socialAccountsRecipe, Component: SocialAccounts, mockData: socialAccountsMock },
+  { id: "social-agenda", recipe: socialAgendaRecipe, Component: SocialAgenda, mockData: socialAgendaMock },
+  { id: "social-post-detail", recipe: socialPostDetailRecipe, Component: SocialPostDetail, mockData: socialPostDetailMock },
   { id: "social-composer", recipe: socialComposerRecipe, Component: SocialComposer, mockData: socialComposerMock },
   { id: "social-automations", recipe: socialAutomationsRecipe, Component: SocialAutomations, mockData: socialAutomationsMock },
   { id: "social-logs", recipe: socialLogsRecipe, Component: SocialLogs, mockData: socialLogsMock },
