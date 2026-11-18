@@ -208,8 +208,8 @@ export function SocialPostDetail(props: BlockProps<SocialPostDetailData, SocialP
                 required
                 hint="Horário de Brasília. Os arquivos não mudam; para trocar as imagens, crie um novo post."
               >
-                {/* :focus (não só :focus-visible): no ícone do calendário o Chromium não marca focus-visible no campo. */}
-                <Input id="social-post-when" type="datetime-local" value={when} onChange={(e) => setWhen(e.target.value)} required className="max-w-xs focus:outline-2 focus:outline-solid focus:outline-offset-1 focus:outline-accent" />
+                {/* :focus-within: com o foco no ícone do calendário o campo não casa :focus nem :focus-visible. */}
+                <Input id="social-post-when" type="datetime-local" value={when} onChange={(e) => setWhen(e.target.value)} required className="max-w-xs focus-within:outline-2 focus-within:outline-solid focus-within:outline-offset-1 focus-within:outline-accent" />
               </Field>
               <div>
                 <Button type="submit" icon={<Save className="h-4 w-4" aria-hidden />} loading={busy === "post.update"} disabled={tooLong || tooManyTags || !when}>
