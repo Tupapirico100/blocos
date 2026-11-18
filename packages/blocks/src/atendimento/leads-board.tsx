@@ -156,7 +156,7 @@ function LeadBoardView({
             <Panel key={stage.id} tone="solid" padding="md" className="flex min-w-0 flex-col gap-3">
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
-                  <h3 className="bloco-title3 break-words">{stage.label}</h3>
+                  <h2 className="bloco-title3 break-words">{stage.label}</h2>
                   {stage.hint ? (
                     <p className="bloco-caption mt-0.5 break-words text-fg-muted">{stage.hint}</p>
                   ) : null}

@@ -181,7 +181,7 @@ function ConsentCard({
     <Panel tone="solid" padding="md" className="flex flex-col gap-3">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <h3 className="bloco-title3">{KIND_LABEL[kind]}</h3>
+          <h2 className="bloco-title3">{KIND_LABEL[kind]}</h2>
           <p className="bloco-caption mt-0.5 text-fg-muted">
             {kind === "tratamento" ? "Art. 11 — dados de saude" : "Art. 7 — comunicacoes de marketing"}
           </p>

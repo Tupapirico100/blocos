@@ -77,7 +77,9 @@ export function ClinicalEntry(
    * o caso "forbidden" (sem consentimento) — e a ausencia de consentimento
    * nos dados tambem bloqueia.
    */
-  const blocked = state === "forbidden" || !hasConsent;
+  // o estado "forbidden" (sem permissao) e do BlockFrame — ele nomeia o papel.
+  // aqui so bloqueamos a GRAVACAO por falta de consentimento.
+  const blocked = !hasConsent;
 
   const submit = () => {
     if (blocked) return;
@@ -141,7 +143,7 @@ export function ClinicalEntry(
                 <Stethoscope size={18} aria-hidden />
               </span>
               <div className="min-w-0">
-                <h3 className="bloco-title3 truncate">Novo registro para {data.patient.name}</h3>
+                <h2 className="bloco-title3 truncate">Novo registro para {data.patient.name}</h2>
                 <p className="bloco-caption text-fg-muted">
                   {KIND_META[kind].hint}
                   {data.treatmentConsent
