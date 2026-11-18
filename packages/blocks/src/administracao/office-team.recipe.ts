@@ -118,6 +118,7 @@ export const officeTeamRecipe = defineBlock({
     "Nenhum dado de saude (consulta, medida, plano alimentar) aparece na lista de equipe.",
   ],
   emptyAction: { id: "office.team.invite", label: "Convidar membro" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "list",

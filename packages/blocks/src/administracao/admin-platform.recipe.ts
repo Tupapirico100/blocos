@@ -84,6 +84,7 @@ export const adminPlatformRecipe = defineBlock({
     "Criacao de consultorio e uma acao do dono da plataforma: a interface trava o botao enquanto a chamada nao resolve.",
   ],
   emptyAction: { id: "admin.office.create", label: "Novo consultório" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

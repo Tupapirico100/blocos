@@ -166,6 +166,7 @@ export const officeSettingsRecipe = defineBlock({
     "Nenhum dado de saude (consulta, medida, plano alimentar) trafega no payload do webhook.",
   ],
   emptyAction: { id: "office.settings.channel.connect", label: "Conectar canal" },
+  defaultVariant: "sections",
   variants: [
     {
       id: "sections",
