@@ -106,6 +106,7 @@ export const opsHealthRecipe = defineBlock({
     "Nenhuma tela de operacao mostra conteudo de prontuario, token ou chave de API.",
   ],
   emptyAction: { id: "ops.backup.run", label: "Executar backup" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

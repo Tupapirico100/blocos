@@ -98,6 +98,7 @@ export const webhooksRecipe = defineBlock({
     "Payload de saida nunca leva dado de saude do paciente, nem texto de prontuario.",
     "A URL do endpoint e validada de novo a cada entrega — DNS pode mudar depois do cadastro.",
   ],
+  defaultVariant: "list",
   variants: [
     {
       id: "list",

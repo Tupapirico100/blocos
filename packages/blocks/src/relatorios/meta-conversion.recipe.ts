@@ -93,6 +93,7 @@ export const metaConversionRecipe = defineBlock({
     "A origem do evento e a do primeiro toque do lead.",
     "Somente o dono da plataforma provisiona o conector meta_ads; nenhum segredo trafega pelo bloco.",
   ],
+  defaultVariant: "table",
   variants: [
     {
       id: "timeline",
