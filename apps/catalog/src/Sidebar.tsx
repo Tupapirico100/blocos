@@ -82,7 +82,7 @@ export function Sidebar({
                       type="button"
                       onClick={() => onSelect(entry.id)}
                       className={cn(
-                        "flex min-h-8 w-full flex-col items-start justify-center gap-0.5 rounded-[var(--r-sm)] px-3 py-1.5 text-left transition-colors duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+                        "scroll-mt-16 flex min-h-8 w-full flex-col items-start justify-center gap-0.5 rounded-[var(--r-sm)] px-3 py-1.5 text-left transition-[background-color] duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
                         active
                           ? "bg-accent-soft font-medium text-accent-ink"
                           : "text-fg-secondary hover:bg-surface-hover hover:text-fg",

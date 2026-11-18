@@ -78,7 +78,43 @@ CLS do toolbar, curva `ease-apple` como padrão do tema.
 
 ## Rodada 3 — verificação final
 
-_(preenchido ao final)_
+**Reprovada na primeira passagem (24/30)** — o verificador achou 3 desvios reais:
+
+| # | Sev | Onde | Problema | Correcao |
+|---|---|---|---|---|
+| P1 | media | `tokens/styles.css` (reduced-motion) | os loops CSS (shimmer do skeleton, spinner) eram **acelerados para 1ms** em vez de desligados → estroboscopio de ~1 kHz | `animation: none !important` + `animation-iteration-count: 1` |
+| P2 | media | 8 blocos | salto de heading (h1 → h3) e **segundo h1** nos blocos de identidade | titulo de topo padronizado em `h2` |
+| P3 | alta | `clinico/clinical-entry.tsx` | o bloco interceptava `forbidden` e mostrava o ConsentGate **sem nomear o papel** | `forbidden` volta para o `BlockFrame` |
+
+**Corrigidos e reconferidos por medicao:**
+- P1: `animationName: none`, `animationDuration: 0s`, `iterationCount: 1` no contexto `reduced_motion="reduce"`.
+- P2: 29/29 blocos sem salto de heading e com no maximo um `h1`.
+- P3: `clinical-entry` no estado "Sem permissao" → "Esta area e visivel apenas para dono do consultorio, recepcionista ou funcionario".
+
+**Quarta passagem (reconfirmacao):** o verificador de confirmacao refez os 3 itens + varredura
+de regressao nos 4 checkers, na arvore de acessibilidade (CDP `Accessibility.getFullAXTree`),
+no overflow em 5 larguras e no contraste por pixel.
+
+### Placar final
+
+| Checker | Rodada 1 | Rodada 2 | Rodada 3 |
+|---|---|---|---|
+| `qa-automatic.py` | 612 | 0 | **0** |
+| `qa-variantes.py` | 7 | 0 | **0** |
+| `qa-contraste.py` (DOM) | 5.008 | 0 | **0** |
+| `qa-contraste-pixel.py` (pixel) | 11.710 | 433 → 0 | **0** (8.636 medicoes) |
+| Verificacao humana | 113 achados | 21 achados | **0** |
+
+`bash scripts/placar-final.sh` roda os 4 e imprime o placar.
+
+### O que a rodada 3 provou que nenhum checker sozinho prova
+
+- O **portal do Radix perde o tema** (dialog transparente com texto preto) — so apareceu
+  abrindo o dialog num tema escuro.
+- O `.bloco-glass` **vence o `fixed`** por estar fora de `@layer` — os dois overlays
+  estavam **invisiveis** (viajava so o blur).
+- O **item da sidebar sumia sob o cabecalho sticky** ao rolar ate ele.
+- O **reduced-motion** desligava a animacao mas mantinha o loop a 1ms.
 
 ---
 

@@ -77,15 +77,15 @@ Entrada por e-mail e senha, com desafio de segundo fator em 6 digitos.
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `auth.login` — Entrar — `POST /auth/login` — conectores: database
+- `auth.login` — Entrar — `POST /auth/login` — papeis: owner, employee — conectores: database
   - Use quando o usuario enviar e-mail e senha no formulario de login. Valida as credenciais, cria a sessao e responde com o consultorio ativo. Se o segundo fator estiver ativo, devolva o desafio em vez de criar a sessao.
-- `auth.twoFactor.verify` — Verificar codigo de 2FA — `POST /auth/two-factor/verify` — conectores: database
+- `auth.twoFactor.verify` — Verificar codigo de 2FA — `POST /auth/two-factor/verify` — papeis: owner, employee — conectores: database
   - Use quando o usuario informar o codigo de 6 digitos do segundo fator. Consome o desafio pendente e conclui o login; codigo invalido devolve erro sem revelar se o fator existe.
-- `auth.twoFactor.resend` — Reenviar codigo de 2FA — `POST /auth/two-factor/resend` — conectores: database, email
+- `auth.twoFactor.resend` — Reenviar codigo de 2FA — `POST /auth/two-factor/resend` — papeis: owner, employee — conectores: database, email
   - Use quando o usuario pedir um novo codigo do segundo fator. Gera um desafio novo e invalida o anterior.
-- `auth.twoFactor.cancel` — Cancelar desafio de 2FA — `POST /auth/two-factor/cancel` — conectores: database
+- `auth.twoFactor.cancel` — Cancelar desafio de 2FA — `POST /auth/two-factor/cancel` — papeis: owner, employee — conectores: database
   - Use quando o usuario voltar para a etapa de credenciais a partir do desafio de 2FA. Descarta o desafio pendente.
-- `auth.recovery.request` — Pedir link de recuperacao — `POST /auth/recovery` — conectores: database, email
+- `auth.recovery.request` — Pedir link de recuperacao — `POST /auth/recovery` — papeis: owner, employee — conectores: database, email
   - Use quando o usuario clicar em 'Esqueci minha senha'. Envia um link de uso unico por e-mail, sempre com a mesma resposta para e-mails existentes e inexistentes.
 
 **Portas de logica:**
@@ -119,11 +119,11 @@ Pedido de link de recuperacao e definicao de nova senha com medidor de forca.
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `auth.recovery.request` — Pedir link de recuperacao — `POST /auth/recovery` — conectores: database, email
+- `auth.recovery.request` — Pedir link de recuperacao — `POST /auth/recovery` — papeis: owner, employee — conectores: database, email
   - Use quando o usuario pedir para redefinir a senha. Gera um token de uso unico, envia o link por e-mail e responde de forma identica para e-mails existentes e inexistentes.
-- `auth.password.set` — Definir nova senha — `POST /auth/password` — conectores: database
+- `auth.password.set` — Definir nova senha — `POST /auth/password` — papeis: owner, employee — conectores: database
   - Use quando o usuario confirmar a nova senha no formulario de recuperacao. Valida a politica de senha e consome o token — o token vem da sessao do servidor, nunca do cliente.
-- `auth.recovery.resend` — Reenviar link de recuperacao — `POST /auth/recovery/resend` — conectores: database, email
+- `auth.recovery.resend` — Reenviar link de recuperacao — `POST /auth/recovery/resend` — papeis: owner, employee — conectores: database, email
   - Use quando o usuario pedir um novo link sem esperar o primeiro. Invalida o token anterior e emite um novo.
 
 **Portas de logica:**
@@ -160,15 +160,15 @@ Painel do segundo fator TOTP, codigos de recuperacao e remocao do fator.
 
 **Acoes (uma acao = tela + HTTP + tool de agente):**
 
-- `auth.twoFactor.verify` — Verificar codigo do segundo fator — `POST /auth/two-factor/verify` — conectores: database
+- `auth.twoFactor.verify` — Verificar codigo do segundo fator — `POST /auth/two-factor/verify` — papeis: owner, employee — conectores: database
   - Use quando o usuario confirmar o codigo de 6 digitos do autenticador. Valida o codigo TOTP, consome o desafio pendente e, em caso de sucesso, ativa o segundo fator.
-- `auth.twoFactor.remove` — Remover fator de segundo fator — `DELETE /auth/two-factor` — conectores: database
+- `auth.twoFactor.remove` — Remover fator de segundo fator — `DELETE /auth/two-factor` — papeis: owner, employee — conectores: database
   - Use quando o usuario clicar em 'Remover fator'. Exclui o fator e os codigos de recuperacao; o login passa a exigir apenas e-mail e senha.
-- `auth.twoFactor.copySecret` — Copiar chave de configuracao
+- `auth.twoFactor.copySecret` — Copiar chave de configuracao — papeis: owner, employee
   - Use quando o usuario pedir para copiar a chave TOTP exibida no painel. A chave vai para a area de transferencia do proprio navegador — nunca para log ou telemetria.
-- `auth.twoFactor.copyRecoveryCodes` — Copiar codigos de recuperacao
+- `auth.twoFactor.copyRecoveryCodes` — Copiar codigos de recuperacao — papeis: owner, employee
   - Use quando o usuario pedir para copiar os codigos de recuperacao ainda nao usados. Cada codigo funciona uma unica vez.
-- `auth.twoFactor.regenerateRecoveryCodes` — Gerar novos codigos de recuperacao — `POST /auth/two-factor/recovery-codes` — conectores: database
+- `auth.twoFactor.regenerateRecoveryCodes` — Gerar novos codigos de recuperacao — `POST /auth/two-factor/recovery-codes` — papeis: owner, employee — conectores: database
   - Use quando o usuario pedir novos codigos de recuperacao. Invalida todos os codigos anteriores antes de emitir a nova lista.
 
 **Portas de logica:**
