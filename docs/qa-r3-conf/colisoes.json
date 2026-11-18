@@ -1,0 +1,337 @@
+{
+ "390": {
+  "social-composer": [
+   {
+    "txt": "prato-colorido.jpg — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 34.9
+   },
+   {
+    "txt": "mesa-consultorio.jpg —",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 56.6
+   },
+   {
+    "txt": "card-agenda.png — midi",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 31.3
+   },
+   {
+    "txt": "roteiro-almoco.mp4 — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 17.5
+   },
+   {
+    "txt": "detalhe-armario.jpg — ",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 49
+   }
+  ],
+  "office-settings": [
+   {
+    "card": "WhatsApp +5511987654321",
+    "x": 139,
+    "w": 109,
+    "scrollW": 109,
+    "clientW": 109,
+    "overflow_px": 0
+   },
+   {
+    "card": "Instagram sem numero confi",
+    "x": 139,
+    "w": 151,
+    "scrollW": 151,
+    "clientW": 151,
+    "overflow_px": 0
+   }
+  ]
+ },
+ "768": {
+  "social-composer": [
+   {
+    "txt": "prato-colorido.jpg — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -55.1
+   },
+   {
+    "txt": "mesa-consultorio.jpg —",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -33.4
+   },
+   {
+    "txt": "card-agenda.png — midi",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -58.7
+   },
+   {
+    "txt": "roteiro-almoco.mp4 — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -72.5
+   },
+   {
+    "txt": "detalhe-armario.jpg — ",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -41
+   }
+  ],
+  "office-settings": [
+   {
+    "card": "WhatsApp +5511987654321",
+    "x": 415,
+    "w": 109,
+    "scrollW": 109,
+    "clientW": 109,
+    "overflow_px": 0
+   },
+   {
+    "card": "Instagram sem numero confi",
+    "x": 659,
+    "w": 151,
+    "scrollW": 151,
+    "clientW": 151,
+    "overflow_px": 0
+   }
+  ]
+ },
+ "1280": {
+  "social-composer": [
+   {
+    "txt": "prato-colorido.jpg — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 53.9
+   },
+   {
+    "txt": "mesa-consultorio.jpg —",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 75.6
+   },
+   {
+    "txt": "card-agenda.png — midi",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 50.3
+   },
+   {
+    "txt": "roteiro-almoco.mp4 — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 36.5
+   },
+   {
+    "txt": "detalhe-armario.jpg — ",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 68
+   }
+  ],
+  "office-settings": [
+   {
+    "card": "WhatsApp +5511987654321",
+    "x": 415,
+    "w": 109,
+    "scrollW": 109,
+    "clientW": 109,
+    "overflow_px": 0
+   },
+   {
+    "card": "Instagram sem numero confi",
+    "x": 533,
+    "w": 151,
+    "scrollW": 151,
+    "clientW": 151,
+    "overflow_px": 0
+   }
+  ]
+ },
+ "1440": {
+  "social-composer": [
+   {
+    "txt": "prato-colorido.jpg — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -18.6
+   },
+   {
+    "txt": "mesa-consultorio.jpg —",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": 3.1
+   },
+   {
+    "txt": "card-agenda.png — midi",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -22.2
+   },
+   {
+    "txt": "roteiro-almoco.mp4 — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -36
+   },
+   {
+    "txt": "detalhe-armario.jpg — ",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -4.5
+   }
+  ],
+  "office-settings": [
+   {
+    "card": "WhatsApp +5511987654321",
+    "x": 415,
+    "w": 109,
+    "scrollW": 109,
+    "clientW": 109,
+    "overflow_px": 0
+   },
+   {
+    "card": "Instagram sem numero confi",
+    "x": 573,
+    "w": 151,
+    "scrollW": 151,
+    "clientW": 151,
+    "overflow_px": 0
+   }
+  ]
+ },
+ "1920": {
+  "social-composer": [
+   {
+    "txt": "prato-colorido.jpg — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -136.5
+   },
+   {
+    "txt": "mesa-consultorio.jpg —",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -114.8
+   },
+   {
+    "txt": "card-agenda.png — midi",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -140.1
+   },
+   {
+    "txt": "roteiro-almoco.mp4 — m",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -153.9
+   },
+   {
+    "txt": "detalhe-armario.jpg — ",
+    "display": "inline",
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "paiDisplay": "block",
+    "paiFlex": "0 1 auto",
+    "overlap_px": -122.3
+   }
+  ],
+  "office-settings": [
+   {
+    "card": "WhatsApp +5511987654321",
+    "x": 537,
+    "w": 109,
+    "scrollW": 109,
+    "clientW": 109,
+    "overflow_px": 0
+   },
+   {
+    "card": "Instagram sem numero confi",
+    "x": 754,
+    "w": 151,
+    "scrollW": 151,
+    "clientW": 151,
+    "overflow_px": 0
+   }
+  ]
+ }
+}

@@ -263,7 +263,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
             className="flex w-full items-center justify-between gap-3 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5 text-left transition-colors hover:border-border-strong hover:bg-surface-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <span className="min-w-0">
-              <span className="block truncate text-[14px] font-medium text-fg" title={office.name}>{office.name}</span>
+              <span className="block truncate bloco-control font-medium text-fg" title={office.name}>{office.name}</span>
               <span className="bloco-caption block break-words text-fg-muted">
                 {office.city} · {office.members} membros
               </span>
