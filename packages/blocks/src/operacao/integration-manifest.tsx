@@ -245,7 +245,7 @@ function ConnectorCard({
     <Panel tone="glass" padding="md" className="flex flex-col gap-3">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="bloco-title3 truncate">{connector.label}</p>
+          <p className="bloco-title3 truncate" title={connector.label}>{connector.label}</p>
           <p className="bloco-caption">
             {kindLabel[connector.kind]} · id <span className="bloco-mono">{connector.id}</span>
           </p>

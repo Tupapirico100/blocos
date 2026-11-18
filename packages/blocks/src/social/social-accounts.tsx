@@ -187,7 +187,7 @@ function AccountCard({
       <div className="flex items-start gap-3">
         <Avatar name={account.displayName} src={account.avatarUrl} size={40} />
         <div className="min-w-0 flex-1">
-          <p className="bloco-headline truncate">{account.displayName}</p>
+          <p className="bloco-headline truncate" title={account.displayName}>{account.displayName}</p>
           <p className="bloco-caption truncate">{account.handle}</p>
         </div>
       </div>
