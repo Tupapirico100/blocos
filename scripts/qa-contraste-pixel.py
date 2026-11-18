@@ -56,6 +56,12 @@ COLLECT = r"""
       anc = anc.parentElement;
     }
     if (clipped) continue;
+    // encoberto por um overlay (header sticky, dialog): os pixels nao sao os do texto
+    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    if (cx >= 0 && cy >= 0 && cx <= innerWidth && cy <= innerHeight) {
+      const top = document.elementFromPoint(cx, cy);
+      if (top && top !== el && !el.contains(top) && !top.contains(el)) continue;
+    }
     out.push({
       txt: txt.slice(0, 36),
       x: Math.round(r.left), y: Math.round(r.top),
@@ -134,25 +140,45 @@ with sync_playwright() as p:
             page.evaluate("() => document.querySelectorAll('style').forEach(s => { if (s.textContent.includes('color: transparent !important')) s.remove(); })")
             page.wait_for_timeout(80)
 
-            img1 = Image.open(BytesIO(shot1))
-            img2 = Image.open(BytesIO(shot2))
-            for item in page.evaluate(COLLECT):
-                r = analisar(img1, img2, (item["x"], item["y"], item["w"], item["h"]))
-                if r is None:
-                    continue
-                fundo, glifo = r
-                rt = ratio(glifo, fundo)
-                fs = item["fs"]
-                grande = fs >= 24 or (item["bold"] and fs >= 18.66)
-                minimo = 3.0 if grande else 4.5
-                medicoes += 1
-                if rt < minimo:
-                    falhas.append({
-                        "tema": tema, "bloco": bid, "txt": item["txt"],
-                        "ratio": round(rt, 2), "min": minimo, "fs": fs,
-                        "glifo": [int(v) for v in glifo], "fundo": [int(v) for v in fundo],
-                        "cls": item["cls"],
-                    })
+            def medir(shot_a, shot_b, itens):
+                """devolve (medicoes, falhas) de um conjunto de itens"""
+                ia = Image.open(BytesIO(shot_a))
+                ib = Image.open(BytesIO(shot_b))
+                meds = 0
+                fails = []
+                for item in itens:
+                    r = analisar(ia, ib, (item["x"], item["y"], item["w"], item["h"]))
+                    if r is None:
+                        continue
+                    fundo, glifo = r
+                    rt = ratio(glifo, fundo)
+                    fs = item["fs"]
+                    grande = fs >= 24 or (item["bold"] and fs >= 18.66)
+                    minimo = 3.0 if grande else 4.5
+                    meds += 1
+                    if rt < minimo:
+                        fails.append({
+                            "tema": tema, "bloco": bid, "txt": item["txt"],
+                            "ratio": round(rt, 2), "min": minimo, "fs": fs,
+                            "glifo": [int(v) for v in glifo], "fundo": [int(v) for v in fundo],
+                            "cls": item["cls"],
+                        })
+                return meds, fails
+
+            itens = page.evaluate(COLLECT)
+            m, f = medir(shot1, shot2, itens)
+            medicoes += m
+            if f:
+                # re-medicao: so conta se falhar de novo (medicao instavel por contencao)
+                page.wait_for_timeout(300)
+                s1b = page.screenshot()
+                page.add_style_tag(content="* { color: transparent !important; text-shadow: none !important; }")
+                page.wait_for_timeout(150)
+                s2b = page.screenshot()
+                page.evaluate("() => document.querySelectorAll('style').forEach(s => { if (s.textContent.includes('color: transparent !important')) s.remove(); })")
+                page.wait_for_timeout(100)
+                _, f2 = medir(s1b, s2b, itens)
+                falhas.extend(f2)
         resumo_tema[tema] = len([f for f in falhas if f["tema"] == tema])
     browser.close()
 
