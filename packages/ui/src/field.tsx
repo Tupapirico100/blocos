@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "./cn.js";
+import { useBlocosLocale } from "./locale.js";
 
 /* ------------------------------------------------------------------ */
 /* Field wrapper                                                       */
@@ -136,6 +137,7 @@ export interface SwitchProps {
 }
 
 export function Switch({ checked, onCheckedChange, disabled, label, description, className, ariaLabel }: SwitchProps) {
+  const { t } = useBlocosLocale();
   const id = React.useId();
   return (
     <label className={cn("flex items-start gap-3", disabled && "opacity-50", className)}>
@@ -144,7 +146,7 @@ export function Switch({ checked, onCheckedChange, disabled, label, description,
         role="switch"
         aria-checked={checked}
         aria-labelledby={label ? `${id}-label` : undefined}
-        aria-label={!label ? (ariaLabel ?? "Alternar") : undefined}
+        aria-label={!label ? (ariaLabel ?? t("ui.toggle", "Alternar")) : undefined}
         disabled={disabled}
         onClick={() => onCheckedChange?.(!checked)}
         className={cn(
@@ -194,6 +196,7 @@ export interface CheckboxProps {
 }
 
 export function Checkbox({ checked, onCheckedChange, disabled, label, className, ariaLabel }: CheckboxProps) {
+  const { t } = useBlocosLocale();
   const id = React.useId();
   return (
     <label className={cn("inline-flex items-center gap-2", disabled && "opacity-50", className)}>
@@ -202,7 +205,7 @@ export function Checkbox({ checked, onCheckedChange, disabled, label, className,
         role="checkbox"
         aria-checked={checked}
         aria-labelledby={label ? `${id}-label` : undefined}
-        aria-label={!label ? (ariaLabel ?? "Selecionar") : undefined}
+        aria-label={!label ? (ariaLabel ?? t("ui.select", "Selecionar")) : undefined}
         disabled={disabled}
         onClick={() => onCheckedChange?.(!checked)}
         className={cn(
@@ -244,10 +247,11 @@ export interface SegmentedProps<T extends string> {
 }
 
 export function Segmented<T extends string>({ options, value, onChange, size = "md", className }: SegmentedProps<T>) {
+  const { t } = useBlocosLocale();
   return (
     <div
       role="radiogroup"
-      aria-label="Selecionar opcao"
+      aria-label={t("ui.selectOption", "Selecionar opcao")}
       className={cn(
         "bloco-scroll inline-flex max-w-full items-center gap-0.5 overflow-x-auto rounded-[var(--r-md)] border border-border bg-surface/60 p-0.5",
         className,

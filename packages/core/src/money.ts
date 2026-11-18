@@ -37,16 +37,33 @@ export function percentOf(value: Money, percent: number): Money {
   return { cents: Math.round((value.cents * percent) / 100), currency: value.currency };
 }
 
-export function formatBRL(cents: number, opts: { compact?: boolean; showCents?: boolean } = {}): string {
-  const { compact = false, showCents = true } = opts;
+export interface FormatCurrencyOptions {
+  /** Moeda ISO-4217. Padrao BRL. */
+  currency?: string;
+  /** Idioma BCP 47 do formato. Padrao pt-BR. */
+  locale?: string;
+  compact?: boolean;
+  showCents?: boolean;
+}
+
+/**
+ * Formata centavos em qualquer moeda e idioma (ex.: PEN em es-PE -> "S/ 150.00").
+ * Os padroes (pt-BR, BRL) sao os de `formatBRL`, que continua igual.
+ */
+export function formatCurrency(cents: number, opts: FormatCurrencyOptions = {}): string {
+  const { currency = BRL, locale = "pt-BR", compact = false, showCents = true } = opts;
   const value = cents / 100;
-  return new Intl.NumberFormat("pt-BR", {
+  return new Intl.NumberFormat(locale, {
     style: "currency",
-    currency: BRL,
+    currency,
     notation: compact ? "compact" : "standard",
     minimumFractionDigits: showCents ? 2 : 0,
     maximumFractionDigits: showCents ? 2 : 0,
   }).format(value);
+}
+
+export function formatBRL(cents: number, opts: { compact?: boolean; showCents?: boolean } = {}): string {
+  return formatCurrency(cents, { ...opts, currency: BRL, locale: "pt-BR" });
 }
 
 export function formatMoney(m: Money, opts?: { compact?: boolean; showCents?: boolean }): string {

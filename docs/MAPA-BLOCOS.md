@@ -4,7 +4,7 @@
 > Cada bloco e uma receita: acoes (UI + HTTP + agente), portas de logica,
 > conectores owner-only, regras e variacoes de UI.
 
-**29 blocos · 62 acoes · 83 variacoes de UI**
+**29 blocos · 63 acoes · 83 variacoes de UI**
 
 ## 1. Blocos por repositorio de origem
 
@@ -1108,6 +1108,8 @@ Endpoints de saida do programa, com eventos assinados, segredo por referencia, t
 
 - `webhook.toggle` — Ativar ou desativar webhook — `PATCH /webhooks/:id` — papeis: platform_owner, owner — conectores: webhooks
   - Use quando o usuario quiser pausar ou retomar o envio de eventos para um endpoint. Desativar mantem a configuracao e o historico de entregas.
+- `webhook.preview` — Ver previa do envio — papeis: platform_owner, owner — conectores: database
+  - Use quando o usuario quiser ver o corpo e a assinatura que seriam enviados a um endpoint, SEM enviar nada. So aparece quando `data.canPreview` e verdadeiro (CRM-HOF).
 
 **Portas de logica:**
 
@@ -1130,6 +1132,8 @@ Endpoints de saida do programa, com eventos assinados, segredo por referencia, t
 - Backoff de reexecucao: 1m -> 5m -> 15m -> 1h -> 6h -> 24h; depois disso o evento e marcado como falho.
 - Payload de saida nunca leva dado de saude do paciente, nem texto de prontuario.
 - A URL do endpoint e validada de novo a cada entrega — DNS pode mudar depois do cadastro.
+- A previa (`webhook.preview`) mostra o corpo e a assinatura que seriam enviados e NAO envia nada.
+- Textos, datas e nomes de evento vem do `LocaleProvider` (chaves `webhooks.*`) e de `data.eventLabels`; sem eles, o padrao em pt-BR.
 
 **Origem:** `CRM-Nutricionista: src/app/[locale]/consultorios/[officeId]/webhook/WebhookPanel.tsx` · `CRM-HOF: src/app/[locale]/webhooks/page.tsx`
 

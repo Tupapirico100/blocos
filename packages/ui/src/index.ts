@@ -7,3 +7,4 @@ export * from "./overlay.js";
 export * from "./feedback.js";
 export * from "./confirm.js";
 export * from "./theme.js";
+export * from "./locale.js";

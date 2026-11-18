@@ -68,6 +68,17 @@ export const webhooksRecipe = defineBlock({
       connectors: ["webhooks"],
       states: ["success", "error", "forbidden"],
     },
+    {
+      id: "webhook.preview",
+      title: "Ver previa do envio",
+      description:
+        "Use quando o usuario quiser ver o corpo e a assinatura que seriam enviados a um endpoint, SEM enviar nada. So aparece quando `data.canPreview` e verdadeiro (CRM-HOF).",
+      input: z.object({ id: z.string().min(1) }),
+      permissions: ["platform_owner", "owner"],
+      connectors: ["database"],
+      readOnly: true,
+      states: ["success", "error", "forbidden"],
+    },
   ],
   connectors: [
     {
@@ -97,6 +108,8 @@ export const webhooksRecipe = defineBlock({
     "Backoff de reexecucao: 1m -> 5m -> 15m -> 1h -> 6h -> 24h; depois disso o evento e marcado como falho.",
     "Payload de saida nunca leva dado de saude do paciente, nem texto de prontuario.",
     "A URL do endpoint e validada de novo a cada entrega — DNS pode mudar depois do cadastro.",
+    "A previa (`webhook.preview`) mostra o corpo e a assinatura que seriam enviados e NAO envia nada.",
+    "Textos, datas e nomes de evento vem do `LocaleProvider` (chaves `webhooks.*`) e de `data.eventLabels`; sem eles, o padrao em pt-BR.",
   ],
   defaultVariant: "list",
   variants: [

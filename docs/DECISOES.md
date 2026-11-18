@@ -116,3 +116,26 @@ nunca "clinica".
    trivialmente testaveis com Testing Library. Nao Priorizado no beta.
 4. **React Server Components** — os blocos sao `use client` friendly (tem `onAction` e
    `useState`). Para Next.js App Router, o consumidor decide onde montar.
+
+## Idioma, moeda e fuso configuraveis (18/11/2026, para o CRM-HOF do Peru)
+
+O CRM-HOF e do Peru: interface em espanhol (es-PE) e ingles, soles (PEN),
+fuso America/Lima. Os blocos tinham pt-BR, BRL e America/Sao_Paulo fixos —
+uma cita das 10:00 em Lima apareceria as 12:00.
+
+- `LocaleProvider` / `useBlocosLocale` em `@blocos/ui`: `locale`, `currency`,
+  `timeZone` e `messages` (texto por chave, interpolacao `{nome}`). Padrao
+  pt-BR / BRL / America/Sao_Paulo e o texto de sempre: **sem o provedor nada
+  muda** para o CRM-Nutricionista (provado por `npm run verificar:locale`).
+- `formatCurrency` em `@blocos/core` (qualquer moeda e idioma); `formatBRL`
+  continua igual e passa a usa-lo.
+- Chaves ja existentes: `ui.*` (Confirmar, Cancelar, Fechar, Dispensar,
+  Alternar, Selecionar, bloqueio de conector), `frame.*` (vazio, erro, sem
+  permissao), `role.<papel>` (o nome do papel no "sem permissao" — o
+  `ROLE_LABEL` continua o padrao), `connector.<id>` e `webhooks.*`.
+- `webhooks-panel` e o primeiro bloco inteiro no provedor. Ganhou, opcionais
+  e desligados por padrao: `eventLabels` (nome legivel do evento),
+  `canPreview` (acao `webhook.preview`, so leitura, nao envia nada) e
+  `showHeader`.
+- Os outros blocos seguem com texto e formato fixos ate migrarem, um por PR,
+  junto com a tela correspondente no app.
