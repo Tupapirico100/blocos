@@ -92,6 +92,7 @@ export const followUpTasksRecipe = defineBlock({
     "Timezone America/Sao_Paulo: a conversao local<->UTC faz DUAS passadas por causa do DST.",
     "Quem fala com o paciente e employee: `employee` e `user` sao o mesmo papel.",
   ],
+  defaultVariant: "calendar",
   variants: [
     {
       id: "list",

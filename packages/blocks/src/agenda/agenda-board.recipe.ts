@@ -110,6 +110,7 @@ export const agendaBoardRecipe = defineBlock({
     "A agenda nao carrega dado de saude em log, URL ou telemetria.",
     "O status 'compareceu' e a base da taxa de comparecimento usada no financeiro.",
   ],
+  defaultVariant: "week",
   variants: [
     {
       id: "day",

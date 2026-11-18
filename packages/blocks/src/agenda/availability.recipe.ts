@@ -110,6 +110,7 @@ export const availabilityRecipe = defineBlock({
     "Folga e horario de atendimento sao do profissional, nao do consultorio inteiro.",
   ],
   emptyAction: { id: "availability.setHours", label: "Definir horário" },
+  defaultVariant: "week",
   variants: [
     {
       id: "week",
