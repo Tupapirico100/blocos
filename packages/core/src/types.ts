@@ -132,6 +132,11 @@ export interface BlockRecipe {
   /** Variacoes de UI disponiveis para este bloco. */
   variants: BlockVariant[];
   /**
+   * A variacao ESCOLHIDA pelo dono da plataforma — a que o produto usa.
+   * As demais continuam na biblioteca como alternativas para outros programas.
+   */
+  defaultVariant?: string;
+  /**
    * Acao oferecida no estado vazio. Omitir quando o dado chega sozinho
    * (lead entra pelo WhatsApp, log entra pela fila) — o estado vazio
    * explica que o dado vai chegar, sem prometer acao que nao existe.

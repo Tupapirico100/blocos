@@ -75,6 +75,7 @@ export const socialLogsRecipe = defineBlock({
     "Somente registros com falha sao reexecutaveis — a interface nao oferece retry em sucesso.",
     "Toda entrada tem data ISO para correlacao com a fila e com o console do agente.",
   ],
+  defaultVariant: "table",
   variants: [
     {
       id: "table",

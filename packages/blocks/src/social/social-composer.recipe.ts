@@ -101,6 +101,7 @@ export const socialComposerRecipe = defineBlock({
     "A legenda nao substitui consentimento de marketing e nunca carrega dado de paciente.",
   ],
   emptyAction: { id: "post.schedule", label: "Publicar" },
+  defaultVariant: "composer",
   variants: [
     {
       id: "composer",
