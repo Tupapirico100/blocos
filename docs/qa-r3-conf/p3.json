@@ -1,0 +1,321 @@
+{
+ "auth-login": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 133,
+  "state": "forbidden"
+ },
+ "auth-two-factor": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 133,
+  "state": "forbidden"
+ },
+ "auth-recovery": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 133,
+  "state": "forbidden"
+ },
+ "admin-platform": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 126,
+  "state": "forbidden"
+ },
+ "office-team": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "office-settings": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou administrador da plataforma ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou administrador da plataforma ou recepcionista. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 166,
+  "state": "forbidden"
+ },
+ "leads-board": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "inbox-whatsapp": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "consent-panel": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "channel-connections": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "patients-list": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "patient-chart": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "clinical-entry": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "agenda-board": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "availability": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 133,
+  "state": "forbidden"
+ },
+ "follow-up-tasks": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 133,
+  "state": "forbidden"
+ },
+ "packages-pricing": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "payments-checkout": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou recepcionista ou funcionário. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 150,
+  "state": "forbidden"
+ },
+ "finance-overview": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "reports-funnel": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "meta-conversion": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 118,
+  "state": "forbidden"
+ },
+ "social-accounts": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 126,
+  "state": "forbidden"
+ },
+ "social-composer": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 152,
+  "state": "forbidden"
+ },
+ "social-automations": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 152,
+  "state": "forbidden"
+ },
+ "social-logs": {
+  "txt": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para dono do consultório ou nutricionista ou recepcionista. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 152,
+  "state": "forbidden"
+ },
+ "webhooks-panel": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma ou dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma ou dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 149,
+  "state": "forbidden"
+ },
+ "agent-console": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma ou dono do consultório. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma ou dono do consultório. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 149,
+  "state": "forbidden"
+ },
+ "ops-health": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 126,
+  "state": "forbidden"
+ },
+ "integration-manifest": {
+  "txt": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso.",
+  "alerts": [
+   {
+    "role": "alert",
+    "text": "Acesso restrito Esta area e visivel apenas para administrador da plataforma. Fale com o dono do consultório para pedir acesso."
+   }
+  ],
+  "len": 126,
+  "state": "forbidden"
+ }
+}
