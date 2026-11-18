@@ -93,7 +93,18 @@ CLS do toolbar, curva `ease-apple` como padrão do tema.
 
 **Quarta passagem (reconfirmacao):** o verificador de confirmacao refez os 3 itens + varredura
 de regressao nos 4 checkers, na arvore de acessibilidade (CDP `Accessibility.getFullAXTree`),
-no overflow em 5 larguras e no contraste por pixel.
+no overflow em 5 larguras e no contraste por pixel. **Reprovou em 88/100** — achou mais 4 desvios:
+
+| # | Sev | Onde | Problema | Correcao |
+|---|---|---|---|---|
+| C2a | alta | `ui/overlay.tsx` (TabPanel) | o painel de aba tinha `focus-visible:outline-none` → **nenhum indicador de foco** | anel do DS (2px accent, offset 2px) |
+| C2b | alta | `ui/field.tsx` (Input/Select/Textarea) | `focus:outline-none` zerava `--tw-outline-style` → o `outline-2` **nunca era pintado** (so a borda de 1px) | `focus-visible:outline-solid` + remocao do `focus:outline-none` |
+| C5a | alta | `administracao/office-settings.tsx` | grade por **viewport** (`sm:grid-cols-2`) dentro de um container de 223px → o cartao WhatsApp invadia o Instagram (ate 227px de invasao) | **container query** (`@container` + `@[420px]:grid-cols-2`) + `min-w-0` |
+| C5b | media | `social/social-composer.tsx` | `truncate` em `display:inline` → **truncamento inerte**: o nome do arquivo invadia o rotulo "IMAGEM · N MB" | `inline-block max-w-full` no span truncado |
+| C4 | media | 17 blocos | 29 `text-[Npx]` avulsos (1 fora da escala: `text-[9px]`) | migrados para `bloco-control*` / `bloco-label*` / `bloco-cell` |
+
+**Quinta passagem (confirmacao final):** os 4 desvios reconfirmados por medicao e a
+regressao completa verde — **100/100**.
 
 ### Placar final
 
@@ -103,7 +114,7 @@ no overflow em 5 larguras e no contraste por pixel.
 | `qa-variantes.py` | 7 | 0 | **0** |
 | `qa-contraste.py` (DOM) | 5.008 | 0 | **0** |
 | `qa-contraste-pixel.py` (pixel) | 11.710 | 433 → 0 | **0** (8.636 medicoes) |
-| Verificacao humana | 113 achados | 21 achados | **0** |
+| Verificacao humana | 113 achados | 21 achados | 7 achados → **0** |
 
 `bash scripts/placar-final.sh` roda os 4 e imprime o placar.
 
