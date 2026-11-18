@@ -1,0 +1,3716 @@
+{
+ "auth-login": {
+  "Dividida|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Centralizada|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Centralizada|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Centralizada|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Centralizada|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Centralizada|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Minima|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Minima|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Minima|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Minima|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Minima|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "auth-two-factor": {
+  "Cartões|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Coluna|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Coluna|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Coluna|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Coluna|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Coluna|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "auth-recovery": {
+  "Formulário|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulário|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulário|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulário|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulário|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Passos|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "admin-platform": {
+  "Cartões|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividida|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "office-team": {
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "office-settings": {
+  "Seções|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Seções|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Seções|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Seções|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Seções|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [
+    {
+     "a": "Conectado",
+     "b": "Instagram",
+     "ac": "inline-flex items-center gap-1 rounded-[var(-",
+     "bc": "bloco-headline",
+     "ox": 41,
+     "oy": 20
+    },
+    {
+     "a": "Nao conectado",
+     "b": "Evolution API (provedor in",
+     "ac": "inline-flex items-center gap-1 rounded-[var(-",
+     "bc": "bloco-headline",
+     "ox": 100,
+     "oy": 20
+    }
+   ],
+   "nCol": 2
+  },
+  "Cartões|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartões|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "leads-board": {
+  "Quadro|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "inbox-whatsapp": {
+  "Dividido|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 132,
+     "cw": 1,
+     "txt": "Buscar conversa"
+    }
+   ],
+   "nOverflow": 1,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Empilhado|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 132,
+     "cw": 1,
+     "txt": "Buscar conversa"
+    }
+   ],
+   "nOverflow": 1,
+   "col": [
+    {
+     "a": "1 nova(s)",
+     "b": "Ana Beatriz Souza",
+     "ac": "inline-flex items-center gap-1 rounded-[var(-",
+     "bc": "bloco-headline truncate",
+     "ox": 66,
+     "oy": 20
+    },
+    {
+     "a": "Bloqueado",
+     "b": "Ana Beatriz Souza",
+     "ac": "inline-flex items-center gap-1 rounded-[var(-",
+     "bc": "bloco-headline truncate",
+     "ox": 92,
+     "oy": 20
+    },
+    {
+     "a": "Dentro da janela",
+     "b": "Ana Beatriz Souza",
+     "ac": "inline-flex items-center gap-1 rounded-[var(-",
+     "bc": "bloco-headline truncate",
+     "ox": 7,
+     "oy": 20
+    },
+    {
+     "a": "Perfeito, ate quinta!",
+     "b": "Ola! Aqui e do consultorio",
+     "ac": "bloco-caption mt-0.5 block truncate text-fg-m",
+     "bc": "bloco-body whitespace-pre-wrap",
+     "ox": 381,
+     "oy": 10
+    }
+   ],
+   "nCol": 4
+  },
+  "Empilhado|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Empilhado|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Empilhado|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Empilhado|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Foco|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Foco|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Foco|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Foco|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Foco|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "consent-panel": {
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "channel-connections": {
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "patients-list": {
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 211,
+     "cw": 1,
+     "txt": "Buscar paciente por nome"
+    }
+   ],
+   "nOverflow": 1,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 211,
+     "cw": 1,
+     "txt": "Buscar paciente por nome"
+    }
+   ],
+   "nOverflow": 1,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 211,
+     "cw": 1,
+     "txt": "Buscar paciente por nome"
+    }
+   ],
+   "nOverflow": 1,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "patient-chart": {
+  "Timeline|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Blocos|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Blocos|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Blocos|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Blocos|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Blocos|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Abas|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "clinical-entry": {
+  "Formulario|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Wizard|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Wizard|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Wizard|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Wizard|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Wizard|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "agenda-board": {
+  "Dia|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dia|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dia|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dia|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dia|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "availability": {
+  "Semana|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Semana|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Slots|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Slots|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Slots|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Slots|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Slots|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "follow-up-tasks": {
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Calendario|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Calendario|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Calendario|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Calendario|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Calendario|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Quadro|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "packages-pricing": {
+  "Cards|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "payments-checkout": {
+  "Formulario|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Formulario|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Recibo|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Recibo|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Recibo|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Recibo|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Recibo|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Split|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "finance-overview": {
+  "Cards|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grafico|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grafico|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grafico|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grafico|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grafico|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "reports-funnel": {
+  "Funil|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Funil|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Funil|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Funil|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Funil|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "meta-conversion": {
+  "Timeline|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Timeline|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cards|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "social-accounts": {
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Grade|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "social-composer": {
+  "Composer|Normal": {
+   "inerte": [
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "prato-colorido.jpg — midia par"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "mesa-consultorio.jpg — midia p"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "card-agenda.png — midia para p"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "roteiro-almoco.mp4 — midia par"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "detalhe-armario.jpg — midia pa"
+    }
+   ],
+   "nInerte": 5,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    }
+   ],
+   "nOverflow": 5,
+   "col": [
+    {
+     "a": "mesa-consultorio.jpg — mid",
+     "b": "IMAGEM · 980 KB",
+     "ac": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "bc": "bloco-micro shrink-0",
+     "ox": 3,
+     "oy": 14
+    }
+   ],
+   "nCol": 1
+  },
+  "Composer|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Composer|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Composer|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Composer|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Normal": {
+   "inerte": [
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "prato-colorido.jpg — midia par"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "mesa-consultorio.jpg — midia p"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "card-agenda.png — midia para p"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "roteiro-almoco.mp4 — midia par"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "display": "inline",
+     "pai": "block",
+     "txt": "detalhe-armario.jpg — midia pa"
+    }
+   ],
+   "nInerte": 5,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 143,
+     "cw": 1,
+     "txt": "— midia para publicar"
+    }
+   ],
+   "nOverflow": 5,
+   "col": [
+    {
+     "a": "mesa-consultorio.jpg — mid",
+     "b": "IMAGEM · 980 KB",
+     "ac": "bloco-callout min-w-0 flex-1 truncate text-fg",
+     "bc": "bloco-micro shrink-0",
+     "ox": 4,
+     "oy": 14
+    }
+   ],
+   "nCol": 1
+  },
+  "Dividido|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Dividido|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "So preview|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "So preview|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "So preview|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "So preview|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "So preview|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "social-automations": {
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 277,
+     "cw": 1,
+     "txt": "Alternar regra Boas-vindas em comentario"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 234,
+     "cw": 1,
+     "txt": "Alternar regra Duvida sobre agenda"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 206,
+     "cw": 1,
+     "txt": "Alternar regra Mencao vira lead"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 293,
+     "cw": 1,
+     "txt": "Alternar regra Confirmacao de agendament"
+    }
+   ],
+   "nOverflow": 4,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "social-logs": {
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "webhooks-panel": {
+  "Lista|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 510,
+     "cw": 1,
+     "txt": "Ativar ou desativar o endpoint https://h"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 518,
+     "cw": 1,
+     "txt": "Ativar ou desativar o endpoint https://e"
+    },
+    {
+     "tag": "SPAN",
+     "cls": "sr-only",
+     "sw": 480,
+     "cw": 1,
+     "txt": "Ativar ou desativar o endpoint https://r"
+    }
+   ],
+   "nOverflow": 3,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Lista|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Fluxo|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "agent-console": {
+  "Conversa|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [
+    {
+     "a": "PACIENTE",
+     "b": "Oi, tem horario para quint",
+     "ac": "bloco-micro mr-2",
+     "bc": "bloco-body",
+     "ox": 65,
+     "oy": 13
+    },
+    {
+     "a": "AGENTE",
+     "b": "Oi! Para quinta de manha t",
+     "ac": "bloco-micro mr-2",
+     "bc": "bloco-body",
+     "ox": 53,
+     "oy": 13
+    },
+    {
+     "a": "AGENTE",
+     "b": "Combinado! Agendei para qu",
+     "ac": "bloco-micro mr-2",
+     "bc": "bloco-body",
+     "ox": 53,
+     "oy": 13
+    },
+    {
+     "a": "SISTEMA",
+     "b": "Atendimento registrado. Le",
+     "ac": "bloco-micro mr-2",
+     "bc": "bloco-body",
+     "ox": 59,
+     "oy": 13
+    }
+   ],
+   "nCol": 4
+  },
+  "Conversa|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Conversa|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Conversa|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Conversa|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Logs|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Logs|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Logs|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Logs|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Logs|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "ops-health": {
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Linha do tempo|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ },
+ "integration-manifest": {
+  "Cartoes|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Cartoes|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Tabela|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Checklist|Normal": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Checklist|Carregando": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Checklist|Vazio": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Checklist|Erro": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  },
+  "Checklist|Sem permissao": {
+   "inerte": [],
+   "nInerte": 0,
+   "overflow": [],
+   "nOverflow": 0,
+   "col": [],
+   "nCol": 0
+  }
+ }
+}
