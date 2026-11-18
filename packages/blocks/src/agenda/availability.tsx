@@ -285,7 +285,7 @@ function WeekGrid({
                     windows.map((window, index) => (
                       <span
                         key={`${window.startMinutes}-${index}`}
-                        className="mb-1 block rounded-[var(--r-sm)] bg-accent-soft px-2 py-1 text-[12px] font-medium tabular-nums text-accent-ink"
+                        className="mb-1 block rounded-[var(--r-sm)] bg-accent-soft px-2 py-1 bloco-label font-medium tabular-nums text-accent-ink"
                       >
                         {formatMinutes(window.startMinutes)}–{formatMinutes(window.endMinutes)}
                       </span>
@@ -467,7 +467,7 @@ function SlotsDay({
                       onClick={() => onBlock(professional.id, date, slot)}
                       title={slot.free ? "Bloquear este slot" : slot.reason}
                       className={
-                        "inline-flex items-center gap-1.5 rounded-[var(--r-pill)] border px-3 py-1.5 text-[12px] tabular-nums transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
+                        "inline-flex items-center gap-1.5 rounded-[var(--r-pill)] border px-3 py-1.5 bloco-label tabular-nums transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
                         (slot.free
                           ? "border-transparent bg-success-soft text-success hover:opacity-80"
                           : "cursor-not-allowed border-border bg-surface-strong/50 text-fg-faint line-through")

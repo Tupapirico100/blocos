@@ -196,7 +196,7 @@ function ConnectionCard({
             {connection.waba.reviewStatus ? ` · Revisao: ${connection.waba.reviewStatus}` : ""}
           </p>
           {connection.waba.id ? (
-            <p className="bloco-mono mt-1 break-all text-[11px] text-fg-faint">{connection.waba.id}</p>
+            <p className="bloco-mono mt-1 break-all bloco-label-sm text-fg-faint">{connection.waba.id}</p>
           ) : null}
         </div>
       ) : null}

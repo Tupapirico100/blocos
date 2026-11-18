@@ -241,7 +241,7 @@ export function FollowUpTasks(props: BlockProps<FollowUpData, FollowUpVariant>) 
 
             {rescheduling ? (
               <div className="flex flex-wrap items-end gap-3 border-t border-border pt-3">
-                <label className="bloco-caption flex flex-col gap-1">
+                <label className="bloco-caption flex flex-col gap-2">
                   Novo prazo
                   <Input
                     type="datetime-local"
@@ -401,7 +401,7 @@ function TaskCalendar({
                     onClick={() => onSelect(task)}
                     aria-pressed={selectedId === task.id}
                     className={
-                      "flex flex-col gap-1 rounded-[var(--r-sm)] border px-2.5 py-2 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
+                      "flex flex-col gap-2 rounded-[var(--r-sm)] border px-2.5 py-2 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
                       (selectedId === task.id
                         ? "border-accent bg-accent-soft"
                         : "border-border bg-surface-strong/50 hover:bg-surface-hover")
@@ -460,7 +460,7 @@ function TaskBoard({
                   <div
                     key={task.id}
                     className={
-                      "flex flex-col gap-1.5 rounded-[var(--r-sm)] border px-2.5 py-2 " +
+                      "flex flex-col gap-2 rounded-[var(--r-sm)] border px-2.5 py-2 " +
                       (selectedId === task.id ? "border-accent bg-accent-soft" : "border-border bg-surface-strong/50")
                     }
                   >
