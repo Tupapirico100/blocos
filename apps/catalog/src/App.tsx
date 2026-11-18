@@ -37,7 +37,9 @@ function CatalogApp() {
     );
   }
 
-  const variant = variants[entry.id] ?? entry.recipe.variants[0]?.id ?? "";
+  // a variacao ESCOLHIDA pelo dono e o padrao; as demais ficam na biblioteca
+  const variant =
+    variants[entry.id] ?? entry.recipe.defaultVariant ?? entry.recipe.variants[0]?.id ?? "";
   const state = states[entry.id] ?? "success";
   const isConnected = connected[entry.id] ?? true;
 

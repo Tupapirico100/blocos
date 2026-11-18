@@ -31,6 +31,22 @@ export function RecipeContent({ entry }: { entry: CatalogEntry }) {
       <div className="border-b border-border px-4 py-4">
         <p className="bloco-micro">A receita do bloco</p>
         <p className="bloco-headline mt-1.5">Como montar em um programa novo</p>
+        {recipe.defaultVariant ? (
+          <div className="mt-3 rounded-[var(--r-md)] border border-accent/25 bg-accent-soft px-3 py-2.5">
+            <p className="bloco-micro text-accent-ink">Variacao escolhida</p>
+            <p className="bloco-headline mt-1 text-fg">
+              {recipe.variants.find((v) => v.id === recipe.defaultVariant)?.label ?? recipe.defaultVariant}
+            </p>
+            <p className="bloco-caption mt-1 text-fg-secondary">
+              {recipe.variants.find((v) => v.id === recipe.defaultVariant)?.intent}
+            </p>
+            {recipe.variants.length > 1 ? (
+              <p className="bloco-caption mt-1.5 text-fg-muted">
+                Alternativas na biblioteca: {recipe.variants.filter((v) => v.id !== recipe.defaultVariant).map((v) => v.label).join(" · ")}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
       </div>
 
       <Tabs
