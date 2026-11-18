@@ -33,3 +33,18 @@ check('es-PE: nome do evento', es.includes('Cita creada'));
 check('es-PE: botao de previa', es.includes('Ver previa'));
 check('sem permissao: papel nomeado em espanhol', forb.includes('responsable de la clínica') && forb.includes('role="alert"') && forb.includes('Acceso restringido'));
 check('sem permissao padrao intacto', renderToStaticMarkup(React.createElement(blocks.WebhooksPanel, { data, state: 'forbidden', connectors: [{ id: 'webhooks', status: 'provisioned' }] })).includes('dono do consultório'));
+
+// packages-pricing (CRM-HOF: sem edicao, recepcao so ve, sem validade, moeda por pacote)
+const pk = { packages: [{ id: 'p1', name: 'Protocolo bioestimulador', priceCents: 50000, currency: 'PEN', sessions: 3, active: true }] };
+const esMsgs = { 'packages.deactivate': 'Descontinuar', 'packages.deactivateNamed': 'Descontinuar {name}', 'packages.sessions': 'Sesiones', 'packages.active': 'Activo' };
+const pkOwner = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', currency: 'PEN', timeZone: 'America/Lima', messages: esMsgs },
+  React.createElement(blocks.PackagesPricing, { data: { ...pk, canSave: false, showValidity: false, showHeader: false } })));
+const pkReception = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', currency: 'PEN', messages: esMsgs },
+  React.createElement(blocks.PackagesPricing, { data: { ...pk, canSave: false, canToggle: false, showValidity: false } })));
+const pkDefault = renderToStaticMarkup(React.createElement(blocks.PackagesPricing, { data: { packages: [{ ...pk.packages[0], currency: undefined }] } }));
+check('pacotes es-PE: preco em soles', pkOwner.includes('S/') && pkOwner.includes('500.00'));
+check('pacotes es-PE: Descontinuar e Sesiones', pkOwner.includes('Descontinuar') && pkOwner.includes('Sesiones'));
+check('pacotes canSave=false: sem Salvar', !pkOwner.includes('Salvar'));
+check('pacotes showValidity=false: sem validade', !pkOwner.includes('Validade') && !pkOwner.includes('validade'));
+check('pacotes canToggle=false: sem botao de desativar', !pkReception.includes('Descontinuar'));
+check('pacotes padrao: BRL, Salvar, Desativar, validade', pkDefault.includes('R$') && pkDefault.includes('Salvar') && pkDefault.includes('Desativar') && pkDefault.includes('Sem validade definida'));
