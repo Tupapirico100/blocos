@@ -60,6 +60,7 @@ export const leadsBoardRecipe = defineBlock({
     "Dinheiro sempre em centavos; estorno devolve o lead para a etapa anterior.",
     "Todo mundo que fala com o paciente e employee: o entry point do agente e unico por consultorio.",
   ],
+  defaultVariant: "table",
   variants: [
     {
       id: "board",

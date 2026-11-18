@@ -60,6 +60,7 @@ export const patientChartRecipe = defineBlock({
     "NUNCA renderizar dado de saude (consulta, medida, plano) em log, URL ou telemetria.",
     "Dinheiro sempre em centavos.",
   ],
+  defaultVariant: "sections",
   variants: [
     {
       id: "timeline",
