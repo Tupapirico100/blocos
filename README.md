@@ -27,6 +27,7 @@ apps/
 docs/
   MAPA-BLOCOS.md   mapa: origem -> bloco -> onde reusar
   ESCOLHAS-DO-DONO.md  tema + variacao escolhida por bloco (padrao do produto)
+  ROADMAP.md         proximas fases: Figma, conectores de CRM/agendamento, plug nos repos
   DESIGN-SYSTEM.md guia do design system
   DECISOES.md      decisoes tecnicas e o que foi descartado
   RUNBOOK-OWNER.md como o dono provisiona as conexoes
