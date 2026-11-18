@@ -346,7 +346,7 @@ function EntryWizard(props: EntryFieldsProps) {
         {steps.map((label, index) => (
           <li key={label} className="flex items-center gap-2">
             <span
-              className={`flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold ${
+              className={`flex h-6 w-6 items-center justify-center rounded-full border bloco-label-sm font-semibold ${
                 index <= step
                   ? "border-accent bg-accent-soft text-accent-ink"
                   : "border-border text-fg-faint"

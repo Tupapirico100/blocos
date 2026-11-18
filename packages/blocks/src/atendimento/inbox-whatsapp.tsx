@@ -232,7 +232,7 @@ function ConversationList({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Buscar por nome"
-            className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 text-[13px] text-fg placeholder:text-fg-faint focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15"
+            className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 bloco-control-sm text-fg placeholder:text-fg-faint focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15"
           />
         </label>
       </div>
@@ -419,7 +419,7 @@ function ChatPanel({
                 key={reply}
                 type="button"
                 onClick={() => onDraftChange(reply)}
-                className="inline-flex min-h-8 items-center rounded-[var(--r-pill)] border border-border bg-surface/60 px-3 py-1.5 text-[12px] text-fg-secondary transition-colors hover:border-border-strong hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex min-h-8 items-center rounded-[var(--r-pill)] border border-border bg-surface/60 px-3 py-1.5 bloco-label text-fg-secondary transition-colors hover:border-border-strong hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {reply}
               </button>

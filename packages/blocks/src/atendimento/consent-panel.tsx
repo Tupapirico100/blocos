@@ -352,7 +352,7 @@ function ConsentTable({ consents }: { consents: ConsentRecord[] }) {
       key: "version",
       header: "Versao do texto",
       width: "130px",
-      render: (record) => <span className="bloco-mono text-[12px]">{record.textVersion}</span>,
+      render: (record) => <span className="bloco-mono bloco-label">{record.textVersion}</span>,
     },
     {
       key: "status",
