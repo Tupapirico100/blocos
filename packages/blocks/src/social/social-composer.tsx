@@ -220,7 +220,10 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
                   checked={mediaIds.includes(item.id)}
                   onCheckedChange={() => toggleMedia(item.id)}
                   label={
-                    <span className="bloco-callout inline-block min-w-0 max-w-full flex-1 truncate text-fg">
+                    <span
+                      className="bloco-callout inline-block min-w-0 max-w-full flex-1 truncate text-fg"
+                      title={item.name}
+                    >
                       {item.name}
                       {/* Contexto para leitor de tela: o nome sozinho nao diz o que a midia e. */}
                       <span className="sr-only"> — midia para publicar</span>

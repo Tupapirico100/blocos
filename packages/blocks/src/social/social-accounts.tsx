@@ -188,7 +188,7 @@ function AccountCard({
         <Avatar name={account.displayName} src={account.avatarUrl} size={40} />
         <div className="min-w-0 flex-1">
           <p className="bloco-headline truncate" title={account.displayName}>{account.displayName}</p>
-          <p className="bloco-caption truncate">{account.handle}</p>
+          <p className="bloco-caption truncate" title={account.handle}>{account.handle}</p>
         </div>
       </div>
 
@@ -269,7 +269,7 @@ function AccountTile({
     <Panel tone="outline" padding="sm" className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <Avatar name={account.displayName} src={account.avatarUrl} size={28} />
-        <span className="bloco-callout min-w-0 flex-1 truncate font-medium text-fg">{account.handle}</span>
+        <span className="bloco-callout min-w-0 flex-1 truncate font-medium text-fg" title={account.handle}>{account.handle}</span>
         <span
           aria-hidden
           className={

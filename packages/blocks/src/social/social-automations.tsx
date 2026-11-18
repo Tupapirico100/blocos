@@ -194,7 +194,7 @@ function automationColumns(
       render: (row) => (
         <span className="flex items-center gap-1.5">
           <span className="text-fg-muted">{triggerIcon[row.trigger.type]}</span>
-          <span className="bloco-mono truncate">{row.trigger.value}</span>
+          <span className="bloco-mono truncate" title={row.trigger.value}>{row.trigger.value}</span>
           <span className="bloco-caption">({triggerLabel[row.trigger.type]})</span>
         </span>
       ),
@@ -249,7 +249,7 @@ function AutomationCard({
     <Panel tone="glass" padding="md" className="flex flex-col gap-3">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="bloco-headline truncate">{automation.name}</p>
+          <p className="bloco-headline truncate" title={automation.name}>{automation.name}</p>
           <p className="bloco-caption">{automation.accountHandle}</p>
         </div>
         <Badge tone={automation.active ? "success" : "neutral"}>
@@ -259,14 +259,14 @@ function AutomationCard({
 
       <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2">
         <span className="text-fg-muted">{triggerIcon[automation.trigger.type]}</span>
-        <span className="bloco-callout min-w-0 truncate">{triggerLabel[automation.trigger.type]}</span>
-        <span className="bloco-mono truncate text-fg">{automation.trigger.value}</span>
+        <span className="bloco-callout min-w-0 truncate" title={triggerLabel[automation.trigger.type]}>{triggerLabel[automation.trigger.type]}</span>
+        <span className="bloco-mono truncate text-fg" title={automation.trigger.value}>{automation.trigger.value}</span>
       </div>
 
       <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-border bg-surface/50 px-3 py-2">
         <span className="text-fg-muted">{actionIcon[automation.action.type]}</span>
-        <span className="bloco-callout min-w-0 truncate">{actionLabel[automation.action.type]}</span>
-        <span className="bloco-caption truncate">{automation.action.value}</span>
+        <span className="bloco-callout min-w-0 truncate" title={actionLabel[automation.action.type]}>{actionLabel[automation.action.type]}</span>
+        <span className="bloco-caption truncate" title={automation.action.value}>{automation.action.value}</span>
       </div>
 
       <div className="mt-auto flex items-center justify-between gap-2 border-t border-border pt-3">
@@ -297,7 +297,7 @@ function AutomationFlow({
   return (
     <Panel tone="outline" padding="md" className="flex flex-col gap-3">
       <div className="flex items-center justify-between gap-3">
-        <p className="bloco-headline truncate">{automation.name}</p>
+        <p className="bloco-headline truncate" title={automation.name}>{automation.name}</p>
         <div className="flex items-center gap-2">
           <Badge tone={automation.active ? "success" : "neutral"}>
             {automation.active ? "Ativa" : "Inativa"}
@@ -318,7 +318,7 @@ function AutomationFlow({
           <span className="bloco-micro flex items-center gap-1.5">
             {triggerIcon[automation.trigger.type]} Gatilho · {triggerLabel[automation.trigger.type]}
           </span>
-          <span className="bloco-mono truncate text-fg">{automation.trigger.value}</span>
+          <span className="bloco-mono truncate text-fg" title={automation.trigger.value}>{automation.trigger.value}</span>
           {automation.trigger.match ? (
             <span className="bloco-caption">Correspondencia: {automation.trigger.match}</span>
           ) : null}
@@ -332,7 +332,7 @@ function AutomationFlow({
           <span className="bloco-micro flex items-center gap-1.5">
             {actionIcon[automation.action.type]} Acao · {actionLabel[automation.action.type]}
           </span>
-          <span className="bloco-callout truncate text-fg">{automation.action.value}</span>
+          <span className="bloco-callout truncate text-fg" title={automation.action.value}>{automation.action.value}</span>
           <span className="bloco-caption">
             {automation.hits} execucao(oes) · {automation.accountHandle}
           </span>
