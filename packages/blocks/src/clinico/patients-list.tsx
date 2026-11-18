@@ -110,7 +110,7 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar por nome"
-              className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 text-[13px] text-fg placeholder:text-fg-faint focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15"
+              className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 bloco-control-sm text-fg placeholder:text-fg-faint focus:border-accent focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/15"
             />
           </label>
           <p className="bloco-caption text-fg-muted">

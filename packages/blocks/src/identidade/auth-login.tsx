@@ -121,7 +121,7 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           <button
             type="button"
             onClick={handleRecovery}
-            className="-mx-1 inline-flex min-h-8 items-center rounded-[var(--r-sm)] px-1 text-[12px] font-medium text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="-mx-1 inline-flex min-h-8 items-center rounded-[var(--r-sm)] px-1 bloco-label font-medium text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Esqueci minha senha
           </button>
@@ -152,14 +152,14 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
         <button
           type="button"
           onClick={handleResend}
-          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] text-[13px] text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] bloco-control-sm text-accent-ink transition-colors hover:text-accent-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Reenviar codigo
         </button>
         <button
           type="button"
           onClick={() => void onAction?.("auth.twoFactor.cancel", { challengeId: data.challengeId })}
-          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] text-[13px] text-fg-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex min-h-8 items-center rounded-[var(--r-sm)] bloco-control-sm text-fg-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Voltar para o login
         </button>

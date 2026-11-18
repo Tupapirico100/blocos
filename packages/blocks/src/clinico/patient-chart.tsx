@@ -276,7 +276,7 @@ function ChartTabs({ data, onOpen }: { data: PatientChartData; onOpen: () => voi
             type="button"
             aria-selected={tab === item.id}
             onClick={() => setTab(item.id)}
-            className={`inline-flex min-h-8 items-center rounded-[var(--r-md)] px-3 py-1.5 text-[13px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+            className={`inline-flex min-h-8 items-center rounded-[var(--r-md)] px-3 py-1.5 bloco-control-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               tab === item.id
                 ? "bg-surface-strong text-fg"
                 : "text-fg-muted hover:bg-surface-hover hover:text-fg-secondary"
@@ -338,7 +338,7 @@ function MeasuresBlock({ data }: { data: PatientChartData }) {
       ) : (
         <>
           <WeightChart measures={measures} />
-          <ul className="flex flex-col gap-1.5">
+          <ul className="flex flex-col gap-2">
             {measures.map((measure) => (
               <li
                 key={measure.id}
@@ -450,7 +450,7 @@ function FinancialBlock({ data, onOpen }: { data: PatientChartData; onOpen: () =
       <button
         type="button"
         onClick={onOpen}
-        className="inline-flex min-h-8 self-start items-center rounded-[var(--r-sm)] text-[13px] font-medium text-accent-ink underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="inline-flex min-h-8 self-start items-center rounded-[var(--r-sm)] bloco-control-sm font-medium text-accent-ink underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Abrir financeiro do paciente
       </button>
