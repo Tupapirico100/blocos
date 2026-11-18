@@ -9,6 +9,18 @@ do que esta atras), nao para enfeitar.
 
 ---
 
+## 0. O que a plataforma usa (decisao do dono)
+
+- **Tema: Aurora.** Os outros dois (Daylight, Graphite) continuam na biblioteca.
+- **Densidade: comfortable.**
+- **Variacao por bloco: fixada** em `defaultVariant` na receita — a tabela completa esta em
+  [`ESCOLHAS-DO-DONO.md`](./ESCOLHAS-DO-DONO.md).
+
+As variacoes nao escolhidas **nao foram apagadas**: continuam na biblioteca para outros
+programas, e o catalogo mostra a escolhida em destaque.
+
+---
+
 ## 1. Os tres eixos
 
 ```
