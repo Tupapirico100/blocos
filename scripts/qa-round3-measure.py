@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """Rodada 3 - medicao dos 4 desvios corrigidos + regressao."""
 import json
-import sys
 from playwright.sync_api import sync_playwright
 
 CHROME = "/root/.cache/ms-playwright/chromium-1243/chrome-linux/chrome"
 URL = "http://localhost:4173"
+DUMP = "/tmp/qa3-out.json"
 
 OUT = {}
+
+
+def save():
+    with open(DUMP, "w") as f:
+        json.dump(OUT, f, indent=2, ensure_ascii=False)
 
 
 def sel_block(page, bid):
@@ -24,27 +29,21 @@ def sel_variant(page, idx):
 def outline_of(page):
     return page.evaluate("""()=>{
       const el = document.activeElement;
-      if(!el) return null;
+      if(!el) return None;
       const cs = getComputedStyle(el);
       const r = el.getBoundingClientRect();
       return {
-        tag: el.tagName,
-        role: el.getAttribute('role'),
-        outlineStyle: cs.outlineStyle,
-        outlineWidth: cs.outlineWidth,
-        outlineColor: cs.outlineColor,
-        outlineOffset: cs.outlineOffset,
-        matchesFV: el.matches(':focus-visible'),
-        matchesF: el.matches(':focus'),
-        w: Math.round(r.width*100)/100,
-        h: Math.round(r.height*100)/100,
+        tag: el.tagName, role: el.getAttribute('role'), id: el.id||'',
+        outlineStyle: cs.outlineStyle, outlineWidth: cs.outlineWidth,
+        outlineColor: cs.outlineColor, outlineOffset: cs.outlineOffset,
+        matchesFV: el.matches(':focus-visible'), matchesF: el.matches(':focus'),
+        w: Math.round(r.width*100)/100, h: Math.round(r.height*100)/100,
         text: (el.innerText||'').slice(0,60)
       };
     }""")
 
 
 def focus_via_keyboard(page, selector, max_tabs=60):
-    """Foca o elemento por TECLADO: foca o anterior focavel via JS e da Tab."""
     ok = page.evaluate("""(sel)=>{
       const t = document.querySelector(sel);
       if(!t) return 'alvo-inexistente';
@@ -61,7 +60,7 @@ def focus_via_keyboard(page, selector, max_tabs=60):
         return ok
     for _ in range(max_tabs):
         page.keyboard.press("Tab")
-        got = page.evaluate("()=>document.activeElement && document.activeElement.getAttribute('data-qa-target')==='1'")
+        got = page.evaluate("()=>!!document.activeElement && document.activeElement.getAttribute('data-qa-target')==='1'")
         if got:
             return "ok"
     return "nao-alcancou"
@@ -81,39 +80,37 @@ def run():
         # ---------- C2(a) TabPanel focus-visible ----------
         sel_block(page, "office-settings")
         sel_variant(page, 1)  # tabs
-        res = page.evaluate("""()=>{
-          const tp=[...document.querySelectorAll('[role="tabpanel"]')];
-          return tp.map(e=>({tabindex:e.getAttribute('tabindex'), cls:(e.className||'').slice(0,160), vis:!!e.offsetParent}));
-        }""")
-        OUT["C2a_tabpanels"] = res
+        OUT["C2a_tabpanels"] = page.evaluate("""()=>[...document.querySelectorAll('[role="tabpanel"]')].map(e=>({
+          tabindex:e.getAttribute('tabindex'), cls:(e.className||'').slice(0,200), vis:!!e.offsetParent}))""")
         r = focus_via_keyboard(page, '[role="tabpanel"]')
         OUT["C2a_focus"] = {"resultado_foco": r, "medido": outline_of(page)}
+        save()
 
-        # tab trigger (botao da aba) tambem
         r2 = focus_via_keyboard(page, 'button[role="tab"]')
         OUT["C2a_tab_trigger"] = {"resultado_foco": r2, "medido": outline_of(page)}
+        save()
 
         # ---------- C2(b) campos de formulario ----------
         campos = {}
-        for tag in ["input", "select", "textarea"]:
-            sel_block(page, "office-settings")
-            sel_variant(page, 1)
-            n = page.evaluate(f"()=>document.querySelectorAll('section {tag}').length")
+        for bid, vidx, tag in [
+            ("office-settings", 1, "input"), ("office-settings", 1, "select"),
+            ("office-settings", 1, "textarea"),
+            ("agenda-board", 0, "input"), ("agenda-board", 0, "select"),
+            ("consent-panel", 0, "input"), ("consent-panel", 0, "select"),
+            ("social-composer", 0, "input"), ("social-composer", 0, "textarea"),
+            ("patients-list", 0, "input"), ("clinical-entry", 0, "textarea"),
+            ("auth-login", 0, "input"), ("payments-checkout", 0, "input"),
+        ]:
+            sel_block(page, bid)
+            sel_variant(page, vidx)
+            n = page.evaluate("""(t)=>document.querySelectorAll('section '+t+':not([type="hidden"])').length""", tag)
             if n == 0:
-                campos[tag] = "ausente no bloco office-settings"
+                campos[f"{bid}:{tag}"] = "ausente"
                 continue
             rr = focus_via_keyboard(page, f'section {tag}:not([type="hidden"])')
-            campos[tag] = {"resultado_foco": rr, "medido": outline_of(page)}
+            campos[f"{bid}:{tag}"] = {"resultado_foco": rr, "medido": outline_of(page)}
         OUT["C2b_campos"] = campos
-
-        # outros blocos com input
-        for bid in ["social-composer", "agenda-board", "leads-board", "consent-panel"]:
-            sel_block(page, bid)
-            for tag in ["input", "select", "textarea"]:
-                n = page.evaluate(f"()=>document.querySelectorAll('section {tag}:not([type=\"hidden\"])').length")
-                if n:
-                    rr = focus_via_keyboard(page, f'section {tag}:not([type="hidden"])')
-                    OUT.setdefault("C2b_outros", {})[f"{bid}:{tag}"] = {"resultado_foco": rr, "medido": outline_of(page)}
+        save()
 
         # ---------- C5(a) office-settings cartoes ----------
         c5a = {}
@@ -122,72 +119,72 @@ def run():
             page.wait_for_timeout(250)
             sel_block(page, "office-settings")
             sel_variant(page, 2)  # cards
-            page.wait_for_timeout(400)
+            page.wait_for_timeout(450)
             m = page.evaluate("""()=>{
               const palco = document.querySelector('section .bloco-scroll.flex-1');
-              const root = palco.querySelector('.rounded-\\[var\\(--r-xl\\\]');
-              const panels = [...root.querySelectorAll('div')].filter(e=>{
-                const cs=getComputedStyle(e);
-                return cs.borderTopWidth!=='0px' && e.className.includes('rounded-');
+              let root=null;
+              for(const d of palco.querySelectorAll('div')){
+                if((d.className||'').includes('rounded-[var(--r-xl)]')){ root=d; break; }
+              }
+              if(!root) return {erro:'root nao encontrado'};
+              const cartoes=[...root.querySelectorAll('div')].filter(e=>{
+                const h=e.querySelector(':scope > div > div > p.bloco-headline');
+                return h && (h.textContent.trim()==='WhatsApp'||h.textContent.trim()==='Instagram');
               });
-              // cartoes de canal: paineis que contem o texto WhatsApp/Instagram
-              const canais=[...root.querySelectorAll('*')].filter(e=>e.textContent.trim()==='WhatsApp'||e.textContent.trim()==='Instagram');
-              const cartoes=[...new Set(canais.map(e=>e.closest('div[class*="rounded"]')).filter(Boolean))];
-              const info=cartoes.map(c=>({
-                label:(c.querySelector('.bloco-headline')||{}).textContent,
-                sw:c.scrollWidth, cw:c.clientWidth, over:c.scrollWidth-c.clientWidth,
-                rect:(()=>{const r=c.getBoundingClientRect();return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}})()
-              }));
-              // bounding box dos textos para detectar sobreposicao
-              const textos=[...root.querySelectorAll('*')].filter(e=>['WhatsApp','Instagram'].includes(e.textContent.trim()) && e.children.length===0).map(e=>{
-                const r=e.getBoundingClientRect(); return {t:e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)};
+              const info=cartoes.map(c=>{
+                const r=c.getBoundingClientRect();
+                return {label:c.querySelector('.bloco-headline').textContent.trim(),
+                        sw:c.scrollWidth, cw:c.clientWidth, over:c.scrollWidth-c.clientWidth,
+                        rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}};
               });
-              const docOver=document.documentElement.scrollWidth-window.innerWidth;
-              return {cartoes:info, textos, docOver, docSW:document.documentElement.scrollWidth, docCW:document.documentElement.clientWidth};
+              const textos=[...root.querySelectorAll('p.bloco-headline')].filter(e=>['WhatsApp','Instagram'].includes(e.textContent.trim())).map(e=>{
+                const r=e.getBoundingClientRect(); return {t:e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),right:Math.round(r.right)};});
+              return {cartoes:info, textos:textos,
+                      docOver:document.documentElement.scrollWidth-window.innerWidth,
+                      docSW:document.documentElement.scrollWidth, docCW:document.documentElement.clientWidth};
             }""")
             c5a[str(w)] = m
-            page.screenshot(path=f"/tmp/qa3-office-cards-{w}.png", full_page=False)
+            page.screenshot(path=f"/tmp/qa3-office-cards-{w}.png")
+            save()
         OUT["C5a"] = c5a
+        save()
 
         # ---------- C5(b) social-composer 390 ----------
         page.set_viewport_size({"width": 390, "height": 844})
         page.wait_for_timeout(300)
         sel_block(page, "social-composer")
         sel_variant(page, 0)  # composer
-        page.wait_for_timeout(400)
-        c5b = page.evaluate("""()=>{
+        page.wait_for_timeout(450)
+        OUT["C5b"] = page.evaluate("""()=>{
           const out=[];
-          const spans=[...document.querySelectorAll('section span')];
-          for(const s of spans){
+          for(const s of document.querySelectorAll('section span, section div')){
             const cs=getComputedStyle(s);
             if(cs.textOverflow==='ellipsis'){
               const p=s.parentElement;
-              out.push({
-                texto:(s.textContent||'').slice(0,60),
-                spanW:Math.round(s.getBoundingClientRect().width*100)/100,
-                paiTag:p.tagName,
-                paiW:Math.round(p.getBoundingClientRect().width*100)/100,
-                paiCls:(p.className||'').slice(0,120),
-                paiTrunc:getComputedStyle(p).textOverflow,
-                paiScroll:p.scrollWidth, paiClient:p.clientWidth,
-                paiOverflow:p.scrollWidth-p.clientWidth,
-                sobrepoePai: s.getBoundingClientRect().right > p.getBoundingClientRect().right+0.5
-              });
+              const sr=s.getBoundingClientRect(), pr=p.getBoundingClientRect();
+              out.push({tag:s.tagName, texto:(s.textContent||'').slice(0,60),
+                spanW:Math.round(sr.width*100)/100, spanRight:Math.round(sr.right*100)/100,
+                paiTag:p.tagName, paiW:Math.round(pr.width*100)/100, paiRight:Math.round(pr.right*100)/100,
+                paiCls:(p.className||'').slice(0,140),
+                paiScroll:p.scrollWidth, paiClient:p.clientWidth, paiOverflow:p.scrollWidth-p.clientWidth,
+                invadePai: sr.right > pr.right + 0.5});
             }
           }
-          // rotulo IMAGEM
           const labels=[...document.querySelectorAll('section *')].filter(e=>e.children.length===0 && /IMAGEM/i.test(e.textContent||'')).map(e=>{
-            const r=e.getBoundingClientRect(); return {t:e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)};
-          });
-          const docSW=document.documentElement.scrollWidth, docCW=document.documentElement.clientWidth;
-          return {truncados:out, labels, docOver:docSW-docCW, docSW, docCW};
+            const r=e.getBoundingClientRect(); return {t:e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),right:Math.round(r.right)};});
+          const filenames=[...document.querySelectorAll('section *')].filter(e=>e.children.length===0 && /\.(png|jpg|jpeg|webp|mp4|gif)$/i.test(e.textContent.trim())).map(e=>{
+            const r=e.getBoundingClientRect(); return {t:e.textContent.trim(),cls:(e.className||'').slice(0,140),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),right:Math.round(r.right)};});
+          return {truncados:out, labels, filenames,
+                  docOver:document.documentElement.scrollWidth-document.documentElement.clientWidth,
+                  docSW:document.documentElement.scrollWidth, docCW:document.documentElement.clientWidth};
         }""")
-        OUT["C5b"] = c5b
-        page.screenshot(path="/tmp/qa3-social-composer-390.png", full_page=False)
+        page.screenshot(path="/tmp/qa3-social-composer-390.png")
+        save()
 
         OUT["erros_console"] = erros
+        save()
         browser.close()
 
 
 run()
-print(json.dumps(OUT, indent=2, ensure_ascii=False))
+print("OK")
