@@ -104,7 +104,6 @@
   --dur-2: 180ms;
   --dur-3: 260ms;
   --dur-4: 420ms;
-  --dur-5: 700ms;
 
   /* Desfoque */
   --blur-sm: 8px;
@@ -545,7 +544,12 @@
   .bloco-anim-fade-up {
     animation: bloco-fade-up var(--dur-4) var(--ease-apple) both;
   }
-  .bloco-anim-fade {
+  /* conteudo de aba que entra: a variante do Tailwind nao aplica classe custom */
+.bloco-tab-anim[data-state="active"] {
+  animation: bloco-fade-up var(--dur-4) var(--ease-apple) both;
+}
+
+.bloco-anim-fade {
     animation: bloco-fade var(--dur-3) var(--ease-out) both;
   }
   .bloco-anim-scale {
@@ -561,6 +565,14 @@
     * {
       transition-duration: 1ms !important;
       animation-duration: 1ms !important;
+      /* loop acelerado vira estroboscopio: o shimmer gira 200%/frame */
+      animation-iteration-count: 1 !important;
+    }
+    /* o que gira ou brilha continuamente e DESLIGADO, nao acelerado */
+    .bloco-skeleton,
+    .bloco-tab-anim,
+    .animate-spin {
+      animation: none !important;
     }
   }
 

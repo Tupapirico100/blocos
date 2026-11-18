@@ -528,7 +528,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
         className="flex w-full flex-col gap-5"
       >
         <div>
-          <h1 className="bloco-title3">Verificacao em duas etapas</h1>
+          <h2 className="bloco-title3">Verificacao em duas etapas</h2>
           <p className="bloco-callout mt-1 text-fg-muted">
             Vincule seu aplicativo autenticador e guarde os codigos de recuperacao.
           </p>

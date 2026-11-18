@@ -39,7 +39,7 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
+            transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
             className="fixed inset-0 z-50 bg-black/55 backdrop-blur-[3px]"
           />
         </DialogPrimitive.Overlay>
@@ -156,7 +156,7 @@ export function TabPanel({ value, children, className }: { value: string; childr
     <TabsPrimitive.Content
       value={value}
       className={cn(
-        "focus-visible:outline-none data-[state=active]:bloco-anim-fade-up",
+        "focus-visible:outline-none bloco-tab-anim",
         className,
       )}
     >
@@ -225,7 +225,7 @@ export function Drawer({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
+            transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
             className="fixed inset-0 z-40 bg-black/45 backdrop-blur-[2px]"
           />
         </DialogPrimitive.Overlay>
