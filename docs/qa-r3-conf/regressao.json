@@ -1,0 +1,4191 @@
+{
+ "console": [],
+ "ax": {
+  "auth-login": {
+   "Normal": {
+    "controls": 5,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "auth-two-factor": {
+   "Normal": {
+    "controls": 5,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "auth-recovery": {
+   "Normal": {
+    "controls": 2,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "admin-platform": {
+   "Normal": {
+    "controls": 5,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "office-team": {
+   "Normal": {
+    "controls": 13,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "office-settings": {
+   "Normal": {
+    "controls": 67,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "leads-board": {
+   "Normal": {
+    "controls": 12,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "inbox-whatsapp": {
+   "Normal": {
+    "controls": 11,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "consent-panel": {
+   "Normal": {
+    "controls": 12,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "channel-connections": {
+   "Normal": {
+    "controls": 3,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "patients-list": {
+   "Normal": {
+    "controls": 8,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "patient-chart": {
+   "Normal": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "clinical-entry": {
+   "Normal": {
+    "controls": 15,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "agenda-board": {
+   "Normal": {
+    "controls": 10,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "availability": {
+   "Normal": {
+    "controls": 12,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "follow-up-tasks": {
+   "Normal": {
+    "controls": 18,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "packages-pricing": {
+   "Normal": {
+    "controls": 10,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "payments-checkout": {
+   "Normal": {
+    "controls": 13,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "finance-overview": {
+   "Normal": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "reports-funnel": {
+   "Normal": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "meta-conversion": {
+   "Normal": {
+    "controls": 2,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "social-accounts": {
+   "Normal": {
+    "controls": 2,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "social-composer": {
+   "Normal": {
+    "controls": 24,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "social-automations": {
+   "Normal": {
+    "controls": 4,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "social-logs": {
+   "Normal": {
+    "controls": 2,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "webhooks-panel": {
+   "Normal": {
+    "controls": 3,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "agent-console": {
+   "Normal": {
+    "controls": 3,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "ops-health": {
+   "Normal": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  },
+  "integration-manifest": {
+   "Normal": {
+    "controls": 3,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Carregando": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Vazio": {
+    "controls": 1,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Erro": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   },
+   "Sem permissao": {
+    "controls": 0,
+    "unnamed": [],
+    "nUnnamed": 0
+   }
+  }
+ },
+ "overflow": {
+  "390": {
+   "auth-login": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     }
+    ],
+    "nOff": 1
+   },
+   "auth-two-factor": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 332,
+      "right": 414
+     }
+    ],
+    "nOff": 1
+   },
+   "auth-recovery": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 329,
+      "right": 411
+     }
+    ],
+    "nOff": 1
+   },
+   "admin-platform": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 333,
+      "right": 415
+     }
+    ],
+    "nOff": 1
+   },
+   "office-team": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 337,
+      "right": 419
+     }
+    ],
+    "nOff": 1
+   },
+   "office-settings": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 335,
+      "right": 416
+     },
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 45,
+      "right": 398
+     },
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 45,
+      "right": 398
+     },
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-[inherit]",
+      "left": -5,
+      "right": 395
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "left": -5,
+      "right": 11
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "left": -3,
+      "right": 10
+     }
+    ],
+    "nOff": 6
+   },
+   "leads-board": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     }
+    ],
+    "nOff": 1
+   },
+   "inbox-whatsapp": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 333,
+      "right": 415
+     }
+    ],
+    "nOff": 1
+   },
+   "consent-panel": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 333,
+      "right": 415
+     }
+    ],
+    "nOff": 1
+   },
+   "channel-connections": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 325,
+      "right": 407
+     },
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 45,
+      "right": 568
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex items-start justify-between gap-2",
+      "left": 66,
+      "right": 547
+     },
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-1 rounded-[var(--r-pill)] borde",
+      "left": 501,
+      "right": 547
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex flex-wrap items-center gap-1.5",
+      "left": 66,
+      "right": 547
+     },
+     {
+      "tag": "DIV",
+      "cls": "rounded-[var(--r-md)] border border-border bg-surface/60 p-3",
+      "left": 66,
+      "right": 547
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-micro flex items-center gap-1.5 text-fg-faint",
+      "left": 79,
+      "right": 534
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-body mt-1 text-fg",
+      "left": 79,
+      "right": 534
+     }
+    ],
+    "nOff": 43
+   },
+   "patients-list": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     },
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 46,
+      "right": 844
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 46,
+      "right": 844
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 46,
+      "right": 844
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 305,
+      "right": 516
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 516,
+      "right": 683
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 683,
+      "right": 788
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 788,
+      "right": 844
+     }
+    ],
+    "nOff": 124
+   },
+   "patient-chart": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 330,
+      "right": 412
+     }
+    ],
+    "nOff": 1
+   },
+   "clinical-entry": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 328,
+      "right": 410
+     }
+    ],
+    "nOff": 1
+   },
+   "agenda-board": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     },
+     {
+      "tag": "DIV",
+      "cls": "grid gap-px rounded-[var(--r-lg)] border border-border bg-bo",
+      "left": 45,
+      "right": 600
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 280,
+      "right": 440
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-caption truncate font-medium text-fg",
+      "left": 292,
+      "right": 428
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-micro truncate",
+      "left": 292,
+      "right": 428
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 441,
+      "right": 601
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-caption truncate font-medium text-fg",
+      "left": 453,
+      "right": 589
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-micro truncate",
+      "left": 453,
+      "right": 589
+     }
+    ],
+    "nOff": 53
+   },
+   "availability": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 331,
+      "right": 413
+     },
+     {
+      "tag": "DIV",
+      "cls": "grid min-w-[720px] gap-px rounded-[var(--r-lg)] border borde",
+      "left": 45,
+      "right": 765
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 381,
+      "right": 457
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 393,
+      "right": 418
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 458,
+      "right": 533
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 470,
+      "right": 498
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 534,
+      "right": 610
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 546,
+      "right": 571
+     }
+    ],
+    "nOff": 98
+   },
+   "follow-up-tasks": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 341,
+      "right": 423
+     },
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 46,
+      "right": 813
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 46,
+      "right": 813
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 46,
+      "right": 813
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 359,
+      "right": 479
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 479,
+      "right": 606
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 606,
+      "right": 813
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 46,
+      "right": 813
+     }
+    ],
+    "nOff": 74
+   },
+   "packages-pricing": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 335,
+      "right": 416
+     }
+    ],
+    "nOff": 1
+   },
+   "payments-checkout": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 327,
+      "right": 409
+     },
+     {
+      "tag": "BUTTON",
+      "cls": "relative inline-flex items-center justify-center font-medium",
+      "left": 227,
+      "right": 407
+     },
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-[inherit]",
+      "left": 243,
+      "right": 391
+     }
+    ],
+    "nOff": 3
+   },
+   "finance-overview": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 335,
+      "right": 417
+     }
+    ],
+    "nOff": 1
+   },
+   "reports-funnel": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     }
+    ],
+    "nOff": 1
+   },
+   "meta-conversion": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 331,
+      "right": 412
+     }
+    ],
+    "nOff": 1
+   },
+   "social-accounts": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 324,
+      "right": 406
+     },
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 45,
+      "right": 520
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex items-start gap-3",
+      "left": 66,
+      "right": 499
+     },
+     {
+      "tag": "DIV",
+      "cls": "min-w-0 flex-1",
+      "left": 118,
+      "right": 499
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-headline truncate",
+      "left": 118,
+      "right": 499
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-caption truncate",
+      "left": 118,
+      "right": 499
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex flex-wrap items-center gap-2",
+      "left": 66,
+      "right": 499
+     },
+     {
+      "tag": "DL",
+      "cls": "grid gap-x-6 gap-y-4 sm:grid-cols-2",
+      "left": 66,
+      "right": 499
+     }
+    ],
+    "nOff": 87
+   },
+   "social-composer": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 332,
+      "right": 414
+     }
+    ],
+    "nOff": 1
+   },
+   "social-automations": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 335,
+      "right": 417
+     },
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 46,
+      "right": 745
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 46,
+      "right": 745
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 46,
+      "right": 745
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 194,
+      "right": 444
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 444,
+      "right": 562
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 562,
+      "right": 665
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 665,
+      "right": 745
+     }
+    ],
+    "nOff": 91
+   },
+   "social-logs": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 335,
+      "right": 417
+     },
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 46,
+      "right": 802
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 46,
+      "right": 802
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 46,
+      "right": 802
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 300,
+      "right": 467
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 467,
+      "right": 562
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 562,
+      "right": 659
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 659,
+      "right": 802
+     }
+    ],
+    "nOff": 75
+   },
+   "webhooks-panel": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 326,
+      "right": 408
+     },
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 46,
+      "right": 1078
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 46,
+      "right": 1078
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 46,
+      "right": 1078
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 46,
+      "right": 449
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 449,
+      "right": 622
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 622,
+      "right": 784
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 784,
+      "right": 889
+     }
+    ],
+    "nOff": 92
+   },
+   "agent-console": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 330,
+      "right": 412
+     }
+    ],
+    "nOff": 1
+   },
+   "ops-health": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 336,
+      "right": 418
+     }
+    ],
+    "nOff": 1
+   },
+   "integration-manifest": {
+    "scrollW": 390,
+    "clientW": 390,
+    "bodyScrollW": 390,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "rounded-[var(--r-sm)] font-medium transition-all duration-[v",
+      "left": 334,
+      "right": 416
+     },
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 45,
+      "right": 447
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex items-start justify-between gap-3",
+      "left": 66,
+      "right": 426
+     },
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-1 rounded-[var(--r-pill)] borde",
+      "left": 322,
+      "right": 426
+     },
+     {
+      "tag": "DL",
+      "cls": "grid gap-x-6 gap-y-4 grid-cols-1",
+      "left": 66,
+      "right": 426
+     },
+     {
+      "tag": "DIV",
+      "cls": "",
+      "left": 66,
+      "right": 426
+     },
+     {
+      "tag": "DT",
+      "cls": "bloco-micro",
+      "left": 66,
+      "right": 426
+     },
+     {
+      "tag": "DD",
+      "cls": "bloco-body mt-1 text-fg",
+      "left": 66,
+      "right": 426
+     }
+    ],
+    "nOff": 197
+   }
+  },
+  "768": {
+   "auth-login": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "auth-two-factor": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "auth-recovery": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "admin-platform": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "office-team": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "office-settings": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-1 rounded-[var(--r-pill)] borde",
+      "left": 754,
+      "right": 854
+     }
+    ],
+    "nOff": 1
+   },
+   "leads-board": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "inbox-whatsapp": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "consent-panel": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "channel-connections": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "DIV",
+      "cls": "relative rounded-[var(--r-lg)] text-fg transition-[transform",
+      "left": 321,
+      "right": 844
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex items-start justify-between gap-2",
+      "left": 342,
+      "right": 823
+     },
+     {
+      "tag": "SPAN",
+      "cls": "inline-flex items-center gap-1 rounded-[var(--r-pill)] borde",
+      "left": 777,
+      "right": 823
+     },
+     {
+      "tag": "DIV",
+      "cls": "flex flex-wrap items-center gap-1.5",
+      "left": 342,
+      "right": 823
+     },
+     {
+      "tag": "DIV",
+      "cls": "rounded-[var(--r-md)] border border-border bg-surface/60 p-3",
+      "left": 342,
+      "right": 823
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-micro flex items-center gap-1.5 text-fg-faint",
+      "left": 355,
+      "right": 810
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-body mt-1 text-fg",
+      "left": 355,
+      "right": 810
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-caption mt-0.5 text-fg-muted",
+      "left": 355,
+      "right": 810
+     }
+    ],
+    "nOff": 36
+   },
+   "patients-list": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1120
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1120
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1120
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 581,
+      "right": 792
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 792,
+      "right": 959
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 959,
+      "right": 1064
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 1064,
+      "right": 1120
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 322,
+      "right": 1120
+     }
+    ],
+    "nOff": 123
+   },
+   "patient-chart": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "clinical-entry": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "agenda-board": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "DIV",
+      "cls": "grid gap-px rounded-[var(--r-lg)] border border-border bg-bo",
+      "left": 321,
+      "right": 876
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 717,
+      "right": 877
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-caption truncate font-medium text-fg",
+      "left": 729,
+      "right": 865
+     },
+     {
+      "tag": "P",
+      "cls": "bloco-micro truncate",
+      "left": 729,
+      "right": 865
+     },
+     {
+      "tag": "DIV",
+      "cls": "min-h-[64px] bg-surface/40 p-1.5",
+      "left": 717,
+      "right": 877
+     },
+     {
+      "tag": "DIV",
+      "cls": "min-h-[64px] bg-surface/40 p-1.5",
+      "left": 717,
+      "right": 877
+     },
+     {
+      "tag": "DIV",
+      "cls": "min-h-[64px] bg-surface/40 p-1.5",
+      "left": 717,
+      "right": 877
+     },
+     {
+      "tag": "BUTTON",
+      "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(--r-sm)] border",
+      "left": 723,
+      "right": 871
+     }
+    ],
+    "nOff": 24
+   },
+   "availability": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "DIV",
+      "cls": "grid min-w-[720px] gap-px rounded-[var(--r-lg)] border borde",
+      "left": 321,
+      "right": 1041
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 734,
+      "right": 809
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 746,
+      "right": 774
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 810,
+      "right": 886
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 822,
+      "right": 847
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 887,
+      "right": 963
+     },
+     {
+      "tag": "SPAN",
+      "cls": "bloco-micro",
+      "left": 899,
+      "right": 925
+     },
+     {
+      "tag": "DIV",
+      "cls": "bg-surface/90 px-3 py-2",
+      "left": 964,
+      "right": 1040
+     }
+    ],
+    "nOff": 68
+   },
+   "follow-up-tasks": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1089
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1089
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1089
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 755,
+      "right": 882
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 882,
+      "right": 1089
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 322,
+      "right": 1089
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border/60 transition-colors duration-[var(--",
+      "left": 322,
+      "right": 1089
+     },
+     {
+      "tag": "TD",
+      "cls": "px-[var(--density-cell-x)] py-[var(--density-cell-y)] bloco-",
+      "left": 755,
+      "right": 882
+     }
+    ],
+    "nOff": 60
+   },
+   "packages-pricing": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "payments-checkout": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "finance-overview": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "reports-funnel": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "meta-conversion": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "social-accounts": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "social-composer": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "social-automations": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1021
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1021
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1021
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 720,
+      "right": 838
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 838,
+      "right": 941
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 941,
+      "right": 1021
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 322,
+      "right": 1021
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border/60 transition-colors duration-[var(--",
+      "left": 322,
+      "right": 1021
+     }
+    ],
+    "nOff": 63
+   },
+   "social-logs": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1078
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1078
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1078
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 743,
+      "right": 838
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 838,
+      "right": 935
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 935,
+      "right": 1078
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 322,
+      "right": 1078
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border/60 transition-colors duration-[var(--",
+      "left": 322,
+      "right": 1078
+     }
+    ],
+    "nOff": 61
+   },
+   "webhooks-panel": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 725,
+      "right": 898
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 898,
+      "right": 1060
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 1060,
+      "right": 1165
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 1165,
+      "right": 1274
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 1274,
+      "right": 1354
+     }
+    ],
+    "nOff": 78
+   },
+   "agent-console": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "ops-health": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   },
+   "integration-manifest": {
+    "scrollW": 768,
+    "clientW": 768,
+    "bodyScrollW": 768,
+    "overflow": false,
+    "offenders": [],
+    "nOff": 0
+   }
+  },
+  "1280": {
+   "auth-login": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-two-factor": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-recovery": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "admin-platform": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "office-team": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "office-settings": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "leads-board": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "inbox-whatsapp": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "consent-panel": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "channel-connections": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "patients-list": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "patient-chart": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "clinical-entry": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "agenda-board": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "availability": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "follow-up-tasks": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "packages-pricing": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "payments-checkout": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "finance-overview": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "reports-funnel": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "meta-conversion": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "social-accounts": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "social-composer": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "social-automations": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "social-logs": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "webhooks-panel": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "TABLE",
+      "cls": "w-full border-collapse text-left",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "THEAD",
+      "cls": "sticky top-0 z-10",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TH",
+      "cls": "bloco-micro bg-surface/80 px-[var(--density-cell-x)] py-[var",
+      "left": 1274,
+      "right": 1354
+     },
+     {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TR",
+      "cls": "border-b border-border/60 transition-colors duration-[var(--",
+      "left": 322,
+      "right": 1354
+     },
+     {
+      "tag": "TD",
+      "cls": "px-[var(--density-cell-x)] py-[var(--density-cell-y)] bloco-",
+      "left": 1274,
+      "right": 1354
+     },
+     {
+      "tag": "LABEL",
+      "cls": "flex items-start gap-3",
+      "left": 1286,
+      "right": 1342
+     }
+    ],
+    "nOff": 28
+   },
+   "agent-console": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "ops-health": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   },
+   "integration-manifest": {
+    "scrollW": 1280,
+    "clientW": 1280,
+    "bodyScrollW": 1280,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1281,
+      "right": 1361
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1321,
+      "right": 1321
+     }
+    ],
+    "nOff": 2
+   }
+  },
+  "1440": {
+   "auth-login": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-two-factor": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-recovery": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "admin-platform": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "office-team": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "office-settings": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "leads-board": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "inbox-whatsapp": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "consent-panel": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "channel-connections": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "patients-list": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "patient-chart": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "clinical-entry": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "agenda-board": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "availability": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "follow-up-tasks": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "packages-pricing": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "payments-checkout": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "finance-overview": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "reports-funnel": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "meta-conversion": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "social-accounts": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "social-composer": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "social-automations": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "social-logs": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "webhooks-panel": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "agent-console": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "ops-health": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   },
+   "integration-manifest": {
+    "scrollW": 1440,
+    "clientW": 1440,
+    "bodyScrollW": 1440,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1441,
+      "right": 1521
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1481,
+      "right": 1481
+     }
+    ],
+    "nOff": 2
+   }
+  },
+  "1920": {
+   "auth-login": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-two-factor": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "auth-recovery": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "admin-platform": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "office-team": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "office-settings": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "leads-board": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "inbox-whatsapp": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "consent-panel": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "channel-connections": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "patients-list": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "patient-chart": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "clinical-entry": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "agenda-board": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "availability": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "follow-up-tasks": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "packages-pricing": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "payments-checkout": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "finance-overview": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "reports-funnel": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "meta-conversion": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "social-accounts": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "social-composer": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "social-automations": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "social-logs": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "webhooks-panel": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "agent-console": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "ops-health": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   },
+   "integration-manifest": {
+    "scrollW": 1920,
+    "clientW": 1920,
+    "bodyScrollW": 1920,
+    "overflow": false,
+    "offenders": [
+     {
+      "tag": "BUTTON",
+      "cls": "group relative flex items-center gap-2 whitespace-nowrap px-",
+      "left": 1921,
+      "right": 2001
+     },
+     {
+      "tag": "SPAN",
+      "cls": "absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-accent",
+      "left": 1961,
+      "right": 1961
+     }
+    ],
+    "nOff": 2
+   }
+  }
+ }
+}
