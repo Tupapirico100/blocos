@@ -173,11 +173,11 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
         title="Canais conectados"
         description="Por onde o consultorio conversa com os pacientes."
       />
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="@container grid gap-3 @[420px]:grid-cols-2">
         {data.channels.map((channel) => (
-          <Panel key={channel.id} tone="glass" padding="md" className="flex flex-col gap-3">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex items-center gap-3">
+          <Panel key={channel.id} tone="glass" padding="md" className="flex min-w-0 flex-col gap-3">
+            <div className="flex min-w-0 flex-wrap items-start justify-between gap-3">
+              <div className="flex min-w-0 items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] bg-accent-soft text-accent-ink">
                   {CHANNEL_ICON[channel.id]}
                 </span>
@@ -283,6 +283,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
             variant="secondary"
             icon={<AlertTriangle className="h-4 w-4" aria-hidden />}
             onClick={handleAcceptRisk}
+            className="h-auto min-h-[var(--btn-h-sm)] max-w-full whitespace-normal py-2 text-left"
           >
             {riskIsOutdated ? `Aceitar a versao ${data.riskVersion}` : "Aceitar o risco"}
           </Button>
@@ -309,7 +310,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
           {hours.map((day, index) => (
             <li
               key={day.day}
-              className="flex flex-wrap items-center justify-between gap-3 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5"
+              className="flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5"
             >
               <Switch
                 checked={day.enabled}
@@ -320,7 +321,7 @@ export function OfficeSettings(props: BlockProps<OfficeSettingsData, OfficeSetti
                 }
                 label={day.day}
               />
-              <div className="flex items-center gap-2">
+              <div className="flex min-w-0 flex-1 items-center gap-2">
                 <Input
                   aria-label={`Inicio de ${day.day}`}
                   type="time"

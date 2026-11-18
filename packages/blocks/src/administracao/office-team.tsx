@@ -227,7 +227,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
               className="flex flex-wrap items-center justify-between gap-3 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5"
             >
               <div className="min-w-0">
-                <p className="truncate text-[14px] text-fg">{invite.email}</p>
+                <p className="truncate bloco-control text-fg">{invite.email}</p>
                 <p className="bloco-caption text-fg-muted">
                   {ROLE_LABEL[invite.role]} · token{" "}
                   <span className="bloco-mono text-fg-secondary">{invite.tokenPreview}</span> · expira em{" "}
@@ -325,7 +325,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
             <div className="flex min-w-0 items-center gap-3">
               <Avatar name={member.name} />
               <div className="min-w-0">
-                <p className="flex items-center gap-2 truncate text-[14px] font-medium text-fg">
+                <p className="flex items-center gap-2 truncate bloco-control font-medium text-fg">
                   {member.name}
                   {isPlatformAccess ? (
                     <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-ink" aria-hidden />
@@ -378,7 +378,7 @@ export function OfficeTeam(props: BlockProps<OfficeTeamData, OfficeTeamVariant>)
               <div className="flex items-center gap-3">
                 <Avatar name={member.name} size={40} />
                 <div className="min-w-0">
-                  <p className="truncate text-[14px] font-medium text-fg">{member.name}</p>
+                  <p className="truncate bloco-control font-medium text-fg">{member.name}</p>
                   <p className="bloco-caption truncate text-fg-muted">{member.email}</p>
                 </div>
               </div>

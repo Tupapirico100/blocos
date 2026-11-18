@@ -311,7 +311,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
 
             {rescheduling ? (
               <div className="flex flex-wrap items-end gap-3 border-t border-border pt-3">
-                <label className="bloco-caption flex flex-col gap-1">
+                <label className="bloco-caption flex flex-col gap-2">
                   Nova data
                   <Input
                     type="date"
@@ -320,7 +320,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
                     className="h-9"
                   />
                 </label>
-                <label className="bloco-caption flex flex-col gap-1">
+                <label className="bloco-caption flex flex-col gap-2">
                   Nova hora
                   <Input
                     type="time"
@@ -555,7 +555,7 @@ function AgendaList({
             aria-label={`Alterar status de ${row.patientName}`}
             value={row.status}
             onChange={(e) => onStatus(row, e.target.value as AppointmentStatus)}
-            className="h-8 text-[13px]"
+            className="h-8 bloco-control-sm"
           >
             {(Object.keys(STATUS_LABEL) as AppointmentStatus[]).map((status) => (
               <option key={status} value={status}>
