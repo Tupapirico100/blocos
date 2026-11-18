@@ -96,6 +96,7 @@ export const inboxWhatsappRecipe = defineBlock({
     "A Fila de eventos da Meta usa chave deterministica (dedup) e nunca leva dado de saude.",
     "Todo mundo que fala com o paciente e employee: nao existe papel de 'atendente' separado.",
   ],
+  defaultVariant: "split",
   variants: [
     {
       id: "split",

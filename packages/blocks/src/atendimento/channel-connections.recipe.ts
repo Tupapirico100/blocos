@@ -69,6 +69,7 @@ export const channelConnectionsRecipe = defineBlock({
     "Credencial e segredo: nunca vai para log, URL ou telemetria.",
   ],
   emptyAction: { id: "channel.reconnect", label: "Reconectar canal" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

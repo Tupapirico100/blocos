@@ -58,6 +58,7 @@ export const consentPanelRecipe = defineBlock({
     "Consentimento e dado sensivel: nunca vai para log, URL ou telemetria.",
   ],
   emptyAction: { id: "consent.grant", label: "Registrar consentimento" },
+  defaultVariant: "table",
   variants: [
     {
       id: "cards",
