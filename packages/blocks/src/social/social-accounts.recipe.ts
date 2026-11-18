@@ -80,6 +80,7 @@ export const socialAccountsRecipe = defineBlock({
     "Reconectar uma conta expirada nao cria uma conta duplicada: reaproveita o mesmo registro.",
   ],
   emptyAction: { id: "social.connect", label: "Conectar conta" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

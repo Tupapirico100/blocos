@@ -85,6 +85,7 @@ export const socialAutomationsRecipe = defineBlock({
     "Regra desativada e preservada: religar nao perde historico de execucoes.",
     "O texto exato do comentario do paciente nao e persistido — a execucao guarda apenas contadores.",
   ],
+  defaultVariant: "flow",
   variants: [
     {
       id: "list",

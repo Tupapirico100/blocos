@@ -81,6 +81,7 @@ export const reportsFunnelRecipe = defineBlock({
     "Estorno devolve o lead: o paciente volta para a etapa new e o funil reflete isso.",
     "O relatorio nao expoe dado de saude: contagens e origens, nunca conteudo de atendimento.",
   ],
+  defaultVariant: "funnel",
   variants: [
     {
       id: "funnel",
