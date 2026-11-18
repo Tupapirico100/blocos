@@ -165,7 +165,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="bloco-headline truncate">{office.name}</p>
+          <p className="bloco-headline truncate" title={office.name}>{office.name}</p>
           <p className="bloco-caption break-words text-fg-muted">{office.city}</p>
         </div>
         <Badge tone={STATUS_TONE[office.status]}>{STATUS_LABEL[office.status]}</Badge>
@@ -211,7 +211,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           header: "Consultorio",
           render: (office) => (
             <div className="min-w-0">
-              <p className="truncate font-medium text-fg">{office.name}</p>
+              <p className="truncate font-medium text-fg" title={office.name}>{office.name}</p>
               <p className="bloco-caption break-words text-fg-muted">{office.city}</p>
             </div>
           ),
@@ -263,7 +263,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
             className="flex w-full items-center justify-between gap-3 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5 text-left transition-colors hover:border-border-strong hover:bg-surface-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <span className="min-w-0">
-              <span className="block truncate text-[14px] font-medium text-fg">{office.name}</span>
+              <span className="block truncate text-[14px] font-medium text-fg" title={office.name}>{office.name}</span>
               <span className="bloco-caption block break-words text-fg-muted">
                 {office.city} · {office.members} membros
               </span>

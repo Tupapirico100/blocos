@@ -260,12 +260,15 @@ function ConversationList({
                   <Avatar name={conversation.name} size={34} />
                   <span className="min-w-0 flex-1">
                     <span className="flex items-center justify-between gap-2">
-                      <span className="bloco-headline truncate text-fg">{conversation.name}</span>
+                      <span className="bloco-headline truncate text-fg" title={conversation.name}>{conversation.name}</span>
                       <span className="bloco-micro shrink-0 text-fg-faint">
                         {formatTime(conversation.lastMessageAt)}
                       </span>
                     </span>
-                    <span className="bloco-caption mt-0.5 block truncate text-fg-muted">
+                    <span
+                      className="bloco-caption mt-0.5 block truncate text-fg-muted"
+                      title={conversation.lastMessage}
+                    >
                       {conversation.lastMessage}
                     </span>
                     <span className="mt-1.5 flex flex-wrap items-center gap-1">

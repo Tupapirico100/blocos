@@ -134,7 +134,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
               <Panel key={pkg.id} tone="glass" className="flex min-w-[248px] flex-col gap-3">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <p className="bloco-title3 truncate">{pkg.name}</p>
+                    <p className="bloco-title3 truncate" title={pkg.name}>{pkg.name}</p>
                     {pkg.description ? (
                       <p className="bloco-caption mt-0.5 break-words text-fg-muted">{pkg.description}</p>
                     ) : null}
@@ -219,7 +219,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
                   }
                 >
                   <span className="min-w-0">
-                    <span className="bloco-caption block truncate font-medium text-fg">{pkg.name}</span>
+                    <span className="bloco-caption block truncate font-medium text-fg" title={pkg.name}>{pkg.name}</span>
                     <span className="bloco-micro block tabular-nums">{formatBRL(pkg.priceCents)}</span>
                   </span>
                   <Badge tone={statusTone(pkg.active)}>{pkg.active ? "Ativo" : "Inativo"}</Badge>
@@ -230,7 +230,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
             <Panel tone="glass" className="flex flex-col gap-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="bloco-title3 truncate">{selected.name}</p>
+                  <p className="bloco-title3 truncate" title={selected.name}>{selected.name}</p>
                   {selected.description ? (
                     <p className="bloco-caption mt-0.5 break-words text-fg-muted">{selected.description}</p>
                   ) : null}
