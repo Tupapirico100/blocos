@@ -130,6 +130,7 @@ export const agentConsoleRecipe = defineBlock({
     "A chave da Anthropic nunca e exibida: a interface so mostra o nome da variavel de ambiente.",
   ],
   emptyAction: { id: "agent.toggle", label: "Ativar agente" },
+  defaultVariant: "logs",
   variants: [
     {
       id: "chat",

@@ -113,6 +113,7 @@ export const authTwoFactorRecipe = defineBlock({
     "Regra 11: a lista de permitidos e reavaliada a cada login — remover o fator nao amplia permissao.",
     "Nenhum dado de saude (consulta, medida, plano alimentar) e exibido neste painel.",
   ],
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",

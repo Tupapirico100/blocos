@@ -161,6 +161,7 @@ export const integrationManifestRecipe = defineBlock({
     "Nenhum conector grava ou envia dado de saude do paciente.",
   ],
   emptyAction: { id: "connector.provision", label: "Provisionar conector" },
+  defaultVariant: "cards",
   variants: [
     {
       id: "cards",
