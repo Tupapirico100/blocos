@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@blocos/ui";
 import type { BlockRecipe, BlockState, ConnectorState } from "@blocos/core";
-import { Button, ConnectorLock, EmptyState, Skeleton } from "@blocos/ui";
+import { Button, ConnectorLock, EmptyState, Skeleton, useBlocosLocale } from "@blocos/ui";
 
 /* ------------------------------------------------------------------ */
 /* Tipos comuns                                                        */
@@ -56,7 +56,12 @@ export interface BlockFrameProps {
   className?: string;
 }
 
-const ROLE_LABEL: Record<string, string> = {
+/**
+ * Nome de cada papel na tela de "sem permissao". Padrao do CRM-Nutricionista;
+ * outro app troca pela chave `role.<id>` no `LocaleProvider` (ex.: no CRM-HOF,
+ * `role.owner` = "responsable de la clinica").
+ */
+export const ROLE_LABEL: Record<string, string> = {
   owner: "dono do consultório",
   nutritionist: "nutricionista",
   receptionist: "recepcionista",
@@ -90,6 +95,7 @@ export function BlockFrame({
   children,
   className,
 }: BlockFrameProps) {
+  const { t } = useBlocosLocale();
   const requires = requiresProp ?? (recipe ? requiresOf(recipe) : []);
   const requiredRoles = requiredRolesProp ?? (recipe ? rolesOf(recipe) : undefined);
   const acaoDoVazio = recipe ? primaryActionOf(recipe) : undefined;
@@ -108,9 +114,10 @@ export function BlockFrame({
       storage: "Storage",
       database: "Banco de dados",
     };
+    const id = missing[0]!;
     return (
       <ConnectorLock
-        connectorLabel={labels[missing[0]!] ?? missing[0]!}
+        connectorLabel={t(`connector.${id}`, labels[id] ?? id)}
         onRequestAccess={() => onRequestConnector?.(missing[0]!)}
         className={className}
       />
@@ -139,8 +146,8 @@ export function BlockFrame({
       ) : undefined);
     const conteudo = empty ?? (
       <EmptyState
-        title="Nada por aqui ainda"
-        description="Os itens vao aparecer aqui assim que existirem."
+        title={t("frame.emptyTitle", "Nada por aqui ainda")}
+        description={t("frame.emptyDescription", "Os itens vao aparecer aqui assim que existirem.")}
         action={acao}
       />
     );
@@ -160,23 +167,27 @@ export function BlockFrame({
         role="alert"
         className={cn("rounded-[var(--r-lg)] border border-danger/30 bg-danger-soft p-4", className)}
       >
-        <p className="bloco-headline text-danger">Algo deu errado</p>
+        <p className="bloco-headline text-danger">{t("frame.errorTitle", "Algo deu errado")}</p>
         <div className="bloco-callout mt-1 text-fg-secondary">
-          {error ?? "Nao foi possivel carregar este bloco. Tente novamente."}
+          {error ?? t("frame.errorDescription", "Nao foi possivel carregar este bloco. Tente novamente.")}
         </div>
       </div>
     );
   }
 
   if (state === "forbidden") {
-    const papeis = requiredRoles?.map((r) => ROLE_LABEL[r] ?? r).join(" ou ");
+    const papeis = requiredRoles?.map((r) => t(`role.${r}`, ROLE_LABEL[r] ?? r)).join(t("frame.rolesJoin", " ou "));
     return (
       <div className={cn("rounded-[var(--r-lg)] border border-warn/30 bg-warn-soft p-4", className)} role="alert">
-        <p className="bloco-headline text-warn">Acesso restrito</p>
+        <p className="bloco-headline text-warn">{t("frame.forbiddenTitle", "Acesso restrito")}</p>
         <p className="bloco-callout mt-1 text-fg-secondary">
           {papeis
-            ? `Esta area e visivel apenas para ${papeis}. Fale com o dono do consultório para pedir acesso.`
-            : "Seu perfil nao tem permissao para ver esta informacao."}
+            ? t(
+                "frame.forbiddenRoles",
+                "Esta area e visivel apenas para {roles}. Fale com o dono do consultório para pedir acesso.",
+                { roles: papeis },
+              )
+            : t("frame.forbidden", "Seu perfil nao tem permissao para ver esta informacao.")}
         </p>
       </div>
     );

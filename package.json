@@ -15,7 +15,8 @@
     "mapa": "node scripts/gerar-mapa.mjs",
     "verificar": "npm run build && npm run build:app && npm run mapa && npm run escolhas && npm run html",
     "html": "node scripts/gerar-html-autocontido.mjs",
-    "escolhas": "node scripts/gerar-escolhas.mjs"
+    "escolhas": "node scripts/gerar-escolhas.mjs",
+    "verificar:locale": "node scripts/verificar-locale.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

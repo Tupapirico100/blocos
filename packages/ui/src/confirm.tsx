@@ -3,6 +3,7 @@ import { AlertTriangle } from "lucide-react";
 import { Button } from "./button.js";
 import { Dialog } from "./overlay.js";
 import { cn } from "./cn.js";
+import { useBlocosLocale } from "./locale.js";
 
 export interface ConfirmDialogProps {
   open: boolean;
@@ -30,12 +31,13 @@ export function ConfirmDialog({
   onOpenChange,
   title,
   description,
-  confirmLabel = "Confirmar",
-  cancelLabel = "Cancelar",
+  confirmLabel,
+  cancelLabel,
   tone = "danger",
   busy,
   onConfirm,
 }: ConfirmDialogProps) {
+  const { t } = useBlocosLocale();
   return (
     <Dialog
       open={open}
@@ -55,7 +57,7 @@ export function ConfirmDialog({
       footer={
         <>
           <Button type="button" variant="ghost" onClick={() => onOpenChange(false)} disabled={busy}>
-            {cancelLabel}
+            {cancelLabel ?? t("ui.cancel", "Cancelar")}
           </Button>
           <Button
             type="button"
@@ -66,7 +68,7 @@ export function ConfirmDialog({
               onOpenChange(false);
             }}
           >
-            {confirmLabel}
+            {confirmLabel ?? t("ui.confirm", "Confirmar")}
           </Button>
         </>
       }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "./cn.js";
+import { useBlocosLocale } from "./locale.js";
 
 export type CalloutTone = "info" | "success" | "warn" | "danger" | "accent";
 
@@ -51,6 +52,7 @@ export function ConnectorLock({
   onRequestAccess?: () => void;
   className?: string;
 }) {
+  const { t } = useBlocosLocale();
   return (
     <div
       className={cn(
@@ -65,11 +67,11 @@ export function ConnectorLock({
         </svg>
       </span>
       <div>
-        <p className="bloco-headline">{connectorLabel} nao esta conectado</p>
+        <p className="bloco-headline">{t("ui.connectorMissing", "{connector} nao esta conectado", { connector: connectorLabel })}</p>
         <p className="bloco-callout mt-1 max-w-sm text-fg-muted">
           {ownerOnly
-            ? "Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco."
-            : "Peca ao dono da plataforma para provisionar esta conexao."}
+            ? t("ui.connectorOwnerOnly", "Apenas o dono da plataforma pode provisionar esta conexao. Nenhum segredo trafega pelo bloco.")
+            : t("ui.connectorAsk", "Peca ao dono da plataforma para provisionar esta conexao.")}
         </p>
       </div>
       {onRequestAccess ? (
@@ -78,7 +80,7 @@ export function ConnectorLock({
           onClick={onRequestAccess}
           className="rounded-[var(--r-md)] border border-border-strong bg-surface-strong px-3.5 py-2 bloco-control-sm font-medium transition-colors hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          Solicitar acesso
+          {t("ui.requestAccess", "Solicitar acesso")}
         </button>
       ) : null}
     </div>
@@ -94,6 +96,7 @@ export interface ToastMessage {
 }
 
 export function ToastStack({ toasts, onDismiss }: { toasts: ToastMessage[]; onDismiss?: (id: string) => void }) {
+  const { t: tr } = useBlocosLocale();
   if (toasts.length === 0) return null;
   return (
     <div className="pointer-events-none fixed right-4 top-4 z-[60] flex w-full max-w-sm flex-col gap-2">
@@ -113,7 +116,7 @@ export function ToastStack({ toasts, onDismiss }: { toasts: ToastMessage[]; onDi
             <button
               type="button"
               onClick={() => onDismiss(t.id)}
-              aria-label="Dispensar"
+              aria-label={tr("ui.dismiss", "Dispensar")}
               className="text-fg-faint transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>

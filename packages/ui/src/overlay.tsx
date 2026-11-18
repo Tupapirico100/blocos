@@ -2,6 +2,7 @@ import * as React from "react";
 import { Dialog as DialogPrimitive, Tabs as TabsPrimitive, Tooltip as TooltipPrimitive } from "radix-ui";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "./cn.js";
+import { useBlocosLocale } from "./locale.js";
 
 /* ------------------------------------------------------------------ */
 /* Dialog                                                              */
@@ -25,6 +26,7 @@ const dialogSizes = {
 } as const;
 
 export function Dialog({ open, onOpenChange, title, description, children, footer, size = "md" }: DialogProps) {
+  const { t } = useBlocosLocale();
   // guarda o elemento que tinha o foco para devolver o foco a ele ao fechar
   const gatilho = React.useRef<HTMLElement | null>(null);
   React.useEffect(() => {
@@ -75,7 +77,7 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
             <DialogPrimitive.Close asChild>
               <button
                   type="button"
-                aria-label="Fechar"
+                aria-label={t("ui.close", "Fechar")}
                 className="absolute right-4 top-4 rounded-[var(--r-sm)] p-1 text-fg-muted transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
@@ -211,6 +213,7 @@ export function Drawer({
   footer?: React.ReactNode;
   side?: "left" | "right";
 }) {
+  const { t } = useBlocosLocale();
   // Construido sobre Radix Dialog: foco preso, Esc fecha e o foco volta ao gatilho.
   const gatilho = React.useRef<HTMLElement | null>(null);
   React.useEffect(() => {
@@ -253,7 +256,7 @@ export function Drawer({
               <DialogPrimitive.Close asChild>
                 <button
                   type="button"
-                  aria-label="Fechar"
+                  aria-label={t("ui.close", "Fechar")}
                   className="rounded-[var(--r-sm)] p-1 text-fg-muted transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden>
