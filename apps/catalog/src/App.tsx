@@ -71,7 +71,7 @@ function CatalogApp() {
             </span>
             <div className="min-w-0">
               <h1 className="bloco-headline leading-tight">Blocos</h1>
-              <p className="bloco-caption truncate text-fg-faint">
+              <p className="bloco-caption truncate text-fg-faint" title="Biblioteca de blocos reutilizaveis · design system Aurora · beta">
                 Biblioteca de blocos reutilizaveis · design system Aurora · beta
               </p>
             </div>

@@ -1,94 +1,55 @@
 import { defineBlock } from "@blocos/core";
-import { z } from "zod";
 
 /**
- * social-logs — logs de publicacao e interacao do Instagram.
+ * social-logs — registro das respostas automaticas (comentario -> direct).
  *
  * Extraido de `Agendador-Instagram: src/app/(app)/logs/page.tsx`.
+ * Somente leitura: resposta que falhou nao e reenviada sozinha (a Meta aceita
+ * 1 resposta privada por comentario).
  */
-
-export const logRetryInput = z.object({
-  id: z.string().min(1, "Informe o id do registro que falhou."),
-});
-
 export const socialLogsRecipe = defineBlock({
   id: "social-logs",
-  name: "Logs de publicacao",
+  name: "Registros de respostas",
   domain: "social",
   summary:
-    "Historico de publicacoes e interacoes do Instagram, com nivel, conta, acao, status e data, e reexecucao de falhas.",
+    "Ultimas respostas automaticas: quando, conta, automacao, quem escreveu, o texto recebido e o resultado (enviada, ignorada, em andamento ou erro).",
   origins: ["Agendador-Instagram: src/app/(app)/logs/page.tsx"],
   ports: [
     {
-      id: "socialLogsRepository",
-      label: "Repositorio de logs",
+      id: "automationLogs",
+      label: "Registros das automacoes",
       contract:
-        "Historico paginado por conta e nivel. Nao devolve token, legenda completa nem dado de paciente.",
-      methods: ["list(filter): SocialLogEntry[]", "retry(id): SocialLogEntry"],
+        "As 100 ultimas linhas de automation_logs com o nome da automacao e o @ da conta. Erro ja vem tratado, sem token nem corpo cru da Meta.",
+      methods: ["listRecent(limit): SocialLogEntry[]"],
       connectors: ["database"],
       mockable: true,
     },
-    {
-      id: "publishQueue",
-      label: "Fila de publicacao",
-      contract: "Reexecuta uma publicacao que falhou, respeitando a chave deterministica de dedup da Meta.",
-      methods: ["enqueue(accountId, postId): Task", "findById(taskId): Task | null"],
-      connectors: ["instagram"],
-      mockable: true,
-    },
   ],
-  actions: [
-    {
-      id: "log.retry",
-      title: "Reexecutar publicacao",
-      description:
-        "Use quando o usuario pedir para reexecutar uma publicacao ou interacao que falhou. A reexecucao usa a mesma chave de dedup, entao nao duplica entrega.",
-      input: logRetryInput,
-      http: { method: "POST", path: "/social/logs/:id/retry" },
-      permissions: ["owner", "nutritionist", "receptionist"],
-      connectors: ["instagram"],
-      states: ["success", "error", "forbidden"],
-    },
-  ],
+  actions: [],
   connectors: [
-    {
-      id: "instagram",
-      label: "Instagram Graph API",
-      kind: "api",
-      description: "Destino das publicacoes reexecutadas.",
-      env: ["INSTAGRAM_APP_ID", "INSTAGRAM_APP_SECRET"],
-      ownerOnly: true,
-    },
-    {
-      id: "database",
-      label: "Banco de dados",
-      kind: "database",
-      description: "Guarda o historico de logs.",
-      env: ["DATABASE_URL"],
-      ownerOnly: true,
-    },
+    { id: "database", label: "Banco de dados", kind: "database", description: "Postgres (Supabase), so a service role.", ownerOnly: true },
   ],
   rules: [
-    "Log nunca carrega token, legenda completa, mensagem de paciente ou dado de saude.",
-    "A fila de eventos da Meta usa chave deterministica (dedup): reexecutar nao cria publicacao duplicada.",
-    "Nivel `error` e aviso de operacao; `warn` e informativo e nao interrompe o fluxo.",
-    "Somente registros com falha sao reexecutaveis — a interface nao oferece retry em sucesso.",
-    "Toda entrada tem data ISO para correlacao com a fila e com o console do agente.",
+    "Somente leitura: nao existe reenviar. A Meta aceita 1 resposta privada por comentario e repetir vira spam.",
+    "`skipped` = a pessoa ja tinha recebido esta automacao (1 direct por pessoa por automacao).",
+    "Guarda @ e texto de quem comentou (dado pessoal): a retencao e responsabilidade do servidor.",
+    "Estado sempre em texto + bolinha, nunca so cor.",
   ],
   defaultVariant: "table",
   variants: [
     {
       id: "table",
       label: "Tabela",
-      intent: "Varrer muitos registros e filtrar por nivel",
-      tradeoff: "A mensagem aparece resumida",
+      intent: "Comparar muitas respostas lado a lado",
+      tradeoff: "Rola na horizontal no celular",
     },
     {
       id: "timeline",
       label: "Linha do tempo",
-      intent: "Ler a sequencia do que aconteceu",
-      tradeoff: "Mostra menos registros por tela",
+      intent: "Ler no celular, uma resposta por linha",
+      tradeoff: "Mostra menos linhas por tela",
     },
   ],
-  states: ["loading", "success", "empty", "error", "forbidden"],
+  states: ["loading", "success", "empty", "error"],
+  sensitive: true,
 });
