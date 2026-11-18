@@ -114,6 +114,7 @@ export const authLoginRecipe = defineBlock({
     "Desafio de 2FA tem validade curta e uso unico; um codigo verificado nao pode ser reaproveitado.",
     "Nenhum dado de saude (consulta, medida, plano alimentar) trafega pela tela de login.",
   ],
+  defaultVariant: "centered",
   variants: [
     {
       id: "split",

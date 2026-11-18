@@ -103,6 +103,7 @@ export const authRecoveryRecipe = defineBlock({
     "Regra 11: a lista de permitidos e reavaliada no proximo login.",
     "Nenhum dado de saude (consulta, medida, plano alimentar) trafega por este fluxo.",
   ],
+  defaultVariant: "form",
   variants: [
     {
       id: "form",

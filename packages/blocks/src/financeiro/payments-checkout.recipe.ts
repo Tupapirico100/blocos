@@ -121,6 +121,7 @@ export const paymentsCheckoutRecipe = defineBlock({
     "O recibo carrega nome e valor, nunca dado de saude.",
   ],
   emptyAction: { id: "payment.create", label: "Novo pagamento" },
+  defaultVariant: "form",
   variants: [
     {
       id: "form",
