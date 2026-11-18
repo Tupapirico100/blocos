@@ -289,7 +289,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
       description="Visao do dono da plataforma sobre todos os consultorios ativos, em teste ou suspensos."
       actions={
         <Button icon={<Plus className="h-4 w-4" aria-hidden />} onClick={createOffice}>
-          Novo consultorio
+          Novo consultório
         </Button>
       }
     />
@@ -308,7 +308,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
             description="Crie o primeiro consultorio para comecar a atender."
             action={
               <Button icon={<Plus className="h-4 w-4" aria-hidden />} onClick={createOffice}>
-                Novo consultorio
+                Novo consultório
               </Button>
             }
           />
@@ -348,7 +348,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
             description="Crie o primeiro consultorio para comecar a atender."
             action={
               <Button icon={<Plus className="h-4 w-4" aria-hidden />} onClick={createOffice}>
-                Novo consultorio
+                Novo consultório
               </Button>
             }
           />
@@ -397,7 +397,7 @@ export function AdminPlatform(props: BlockProps<AdminPlatformData, AdminPlatform
           description="Crie o primeiro consultorio para comecar a atender."
           action={
             <Button icon={<Plus className="h-4 w-4" aria-hidden />} onClick={createOffice}>
-              Novo consultorio
+              Novo consultório
             </Button>
           }
         />
