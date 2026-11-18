@@ -362,7 +362,7 @@ function PromptPanel({
           />
         </Field>
       ) : (
-        <p className="bloco-mono block max-h-48 overflow-y-auto whitespace-pre-wrap rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5 text-[13px] text-fg-secondary">
+        <p className="bloco-mono block max-h-48 overflow-y-auto whitespace-pre-wrap rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5 bloco-control-sm text-fg-secondary">
           {prompt}
         </p>
       )}

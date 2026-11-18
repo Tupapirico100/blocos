@@ -280,7 +280,7 @@ const eventColumns: Array<Column<MetaConversionEvent>> = [
   {
     key: "dedup",
     header: "Chave dedup",
-    render: (row) => <span className="bloco-mono text-[12px]">{row.dedupKey}</span>,
+    render: (row) => <span className="bloco-mono bloco-label">{row.dedupKey}</span>,
   },
   {
     key: "stage",

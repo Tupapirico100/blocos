@@ -276,7 +276,7 @@ function ConnectorCard({
                 {connector.env.map((name) => (
                   <span
                     key={name}
-                    className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 text-[12px] text-fg-secondary"
+                    className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 bloco-label text-fg-secondary"
                   >
                     {name}
                   </span>
@@ -289,7 +289,7 @@ function ConnectorCard({
             value: connector.unlocks.length === 0 ? (
               <span className="bloco-caption">Nada informado.</span>
             ) : (
-              <ul className="flex flex-col gap-1">
+              <ul className="flex flex-col gap-2">
                 {connector.unlocks.map((item) => (
                   <li key={item} className="bloco-callout flex items-start gap-1.5 text-fg-secondary">
                     <CircleCheckBig className="mt-0.5 h-3.5 w-3.5 shrink-0 text-success" aria-hidden />
@@ -400,13 +400,13 @@ function ChecklistGroup({
               ) : null}
             </div>
 
-            <div className="mt-2 flex flex-col gap-1.5">
+            <div className="mt-2 flex flex-col gap-2">
               <span className="bloco-micro">Variaveis (nome)</span>
               <span className="flex flex-wrap gap-1">
                 {connector.env.map((name) => (
                   <span
                     key={name}
-                    className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 text-[12px] text-fg-secondary"
+                    className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 bloco-label text-fg-secondary"
                   >
                     {name}
                   </span>
@@ -467,7 +467,7 @@ function manifestColumns(
           {row.env.map((name) => (
             <span
               key={name}
-              className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 text-[12px] text-fg-secondary"
+              className="bloco-mono rounded-[var(--r-sm)] border border-border bg-surface/60 px-1.5 py-0.5 bloco-label text-fg-secondary"
             >
               {name}
             </span>
