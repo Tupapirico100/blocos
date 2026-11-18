@@ -172,7 +172,10 @@ export function DataTable<T>({
     return <div className={className}>{empty}</div>;
   }
   return (
-    <div className={cn("bloco-scroll overflow-x-auto", className)}>
+    // relative: an absolutely positioned descendant (the sr-only label of a Switch
+    // in a cell) takes this box as its containing block, so the scroll clips it
+    // instead of letting it stretch the page sideways.
+    <div className={cn("bloco-scroll relative overflow-x-auto", className)}>
       <table className="w-full border-collapse text-left">
         <thead className={cn(stickyHeader && "sticky top-0 z-10")}>
           <tr className="border-b border-border">
