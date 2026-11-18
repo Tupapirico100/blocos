@@ -427,8 +427,8 @@ function ScheduleGrid({
         </div>
         {columns.map((col) => (
           <div key={col.id} className="bg-surface/90 px-3 py-2">
-            <p className="bloco-caption truncate font-medium text-fg">{col.title}</p>
-            {col.subtitle ? <p className="bloco-micro truncate">{col.subtitle}</p> : null}
+            <p className="bloco-caption truncate font-medium text-fg" title={col.title}>{col.title}</p>
+            {col.subtitle ? <p className="bloco-micro truncate" title={col.subtitle}>{col.subtitle}</p> : null}
           </div>
         ))}
 
@@ -460,7 +460,7 @@ function ScheduleGrid({
                       <span className="bloco-caption truncate font-medium text-fg">
                         {appointment.patientName}
                       </span>
-                      <span className="bloco-micro truncate">{appointment.type}</span>
+                      <span className="bloco-micro truncate" title={appointment.type}>{appointment.type}</span>
                       <Badge tone={STATUS_TONE[appointment.status]} size="sm">
                         {STATUS_LABEL[appointment.status]}
                       </Badge>
