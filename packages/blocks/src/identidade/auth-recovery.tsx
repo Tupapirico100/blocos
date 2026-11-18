@@ -334,9 +334,9 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
         </span>
         <span className="bloco-micro text-fg-muted">Aurora</span>
       </div>
-      <h1 className="bloco-title2">
+      <h2 className="bloco-title2">
         {isSettingPassword ? "Definir nova senha" : "Esqueci minha senha"}
-      </h1>
+      </h2>
       <p className="bloco-callout mt-1.5 text-fg-muted">
         {isSettingPassword
           ? "Escolha uma senha nova para voltar a entrar no programa."

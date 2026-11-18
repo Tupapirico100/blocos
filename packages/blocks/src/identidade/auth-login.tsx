@@ -218,9 +218,9 @@ export function AuthLogin(props: BlockProps<AuthLoginData, AuthLoginVariant>) {
           <span className="bloco-micro text-fg-muted">{brandName}</span>
         </div>
       )}
-      <h1 className="bloco-title2">
+      <h2 className="bloco-title2">
         {isTwoFactor ? "Verificacao em duas etapas" : "Entrar na sua conta"}
-      </h1>
+      </h2>
       <p className="bloco-callout mt-1.5 text-fg-muted">
         {isTwoFactor
           ? "Como sua conta tem segundo fator ativo, precisamos de mais uma confirmacao."

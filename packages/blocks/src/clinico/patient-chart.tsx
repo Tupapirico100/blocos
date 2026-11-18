@@ -124,9 +124,9 @@ export function PatientChart(props: BlockProps<PatientChartData, "timeline" | "s
             <div className="flex min-w-0 items-center gap-3">
               <Avatar name={data.patient.name} size={42} />
               <div className="min-w-0">
-                <h3 className="bloco-title3 truncate" title={data.patient.name}>
+                <h2 className="bloco-title3 truncate" title={data.patient.name}>
                   {data.patient.name}
-                </h3>
+                </h2>
                 <p className="bloco-caption min-w-0 break-words text-fg-muted">
                   {formatPhone(data.patient.phone)}
                   {data.patient.birthDate ? ` · nasc. em ${formatDate(data.patient.birthDate)}` : ""}
