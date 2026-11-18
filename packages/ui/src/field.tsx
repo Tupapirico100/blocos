@@ -46,7 +46,7 @@ export function Field({ label, hint, error, required, htmlFor, children, classNa
 const controlBase =
   "w-full rounded-[var(--r-md)] border border-input bg-surface-strong/60 px-3 bloco-control text-fg " +
   "placeholder:text-fg-placeholder transition-[border-color,box-shadow,background-color] duration-[var(--dur-2)] " +
-  "focus:outline-none focus-visible:border-accent focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:ring-4 focus-visible:ring-accent/15 " +
+  "focus-visible:border-accent focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:ring-4 focus-visible:ring-accent/15 " +
   "disabled:opacity-50";
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -164,8 +164,8 @@ export function Switch({ checked, onCheckedChange, disabled, label, description,
         <span
           aria-hidden
           className={cn(
-            "absolute top-2 h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-[var(--dur-3)] ease-[var(--ease-spring)]",
-            checked ? "translate-x-6" : "translate-x-2",
+            "absolute left-1 top-2 h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-[var(--dur-3)] ease-[var(--ease-spring)]",
+            checked ? "translate-x-5" : "translate-x-0",
           )}
         />
       </button>
@@ -226,7 +226,7 @@ export function Checkbox({ checked, onCheckedChange, disabled, label, className,
         </span>
       </button>
       {label ? (
-        <span id={`${id}-label`} className="bloco-callout text-fg-secondary">
+        <span id={`${id}-label`} className="min-w-0 flex-1 bloco-callout text-fg-secondary">
           {label}
         </span>
       ) : null}

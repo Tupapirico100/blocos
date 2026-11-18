@@ -208,7 +208,7 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
         {data.media.length === 0 ? (
           <p className="bloco-caption">Nenhuma midia disponivel no storage do programa.</p>
         ) : (
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-2">
             {data.media.map((item) => (
               <div
                 key={item.id}
@@ -220,7 +220,7 @@ export function SocialComposer(props: BlockProps<SocialComposerData, SocialCompo
                   checked={mediaIds.includes(item.id)}
                   onCheckedChange={() => toggleMedia(item.id)}
                   label={
-                    <span className="bloco-callout min-w-0 flex-1 truncate text-fg">
+                    <span className="bloco-callout inline-block min-w-0 max-w-full flex-1 truncate text-fg">
                       {item.name}
                       {/* Contexto para leitor de tela: o nome sozinho nao diz o que a midia e. */}
                       <span className="sr-only"> — midia para publicar</span>
@@ -433,7 +433,7 @@ function PostPreview({
         </div>
       )}
 
-      <div className="flex flex-col gap-1 px-3 py-3">
+      <div className="flex flex-col gap-2 px-3 py-3">
         <p className="bloco-callout line-clamp-4 whitespace-pre-line text-fg">
           {caption || "Sua legenda aparece aqui."}
         </p>

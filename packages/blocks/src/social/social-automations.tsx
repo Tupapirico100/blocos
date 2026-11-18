@@ -314,7 +314,7 @@ function AutomationFlow({
       </div>
 
       <div className="grid items-center gap-2 md:grid-cols-[1fr_auto_1fr]">
-        <div className="flex flex-col gap-1 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
+        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
           <span className="bloco-micro flex items-center gap-1.5">
             {triggerIcon[automation.trigger.type]} Gatilho · {triggerLabel[automation.trigger.type]}
           </span>
@@ -328,7 +328,7 @@ function AutomationFlow({
           <ArrowRight className="h-4 w-4 rotate-90 md:rotate-0" aria-hidden />
         </span>
 
-        <div className="flex flex-col gap-1 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
+        <div className="flex flex-col gap-2 rounded-[var(--r-md)] border border-border bg-surface/60 px-3 py-2.5">
           <span className="bloco-micro flex items-center gap-1.5">
             {actionIcon[automation.action.type]} Acao · {actionLabel[automation.action.type]}
           </span>
