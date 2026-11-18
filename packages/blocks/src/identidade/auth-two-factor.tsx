@@ -239,7 +239,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
           {factor.secret ? (
             <div className="mt-3">
               <p className="bloco-micro break-words text-fg-muted">Chave de configuracao</p>
-              <p className="bloco-mono mt-1 break-all rounded-[var(--r-md)] border border-border bg-surface-strong/60 px-3 py-2 text-[13px] text-fg">
+              <p className="bloco-mono mt-1 break-all rounded-[var(--r-md)] border border-border bg-surface-strong/60 px-3 py-2 bloco-control-sm text-fg">
                 {factor.secret}
               </p>
               <Button
@@ -338,7 +338,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
         em lugar seguro.
       </p>
 
-      <ul className="flex flex-col gap-1.5">
+      <ul className="flex flex-col gap-2">
         {data.recoveryCodes.map((item) => (
           <li
             key={item.id}
@@ -349,7 +349,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
           >
             <span
               className={cn(
-                "bloco-mono text-[13px] tracking-wide text-fg",
+                "bloco-mono bloco-control-sm tracking-wide text-fg",
                 item.usedAt && "line-through",
                 !codesVisible && !item.usedAt && "text-fg-faint",
               )}
@@ -405,7 +405,7 @@ export function AuthTwoFactor(props: BlockProps<AuthTwoFactorData, AuthTwoFactor
           <li key={item.id} className="flex items-center gap-2">
             <span
               className={cn(
-                "flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold",
+                "flex h-6 w-6 items-center justify-center rounded-full border bloco-label-sm font-semibold",
                 done && "border-accent bg-accent text-accent-fg",
                 active && "border-accent text-accent-ink",
                 !done && !active && "border-border text-fg-faint",

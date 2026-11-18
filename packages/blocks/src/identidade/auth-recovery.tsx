@@ -200,7 +200,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
         />
       </Field>
 
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-2">
         <div className="flex items-baseline justify-between gap-3">
           <span className="bloco-micro text-fg-muted">Forca da senha</span>
           <span
@@ -226,7 +226,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
             <li key={check.id} className="flex items-center gap-1.5">
               <span
                 className={cn(
-                  "flex h-3.5 w-3.5 items-center justify-center rounded-full text-[9px]",
+                  "flex h-3.5 w-3.5 items-center justify-center rounded-full bloco-label-sm",
                   check.met ? "bg-success-soft text-success" : "bg-surface-active text-fg-faint",
                 )}
                 aria-hidden
@@ -307,7 +307,7 @@ export function AuthRecovery(props: BlockProps<AuthRecoveryData, AuthRecoveryVar
           <li key={item.id} className="flex items-center gap-2">
             <span
               className={cn(
-                "flex h-6 w-6 items-center justify-center rounded-full border text-[11px] font-semibold",
+                "flex h-6 w-6 items-center justify-center rounded-full border bloco-label-sm font-semibold",
                 done && "border-accent bg-accent text-accent-fg",
                 active && "border-accent text-accent-ink",
                 !done && !active && "border-border text-fg-faint",
