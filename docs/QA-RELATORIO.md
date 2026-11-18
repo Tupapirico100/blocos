@@ -103,8 +103,31 @@ no overflow em 5 larguras e no contraste por pixel. **Reprovou em 88/100** — a
 | C5b | media | `social/social-composer.tsx` | `truncate` em `display:inline` → **truncamento inerte**: o nome do arquivo invadia o rotulo "IMAGEM · N MB" | `inline-block max-w-full` no span truncado |
 | C4 | media | 17 blocos | 29 `text-[Npx]` avulsos (1 fora da escala: `text-[9px]`) | migrados para `bloco-control*` / `bloco-label*` / `bloco-cell` |
 
-**Quinta passagem (confirmacao final):** os 4 desvios reconfirmados por medicao e a
-regressao completa verde — **100/100**.
+**Quinta passagem (confirmacao final):** o verificador reconfirmou os 4 desvios por medicao
+(outline do TabPanel e dos campos = solid 2px accent; cartoes do office-settings com Δ0 em
+4 larguras e sem intersecao; nome do arquivo do social-composer cortado com folga de +8px;
+`text-[Npx]` = 0) e a regressao completa verde — **100/100**, sem regressao.
+
+**Observacoes finais aplicadas (nao baixavam a nota, mas melhoravam o produto):**
+- 3 `<input>` crus ainda usavam so borda + ring como indicador de foco → agora pintam o
+  outline do DS (solid 2px accent offset 2px).
+- 39 textos truncados sem `title` (o valor completo era inacessivel) → todos com `title`.
+  Verificado: **0 texto cortado sem `title`** nos 29 blocos.
+
+### Placar da 5a passagem (final)
+
+| Checker | Resultado |
+|---|---|
+| `qa-automatic.py` | 0 achados |
+| `qa-variantes.py` | 0 achados (29 blocos) |
+| `qa-contraste.py` | 0 violacoes |
+| `qa-contraste-pixel.py` | **0 violacoes em 8.621 medicoes por pixel** |
+| Erro de console | 0 |
+| Arvore de acessibilidade (CDP) | 0 controles sem nome |
+| Overflow do documento | 0 em 390/768/1280/1440/1920 |
+| Texto cortado sem ellipsis / sem `title` | 0 / 0 |
+| Headings | sem salto, 1 h1 por documento |
+| Verificacao humana independente | **100/100** |
 
 ### Placar final
 
