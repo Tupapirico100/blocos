@@ -1,0 +1,424 @@
+{
+  "C2a_tabpanels": [
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent",
+      "vis": true
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent px-4 py-4",
+      "vis": true
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent px-4 py-4",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent px-4 py-4",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent px-4 py-4",
+      "vis": false
+    },
+    {
+      "tabindex": "0",
+      "cls": "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent px-4 py-4",
+      "vis": false
+    }
+  ],
+  "C2a_focus": {
+    "resultado_foco": "nao-alcancou",
+    "medido": {
+      "tag": "DIV",
+      "role": "tabpanel",
+      "id": "radix-_r_0_-content-acoes",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(0, 105, 214)",
+      "outlineOffset": "2px",
+      "matchesFV": true,
+      "matchesF": true,
+      "w": 339,
+      "h": 1256.31,
+      "text": "A mesma acao serve para a UI, para HTTP e para o agente. O s"
+    }
+  },
+  "C2a_tab_trigger": {
+    "resultado_foco": "nao-alcancou",
+    "medido": {
+      "tag": "DIV",
+      "role": "tabpanel",
+      "id": "radix-_r_0_-content-acoes",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(0, 105, 214)",
+      "outlineOffset": "2px",
+      "matchesFV": true,
+      "matchesF": true,
+      "w": 339,
+      "h": 1256.31,
+      "text": "A mesma acao serve para a UI, para HTTP e para o agente. O s"
+    }
+  },
+  "C2b_campos": {
+    "office-settings:input": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "office-webhook-url",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 680,
+        "h": 40,
+        "text": ""
+      }
+    },
+    "office-settings:select": "ausente",
+    "office-settings:textarea": "ausente",
+    "agenda-board:input": "ausente",
+    "agenda-board:select": "ausente",
+    "consent-panel:input": "ausente",
+    "consent-panel:select": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "SELECT",
+        "role": null,
+        "id": "",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 192,
+        "h": 40,
+        "text": "WhatsApp\nPresencial\nAssinado em papel\nE-mail"
+      }
+    },
+    "social-composer:input": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "social-composer-hashtags",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 311.5,
+        "h": 40,
+        "text": ""
+      }
+    },
+    "social-composer:textarea": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "TEXTAREA",
+        "role": null,
+        "id": "social-composer-caption",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 311.5,
+        "h": 88,
+        "text": ""
+      }
+    },
+    "patients-list:input": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "",
+        "outlineStyle": "none",
+        "outlineWidth": "1px",
+        "outlineColor": "rgb(238, 238, 238)",
+        "outlineOffset": "0px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 320,
+        "h": 36,
+        "text": ""
+      }
+    },
+    "clinical-entry:textarea": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "TEXTAREA",
+        "role": null,
+        "id": "clinical-entry-summary",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 680,
+        "h": 113,
+        "text": ""
+      }
+    },
+    "auth-login:input": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "auth-login-email",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 299,
+        "h": 40,
+        "text": ""
+      }
+    },
+    "payments-checkout:input": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "payment-patient",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 105, 214)",
+        "outlineOffset": "1px",
+        "matchesFV": true,
+        "matchesF": true,
+        "w": 680,
+        "h": 40,
+        "text": ""
+      }
+    }
+  },
+  "C5a": {
+    "768": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "sw": 298,
+          "cw": 298,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 610,
+            "w": 298,
+            "h": 39
+          }
+        },
+        {
+          "label": "Instagram",
+          "sw": 298,
+          "cw": 298,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 792,
+            "w": 298,
+            "h": 71
+          }
+        }
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 610,
+          "w": 109,
+          "h": 23,
+          "right": 524
+        },
+        {
+          "t": "Instagram",
+          "x": 415,
+          "y": 792,
+          "w": 151,
+          "h": 23,
+          "right": 566
+        }
+      ],
+      "docOver": 0,
+      "docSW": 768,
+      "docCW": 768
+    },
+    "1280": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "sw": 181,
+          "cw": 181,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 521,
+            "w": 181,
+            "h": 71
+          }
+        },
+        {
+          "label": "Instagram",
+          "sw": 181,
+          "cw": 181,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 734,
+            "w": 181,
+            "h": 71
+          }
+        }
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 521,
+          "w": 109,
+          "h": 23,
+          "right": 524
+        },
+        {
+          "t": "Instagram",
+          "x": 412,
+          "y": 734,
+          "w": 136,
+          "h": 23,
+          "right": 548
+        }
+      ],
+      "docOver": 0,
+      "docSW": 1280,
+      "docCW": 1280
+    },
+    "1440": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "sw": 261,
+          "cw": 261,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 521,
+            "w": 261,
+            "h": 39
+          }
+        },
+        {
+          "label": "Instagram",
+          "sw": 261,
+          "cw": 261,
+          "over": 0,
+          "rect": {
+            "x": 367,
+            "y": 702,
+            "w": 261,
+            "h": 71
+          }
+        }
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 521,
+          "w": 109,
+          "h": 23,
+          "right": 524
+        },
+        {
+          "t": "Instagram",
+          "x": 415,
+          "y": 702,
+          "w": 151,
+          "h": 23,
+          "right": 566
+        }
+      ],
+      "docOver": 0,
+      "docSW": 1440,
+      "docCW": 1440
+    },
+    "1920": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "sw": 379,
+          "cw": 379,
+          "over": 0,
+          "rect": {
+            "x": 489,
+            "y": 502,
+            "w": 379,
+            "h": 39
+          }
+        },
+        {
+          "label": "Instagram",
+          "sw": 379,
+          "cw": 379,
+          "over": 0,
+          "rect": {
+            "x": 489,
+            "y": 667,
+            "w": 379,
+            "h": 39
+          }
+        }
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 537,
+          "y": 502,
+          "w": 109,
+          "h": 23,
+          "right": 646
+        },
+        {
+          "t": "Instagram",
+          "x": 537,
+          "y": 667,
+          "w": 151,
+          "h": 23,
+          "right": 688
+        }
+      ],
+      "docOver": 0,
+      "docSW": 1920,
+      "docCW": 1920
+    }
+  }
+}

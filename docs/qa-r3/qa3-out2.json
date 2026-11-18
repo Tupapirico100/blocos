@@ -1,0 +1,1179 @@
+{
+  "C5a": {
+    "768": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 388,
+          "clientWidth": 388,
+          "over": 0,
+          "rect": {
+            "x": 321,
+            "y": 505,
+            "w": 390,
+            "h": 448,
+            "right": 711,
+            "bottom": 953
+          }
+        },
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 338,
+          "clientWidth": 338,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 589,
+            "w": 340,
+            "h": 170,
+            "right": 686,
+            "bottom": 759
+          }
+        },
+        {
+          "label": "Instagram",
+          "scrollWidth": 338,
+          "clientWidth": 338,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 771,
+            "w": 340,
+            "h": 157,
+            "right": 686,
+            "bottom": 928
+          }
+        }
+      ],
+      "detalhe": [
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 612,
+            "right": 403,
+            "bottom": 648
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 610,
+            "right": 524,
+            "bottom": 633
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 633,
+            "right": 524,
+            "bottom": 649
+          },
+          {
+            "t": "Conectado",
+            "x": 588,
+            "y": 610,
+            "right": 665,
+            "bottom": 630
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 661,
+            "right": 665,
+            "bottom": 694
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 706,
+            "right": 665,
+            "bottom": 738
+          },
+          {
+            "t": "Desconectar",
+            "x": 465,
+            "y": 714,
+            "right": 567,
+            "bottom": 729
+          },
+          {
+            "t": "",
+            "x": 367,
+            "y": 793,
+            "right": 403,
+            "bottom": 829
+          },
+          {
+            "t": "Instagram",
+            "x": 415,
+            "y": 792,
+            "right": 566,
+            "bottom": 815
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 415,
+            "y": 815,
+            "right": 566,
+            "bottom": 831
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 843,
+            "right": 468,
+            "bottom": 863
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 875,
+            "right": 665,
+            "bottom": 907
+          },
+          {
+            "t": "Conectar",
+            "x": 477,
+            "y": 883,
+            "right": 555,
+            "bottom": 899
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 612,
+            "right": 403,
+            "bottom": 648
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 610,
+            "right": 524,
+            "bottom": 633
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 633,
+            "right": 524,
+            "bottom": 649
+          },
+          {
+            "t": "Conectado",
+            "x": 588,
+            "y": 610,
+            "right": 665,
+            "bottom": 630
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 661,
+            "right": 665,
+            "bottom": 694
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 706,
+            "right": 665,
+            "bottom": 738
+          },
+          {
+            "t": "Desconectar",
+            "x": 465,
+            "y": 714,
+            "right": 567,
+            "bottom": 729
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 793,
+            "right": 403,
+            "bottom": 829
+          },
+          {
+            "t": "Instagram",
+            "x": 415,
+            "y": 792,
+            "right": 566,
+            "bottom": 815
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 415,
+            "y": 815,
+            "right": 566,
+            "bottom": 831
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 843,
+            "right": 468,
+            "bottom": 863
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 875,
+            "right": 665,
+            "bottom": 907
+          },
+          {
+            "t": "Conectar",
+            "x": 477,
+            "y": 883,
+            "right": 555,
+            "bottom": 899
+          }
+        ]
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 610,
+          "right": 524,
+          "bottom": 633
+        },
+        {
+          "t": "Instagram",
+          "x": 415,
+          "y": 792,
+          "right": 566,
+          "bottom": 815
+        }
+      ],
+      "cartoes_sobrepostos": null,
+      "docOver": 0,
+      "docSW": 768,
+      "docCW": 768
+    },
+    "1280": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 271,
+          "clientWidth": 271,
+          "over": 0,
+          "rect": {
+            "x": 321,
+            "y": 396,
+            "w": 273,
+            "h": 1192,
+            "right": 594,
+            "bottom": 1588
+          }
+        },
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 221,
+          "clientWidth": 221,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 500,
+            "w": 223,
+            "h": 202,
+            "right": 569,
+            "bottom": 701
+          }
+        },
+        {
+          "label": "Instagram",
+          "scrollWidth": 221,
+          "clientWidth": 221,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 713,
+            "w": 223,
+            "h": 157,
+            "right": 569,
+            "bottom": 870
+          }
+        }
+      ],
+      "detalhe": [
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 522,
+            "right": 403,
+            "bottom": 558
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 521,
+            "right": 524,
+            "bottom": 544
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 544,
+            "right": 524,
+            "bottom": 560
+          },
+          {
+            "t": "Conectado",
+            "x": 367,
+            "y": 572,
+            "right": 444,
+            "bottom": 592
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 604,
+            "right": 548,
+            "bottom": 636
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 648,
+            "right": 548,
+            "bottom": 680
+          },
+          {
+            "t": "Desconectar",
+            "x": 407,
+            "y": 656,
+            "right": 508,
+            "bottom": 672
+          },
+          {
+            "t": "",
+            "x": 367,
+            "y": 736,
+            "right": 400,
+            "bottom": 772
+          },
+          {
+            "t": "Instagram",
+            "x": 412,
+            "y": 734,
+            "right": 548,
+            "bottom": 757
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 412,
+            "y": 757,
+            "right": 548,
+            "bottom": 773
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 785,
+            "right": 468,
+            "bottom": 805
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 817,
+            "right": 548,
+            "bottom": 849
+          },
+          {
+            "t": "Conectar",
+            "x": 418,
+            "y": 826,
+            "right": 497,
+            "bottom": 841
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 522,
+            "right": 403,
+            "bottom": 558
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 521,
+            "right": 524,
+            "bottom": 544
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 544,
+            "right": 524,
+            "bottom": 560
+          },
+          {
+            "t": "Conectado",
+            "x": 367,
+            "y": 572,
+            "right": 444,
+            "bottom": 592
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 604,
+            "right": 548,
+            "bottom": 636
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 648,
+            "right": 548,
+            "bottom": 680
+          },
+          {
+            "t": "Desconectar",
+            "x": 407,
+            "y": 656,
+            "right": 508,
+            "bottom": 672
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 736,
+            "right": 400,
+            "bottom": 772
+          },
+          {
+            "t": "Instagram",
+            "x": 412,
+            "y": 734,
+            "right": 548,
+            "bottom": 757
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 412,
+            "y": 757,
+            "right": 548,
+            "bottom": 773
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 785,
+            "right": 468,
+            "bottom": 805
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 817,
+            "right": 548,
+            "bottom": 849
+          },
+          {
+            "t": "Conectar",
+            "x": 418,
+            "y": 826,
+            "right": 497,
+            "bottom": 841
+          }
+        ]
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 521,
+          "right": 524,
+          "bottom": 544
+        },
+        {
+          "t": "Instagram",
+          "x": 412,
+          "y": 734,
+          "right": 548,
+          "bottom": 757
+        }
+      ],
+      "cartoes_sobrepostos": null,
+      "docOver": 0,
+      "docSW": 1280,
+      "docCW": 1280
+    },
+    "1440": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 351,
+          "clientWidth": 351,
+          "over": 0,
+          "rect": {
+            "x": 321,
+            "y": 396,
+            "w": 353,
+            "h": 882,
+            "right": 674,
+            "bottom": 1278
+          }
+        },
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 500,
+            "w": 303,
+            "h": 170,
+            "right": 649,
+            "bottom": 669
+          }
+        },
+        {
+          "label": "Instagram",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "over": 0,
+          "rect": {
+            "x": 346,
+            "y": 681,
+            "w": 303,
+            "h": 157,
+            "right": 649,
+            "bottom": 838
+          }
+        }
+      ],
+      "detalhe": [
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 522,
+            "right": 403,
+            "bottom": 558
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 521,
+            "right": 524,
+            "bottom": 544
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 544,
+            "right": 524,
+            "bottom": 560
+          },
+          {
+            "t": "Conectado",
+            "x": 551,
+            "y": 521,
+            "right": 628,
+            "bottom": 541
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 572,
+            "right": 628,
+            "bottom": 604
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 616,
+            "right": 628,
+            "bottom": 648
+          },
+          {
+            "t": "Desconectar",
+            "x": 447,
+            "y": 624,
+            "right": 548,
+            "bottom": 640
+          },
+          {
+            "t": "",
+            "x": 367,
+            "y": 704,
+            "right": 403,
+            "bottom": 740
+          },
+          {
+            "t": "Instagram",
+            "x": 415,
+            "y": 702,
+            "right": 566,
+            "bottom": 725
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 415,
+            "y": 725,
+            "right": 566,
+            "bottom": 741
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 753,
+            "right": 468,
+            "bottom": 773
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 785,
+            "right": 628,
+            "bottom": 817
+          },
+          {
+            "t": "Conectar",
+            "x": 458,
+            "y": 794,
+            "right": 537,
+            "bottom": 809
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 522,
+            "right": 403,
+            "bottom": 558
+          },
+          {
+            "t": "WhatsApp",
+            "x": 415,
+            "y": 521,
+            "right": 524,
+            "bottom": 544
+          },
+          {
+            "t": "+5511987654321",
+            "x": 415,
+            "y": 544,
+            "right": 524,
+            "bottom": 560
+          },
+          {
+            "t": "Conectado",
+            "x": 551,
+            "y": 521,
+            "right": 628,
+            "bottom": 541
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 367,
+            "y": 572,
+            "right": 628,
+            "bottom": 604
+          },
+          {
+            "t": "Desconectar",
+            "x": 367,
+            "y": 616,
+            "right": 628,
+            "bottom": 648
+          },
+          {
+            "t": "Desconectar",
+            "x": 447,
+            "y": 624,
+            "right": 548,
+            "bottom": 640
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 367,
+            "y": 704,
+            "right": 403,
+            "bottom": 740
+          },
+          {
+            "t": "Instagram",
+            "x": 415,
+            "y": 702,
+            "right": 566,
+            "bottom": 725
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 415,
+            "y": 725,
+            "right": 566,
+            "bottom": 741
+          },
+          {
+            "t": "Nao conectado",
+            "x": 367,
+            "y": 753,
+            "right": 468,
+            "bottom": 773
+          },
+          {
+            "t": "Conectar",
+            "x": 367,
+            "y": 785,
+            "right": 628,
+            "bottom": 817
+          },
+          {
+            "t": "Conectar",
+            "x": 458,
+            "y": 794,
+            "right": 537,
+            "bottom": 809
+          }
+        ]
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 415,
+          "y": 521,
+          "right": 524,
+          "bottom": 544
+        },
+        {
+          "t": "Instagram",
+          "x": 415,
+          "y": 702,
+          "right": 566,
+          "bottom": 725
+        }
+      ],
+      "cartoes_sobrepostos": null,
+      "docOver": 0,
+      "docSW": 1440,
+      "docCW": 1440
+    },
+    "1920": {
+      "cartoes": [
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 469,
+          "clientWidth": 469,
+          "over": 0,
+          "rect": {
+            "x": 443,
+            "y": 396,
+            "w": 471,
+            "h": 687,
+            "right": 914,
+            "bottom": 1083
+          }
+        },
+        {
+          "label": "WhatsApp",
+          "scrollWidth": 419,
+          "clientWidth": 419,
+          "over": 0,
+          "rect": {
+            "x": 468,
+            "y": 481,
+            "w": 421,
+            "h": 153,
+            "right": 889,
+            "bottom": 634
+          }
+        },
+        {
+          "label": "Instagram",
+          "scrollWidth": 419,
+          "clientWidth": 419,
+          "over": 0,
+          "rect": {
+            "x": 468,
+            "y": 646,
+            "w": 421,
+            "h": 125,
+            "right": 889,
+            "bottom": 771
+          }
+        }
+      ],
+      "detalhe": [
+        [
+          {
+            "t": "",
+            "x": 489,
+            "y": 503,
+            "right": 525,
+            "bottom": 539
+          },
+          {
+            "t": "WhatsApp",
+            "x": 537,
+            "y": 502,
+            "right": 646,
+            "bottom": 525
+          },
+          {
+            "t": "+5511987654321",
+            "x": 537,
+            "y": 525,
+            "right": 646,
+            "bottom": 541
+          },
+          {
+            "t": "Conectado",
+            "x": 791,
+            "y": 502,
+            "right": 868,
+            "bottom": 522
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 489,
+            "y": 553,
+            "right": 868,
+            "bottom": 569
+          },
+          {
+            "t": "Desconectar",
+            "x": 489,
+            "y": 581,
+            "right": 868,
+            "bottom": 613
+          },
+          {
+            "t": "Desconectar",
+            "x": 628,
+            "y": 589,
+            "right": 729,
+            "bottom": 605
+          },
+          {
+            "t": "",
+            "x": 489,
+            "y": 669,
+            "right": 525,
+            "bottom": 705
+          },
+          {
+            "t": "Instagram",
+            "x": 537,
+            "y": 667,
+            "right": 688,
+            "bottom": 690
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 537,
+            "y": 690,
+            "right": 688,
+            "bottom": 706
+          },
+          {
+            "t": "Nao conectado",
+            "x": 767,
+            "y": 667,
+            "right": 868,
+            "bottom": 687
+          },
+          {
+            "t": "Conectar",
+            "x": 489,
+            "y": 718,
+            "right": 868,
+            "bottom": 750
+          },
+          {
+            "t": "Conectar",
+            "x": 639,
+            "y": 727,
+            "right": 718,
+            "bottom": 742
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 489,
+            "y": 503,
+            "right": 525,
+            "bottom": 539
+          },
+          {
+            "t": "WhatsApp",
+            "x": 537,
+            "y": 502,
+            "right": 646,
+            "bottom": 525
+          },
+          {
+            "t": "+5511987654321",
+            "x": 537,
+            "y": 525,
+            "right": 646,
+            "bottom": 541
+          },
+          {
+            "t": "Conectado",
+            "x": 791,
+            "y": 502,
+            "right": 868,
+            "bottom": 522
+          },
+          {
+            "t": "Provedor: Evolution API · desde 10/06/20",
+            "x": 489,
+            "y": 553,
+            "right": 868,
+            "bottom": 569
+          },
+          {
+            "t": "Desconectar",
+            "x": 489,
+            "y": 581,
+            "right": 868,
+            "bottom": 613
+          },
+          {
+            "t": "Desconectar",
+            "x": 628,
+            "y": 589,
+            "right": 729,
+            "bottom": 605
+          }
+        ],
+        [
+          {
+            "t": "",
+            "x": 489,
+            "y": 669,
+            "right": 525,
+            "bottom": 705
+          },
+          {
+            "t": "Instagram",
+            "x": 537,
+            "y": 667,
+            "right": 688,
+            "bottom": 690
+          },
+          {
+            "t": "sem numero configurado",
+            "x": 537,
+            "y": 690,
+            "right": 688,
+            "bottom": 706
+          },
+          {
+            "t": "Nao conectado",
+            "x": 767,
+            "y": 667,
+            "right": 868,
+            "bottom": 687
+          },
+          {
+            "t": "Conectar",
+            "x": 489,
+            "y": 718,
+            "right": 868,
+            "bottom": 750
+          },
+          {
+            "t": "Conectar",
+            "x": 639,
+            "y": 727,
+            "right": 718,
+            "bottom": 742
+          }
+        ]
+      ],
+      "textos": [
+        {
+          "t": "WhatsApp",
+          "x": 537,
+          "y": 502,
+          "right": 646,
+          "bottom": 525
+        },
+        {
+          "t": "Instagram",
+          "x": 537,
+          "y": 667,
+          "right": 688,
+          "bottom": 690
+        }
+      ],
+      "cartoes_sobrepostos": null,
+      "docOver": 0,
+      "docSW": 1920,
+      "docCW": 1920
+    }
+  },
+  "C5b": {
+    "truncados": [
+      {
+        "tag": "DIV",
+        "texto": "Agendador-Instagram",
+        "spanW": 300,
+        "spanRight": 345,
+        "paiTag": "DIV",
+        "paiW": 300,
+        "paiRight": 345,
+        "paiScroll": 300,
+        "paiClient": 300,
+        "paiOverflow": 0,
+        "paiCls": "min-w-[140px] flex-1",
+        "invadePai": false
+      },
+      {
+        "tag": "SPAN",
+        "texto": "@exemplo.nutricao",
+        "spanW": 151.3,
+        "spanRight": 245.3,
+        "paiTag": "DIV",
+        "paiW": 298,
+        "paiRight": 344,
+        "paiScroll": 298,
+        "paiClient": 298,
+        "paiOverflow": 0,
+        "paiCls": "flex items-center gap-2 border-b border-border px-3 py-2.5",
+        "invadePai": false
+      },
+      {
+        "tag": "SPAN",
+        "texto": "prato-colorido.jpg",
+        "spanW": 148,
+        "spanRight": 194,
+        "paiTag": "DIV",
+        "paiW": 298,
+        "paiRight": 344,
+        "paiScroll": 298,
+        "paiClient": 298,
+        "paiOverflow": 0,
+        "paiCls": "grid aspect-square grid-cols-2 gap-0.5 bg-surface-active",
+        "invadePai": false
+      },
+      {
+        "tag": "SPAN",
+        "texto": "mesa-consultorio.jpg",
+        "spanW": 148,
+        "spanRight": 344,
+        "paiTag": "DIV",
+        "paiW": 298,
+        "paiRight": 344,
+        "paiScroll": 298,
+        "paiClient": 298,
+        "paiOverflow": 0,
+        "paiCls": "grid aspect-square grid-cols-2 gap-0.5 bg-surface-active",
+        "invadePai": false
+      }
+    ],
+    "rotuloIMAGEM": [
+      {
+        "t": "Imagem · 1,2 MB",
+        "x": 198,
+        "y": 1111,
+        "w": 115,
+        "right": 313,
+        "bottom": 1125
+      },
+      {
+        "t": "Imagem · 980 KB",
+        "x": 196,
+        "y": 1169,
+        "w": 117,
+        "right": 313,
+        "bottom": 1183
+      },
+      {
+        "t": "Imagem · 420 KB",
+        "x": 196,
+        "y": 1227,
+        "w": 117,
+        "right": 313,
+        "bottom": 1241
+      },
+      {
+        "t": "Imagem · 760 KB",
+        "x": 196,
+        "y": 1343,
+        "w": 117,
+        "right": 313,
+        "bottom": 1357
+      }
+    ],
+    "arquivos": [
+      {
+        "t": "prato-colorido.jpg",
+        "cls": "bloco-caption truncate px-3 py-2 text-center",
+        "x": 46,
+        "y": 1779,
+        "w": 148,
+        "right": 194
+      },
+      {
+        "t": "mesa-consultorio.jpg",
+        "cls": "bloco-caption truncate px-3 py-2 text-center",
+        "x": 196,
+        "y": 1779,
+        "w": 148,
+        "right": 344
+      }
+    ],
+    "docOver": 0,
+    "docSW": 390,
+    "docCW": 390
+  },
+  "inputs_crus": {
+    "patients-list": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "",
+        "outlineStyle": "none",
+        "outlineWidth": "1px",
+        "outlineColor": "rgb(238, 238, 238)",
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.536011 -0.0435778 -0.181116 / 0.15) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFV": true,
+        "w": 320,
+        "h": 36
+      }
+    },
+    "inbox-whatsapp": {
+      "resultado_foco": "ok",
+      "medido": {
+        "tag": "INPUT",
+        "role": null,
+        "id": "",
+        "outlineStyle": "none",
+        "outlineWidth": "1px",
+        "outlineColor": "rgb(238, 238, 238)",
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.536011 -0.0435778 -0.181116 / 0.15) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFV": true,
+        "w": 294,
+        "h": 36
+      }
+    },
+    "auth-two-factor": "seletor ausente"
+  },
+  "erros_console": []
+}
