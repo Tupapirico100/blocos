@@ -1,0 +1,5470 @@
+{
+ "ordem": {
+  "auth-login": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 582,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 674,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 727,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 774,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 861,
+    "y": 78,
+    "vx": 861,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "voce@exemplo.com.br",
+    "x": 455,
+    "y": 369,
+    "vx": 719,
+    "vy": 495,
+    "domIdx": 44,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "-mx-1 inline-flex min-h-8 items-center rounde",
+    "name": "Esqueci minha senha",
+    "x": 622,
+    "y": 425,
+    "vx": 886,
+    "vy": 551,
+    "domIdx": 50,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Sua senha",
+    "x": 455,
+    "y": 463,
+    "vx": 719,
+    "vy": 589,
+    "domIdx": 51,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Entrar",
+    "x": 455,
+    "y": 519,
+    "vx": 719,
+    "vy": 645,
+    "domIdx": 52,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "A",
+    "cls": "inline-flex min-h-8 items-center text-accent-",
+    "name": "Falar com o suporte",
+    "x": 564,
+    "y": 583,
+    "vx": 828,
+    "vy": 709,
+    "domIdx": 58,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": -0.0,
+    "vx": 1101,
+    "vy": 63,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "auth-two-factor": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 559,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 651,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 705,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 751,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Copiar chave",
+    "x": 258,
+    "y": 355,
+    "vx": 522,
+    "vy": 481,
+    "domIdx": 268,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Remover fator",
+    "x": 82,
+    "y": 503,
+    "vx": 346,
+    "vy": 629,
+    "domIdx": 281,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mostrar",
+    "x": 660,
+    "y": 623,
+    "vx": 924,
+    "vy": 749,
+    "domIdx": 300,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Copiar codigos",
+    "x": 82,
+    "y": 619,
+    "vx": 346,
+    "vy": 745,
+    "domIdx": 326,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Gerar novos codigos",
+    "x": 232,
+    "y": 619,
+    "vx": 496,
+    "vy": 745,
+    "domIdx": 331,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": -0.0,
+    "vx": 1101,
+    "vy": 63,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "auth-recovery": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 568,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 660,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 714,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 760,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 848,
+    "y": 78,
+    "vx": 848,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "voce@exemplo.com.br",
+    "x": 208,
+    "y": 329,
+    "vx": 472,
+    "vy": 455,
+    "domIdx": 16,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Enviar link de recuperacao",
+    "x": 208,
+    "y": 385,
+    "vx": 472,
+    "vy": 511,
+    "domIdx": 17,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "admin-platform": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 562,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 655,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 708,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 754,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Novo consultório",
+    "x": 605,
+    "y": 287,
+    "vx": 869,
+    "vy": 413,
+    "domIdx": 21,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transi",
+    "name": "Consultório Aurora Nutrição Sã",
+    "x": 57,
+    "y": 539,
+    "vx": 321,
+    "vy": 665,
+    "domIdx": 73,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transi",
+    "name": "Consultório Vila Nova Curitiba",
+    "x": 424,
+    "y": 539,
+    "vx": 688,
+    "vy": 665,
+    "domIdx": 90,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transi",
+    "name": "Consultório Serra Azul Belo Ho",
+    "x": 57,
+    "y": 475,
+    "vx": 321,
+    "vy": 601,
+    "domIdx": 107,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "DIV",
+    "cls": "relative rounded-[var(--r-lg)] text-fg transi",
+    "name": "Consultório Boa Vista Recife/P",
+    "x": 424,
+    "y": 475,
+    "vx": 688,
+    "vy": 601,
+    "domIdx": 123,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "office-team": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 552,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 644,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 697,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 744,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 871,
+    "y": 78,
+    "vx": 871,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Convidar",
+    "x": 660,
+    "y": 245,
+    "vx": 924,
+    "vy": 371,
+    "domIdx": 15,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Rebaixar",
+    "x": 555,
+    "y": 392,
+    "vx": 819,
+    "vy": 518,
+    "domIdx": 34,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Remover",
+    "x": 660,
+    "y": 392,
+    "vx": 924,
+    "vy": 518,
+    "domIdx": 40,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Rebaixar",
+    "x": 74,
+    "y": 507,
+    "vx": 338,
+    "vy": 633,
+    "domIdx": 59,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Remover",
+    "x": 179,
+    "y": 507,
+    "vx": 443,
+    "vy": 633,
+    "domIdx": 65,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Remover",
+    "x": 179,
+    "y": 622,
+    "vx": 443,
+    "vy": 748,
+    "domIdx": 90,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Rebaixar",
+    "x": 74,
+    "y": 708,
+    "vx": 338,
+    "vy": 834,
+    "domIdx": 109,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Remover",
+    "x": 179,
+    "y": 708,
+    "vx": 443,
+    "vy": 834,
+    "domIdx": 115,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Copiar link",
+    "x": 526,
+    "y": 498,
+    "vx": 790,
+    "vy": 624,
+    "domIdx": 170,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Revogar",
+    "x": 647,
+    "y": 498,
+    "vx": 911,
+    "vy": 624,
+    "domIdx": 176,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": -0.0,
+    "vx": 1101,
+    "vy": 63,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "office-settings": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 554,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 646,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 700,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 746,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 867,
+    "y": 78,
+    "vx": 867,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Desconectar",
+    "x": 78,
+    "y": 354,
+    "vx": 342,
+    "vy": 480,
+    "domIdx": 25,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectar",
+    "x": 445,
+    "y": 326,
+    "vx": 709,
+    "vy": 452,
+    "domIdx": 44,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Aceitar a versao risco-whatsap",
+    "x": 78,
+    "y": 350,
+    "vx": 342,
+    "vy": 476,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 91,
+    "y": 532,
+    "vx": 355,
+    "vy": 658,
+    "domIdx": 110,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Segunda-feira",
+    "x": 486,
+    "y": 527,
+    "vx": 750,
+    "vy": 653,
+    "domIdx": 116,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Segunda-feira",
+    "x": 486,
+    "y": 527,
+    "vx": 750,
+    "vy": 653,
+    "domIdx": 116,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Segunda-feira",
+    "x": 486,
+    "y": 527,
+    "vx": 750,
+    "vy": 653,
+    "domIdx": 116,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Segunda-feira",
+    "x": 486,
+    "y": 527,
+    "vx": 750,
+    "vy": 653,
+    "domIdx": 116,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Fim de Segunda-feira",
+    "x": 633,
+    "y": 527,
+    "vx": 897,
+    "vy": 653,
+    "domIdx": 118,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Fim de Segunda-feira",
+    "x": 633,
+    "y": 527,
+    "vx": 897,
+    "vy": 653,
+    "domIdx": 118,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Fim de Segunda-feira",
+    "x": 633,
+    "y": 527,
+    "vx": 897,
+    "vy": 653,
+    "domIdx": 118,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Fim de Segunda-feira",
+    "x": 633,
+    "y": 527,
+    "vx": 897,
+    "vy": 653,
+    "domIdx": 118,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 91,
+    "y": 602,
+    "vx": 355,
+    "vy": 728,
+    "domIdx": 121,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Terça-feira",
+    "x": 486,
+    "y": 597,
+    "vx": 750,
+    "vy": 723,
+    "domIdx": 127,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "rounded-[var(--r-md)] border bg-surface-stron",
+    "name": "Inicio de Terça-feira",
+    "x": 486,
+    "y": 597,
+    "vx": 750,
+    "vy": 723,
+    "domIdx": 127,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   }
+  ],
+  "leads-board": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 563,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 655,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 709,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 755,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 866,
+    "y": 78,
+    "vx": 866,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Ana Beatriz Souza para Q",
+    "x": 344,
+    "y": 354,
+    "vx": 608,
+    "vy": 480,
+    "domIdx": 23,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Carlos Eduardo Lima para",
+    "x": 344,
+    "y": 533,
+    "vx": 608,
+    "vy": 659,
+    "domIdx": 44,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Mariana Alves Rocha para",
+    "x": 344,
+    "y": 708,
+    "vx": 608,
+    "vy": 834,
+    "domIdx": 66,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Rafael Nogueira para Nov",
+    "x": 677,
+    "y": 335,
+    "vx": 941,
+    "vy": 461,
+    "domIdx": 92,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Rafael Nogueira para Cli",
+    "x": 713,
+    "y": 335,
+    "vx": 977,
+    "vy": 461,
+    "domIdx": 97,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Juliana Prado para Novo",
+    "x": 677,
+    "y": 491,
+    "vx": 941,
+    "vy": 617,
+    "domIdx": 118,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Juliana Prado para Clien",
+    "x": 713,
+    "y": 491,
+    "vx": 977,
+    "vy": 617,
+    "domIdx": 123,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Thiago Marques para Novo",
+    "x": 677,
+    "y": 662,
+    "vx": 941,
+    "vy": 788,
+    "domIdx": 145,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Thiago Marques para Clie",
+    "x": 713,
+    "y": 662,
+    "vx": 977,
+    "vy": 788,
+    "domIdx": 150,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Camila Ferraz para Quali",
+    "x": 344,
+    "y": 354,
+    "vx": 608,
+    "vy": 480,
+    "domIdx": 176,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Bruno Tavares para Quali",
+    "x": 344,
+    "y": 526,
+    "vx": 608,
+    "vy": 652,
+    "domIdx": 198,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Mover Larissa Moreira para Qua",
+    "x": 344,
+    "y": 682,
+    "vx": 608,
+    "vy": 808,
+    "domIdx": 219,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "inbox-whatsapp": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 566,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 658,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 711,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 758,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 861,
+    "y": 78,
+    "vx": 861,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "h-9 w-full rounded-[var(--r-md)] border borde",
+    "name": "Buscar por nome",
+    "x": 70,
+    "y": 177,
+    "vx": 334,
+    "vy": 303,
+    "domIdx": 9,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-",
+    "name": "AB Ana Beatriz Souza 14:12 Boa",
+    "x": 4,
+    "y": 4,
+    "vx": 326,
+    "vy": 356,
+    "domIdx": 12,
+    "inStage": true,
+    "scroller": "bloco-scroll max-h-[420px] overflow-y-au"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-",
+    "name": "CE Carlos Eduardo Lima 12:40 O",
+    "x": 4,
+    "y": 120,
+    "vx": 326,
+    "vy": 472,
+    "domIdx": 30,
+    "inStage": true,
+    "scroller": "bloco-scroll max-h-[420px] overflow-y-au"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-",
+    "name": "D( Desconhecido (numero novo) ",
+    "x": 4,
+    "y": 212,
+    "vx": 326,
+    "vy": 565,
+    "domIdx": 47,
+    "inStage": true,
+    "scroller": "bloco-scroll max-h-[420px] overflow-y-au"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex min-h-8 w-full items-start gap-3 border-",
+    "name": "JP Juliana Prado 16:22 Perfeit",
+    "x": 4,
+    "y": 327,
+    "vx": 326,
+    "vy": 680,
+    "domIdx": 65,
+    "inStage": true,
+    "scroller": "bloco-scroll max-h-[420px] overflow-y-au"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var",
+    "name": "Oi! Recebi sua mensagem, ja te",
+    "x": 410,
+    "y": 475,
+    "vx": 674,
+    "vy": 601,
+    "domIdx": 108,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var",
+    "name": "Posso te enviar os horarios de",
+    "x": 410,
+    "y": 513,
+    "vx": 674,
+    "vy": 639,
+    "domIdx": 109,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center rounded-[var",
+    "name": "Quer que eu reserve uma avalia",
+    "x": 410,
+    "y": 551,
+    "vx": 674,
+    "vy": 677,
+    "domIdx": 110,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Escreva a resposta para o cont",
+    "x": 410,
+    "y": 595,
+    "vx": 674,
+    "vy": 721,
+    "domIdx": 112,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Enviar template aprovado",
+    "x": 621,
+    "y": 625,
+    "vx": 885,
+    "vy": 751,
+    "domIdx": 115,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "consent-panel": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 564,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 656,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 709,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 756,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "WhatsApp Presencial Assinado e",
+    "x": 78,
+    "y": 671,
+    "vx": 342,
+    "vy": 797,
+    "domIdx": 40,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Registrar consentimento",
+    "x": 78,
+    "y": 708,
+    "vx": 342,
+    "vy": 834,
+    "domIdx": 45,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "WhatsApp Presencial Assinado e",
+    "x": 447,
+    "y": 660,
+    "vx": 711,
+    "vy": 786,
+    "domIdx": 81,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Registrar consentimento",
+    "x": 447,
+    "y": 708,
+    "vx": 711,
+    "vy": 834,
+    "domIdx": 86,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "channel-connections": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 501,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 593,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 647,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 693,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 821,
+    "y": 78,
+    "vx": 821,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reconectar",
+    "x": 78,
+    "y": 497,
+    "vx": 342,
+    "vy": 623,
+    "domIdx": 28,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reconectar",
+    "x": 447,
+    "y": 497,
+    "vx": 711,
+    "vy": 623,
+    "domIdx": 63,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reconectar",
+    "x": 78,
+    "y": 623,
+    "vx": 342,
+    "vy": 749,
+    "domIdx": 114,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "patients-list": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 557,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 649,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 703,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 749,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 871,
+    "y": 78,
+    "vx": 871,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "h-9 w-full rounded-[var(--r-md)] border borde",
+    "name": "Buscar por nome",
+    "x": 57,
+    "y": 158,
+    "vx": 321,
+    "vy": 284,
+    "domIdx": 7,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Ana Beatri",
+    "x": 676,
+    "y": 63,
+    "vx": 998,
+    "vy": 400,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Carlos Edu",
+    "x": 676,
+    "y": 123,
+    "vx": 998,
+    "vy": 461,
+    "domIdx": 61,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Juliana Pr",
+    "x": 676,
+    "y": 183,
+    "vx": 998,
+    "vy": 521,
+    "domIdx": 84,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Rafael Nog",
+    "x": 676,
+    "y": 242,
+    "vx": 998,
+    "vy": 580,
+    "domIdx": 106,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Mariana Al",
+    "x": 676,
+    "y": 301,
+    "vx": 998,
+    "vy": 638,
+    "domIdx": 128,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Thiago Mar",
+    "x": 676,
+    "y": 361,
+    "vx": 998,
+    "vy": 698,
+    "domIdx": 150,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 items-center justify-center roun",
+    "name": "Abrir prontuario de Larissa Mo",
+    "x": 676,
+    "y": 420,
+    "vx": 998,
+    "vy": 757,
+    "domIdx": 172,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "patient-chart": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 552,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 644,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 698,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 744,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 860,
+    "y": 78,
+    "vx": 860,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "DIV",
+    "cls": "bloco-scroll flex-1 overflow-y-auto px-6 py-8",
+    "name": "PRONTUARIO DO PACIENTE Evoluca",
+    "x": 264,
+    "y": 126,
+    "vx": 264,
+    "vy": 126,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "clinical-entry": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 559,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 651,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 705,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 751,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 848,
+    "y": 78,
+    "vx": 848,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Consulta",
+    "x": 3,
+    "y": 3,
+    "vx": 345,
+    "vy": 432,
+    "domIdx": 24,
+    "inStage": true,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Medida",
+    "x": 86,
+    "y": 3,
+    "vx": 428,
+    "vy": 432,
+    "domIdx": 25,
+    "inStage": true,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "Marina Alencar — Nutricionista",
+    "x": 78,
+    "y": 386,
+    "vx": 342,
+    "vy": 512,
+    "domIdx": 31,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 426,
+    "y": 386,
+    "vx": 690,
+    "vy": 512,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Anamnese, orientacoes, plano d",
+    "x": 78,
+    "y": 467,
+    "vx": 342,
+    "vy": 593,
+    "domIdx": 43,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Gravar registro",
+    "x": 597,
+    "y": 618,
+    "vx": 861,
+    "vy": 744,
+    "domIdx": 46,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "agenda-board": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 536,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 628,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 681,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 728,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 855,
+    "y": 78,
+    "vx": 855,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "08:30 Joana Prado AVALIACAO IN",
+    "x": 80,
+    "y": 54,
+    "vx": 401,
+    "vy": 459,
+    "domIdx": 34,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "08:00 Patricia Lemos AVALIACAO",
+    "x": 80,
+    "y": 149,
+    "vx": 401,
+    "vy": 554,
+    "domIdx": 39,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "09:00 Bruno Sarmento CONSULTA ",
+    "x": 296,
+    "y": 257,
+    "vx": 617,
+    "vy": 661,
+    "domIdx": 50,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "10:00 Otavio Bezerra RETORNO A",
+    "x": 80,
+    "y": 365,
+    "vx": 401,
+    "vy": 769,
+    "domIdx": 59,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "10:30 Renata Bastos AVALIACAO ",
+    "x": 512,
+    "y": 365,
+    "vx": 833,
+    "vy": 769,
+    "domIdx": 66,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "11:30 Larissa Fontes AVALIACAO",
+    "x": 296,
+    "y": 473,
+    "vx": 617,
+    "vy": 451,
+    "domIdx": 75,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "13:00 Marcelo Tavares CONSULTA",
+    "x": 296,
+    "y": 645,
+    "vx": 617,
+    "vy": 624,
+    "domIdx": 90,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "14:00 Camila Rezende CONSULTA ",
+    "x": 80,
+    "y": 753,
+    "vx": 401,
+    "vy": 731,
+    "domIdx": 99,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "15:00 Vinicius Andrada RETORNO",
+    "x": 80,
+    "y": 861,
+    "vx": 401,
+    "vy": 776,
+    "domIdx": 109,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "mb-1 flex w-full flex-col gap-1 rounded-[var(",
+    "name": "16:00 Eduardo Vilela RETORNO C",
+    "x": 512,
+    "y": 969,
+    "vx": 833,
+    "vy": 635,
+    "domIdx": 121,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 133,
+    "vx": 1101,
+    "vy": 196,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "availability": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 544,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 636,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 690,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 736,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 861,
+    "y": 78,
+    "vx": 861,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 188,
+    "y": 48,
+    "vx": 509,
+    "vy": 463,
+    "domIdx": 33,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 342,
+    "y": 48,
+    "vx": 663,
+    "vy": 463,
+    "domIdx": 45,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 497,
+    "y": 48,
+    "vx": 818,
+    "vy": 463,
+    "domIdx": 56,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 651,
+    "y": 48,
+    "vx": 972,
+    "vy": 463,
+    "domIdx": 67,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 188,
+    "y": 157,
+    "vx": 509,
+    "vy": 572,
+    "domIdx": 79,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 419,
+    "y": 157,
+    "vx": 740,
+    "vy": 572,
+    "domIdx": 92,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 574,
+    "y": 157,
+    "vx": 895,
+    "vy": 572,
+    "domIdx": 103,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 651,
+    "y": 157,
+    "vx": 972,
+    "vy": 572,
+    "domIdx": 112,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 188,
+    "y": 230,
+    "vx": 509,
+    "vy": 645,
+    "domIdx": 124,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 265,
+    "y": 230,
+    "vx": 586,
+    "vy": 645,
+    "domIdx": 133,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 419,
+    "y": 230,
+    "vx": 740,
+    "vy": 645,
+    "domIdx": 144,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "bloco-micro flex min-h-8 w-full items-center ",
+    "name": "FOLGA",
+    "x": 574,
+    "y": 230,
+    "vx": 895,
+    "vy": 645,
+    "domIdx": 155,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "follow-up-tasks": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 570,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 662,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 716,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 762,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 880,
+    "y": 78,
+    "vx": 880,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center py-2 text-le",
+    "name": "Eduardo Vilela",
+    "x": 12,
+    "y": 45,
+    "vx": 334,
+    "vy": 461,
+    "domIdx": 25,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Concluir",
+    "x": 572,
+    "y": 58,
+    "vx": 894,
+    "vy": 474,
+    "domIdx": 36,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reagendar",
+    "x": 659,
+    "y": 58,
+    "vx": 981,
+    "vy": 474,
+    "domIdx": 38,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center py-2 text-le",
+    "name": "Joana Prado",
+    "x": 12,
+    "y": 123,
+    "vx": 334,
+    "vy": 539,
+    "domIdx": 42,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Concluir",
+    "x": 572,
+    "y": 135,
+    "vx": 894,
+    "vy": 551,
+    "domIdx": 53,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reagendar",
+    "x": 659,
+    "y": 135,
+    "vx": 981,
+    "vy": 551,
+    "domIdx": 55,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center py-2 text-le",
+    "name": "Camila Rezende",
+    "x": 12,
+    "y": 200,
+    "vx": 334,
+    "vy": 617,
+    "domIdx": 59,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Concluir",
+    "x": 572,
+    "y": 213,
+    "vx": 894,
+    "vy": 629,
+    "domIdx": 70,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reagendar",
+    "x": 659,
+    "y": 213,
+    "vx": 981,
+    "vy": 629,
+    "domIdx": 72,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center py-2 text-le",
+    "name": "Marcelo Tavares",
+    "x": 12,
+    "y": 278,
+    "vx": 334,
+    "vy": 694,
+    "domIdx": 76,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Concluir",
+    "x": 572,
+    "y": 290,
+    "vx": 894,
+    "vy": 706,
+    "domIdx": 87,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reagendar",
+    "x": 659,
+    "y": 290,
+    "vx": 981,
+    "vy": 706,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "inline-flex min-h-8 items-center py-2 text-le",
+    "name": "Patricia Lemos",
+    "x": 12,
+    "y": 356,
+    "vx": 334,
+    "vy": 772,
+    "domIdx": 93,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Concluir",
+    "x": 572,
+    "y": 368,
+    "vx": 894,
+    "vy": 784,
+    "domIdx": 104,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reagendar",
+    "x": 659,
+    "y": 368,
+    "vx": 981,
+    "vy": 784,
+    "domIdx": 106,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   }
+  ],
+  "packages-pricing": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 538,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 630,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 683,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 730,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 857,
+    "y": 78,
+    "vx": 857,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Salvar",
+    "x": 78,
+    "y": 491,
+    "vx": 342,
+    "vy": 617,
+    "domIdx": 22,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Desativar",
+    "x": 153,
+    "y": 491,
+    "vx": 417,
+    "vy": 617,
+    "domIdx": 24,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Salvar",
+    "x": 445,
+    "y": 475,
+    "vx": 709,
+    "vy": 601,
+    "domIdx": 41,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Desativar",
+    "x": 520,
+    "y": 475,
+    "vx": 784,
+    "vy": 601,
+    "domIdx": 43,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Salvar",
+    "x": 78,
+    "y": 355,
+    "vx": 342,
+    "vy": 481,
+    "domIdx": 60,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Desativar",
+    "x": 153,
+    "y": 355,
+    "vx": 417,
+    "vy": 481,
+    "domIdx": 62,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Salvar",
+    "x": 445,
+    "y": 361,
+    "vx": 709,
+    "vy": 487,
+    "domIdx": 79,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Desativar",
+    "x": 520,
+    "y": 361,
+    "vx": 784,
+    "vy": 487,
+    "domIdx": 81,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Salvar",
+    "x": 78,
+    "y": 634,
+    "vx": 342,
+    "vy": 760,
+    "domIdx": 98,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Ativar",
+    "x": 153,
+    "y": 634,
+    "vx": 417,
+    "vy": 760,
+    "domIdx": 100,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "payments-checkout": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 555,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 647,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 701,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 747,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 848,
+    "y": 78,
+    "vx": 848,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Nome do paciente",
+    "x": 78,
+    "y": 330,
+    "vx": 342,
+    "vy": 456,
+    "domIdx": 11,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "Avaliacao inicial — R$ 280,00 ",
+    "x": 78,
+    "y": 411,
+    "vx": 342,
+    "vy": 537,
+    "domIdx": 15,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "Pix Cartao de credito Cartao d",
+    "x": 78,
+    "y": 492,
+    "vx": 342,
+    "vy": 618,
+    "domIdx": 23,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Registrar pagamento",
+    "x": 561,
+    "y": 567,
+    "vx": 825,
+    "vy": 693,
+    "domIdx": 33,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "finance-overview": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 554,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 646,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 700,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 746,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 874,
+    "y": 78,
+    "vx": 874,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Exportar",
+    "x": 677,
+    "y": 161,
+    "vx": 941,
+    "vy": 287,
+    "domIdx": 7,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "reports-funnel": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 539,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 631,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 685,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 731,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 859,
+    "y": 78,
+    "vx": 859,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Exportar",
+    "x": 677,
+    "y": 161,
+    "vx": 941,
+    "vy": 287,
+    "domIdx": 7,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "meta-conversion": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 555,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 647,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 700,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 747,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 860,
+    "y": 78,
+    "vx": 860,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Exportar fila",
+    "x": 57,
+    "y": 644,
+    "vx": 321,
+    "vy": 770,
+    "domIdx": 90,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reenviar com erro",
+    "x": 171,
+    "y": 644,
+    "vx": 435,
+    "vy": 770,
+    "domIdx": 92,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "social-accounts": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 499,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 591,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 645,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 691,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 819,
+    "y": 78,
+    "vx": 819,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectar",
+    "x": 660,
+    "y": 186,
+    "vx": 924,
+    "vy": 312,
+    "domIdx": 7,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reconectar",
+    "x": 639,
+    "y": 593,
+    "vx": 903,
+    "vy": 719,
+    "domIdx": 98,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "social-composer": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 582,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 674,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 727,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 774,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 850,
+    "y": 78,
+    "vx": 850,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "Post Carrossel Reels",
+    "x": 78,
+    "y": 335,
+    "vx": 342,
+    "vy": 461,
+    "domIdx": 12,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "SELECT",
+    "cls": "w-full rounded-[var(--r-md)] border px-3 bloc",
+    "name": "@exemplo.nutricao — Consultori",
+    "x": 78,
+    "y": 438,
+    "vx": 342,
+    "vy": 564,
+    "domIdx": 21,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Conte a novidade do consultori",
+    "x": 78,
+    "y": 519,
+    "vx": 342,
+    "vy": 645,
+    "domIdx": 30,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "nutricao #consultorio #agenda",
+    "x": 78,
+    "y": 686,
+    "vx": 342,
+    "vy": 812,
+    "domIdx": 35,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-ce",
+    "name": "",
+    "x": 89,
+    "y": 354,
+    "vx": 353,
+    "vy": 480,
+    "domIdx": 43,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-ce",
+    "name": "",
+    "x": 89,
+    "y": 410,
+    "vx": 353,
+    "vy": 536,
+    "domIdx": 53,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-ce",
+    "name": "",
+    "x": 89,
+    "y": 466,
+    "vx": 353,
+    "vy": 592,
+    "domIdx": 63,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-ce",
+    "name": "",
+    "x": 89,
+    "y": 522,
+    "vx": 353,
+    "vy": 648,
+    "domIdx": 71,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "flex h-8 w-8 shrink-0 items-center justify-ce",
+    "name": "",
+    "x": 89,
+    "y": 578,
+    "vx": 353,
+    "vy": 704,
+    "domIdx": 79,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "INPUT",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "",
+    "x": 78,
+    "y": 682,
+    "vx": 342,
+    "vy": 808,
+    "domIdx": 89,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   }
+  ],
+  "social-automations": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 545,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 637,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 691,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 737,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 59,
+    "vx": 974,
+    "vy": 414,
+    "domIdx": 41,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 136,
+    "vx": 974,
+    "vy": 492,
+    "domIdx": 74,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 212,
+    "vx": 974,
+    "vy": 567,
+    "domIdx": 109,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 288,
+    "vx": 974,
+    "vy": 643,
+    "domIdx": 142,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "social-logs": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 549,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 641,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 694,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 741,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 868,
+    "y": 78,
+    "vx": 868,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reexecutar",
+    "x": 625,
+    "y": 343,
+    "vx": 947,
+    "vy": 698,
+    "domIdx": 73,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Reexecutar",
+    "x": 625,
+    "y": 744,
+    "vx": 947,
+    "vy": 617,
+    "domIdx": 135,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "webhooks-panel": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 477,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 569,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 622,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 669,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 796,
+    "y": 78,
+    "vx": 796,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 79,
+    "vx": 974,
+    "vy": 437,
+    "domIdx": 50,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 168,
+    "vx": 974,
+    "vy": 527,
+    "domIdx": 82,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 652,
+    "y": 250,
+    "vx": 974,
+    "vy": 608,
+    "domIdx": 113,
+    "inStage": true,
+    "scroller": "bloco-scroll overflow-x-auto"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "agent-console": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 557,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 649,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 703,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 749,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 855,
+    "y": 78,
+    "vx": 855,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative mt-0.5 h-8 w-11 shrink-0 rounded-[va",
+    "name": "",
+    "x": 633,
+    "y": 130,
+    "vx": 897,
+    "vy": 256,
+    "domIdx": 13,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "DIV",
+    "cls": "bloco-scroll flex max-h-[420px] flex-col gap-",
+    "name": "PACIENTEOi, tem horario para q",
+    "x": 78,
+    "y": 252,
+    "vx": 342,
+    "vy": 378,
+    "domIdx": 20,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "TEXTAREA",
+    "cls": "w-full rounded-[var(--r-md)] border bg-surfac",
+    "name": "Mensagem para o agente",
+    "x": 78,
+    "y": 710,
+    "vx": 342,
+    "vy": 836,
+    "domIdx": 50,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "P",
+    "cls": "bloco-mono block max-h-48 overflow-y-auto whi",
+    "name": "Voce e o assistente do consult",
+    "x": 480,
+    "y": 284,
+    "vx": 744,
+    "vy": 410,
+    "domIdx": 112,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "ops-health": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 588,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 680,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 734,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 780,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Rodar backup",
+    "x": 627,
+    "y": 186,
+    "vx": 891,
+    "vy": 312,
+    "domIdx": 7,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ],
+  "integration-manifest": [
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Carregando",
+    "x": 68,
+    "y": 3,
+    "vx": 566,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Vazio",
+    "x": 160,
+    "y": 3,
+    "vx": 658,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Erro",
+    "x": 214,
+    "y": 3,
+    "vx": 712,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "rounded-[var(--r-sm)] font-medium transition-",
+    "name": "Sem permissao",
+    "x": 260,
+    "y": 3,
+    "vx": 758,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll inline-flex max-w-full item"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Conectado",
+    "x": 864,
+    "y": 78,
+    "vx": 864,
+    "vy": 78,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "-"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Provisionar",
+    "x": 445,
+    "y": 354,
+    "vx": 709,
+    "vy": 480,
+    "domIdx": 218,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Provisionar",
+    "x": 78,
+    "y": 354,
+    "vx": 342,
+    "vy": 480,
+    "domIdx": 360,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "relative inline-flex items-center justify-cen",
+    "name": "Provisionar",
+    "x": 445,
+    "y": 354,
+    "vx": 709,
+    "vy": 480,
+    "domIdx": 405,
+    "inStage": true,
+    "scroller": "bloco-scroll flex-1 overflow-y-auto px-6"
+   },
+   {
+    "tag": "BUTTON",
+    "cls": "group relative flex items-center gap-2 whites",
+    "name": "Acoes",
+    "x": 0,
+    "y": 0,
+    "vx": 1101,
+    "vy": 162,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex min-w-0 gap-1 overflow"
+   },
+   {
+    "tag": "DIV",
+    "cls": "focus-visible:outline-none bloco-tab-anim px-",
+    "name": "A mesma acao serve para a UI, ",
+    "x": 1,
+    "y": 136,
+    "vx": 1101,
+    "vy": 199,
+    "domIdx": -1,
+    "inStage": false,
+    "scroller": "bloco-scroll flex w-[340px] shrink-0 fle"
+   }
+  ]
+ },
+ "coll": {
+  "390": {
+   "auth-login": {
+    "n": 0,
+    "col": []
+   },
+   "auth-two-factor": {
+    "n": 0,
+    "col": []
+   },
+   "auth-recovery": {
+    "n": 0,
+    "col": []
+   },
+   "admin-platform": {
+    "n": 0,
+    "col": []
+   },
+   "office-team": {
+    "n": 0,
+    "col": []
+   },
+   "office-settings": {
+    "n": 0,
+    "col": []
+   },
+   "leads-board": {
+    "n": 0,
+    "col": []
+   },
+   "inbox-whatsapp": {
+    "n": 0,
+    "col": []
+   },
+   "consent-panel": {
+    "n": 0,
+    "col": []
+   },
+   "channel-connections": {
+    "n": 0,
+    "col": []
+   },
+   "patients-list": {
+    "n": 0,
+    "col": []
+   },
+   "patient-chart": {
+    "n": 0,
+    "col": []
+   },
+   "clinical-entry": {
+    "n": 0,
+    "col": []
+   },
+   "agenda-board": {
+    "n": 0,
+    "col": []
+   },
+   "availability": {
+    "n": 0,
+    "col": []
+   },
+   "follow-up-tasks": {
+    "n": 0,
+    "col": []
+   },
+   "packages-pricing": {
+    "n": 0,
+    "col": []
+   },
+   "payments-checkout": {
+    "n": 0,
+    "col": []
+   },
+   "finance-overview": {
+    "n": 0,
+    "col": []
+   },
+   "reports-funnel": {
+    "n": 0,
+    "col": []
+   },
+   "meta-conversion": {
+    "n": 0,
+    "col": []
+   },
+   "social-accounts": {
+    "n": 0,
+    "col": []
+   },
+   "social-composer": {
+    "n": 5,
+    "col": [
+     {
+      "a": "prato-colorido.jpg — midia p",
+      "b": "IMAGEM · 1,2 MB",
+      "ox": 35,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "mesa-consultorio.jpg — midia",
+      "b": "IMAGEM · 980 KB",
+      "ox": 57,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "card-agenda.png — midia para",
+      "b": "IMAGEM · 420 KB",
+      "ox": 31,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "roteiro-almoco.mp4 — midia p",
+      "b": "VIDEO · 38 S",
+      "ox": 18,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "detalhe-armario.jpg — midia ",
+      "b": "IMAGEM · 760 KB",
+      "ox": 49,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     }
+    ]
+   },
+   "social-automations": {
+    "n": 0,
+    "col": []
+   },
+   "social-logs": {
+    "n": 0,
+    "col": []
+   },
+   "webhooks-panel": {
+    "n": 0,
+    "col": []
+   },
+   "agent-console": {
+    "n": 7,
+    "col": [
+     {
+      "a": "PACIENTE",
+      "b": "Oi, tem horario para quinta ",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Oi! Para quinta de manha ten",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "PACIENTE",
+      "b": "10h30 funciona.",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Combinado! Agendei para quin",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "Combinado! Agendei para quin",
+      "b": "Mensagem para o agente",
+      "ox": 114,
+      "oy": 19,
+      "acls": "bloco-body",
+      "bcls": "bloco-callout font-medium text-fg-s"
+     },
+     {
+      "a": "SISTEMA",
+      "b": "Atendimento registrado. Lead",
+      "ox": 59,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     }
+    ]
+   },
+   "ops-health": {
+    "n": 0,
+    "col": []
+   },
+   "integration-manifest": {
+    "n": 0,
+    "col": []
+   }
+  },
+  "768": {
+   "auth-login": {
+    "n": 0,
+    "col": []
+   },
+   "auth-two-factor": {
+    "n": 0,
+    "col": []
+   },
+   "auth-recovery": {
+    "n": 0,
+    "col": []
+   },
+   "admin-platform": {
+    "n": 0,
+    "col": []
+   },
+   "office-team": {
+    "n": 0,
+    "col": []
+   },
+   "office-settings": {
+    "n": 0,
+    "col": []
+   },
+   "leads-board": {
+    "n": 0,
+    "col": []
+   },
+   "inbox-whatsapp": {
+    "n": 0,
+    "col": []
+   },
+   "consent-panel": {
+    "n": 0,
+    "col": []
+   },
+   "channel-connections": {
+    "n": 0,
+    "col": []
+   },
+   "patients-list": {
+    "n": 0,
+    "col": []
+   },
+   "patient-chart": {
+    "n": 0,
+    "col": []
+   },
+   "clinical-entry": {
+    "n": 0,
+    "col": []
+   },
+   "agenda-board": {
+    "n": 0,
+    "col": []
+   },
+   "availability": {
+    "n": 0,
+    "col": []
+   },
+   "follow-up-tasks": {
+    "n": 0,
+    "col": []
+   },
+   "packages-pricing": {
+    "n": 0,
+    "col": []
+   },
+   "payments-checkout": {
+    "n": 0,
+    "col": []
+   },
+   "finance-overview": {
+    "n": 0,
+    "col": []
+   },
+   "reports-funnel": {
+    "n": 0,
+    "col": []
+   },
+   "meta-conversion": {
+    "n": 0,
+    "col": []
+   },
+   "social-accounts": {
+    "n": 0,
+    "col": []
+   },
+   "social-composer": {
+    "n": 0,
+    "col": []
+   },
+   "social-automations": {
+    "n": 0,
+    "col": []
+   },
+   "social-logs": {
+    "n": 0,
+    "col": []
+   },
+   "webhooks-panel": {
+    "n": 0,
+    "col": []
+   },
+   "agent-console": {
+    "n": 4,
+    "col": [
+     {
+      "a": "PACIENTE",
+      "b": "Oi, tem horario para quinta ",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Oi! Para quinta de manha ten",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Combinado! Agendei para quin",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "SISTEMA",
+      "b": "Atendimento registrado. Lead",
+      "ox": 59,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     }
+    ]
+   },
+   "ops-health": {
+    "n": 0,
+    "col": []
+   },
+   "integration-manifest": {
+    "n": 0,
+    "col": []
+   }
+  },
+  "1280": {
+   "auth-login": {
+    "n": 0,
+    "col": []
+   },
+   "auth-two-factor": {
+    "n": 0,
+    "col": []
+   },
+   "auth-recovery": {
+    "n": 0,
+    "col": []
+   },
+   "admin-platform": {
+    "n": 0,
+    "col": []
+   },
+   "office-team": {
+    "n": 0,
+    "col": []
+   },
+   "office-settings": {
+    "n": 0,
+    "col": []
+   },
+   "leads-board": {
+    "n": 0,
+    "col": []
+   },
+   "inbox-whatsapp": {
+    "n": 0,
+    "col": []
+   },
+   "consent-panel": {
+    "n": 0,
+    "col": []
+   },
+   "channel-connections": {
+    "n": 0,
+    "col": []
+   },
+   "patients-list": {
+    "n": 0,
+    "col": []
+   },
+   "patient-chart": {
+    "n": 0,
+    "col": []
+   },
+   "clinical-entry": {
+    "n": 0,
+    "col": []
+   },
+   "agenda-board": {
+    "n": 0,
+    "col": []
+   },
+   "availability": {
+    "n": 0,
+    "col": []
+   },
+   "follow-up-tasks": {
+    "n": 0,
+    "col": []
+   },
+   "packages-pricing": {
+    "n": 0,
+    "col": []
+   },
+   "payments-checkout": {
+    "n": 0,
+    "col": []
+   },
+   "finance-overview": {
+    "n": 0,
+    "col": []
+   },
+   "reports-funnel": {
+    "n": 0,
+    "col": []
+   },
+   "meta-conversion": {
+    "n": 0,
+    "col": []
+   },
+   "social-accounts": {
+    "n": 0,
+    "col": []
+   },
+   "social-composer": {
+    "n": 5,
+    "col": [
+     {
+      "a": "prato-colorido.jpg — midia p",
+      "b": "IMAGEM · 1,2 MB",
+      "ox": 54,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "mesa-consultorio.jpg — midia",
+      "b": "IMAGEM · 980 KB",
+      "ox": 76,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "card-agenda.png — midia para",
+      "b": "IMAGEM · 420 KB",
+      "ox": 50,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "roteiro-almoco.mp4 — midia p",
+      "b": "VIDEO · 38 S",
+      "ox": 37,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     },
+     {
+      "a": "detalhe-armario.jpg — midia ",
+      "b": "IMAGEM · 760 KB",
+      "ox": 68,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     }
+    ]
+   },
+   "social-automations": {
+    "n": 0,
+    "col": []
+   },
+   "social-logs": {
+    "n": 0,
+    "col": []
+   },
+   "webhooks-panel": {
+    "n": 0,
+    "col": []
+   },
+   "agent-console": {
+    "n": 7,
+    "col": [
+     {
+      "a": "PACIENTE",
+      "b": "Oi, tem horario para quinta ",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Oi! Para quinta de manha ten",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "PACIENTE",
+      "b": "10h30 funciona.",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Combinado! Agendei para quin",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "Combinado! Agendei para quin",
+      "b": "Mensagem para o agente",
+      "ox": 124,
+      "oy": 2,
+      "acls": "bloco-body",
+      "bcls": "bloco-callout font-medium text-fg-s"
+     },
+     {
+      "a": "Combinado! Agendei para quin",
+      "b": "Enviar",
+      "ox": 68,
+      "oy": 18,
+      "acls": "bloco-body",
+      "bcls": "inline-flex items-center gap-[inher"
+     }
+    ]
+   },
+   "ops-health": {
+    "n": 0,
+    "col": []
+   },
+   "integration-manifest": {
+    "n": 0,
+    "col": []
+   }
+  },
+  "1440": {
+   "auth-login": {
+    "n": 0,
+    "col": []
+   },
+   "auth-two-factor": {
+    "n": 0,
+    "col": []
+   },
+   "auth-recovery": {
+    "n": 0,
+    "col": []
+   },
+   "admin-platform": {
+    "n": 0,
+    "col": []
+   },
+   "office-team": {
+    "n": 0,
+    "col": []
+   },
+   "office-settings": {
+    "n": 0,
+    "col": []
+   },
+   "leads-board": {
+    "n": 0,
+    "col": []
+   },
+   "inbox-whatsapp": {
+    "n": 0,
+    "col": []
+   },
+   "consent-panel": {
+    "n": 0,
+    "col": []
+   },
+   "channel-connections": {
+    "n": 0,
+    "col": []
+   },
+   "patients-list": {
+    "n": 0,
+    "col": []
+   },
+   "patient-chart": {
+    "n": 0,
+    "col": []
+   },
+   "clinical-entry": {
+    "n": 0,
+    "col": []
+   },
+   "agenda-board": {
+    "n": 0,
+    "col": []
+   },
+   "availability": {
+    "n": 0,
+    "col": []
+   },
+   "follow-up-tasks": {
+    "n": 0,
+    "col": []
+   },
+   "packages-pricing": {
+    "n": 0,
+    "col": []
+   },
+   "payments-checkout": {
+    "n": 0,
+    "col": []
+   },
+   "finance-overview": {
+    "n": 0,
+    "col": []
+   },
+   "reports-funnel": {
+    "n": 0,
+    "col": []
+   },
+   "meta-conversion": {
+    "n": 0,
+    "col": []
+   },
+   "social-accounts": {
+    "n": 0,
+    "col": []
+   },
+   "social-composer": {
+    "n": 1,
+    "col": [
+     {
+      "a": "mesa-consultorio.jpg — midia",
+      "b": "IMAGEM · 980 KB",
+      "ox": 3,
+      "oy": 14,
+      "acls": "bloco-callout min-w-0 flex-1 trunca",
+      "bcls": "bloco-micro shrink-0"
+     }
+    ]
+   },
+   "social-automations": {
+    "n": 0,
+    "col": []
+   },
+   "social-logs": {
+    "n": 0,
+    "col": []
+   },
+   "webhooks-panel": {
+    "n": 0,
+    "col": []
+   },
+   "agent-console": {
+    "n": 4,
+    "col": [
+     {
+      "a": "PACIENTE",
+      "b": "Oi, tem horario para quinta ",
+      "ox": 65,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Oi! Para quinta de manha ten",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Combinado! Agendei para quin",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "SISTEMA",
+      "b": "Atendimento registrado. Lead",
+      "ox": 59,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     }
+    ]
+   },
+   "ops-health": {
+    "n": 0,
+    "col": []
+   },
+   "integration-manifest": {
+    "n": 0,
+    "col": []
+   }
+  },
+  "1920": {
+   "auth-login": {
+    "n": 0,
+    "col": []
+   },
+   "auth-two-factor": {
+    "n": 0,
+    "col": []
+   },
+   "auth-recovery": {
+    "n": 0,
+    "col": []
+   },
+   "admin-platform": {
+    "n": 0,
+    "col": []
+   },
+   "office-team": {
+    "n": 0,
+    "col": []
+   },
+   "office-settings": {
+    "n": 0,
+    "col": []
+   },
+   "leads-board": {
+    "n": 0,
+    "col": []
+   },
+   "inbox-whatsapp": {
+    "n": 0,
+    "col": []
+   },
+   "consent-panel": {
+    "n": 0,
+    "col": []
+   },
+   "channel-connections": {
+    "n": 0,
+    "col": []
+   },
+   "patients-list": {
+    "n": 0,
+    "col": []
+   },
+   "patient-chart": {
+    "n": 0,
+    "col": []
+   },
+   "clinical-entry": {
+    "n": 0,
+    "col": []
+   },
+   "agenda-board": {
+    "n": 0,
+    "col": []
+   },
+   "availability": {
+    "n": 0,
+    "col": []
+   },
+   "follow-up-tasks": {
+    "n": 0,
+    "col": []
+   },
+   "packages-pricing": {
+    "n": 0,
+    "col": []
+   },
+   "payments-checkout": {
+    "n": 0,
+    "col": []
+   },
+   "finance-overview": {
+    "n": 0,
+    "col": []
+   },
+   "reports-funnel": {
+    "n": 0,
+    "col": []
+   },
+   "meta-conversion": {
+    "n": 0,
+    "col": []
+   },
+   "social-accounts": {
+    "n": 0,
+    "col": []
+   },
+   "social-composer": {
+    "n": 0,
+    "col": []
+   },
+   "social-automations": {
+    "n": 0,
+    "col": []
+   },
+   "social-logs": {
+    "n": 0,
+    "col": []
+   },
+   "webhooks-panel": {
+    "n": 0,
+    "col": []
+   },
+   "agent-console": {
+    "n": 3,
+    "col": [
+     {
+      "a": "AGENTE",
+      "b": "Oi! Para quinta de manha ten",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "AGENTE",
+      "b": "Combinado! Agendei para quin",
+      "ox": 53,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     },
+     {
+      "a": "SISTEMA",
+      "b": "Atendimento registrado. Lead",
+      "ox": 59,
+      "oy": 13,
+      "acls": "bloco-micro mr-2",
+      "bcls": "bloco-body"
+     }
+    ]
+   },
+   "ops-health": {
+    "n": 0,
+    "col": []
+   },
+   "integration-manifest": {
+    "n": 0,
+    "col": []
+   }
+  }
+ }
+}
