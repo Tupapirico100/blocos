@@ -64,15 +64,16 @@ with sync_playwright() as p:
         for v in variantes:
             # a barra de variantes usa o rotulo da receita; localiza pelo id do bloco
             botoes = page.query_selector_all("section button[role='radio']")  # variantes primeiro, estados depois
-            if v != variantes[0]:
-                idx = variantes.index(v)
-                if idx < len(botoes):
-                    botoes[idx].click()
-                    page.wait_for_timeout(320)
-                    sel = botoes[idx].get_attribute("aria-checked") or botoes[idx].get_attribute("aria-selected")
-                    if sel != "true":
-                        achados.append({"bloco": bid, "variante": v, "tipo": "variante_nao_ativa",
-                                        "detalhe": f"aria-selected={sel}"})
+            # clica SEMPRE: o estado inicial e a variante escolhida pelo dono,
+            # nao a primeira da lista
+            idx = variantes.index(v)
+            if idx < len(botoes):
+                botoes[idx].click()
+                page.wait_for_timeout(320)
+                sel = botoes[idx].get_attribute("aria-checked") or botoes[idx].get_attribute("aria-selected")
+                if sel != "true":
+                    achados.append({"bloco": bid, "variante": v, "tipo": "variante_nao_ativa",
+                                    "detalhe": f"aria-checked={sel}"})
             s = snapshot(page)
             hashes.append(s["hash"])
             sigs.append(s["sig"])
