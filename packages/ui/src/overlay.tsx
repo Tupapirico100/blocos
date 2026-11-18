@@ -156,7 +156,7 @@ export function TabPanel({ value, children, className }: { value: string; childr
     <TabsPrimitive.Content
       value={value}
       className={cn(
-        "focus-visible:outline-none bloco-tab-anim",
+        "bloco-tab-anim focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent",
         className,
       )}
     >
