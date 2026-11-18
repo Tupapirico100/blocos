@@ -1,0 +1,2250 @@
+{
+ "auth-login": {
+  "variantes": {
+   "Dividida": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ]
+   },
+   "Centralizada": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ]
+   },
+   "Minima": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Entrar na sua conta",
+      "cls": "bloco-title2"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Dividida",
+   "Centralizada",
+   "Minima"
+  ]
+ },
+ "auth-two-factor": {
+  "variantes": {
+   "Cartões": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Coluna": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Passos": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Verificacao em duas etapas",
+      "cls": "bloco-title3"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Verificacao em duas etapas",
+      "cls": "bloco-title3"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartões",
+   "Coluna",
+   "Passos"
+  ]
+ },
+ "auth-recovery": {
+  "variantes": {
+   "Formulário": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ]
+   },
+   "Passos": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ]
+   },
+   "Dividida": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Esqueci minha senha",
+      "cls": "bloco-title2"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Formulário",
+   "Passos",
+   "Dividida"
+  ]
+ },
+ "admin-platform": {
+  "variantes": {
+   "Cartões": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Dividida": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Consultorios administrados",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartões",
+   "Tabela",
+   "Dividida"
+  ]
+ },
+ "office-team": {
+  "variantes": {
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cartões": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Equipe e acessos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Lista",
+   "Cartões",
+   "Tabela"
+  ]
+ },
+ "office-settings": {
+  "variantes": {
+   "Seções": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Provedor de WhatsApp",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horario de atendimento",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhook de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Provedor de WhatsApp",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horario de atendimento",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhook de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Abas": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cartões": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Provedor de WhatsApp",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horario de atendimento",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhook de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Configuracoes do consultorio",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canais conectados",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Provedor de WhatsApp",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horario de atendimento",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhook de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Seções",
+   "Abas",
+   "Cartões"
+  ]
+ },
+ "leads-board": {
+  "variantes": {
+   "Quadro": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Qualificado",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Cliente",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Qualificado",
+      "cls": "bloco-title3 break-words"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Cliente",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Timeline": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Quadro",
+   "Tabela",
+   "Timeline"
+  ]
+ },
+ "inbox-whatsapp": {
+  "variantes": {
+   "Dividido": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Empilhado": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Foco": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Dividido",
+   "Empilhado",
+   "Foco"
+  ]
+ },
+ "consent-panel": {
+  "variantes": {
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tratamento de dados",
+      "cls": "bloco-title3"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Marketing",
+      "cls": "bloco-title3"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tratamento de dados",
+      "cls": "bloco-title3"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Marketing",
+      "cls": "bloco-title3"
+     }
+    ]
+   },
+   "Timeline": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartoes",
+   "Timeline",
+   "Tabela"
+  ]
+ },
+ "channel-connections": {
+  "variantes": {
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "WhatsApp Cloud API (Meta)",
+      "cls": "bloco-title3 truncate"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "WhatsApp auto-hospedado (Baileys)",
+      "cls": "bloco-title3 truncate"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canal hospedado por terceiro",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "WhatsApp Cloud API (Meta)",
+      "cls": "bloco-title3 truncate"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "WhatsApp auto-hospedado (Baileys)",
+      "cls": "bloco-title3 truncate"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Canal hospedado por terceiro",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartoes",
+   "Tabela"
+  ]
+ },
+ "patients-list": {
+  "variantes": {
+   "Tabela": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Cartoes": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   },
+   "Grade": {
+    "block": [],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Tabela",
+   "Cartoes",
+   "Grade"
+  ]
+ },
+ "patient-chart": {
+  "variantes": {
+   "Timeline": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   },
+   "Blocos": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   },
+   "Abas": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Timeline",
+   "Blocos",
+   "Abas"
+  ]
+ },
+ "clinical-entry": {
+  "variantes": {
+   "Formulario": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   },
+   "Wizard": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   },
+   "Linha": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Novo registro para Ana Beatriz Souza",
+      "cls": "bloco-title3 truncate"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Formulario",
+   "Wizard",
+   "Linha"
+  ]
+ },
+ "agenda-board": {
+  "variantes": {
+   "Dia": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Semana": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Agenda de consultas",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Dia",
+   "Semana",
+   "Lista"
+  ]
+ },
+ "availability": {
+  "variantes": {
+   "Semana": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Slots": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Horarios de atendimento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Semana",
+   "Lista",
+   "Slots"
+  ]
+ },
+ "follow-up-tasks": {
+  "variantes": {
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Calendario": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Quadro": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Tarefas de acompanhamento",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Lista",
+   "Calendario",
+   "Quadro"
+  ]
+ },
+ "packages-pricing": {
+  "variantes": {
+   "Cards": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Split": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pacotes e precos",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cards",
+   "Tabela",
+   "Split"
+  ]
+ },
+ "payments-checkout": {
+  "variantes": {
+   "Formulario": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Recibo": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Split": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Pagamento e recibo",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Formulario",
+   "Recibo",
+   "Split"
+  ]
+ },
+ "finance-overview": {
+  "variantes": {
+   "Cards": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Grafico": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Visao financeira",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cards",
+   "Grafico",
+   "Tabela"
+  ]
+ },
+ "reports-funnel": {
+  "variantes": {
+   "Funil": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cards": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Funil de conversao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Funil",
+   "Cards",
+   "Tabela"
+  ]
+ },
+ "meta-conversion": {
+  "variantes": {
+   "Timeline": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cards": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Fila de eventos da Meta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Timeline",
+   "Tabela",
+   "Cards"
+  ]
+ },
+ "social-accounts": {
+  "variantes": {
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Contas conectadas",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Contas conectadas",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Grade": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Contas conectadas",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Contas conectadas",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartoes",
+   "Grade"
+  ]
+ },
+ "social-composer": {
+  "variantes": {
+   "Composer": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Dividido": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "So preview": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Composer de publicacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Composer",
+   "Dividido",
+   "So preview"
+  ]
+ },
+ "social-automations": {
+  "variantes": {
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Fluxo": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Automacoes de resposta",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Lista",
+   "Cartoes",
+   "Fluxo"
+  ]
+ },
+ "social-logs": {
+  "variantes": {
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Logs de publicacao e interacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Logs de publicacao e interacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Linha do tempo": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Logs de publicacao e interacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Logs de publicacao e interacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Tabela",
+   "Linha do tempo"
+  ]
+ },
+ "webhooks-panel": {
+  "variantes": {
+   "Lista": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhooks de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhooks de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Fluxo": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhooks de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Webhooks de saida",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Lista",
+   "Fluxo"
+  ]
+ },
+ "agent-console": {
+  "variantes": {
+   "Conversa": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Logs": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Console do agente",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Conversa",
+   "Cartoes",
+   "Logs"
+  ]
+ },
+ "ops-health": {
+  "variantes": {
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Linha do tempo": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Saude da operacao",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartoes",
+   "Tabela",
+   "Linha do tempo"
+  ]
+ },
+ "integration-manifest": {
+  "variantes": {
+   "Cartoes": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Tabela": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   },
+   "Checklist": {
+    "block": [
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ],
+    "doc": [
+     {
+      "tag": "h1",
+      "lvl": 1,
+      "text": "Blocos",
+      "cls": "bloco-headline leading-tight"
+     },
+     {
+      "tag": "h2",
+      "lvl": 2,
+      "text": "Manifesto de conexoes",
+      "cls": "bloco-title3 break-words"
+     }
+    ]
+   }
+  },
+  "labels": [
+   "Cartoes",
+   "Tabela",
+   "Checklist"
+  ]
+ }
+}

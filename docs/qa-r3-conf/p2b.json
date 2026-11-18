@@ -1,0 +1,1026 @@
+{
+ "auth-login": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "auth-two-factor": {
+  "Normal": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "auth-recovery": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "admin-platform": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "office-team": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "office-settings": {
+  "Normal": {
+   "bloco": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "doc": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "leads-board": {
+  "Normal": {
+   "bloco": [
+    2,
+    2,
+    2
+   ],
+   "doc": [
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "inbox-whatsapp": {
+  "Normal": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "consent-panel": {
+  "Normal": {
+   "bloco": [
+    2,
+    2
+   ],
+   "doc": [
+    1,
+    2,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "channel-connections": {
+  "Normal": {
+   "bloco": [
+    2,
+    2,
+    2
+   ],
+   "doc": [
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "patients-list": {
+  "Normal": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "patient-chart": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "clinical-entry": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "agenda-board": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "availability": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "follow-up-tasks": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "packages-pricing": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "payments-checkout": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "finance-overview": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "reports-funnel": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "meta-conversion": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "social-accounts": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "social-composer": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "social-automations": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "social-logs": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "webhooks-panel": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "agent-console": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "ops-health": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ },
+ "integration-manifest": {
+  "Normal": {
+   "bloco": [
+    2
+   ],
+   "doc": [
+    1,
+    2
+   ]
+  },
+  "Carregando": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Vazio": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Erro": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  },
+  "Sem permissao": {
+   "bloco": [],
+   "doc": [
+    1
+   ]
+  }
+ }
+}
