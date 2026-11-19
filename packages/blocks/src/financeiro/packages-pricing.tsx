@@ -51,6 +51,8 @@ export interface PackagesPricingData {
   showValidity?: boolean;
   /** Mostra o cabecalho do bloco. Padrao: sim. */
   showHeader?: boolean;
+  /** Quebra o nome do pacote em varias linhas em vez de cortar com reticencias. Padrao: corta. */
+  wrapNames?: boolean;
 }
 
 /* ------------------------------------------------------------------ */
@@ -99,6 +101,8 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
   const canSave = data.canSave !== false;
   const canToggle = data.canToggle !== false;
   const showValidity = data.showValidity !== false;
+  /** Nome inteiro (quebra a linha) ou cortado com o nome completo no `title`. */
+  const nameClass = data.wrapNames ? "bloco-title3 break-words" : "bloco-title3 truncate";
   const [selectedId, setSelectedId] = React.useState<string | null>(packages[0]?.id ?? null);
   /** Confirmacao pendente de uma acao destrutiva. */
   const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
@@ -202,7 +206,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
               <Panel key={pkg.id} tone="glass" className="flex min-w-[248px] flex-col gap-3">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <p className="bloco-title3 truncate" title={pkg.name}>{pkg.name}</p>
+                    <p className={nameClass} title={pkg.name}>{pkg.name}</p>
                     {pkg.description ? (
                       <p className="bloco-caption mt-0.5 break-words text-fg-muted">{pkg.description}</p>
                     ) : null}
@@ -270,7 +274,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
             <Panel tone="glass" className="flex flex-col gap-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="bloco-title3 truncate" title={selected.name}>{selected.name}</p>
+                  <p className={nameClass} title={selected.name}>{selected.name}</p>
                   {selected.description ? (
                     <p className="bloco-caption mt-0.5 break-words text-fg-muted">{selected.description}</p>
                   ) : null}
