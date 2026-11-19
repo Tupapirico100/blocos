@@ -76,3 +76,18 @@ check('meta: sem exportar e sem reenviar', !metaEs.includes('Exportar') && !meta
 check('meta: sem coluna de origem', !metaEs.includes('Origem'));
 const metaDefault = renderToStaticMarkup(React.createElement(blocks.MetaConversion, { data: { events: [{ ...mev.events[1], source: 'anuncio', status: 'erro' }] }, variant: 'table', connectors: [{ id: 'meta_ads', status: 'provisioned' }] }));
 check('meta padrao: origem, exportar, reenviar, Sao Paulo', metaDefault.includes('Origem') && metaDefault.includes('Exportar fila') && metaDefault.includes('Reenviar com erro') && metaDefault.includes('12:00'));
+
+// follow-up-tasks (CRM-HOF: titulo livre, paciente opcional, sem responsavel nem tipo, hora de Lima)
+const tk = { tasks: [
+  { id: 't1', label: 'Llamar para control de 15 días', patientName: 'Ana Huamán', detail: 'Toxina botulínica', dueAt: '2026-11-20T15:00:00Z', status: 'pendente' },
+  { id: 't2', label: 'Confirmar stock', dueAt: '2026-11-18T15:00:00Z', status: 'atrasada' },
+], showOwner: false, showType: false, showHeader: false };
+const tkEs = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima', messages: { 'tasks.col.patient': 'Tarea', 'tasks.complete': 'Completar', 'tasks.completeNamed': 'Completar {title}', 'tasks.status.atrasada': 'Vencida', 'tasks.col.due': 'Vence' } },
+  React.createElement(blocks.FollowUpTasks, { data: tk, variant: 'list', connectors: [{ id: 'whatsapp', status: 'provisioned' }] })));
+check('tarefas: titulo livre e linha de apoio', tkEs.includes('Llamar para control de 15 días') && tkEs.includes('Ana Huamán · Toxina botulínica'));
+check('tarefas: tarefa sem paciente', tkEs.includes('Confirmar stock'));
+check('tarefas: sem responsavel e sem tipo', !tkEs.includes('Responsavel') && !tkEs.includes('Tipo'));
+check('tarefas es-PE: textos e botao nomeado', tkEs.includes('Vencida') && tkEs.includes('Completar Llamar para control de 15 días'));
+check('tarefas: hora de Lima (15:00Z -> 10:00)', tkEs.includes('20/11 10:00') && !tkEs.includes('12:00'));
+const tkDefault = renderToStaticMarkup(React.createElement(blocks.FollowUpTasks, { data: blocks.followUpMock, variant: 'list', connectors: [{ id: 'whatsapp', status: 'provisioned' }] }));
+check('tarefas padrao: fuso de Sao Paulo, Responsavel e Tipo', tkDefault.includes('Fuso America/Sao_Paulo') && tkDefault.includes('Responsavel') && tkDefault.includes('Tipo'));

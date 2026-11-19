@@ -173,3 +173,14 @@ Sao_Paulo fixo). Render padrao identico a main (`comparar-padrao`, 29/29).
   as colunas da direita (axe `scrollable-region-focusable`, achado no QA do
   CRM-HOF a 390/768 px). Unica mudanca de proposito no render padrao:
   `comparar-padrao` marca as 4 tabelas como "so o foco da tabela".
+
+## follow-up-tasks no provedor (19/11/2026, CRM-HOF)
+
+A tarefa do CRM-HOF tem titulo livre, paciente e servico opcionais e nenhum
+responsavel; o bloco tinha tipo fixo (retorno/resultado de exame/recuperacao)
+e **gravava o reagendamento com "-03:00" fixo** (Sao Paulo): no Peru a tarefa
+sairia 2 h errada. Agora: `label`, `detail`, paciente/responsavel opcionais,
+`showOwner`, `showType`, `canOpen` (acao `task.open`), `showHeader`; prazo
+mostrado no fuso do provedor e `task.reschedule` com o deslocamento desse fuso
+naquela data, mais `dueDate`/`dueTime` locais. Em Sao Paulo o deslocamento
+calculado continua "-03:00". Render padrao identico a main (38/38).
