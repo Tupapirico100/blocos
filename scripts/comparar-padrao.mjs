@@ -11,6 +11,8 @@ async function render(root) {
     out[`packages/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.PackagesPricing, { data: st === 'empty' ? { packages: [] } : b.packagesPricingMock, variant: v, state: st }));
   for (const v of ['table', 'cards', 'grid']) for (const st of ['success', 'empty', 'forbidden'])
     out[`patients/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.PatientsList, { data: st === 'empty' ? { patients: [] } : b.clinicoMock.patientsList, variant: v, state: st }));
+  for (const v of ['timeline', 'table', 'cards']) for (const st of ['success', 'empty', 'forbidden'])
+    out[`meta/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.MetaConversion, { data: st === 'empty' ? { events: [] } : b.metaConversionMock, variant: v, state: st, connectors: [{ id: 'meta_ads', status: 'provisioned' }] }));
   for (const v of ['list', 'flow']) out[`webhooks/${v}`] = renderToStaticMarkup(React.createElement(b.WebhooksPanel, { data: b.webhooksMock ?? b.webhooksPanelMock, variant: v, connectors: [{ id: 'webhooks', status: 'provisioned' }] }));
   return out;
 }

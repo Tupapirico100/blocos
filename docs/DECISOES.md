@@ -158,3 +158,13 @@ do dominio clinico tratava todo numero como brasileiro (`+51 933 333 333`
 virava `+55 (51) 93333-3333`); numero internacional de outro pais agora sai
 correto, e o brasileiro continua igual. Render padrao identico ao da main
 (`comparar-padrao`, 20/20).
+
+## meta-conversion no provedor (19/11/2026, CRM-HOF)
+
+Para a tela `meta/` do CRM-HOF (Peru). A fila do CRM tem cinco estados
+(pendente, enviado, erro, expirado e recusado), com motivo e codigo de
+resposta, e nao tem as acoes de exportar nem reenviar. O bloco ganhou, como
+opcionais com o padrao de antes: status `expirado`/`recusado`, `reason` e
+`responseCode` (`showOutcome`), `showSource`, `canExport`, `canRetry`,
+`showHeader`; textos `meta.*` e hora no fuso do provedor (antes America/
+Sao_Paulo fixo). Render padrao identico a main (`comparar-padrao`, 29/29).
