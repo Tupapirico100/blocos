@@ -60,3 +60,19 @@ check('pacientes: sem busca interna', !ptEs.includes('type="search"'));
 check('pacientes es-PE: botao nomeado', ptEs.includes('Abrir la ficha de Ana Huamán'));
 const ptDefault = renderToStaticMarkup(React.createElement(blocks.PatientsList, { data: { patients: [{ id: 'b', name: 'Joana', phone: '+5511987654321', treatmentConsent: 'vigente' }] } }));
 check('pacientes padrao: telefone BR, consentimento e busca', ptDefault.includes('+55 (11) 98765-4321') && ptDefault.includes('Consentido') && ptDefault.includes('type="search"'));
+
+// meta-conversion (CRM-HOF: fila com expirado/recusado, motivo e resposta; sem exportar/reenviar; hora de Lima)
+const mev = { events: [
+  { id: 'e1', event: 'LeadSubmitted', dedupKey: 'lead1:new', stage: 'new', occurredAt: '2026-11-18T15:00:00Z', status: 'recusado', reason: 'Sin consentimiento de marketing' },
+  { id: 'e2', event: 'Purchase', dedupKey: 'lead2:customer', stage: 'customer', occurredAt: '2026-11-18T15:00:00Z', status: 'enviado', responseCode: 200 },
+  { id: 'e3', event: 'QualifiedLead', dedupKey: 'lead3:qualified', stage: 'qualified', occurredAt: '2026-11-01T15:00:00Z', status: 'expirado' },
+], showSource: false, showOutcome: true, canExport: false, canRetry: false };
+const metaEs = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima', messages: { 'meta.status.recusado': 'Rechazado', 'meta.status.expirado': 'Vencido', 'meta.status.enviado': 'Enviado', 'meta.stage.new': 'Nuevo', 'meta.col.reason': 'Motivo' } },
+  React.createElement(blocks.MetaConversion, { data: mev, variant: 'table', connectors: [{ id: 'meta_ads', status: 'provisioned' }] })));
+check('meta es-PE: status novos traduzidos', metaEs.includes('Rechazado') && metaEs.includes('Vencido'));
+check('meta es-PE: motivo e resposta', metaEs.includes('Sin consentimiento de marketing') && metaEs.includes('200'));
+check('meta es-PE: hora de Lima (15:00Z -> 10:00)', metaEs.includes('10:00') && !metaEs.includes('12:00'));
+check('meta: sem exportar e sem reenviar', !metaEs.includes('Exportar') && !metaEs.includes('Reenviar'));
+check('meta: sem coluna de origem', !metaEs.includes('Origem'));
+const metaDefault = renderToStaticMarkup(React.createElement(blocks.MetaConversion, { data: { events: [{ ...mev.events[1], source: 'anuncio', status: 'erro' }] }, variant: 'table', connectors: [{ id: 'meta_ads', status: 'provisioned' }] }));
+check('meta padrao: origem, exportar, reenviar, Sao Paulo', metaDefault.includes('Origem') && metaDefault.includes('Exportar fila') && metaDefault.includes('Reenviar com erro') && metaDefault.includes('12:00'));

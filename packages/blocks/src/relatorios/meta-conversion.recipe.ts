@@ -87,6 +87,7 @@ export const metaConversionRecipe = defineBlock({
     },
   ],
   rules: [
+    "Opcionais (padrao igual ao de antes): status `expirado` e `recusado`, `reason` e `responseCode` por evento (com `showOutcome`), `showSource`, `canExport` e `canRetry` (desligue onde o endpoint nao existe — o bloco nunca oferece acao que o app nao tem), `showHeader`. Data e hora no fuso do `LocaleProvider`.",
     "A fila de eventos da Meta usa chave deterministica (dedup): o mesmo evento nao e enviado duas vezes.",
     "O payload NUNCA leva dado de saude (LGPD): sem consulta, medida ou plano alimentar.",
     "O estagio do evento segue o funil fixo: new -> qualified -> customer.",
