@@ -139,3 +139,12 @@ uma cita das 10:00 em Lima apareceria as 12:00.
   `showHeader`.
 - Os outros blocos seguem com texto e formato fixos ate migrarem, um por PR,
   junto com a tela correspondente no app.
+
+## packages-pricing no provedor (18/11/2026, CRM-HOF)
+
+Para a tela `service-packages/` do CRM-HOF (Peru): textos e moeda pelo
+`LocaleProvider` (chaves `packages.*`), `currency` por pacote, e quatro
+opcionais desligados so quando o app pede — `canSave` (no CRM-HOF o banco
+proibe UPDATE e o pacote so e descontinuado), `canToggle` (a recepcao so ve),
+`showValidity` (pacotes sem validade) e `showHeader`. O render padrao e
+identico ao da `main` nas 3 variacoes x 3 estados (`scripts/comparar-padrao.mjs`).

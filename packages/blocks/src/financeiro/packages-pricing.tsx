@@ -6,12 +6,14 @@ import {
   DataTable,
   Panel,
   SectionHeader,
+  useBlocosLocale,
   type BadgeTone,
+  type BlocosFormat,
   type Column,
 } from "@blocos/ui";
-import { formatBRL } from "@blocos/core";
+import { formatCurrency } from "@blocos/core";
 import { BadgeCheck, CalendarClock, PackageOpen } from "lucide-react";
-import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
+import { BlockFrame, type BlockProps } from "../shared/index.js";
 import { packagesPricingRecipe } from "./packages-pricing.recipe.js";
 
 /* ------------------------------------------------------------------ */
@@ -26,6 +28,8 @@ export interface ServicePackage {
   description?: string;
   /** Preco em CENTAVOS (inteiro). Nunca ponto flutuante. */
   priceCents: number;
+  /** Moeda ISO-4217 deste pacote. Sem ela, a moeda do `LocaleProvider` (padrao BRL). */
+  currency?: string;
   /** Numero de sessoes que o pacote inclui. */
   sessions: number;
   /** Validade em dias a partir da compra. */
@@ -39,23 +43,41 @@ export interface ServicePackage {
 
 export interface PackagesPricingData {
   packages: ServicePackage[];
+  /** Mostra "Salvar" (acao `package.save`). Padrao: sim. Desligue onde o pacote nao se edita. */
+  canSave?: boolean;
+  /** Mostra ativar/desativar. Padrao: sim. Desligue para quem so pode ver (ex.: recepcao). */
+  canToggle?: boolean;
+  /** Mostra a validade. Padrao: sim. Desligue onde o pacote nao tem validade. */
+  showValidity?: boolean;
+  /** Mostra o cabecalho do bloco. Padrao: sim. */
+  showHeader?: boolean;
+  /** Quebra o nome do pacote em varias linhas em vez de cortar com reticencias. Padrao: corta. */
+  wrapNames?: boolean;
 }
 
 /* ------------------------------------------------------------------ */
 /* Helpers                                                              */
 /* ------------------------------------------------------------------ */
 
-function validityLabel(pkg: ServicePackage): string {
+function validityLabel(L: BlocosFormat, pkg: ServicePackage): string {
   if (pkg.expiresAt) {
-    const [, m = "", d = "", y = ""] = pkg.expiresAt.split("-");
-    return `Ate ${d}/${m}/${y}`;
+    const [y = "", m = "", d = ""] = pkg.expiresAt.split("-");
+    return L.t("packages.validUntil", "Ate {date}", { date: `${d}/${m}/${y}` });
   }
-  if (pkg.validDays) return `Validade de ${pkg.validDays} dias`;
-  return "Sem validade definida";
+  if (pkg.validDays) return L.t("packages.validDays", "Validade de {days} dias", { days: pkg.validDays });
+  return L.t("packages.noValidity", "Sem validade definida");
+}
+
+function price(L: BlocosFormat, pkg: ServicePackage): string {
+  return formatCurrency(pkg.priceCents, { currency: pkg.currency ?? L.config.currency, locale: L.config.locale });
 }
 
 function statusTone(active: boolean): BadgeTone {
   return active ? "success" : "neutral";
+}
+
+function statusLabel(L: BlocosFormat, active: boolean): string {
+  return active ? L.t("packages.active", "Ativo") : L.t("packages.inactive", "Inativo");
 }
 
 /* ------------------------------------------------------------------ */
@@ -72,8 +94,15 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
     onRequestConnector,
     className,
   } = props;
+  const L = useBlocosLocale();
+  const { t } = L;
 
   const packages = data.packages ?? [];
+  const canSave = data.canSave !== false;
+  const canToggle = data.canToggle !== false;
+  const showValidity = data.showValidity !== false;
+  /** Nome inteiro (quebra a linha) ou cortado com o nome completo no `title`. */
+  const nameClass = data.wrapNames ? "bloco-title3 break-words" : "bloco-title3 truncate";
   const [selectedId, setSelectedId] = React.useState<string | null>(packages[0]?.id ?? null);
   /** Confirmacao pendente de uma acao destrutiva. */
   const [confirmando, setConfirmando] = React.useState<{ acao: string; payload?: unknown } | null>(
@@ -109,21 +138,64 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
     });
   }
 
+  /** Os botoes de um pacote (cartao e detalhe). */
+  const actions = (pkg: ServicePackage) =>
+    canSave || canToggle ? (
+      <div className="flex items-center gap-2 border-t border-border pt-3">
+        {canSave ? (
+          <Button
+            size="sm"
+            variant="secondary"
+            aria-label={t("packages.saveNamed", "Salvar pacote {name}", { name: pkg.name })}
+            onClick={() => save(pkg)}
+          >
+            {t("packages.save", "Salvar")}
+          </Button>
+        ) : null}
+        {canToggle ? (
+          pkg.active ? (
+            <Button
+              size="sm"
+              variant="danger-ghost"
+              aria-label={t("packages.deactivateNamed", "Desativar pacote {name}", { name: pkg.name })}
+              onClick={() => requestDeactivate(pkg)}
+            >
+              {t("packages.deactivate", "Desativar")}
+            </Button>
+          ) : (
+            <Button
+              size="sm"
+              variant="secondary"
+              aria-label={t("packages.activateNamed", "Ativar pacote {name}", { name: pkg.name })}
+              onClick={() => toggleActive(pkg)}
+            >
+              {t("packages.activate", "Ativar")}
+            </Button>
+          )
+        ) : null}
+      </div>
+    ) : null;
+
   return (
     <BlockFrame
       state={effectiveState}
       connectors={connectors}
       onRequestConnector={onRequestConnector}
       className={className}
-        recipe={packagesPricingRecipe}
-        onAction={onAction}
-      >
+      recipe={packagesPricingRecipe}
+      onAction={onAction}
+    >
       <div className="@container flex flex-col gap-4">
-        <SectionHeader
-          eyebrow="Financeiro"
-          title="Pacotes e precos"
-          description="Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote."
-        />
+        {data.showHeader === false ? null : (
+          <SectionHeader
+            eyebrow={t("packages.eyebrow", "Financeiro")}
+            title={t("packages.title", "Pacotes e precos")}
+            description={t(
+              "packages.description",
+              "Precos sempre em centavos e exibidos em BRL. Sessao incluida e validade por pacote.",
+            )}
+          />
+        )}
 
         {variant === "cards" ? (
           /* Grade por CONTAINER: quantas colunas cabem depende do espaco real do
@@ -134,58 +206,30 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
               <Panel key={pkg.id} tone="glass" className="flex min-w-[248px] flex-col gap-3">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <p className="bloco-title3 truncate" title={pkg.name}>{pkg.name}</p>
+                    <p className={nameClass} title={pkg.name}>{pkg.name}</p>
                     {pkg.description ? (
                       <p className="bloco-caption mt-0.5 break-words text-fg-muted">{pkg.description}</p>
                     ) : null}
                   </div>
-                  <Badge tone={statusTone(pkg.active)}>
-                    {pkg.active ? "Ativo" : "Inativo"}
-                  </Badge>
+                  <Badge tone={statusTone(pkg.active)}>{statusLabel(L, pkg.active)}</Badge>
                 </div>
 
-                <p className="bloco-title1 break-words tabular-nums">{formatBRL(pkg.priceCents)}</p>
+                <p className="bloco-title1 break-words tabular-nums">{price(L, pkg)}</p>
 
                 <dl className="grid grid-cols-2 gap-3">
                   <div className="min-w-0">
-                    <dt className="bloco-micro break-words">Sessoes</dt>
+                    <dt className="bloco-micro break-words">{t("packages.sessions", "Sessoes")}</dt>
                     <dd className="bloco-body tabular-nums text-fg">{pkg.sessions}</dd>
                   </div>
-                  <div className="min-w-0">
-                    <dt className="bloco-micro break-words">Validade</dt>
-                    <dd className="bloco-body break-words text-fg">{validityLabel(pkg)}</dd>
-                  </div>
+                  {showValidity ? (
+                    <div className="min-w-0">
+                      <dt className="bloco-micro break-words">{t("packages.validity", "Validade")}</dt>
+                      <dd className="bloco-body break-words text-fg">{validityLabel(L, pkg)}</dd>
+                    </div>
+                  ) : null}
                 </dl>
 
-                <div className="flex items-center gap-2 border-t border-border pt-3">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    aria-label={`Salvar pacote ${pkg.name}`}
-                    onClick={() => save(pkg)}
-                  >
-                    Salvar
-                  </Button>
-                  {pkg.active ? (
-                    <Button
-                      size="sm"
-                      variant="danger-ghost"
-                      aria-label={`Desativar pacote ${pkg.name}`}
-                      onClick={() => requestDeactivate(pkg)}
-                    >
-                      Desativar
-                    </Button>
-                  ) : (
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      aria-label={`Ativar pacote ${pkg.name}`}
-                      onClick={() => toggleActive(pkg)}
-                    >
-                      Ativar
-                    </Button>
-                  )}
-                </div>
+                {actions(pkg)}
               </Panel>
             ))}
           </div>
@@ -194,7 +238,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
         {variant === "table" ? (
           <Panel tone="outline" padding="none">
             <DataTable
-              columns={packageColumns(packages, onAction, requestDeactivate)}
+              columns={packageColumns(L, { canToggle, showValidity }, onAction, requestDeactivate)}
               rows={packages}
               rowKey={(row) => row.id}
             />
@@ -204,7 +248,7 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
         {variant === "split" && selected ? (
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
             <Panel tone="outline" className="flex flex-col gap-2">
-              <p className="bloco-headline">Pacotes</p>
+              <p className="bloco-headline">{t("packages.list", "Pacotes")}</p>
               {packages.map((pkg) => (
                 <button
                   key={pkg.id}
@@ -220,9 +264,9 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
                 >
                   <span className="min-w-0">
                     <span className="bloco-caption block truncate font-medium text-fg" title={pkg.name}>{pkg.name}</span>
-                    <span className="bloco-micro block tabular-nums">{formatBRL(pkg.priceCents)}</span>
+                    <span className="bloco-micro block tabular-nums">{price(L, pkg)}</span>
                   </span>
-                  <Badge tone={statusTone(pkg.active)}>{pkg.active ? "Ativo" : "Inativo"}</Badge>
+                  <Badge tone={statusTone(pkg.active)}>{statusLabel(L, pkg.active)}</Badge>
                 </button>
               ))}
             </Panel>
@@ -230,64 +274,34 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
             <Panel tone="glass" className="flex flex-col gap-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="bloco-title3 truncate" title={selected.name}>{selected.name}</p>
+                  <p className={nameClass} title={selected.name}>{selected.name}</p>
                   {selected.description ? (
                     <p className="bloco-caption mt-0.5 break-words text-fg-muted">{selected.description}</p>
                   ) : null}
                 </div>
-                <Badge tone={statusTone(selected.active)}>
-                  {selected.active ? "Ativo" : "Inativo"}
-                </Badge>
+                <Badge tone={statusTone(selected.active)}>{statusLabel(L, selected.active)}</Badge>
               </div>
 
-              <p className="bloco-display tabular-nums">{formatBRL(selected.priceCents)}</p>
+              <p className="bloco-display tabular-nums">{price(L, selected)}</p>
 
               <dl className="grid gap-3 sm:grid-cols-3">
                 <div>
-                  <dt className="bloco-micro">Sessoes</dt>
+                  <dt className="bloco-micro">{t("packages.sessions", "Sessoes")}</dt>
                   <dd className="bloco-body tabular-nums text-fg">{selected.sessions}</dd>
                 </div>
                 <div>
-                  <dt className="bloco-micro">Sessoes por semana</dt>
-                  <dd className="bloco-body tabular-nums text-fg">
-                    {selected.sessionsPerWeek ?? "—"}
-                  </dd>
+                  <dt className="bloco-micro">{t("packages.perWeek", "Sessoes por semana")}</dt>
+                  <dd className="bloco-body tabular-nums text-fg">{selected.sessionsPerWeek ?? "—"}</dd>
                 </div>
-                <div>
-                  <dt className="bloco-micro">Validade</dt>
-                  <dd className="bloco-body text-fg">{validityLabel(selected)}</dd>
-                </div>
+                {showValidity ? (
+                  <div>
+                    <dt className="bloco-micro">{t("packages.validity", "Validade")}</dt>
+                    <dd className="bloco-body text-fg">{validityLabel(L, selected)}</dd>
+                  </div>
+                ) : null}
               </dl>
 
-              <div className="flex items-center gap-2 border-t border-border pt-3">
-                <Button
-                  size="sm"
-                  variant="secondary"
-                  aria-label={`Salvar pacote ${selected.name}`}
-                  onClick={() => save(selected)}
-                >
-                  Salvar
-                </Button>
-                {selected.active ? (
-                  <Button
-                    size="sm"
-                    variant="danger-ghost"
-                    aria-label={`Desativar pacote ${selected.name}`}
-                    onClick={() => requestDeactivate(selected)}
-                  >
-                    Desativar
-                  </Button>
-                ) : (
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    aria-label={`Ativar pacote ${selected.name}`}
-                    onClick={() => toggleActive(selected)}
-                  >
-                    Ativar
-                  </Button>
-                )}
-              </div>
+              {actions(selected)}
             </Panel>
           </div>
         ) : null}
@@ -300,15 +314,23 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
         }}
         title={
           pacoteEmConfirmacao
-            ? `Desativar o pacote ${pacoteEmConfirmacao.name}`
-            : "Confirmar acao destrutiva"
+            ? t("packages.confirmTitle", "Desativar o pacote {name}", { name: pacoteEmConfirmacao.name })
+            : t("packages.confirmGenericTitle", "Confirmar acao destrutiva")
         }
         description={
           pacoteEmConfirmacao
-            ? `O pacote ${pacoteEmConfirmacao.name} deixa de aparecer para novos pacientes e nao pode mais ser vendido. Para reverter, ative o pacote novamente na lista.`
-            : "Esta acao nao pode ser desfeita pela interface."
+            ? t(
+                "packages.confirmBody",
+                "O pacote {name} deixa de aparecer para novos pacientes e nao pode mais ser vendido. Para reverter, ative o pacote novamente na lista.",
+                { name: pacoteEmConfirmacao.name },
+              )
+            : t("packages.confirmGenericBody", "Esta acao nao pode ser desfeita pela interface.")
         }
-        confirmLabel={pacoteEmConfirmacao ? `Desativar ${pacoteEmConfirmacao.name}` : "Confirmar"}
+        confirmLabel={
+          pacoteEmConfirmacao
+            ? t("packages.confirmLabel", "Desativar {name}", { name: pacoteEmConfirmacao.name })
+            : undefined
+        }
         onConfirm={() => {
           if (!confirmando) return;
           void onAction?.(confirmando.acao, confirmando.payload);
@@ -323,14 +345,16 @@ export function PackagesPricing(props: BlockProps<PackagesPricingData, PackagesP
 /* ------------------------------------------------------------------ */
 
 function packageColumns(
-  packages: ServicePackage[],
+  L: BlocosFormat,
+  opts: { canToggle: boolean; showValidity: boolean },
   onAction?: (action: string, payload?: unknown) => void | Promise<void>,
   onRequestDeactivate?: (pkg: ServicePackage) => void,
 ): Array<Column<ServicePackage>> {
-  return [
+  const { t } = L;
+  const columns: Array<Column<ServicePackage>> = [
     {
       key: "name",
-      header: "Pacote",
+      header: t("packages.col.name", "Pacote"),
       render: (row) => (
         <span className="flex items-center gap-1.5 font-medium text-fg">
           <PackageOpen size={13} className="text-fg-faint" aria-hidden />
@@ -340,36 +364,38 @@ function packageColumns(
     },
     {
       key: "price",
-      header: "Preco",
+      header: t("packages.col.price", "Preco"),
       align: "right",
-      render: (row) => <span className="tabular-nums text-fg">{formatBRL(row.priceCents)}</span>,
+      render: (row) => <span className="tabular-nums text-fg">{price(L, row)}</span>,
     },
     {
       key: "sessions",
-      header: "Sessoes",
+      header: t("packages.sessions", "Sessoes"),
       align: "right",
       render: (row) => <span className="tabular-nums">{row.sessions}</span>,
     },
-    {
+  ];
+  if (opts.showValidity) {
+    columns.push({
       key: "validity",
-      header: "Validade",
+      header: t("packages.validity", "Validade"),
       render: (row) => (
         <span className="flex items-center gap-1.5">
           <CalendarClock size={13} className="text-fg-faint" aria-hidden />
-          {validityLabel(row)}
+          {validityLabel(L, row)}
         </span>
       ),
-    },
-    {
-      key: "status",
-      header: "Situacao",
-      render: (row) => (
-        <Badge tone={statusTone(row.active)}>{row.active ? "Ativo" : "Inativo"}</Badge>
-      ),
-    },
-    {
+    });
+  }
+  columns.push({
+    key: "status",
+    header: t("packages.col.status", "Situacao"),
+    render: (row) => <Badge tone={statusTone(row.active)}>{statusLabel(L, row.active)}</Badge>,
+  });
+  if (opts.canToggle) {
+    columns.push({
       key: "actions",
-      header: "Acoes",
+      header: t("packages.col.actions", "Acoes"),
       align: "right",
       render: (row) =>
         row.active ? (
@@ -377,22 +403,23 @@ function packageColumns(
             size="sm"
             variant="danger-ghost"
             icon={<BadgeCheck size={13} aria-hidden />}
-            aria-label={`Desativar pacote ${row.name}`}
+            aria-label={t("packages.deactivateNamed", "Desativar pacote {name}", { name: row.name })}
             onClick={() => onRequestDeactivate?.(row)}
           >
-            Desativar
+            {t("packages.deactivate", "Desativar")}
           </Button>
         ) : (
           <Button
             size="sm"
             variant="secondary"
             icon={<BadgeCheck size={13} aria-hidden />}
-            aria-label={`Ativar pacote ${row.name}`}
+            aria-label={t("packages.activateNamed", "Ativar pacote {name}", { name: row.name })}
             onClick={() => onAction?.("package.toggleActive", { id: row.id, active: true })}
           >
-            Ativar
+            {t("packages.activate", "Ativar")}
           </Button>
         ),
-    },
-  ];
+    });
+  }
+  return columns;
 }

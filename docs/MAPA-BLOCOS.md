@@ -699,6 +699,7 @@ Pacotes de atendimento com preco em centavos, numero de sessoes, validade e situ
 
 **Regras que a implementacao DEVE respeitar:**
 
+- Opcionais, desligados so quando o app pede: `canSave` (sem edicao, ex.: CRM-HOF, onde o banco proibe UPDATE e o pacote so e descontinuado), `canToggle` (quem so pode ver), `showValidity` (pacote sem validade), `wrapNames` (nome longo inteiro em vez de cortado) e `currency` por pacote. Textos e moeda vem do `LocaleProvider` (chaves `packages.*`).
 - Dinheiro em centavos, sempre: nunca ponto flutuante. A formatacao em BRL acontece so na borda (UI).
 - Pacote inativo continua no historico de vendas — desativar nao apaga.
 - Estorno devolve o lead: o pacote comprado entra na mesma regra de estorno do pagamento.
