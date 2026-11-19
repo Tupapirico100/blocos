@@ -53,6 +53,8 @@ export const patientsListRecipe = defineBlock({
     },
   ],
   rules: [
+    "Opcionais (padrao igual ao de antes): `showSearch` (desligue quando o app busca e pagina no servidor), `showConsent`, `showLastVisit` e `showDocument` (coluna `document`, ex.: DNI). O bloco so mostra o que a tela de origem mostra: no CRM-HOF a lista nao exibe consentimento nem ultima consulta.",
+    "Telefone internacional de outro pais nao e formatado como brasileiro (+51 933 333 333).",
     "Prontuario exige consentimento de tratamento vigente — a lista sinaliza quem nao pode ter gravacao.",
     "Consentimento de tratamento e de marketing sao separados.",
     "Dado de saude (consulta, medida, plano) nunca vai para log, URL ou telemetria.",

@@ -148,3 +148,13 @@ opcionais desligados so quando o app pede — `canSave` (no CRM-HOF o banco
 proibe UPDATE e o pacote so e descontinuado), `canToggle` (a recepcao so ve),
 `showValidity` (pacotes sem validade) e `showHeader`. O render padrao e
 identico ao da `main` nas 3 variacoes x 3 estados (`scripts/comparar-padrao.mjs`).
+
+## patients-list no provedor (19/11/2026, CRM-HOF)
+
+Para a tela `patients/` do CRM-HOF (Peru): textos pelo `LocaleProvider`
+(chaves `patients.*`), coluna de documento (DNI) e opcionais `showSearch`,
+`showConsent`, `showLastVisit` e `showDocument`. Correcao: o `formatPhone`
+do dominio clinico tratava todo numero como brasileiro (`+51 933 333 333`
+virava `+55 (51) 93333-3333`); numero internacional de outro pais agora sai
+correto, e o brasileiro continua igual. Render padrao identico ao da main
+(`comparar-padrao`, 20/20).

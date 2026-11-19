@@ -48,3 +48,15 @@ check('pacotes canSave=false: sem Salvar', !pkOwner.includes('Salvar'));
 check('pacotes showValidity=false: sem validade', !pkOwner.includes('Validade') && !pkOwner.includes('validade'));
 check('pacotes canToggle=false: sem botao de desativar', !pkReception.includes('Descontinuar'));
 check('pacotes padrao: BRL, Salvar, Desativar, validade', pkDefault.includes('R$') && pkDefault.includes('Salvar') && pkDefault.includes('Desativar') && pkDefault.includes('Sem validade definida'));
+
+// patients-list (CRM-HOF: DNI, telefone do Peru, sem consentimento nem ultima consulta, busca no servidor)
+const pts = { patients: [{ id: 'a1', name: 'Ana Huamán', phone: '+51933333333', document: '43456789' }], showSearch: false, showConsent: false, showLastVisit: false, showDocument: true };
+const ptEs = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', messages: { 'patients.col.name': 'Nombre', 'patients.col.document': 'Documento', 'patients.col.contact': 'Teléfono', 'patients.open': 'Abrir la ficha de {name}' } },
+  React.createElement(blocks.PatientsList, { data: pts })));
+check('pacientes: telefone do Peru nao vira +55', ptEs.includes('+51 933 333 333') && !ptEs.includes('+55'));
+check('pacientes: coluna de DNI', ptEs.includes('43456789') && ptEs.includes('Documento'));
+check('pacientes: sem consentimento e sem ultima consulta', !ptEs.includes('Consentimento') && !ptEs.includes('Ultima consulta'));
+check('pacientes: sem busca interna', !ptEs.includes('type="search"'));
+check('pacientes es-PE: botao nomeado', ptEs.includes('Abrir la ficha de Ana Huamán'));
+const ptDefault = renderToStaticMarkup(React.createElement(blocks.PatientsList, { data: { patients: [{ id: 'b', name: 'Joana', phone: '+5511987654321', treatmentConsent: 'vigente' }] } }));
+check('pacientes padrao: telefone BR, consentimento e busca', ptDefault.includes('+55 (11) 98765-4321') && ptDefault.includes('Consentido') && ptDefault.includes('type="search"'));

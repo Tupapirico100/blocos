@@ -9,6 +9,8 @@ async function render(root) {
   const out = {};
   for (const v of ['cards', 'table', 'split']) for (const st of ['success', 'empty', 'forbidden'])
     out[`packages/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.PackagesPricing, { data: st === 'empty' ? { packages: [] } : b.packagesPricingMock, variant: v, state: st }));
+  for (const v of ['table', 'cards', 'grid']) for (const st of ['success', 'empty', 'forbidden'])
+    out[`patients/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.PatientsList, { data: st === 'empty' ? { patients: [] } : b.clinicoMock.patientsList, variant: v, state: st }));
   for (const v of ['list', 'flow']) out[`webhooks/${v}`] = renderToStaticMarkup(React.createElement(b.WebhooksPanel, { data: b.webhooksMock ?? b.webhooksPanelMock, variant: v, connectors: [{ id: 'webhooks', status: 'provisioned' }] }));
   return out;
 }
