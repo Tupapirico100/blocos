@@ -86,6 +86,7 @@ export const followUpTasksRecipe = defineBlock({
     },
   ],
   rules: [
+    "Opcionais (padrao igual ao de antes): `label` (titulo livre, substitui o tipo), `detail`, paciente e responsavel opcionais, `showOwner`, `showType`, `canOpen` (acao `task.open`) e `showHeader`. O prazo e mostrado e reagendado no fuso do `LocaleProvider`; `task.reschedule` envia `dueAt` com o deslocamento desse fuso e tambem `dueDate`/`dueTime` locais.",
     "Janela de 24h: mensagem livre so dentro de 24h apos o cliente escrever; fora disso, so template aprovado.",
     "Consentimento de marketing (art. 7) e separado do consentimento de tratamento (art. 11).",
     "A tarefa carrega o nome do paciente e o tipo da tarefa — nunca conteudo de consulta, medida ou plano alimentar.",
