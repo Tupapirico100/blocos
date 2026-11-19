@@ -175,7 +175,10 @@ export function DataTable<T>({
     // relative: an absolutely positioned descendant (the sr-only label of a Switch
     // in a cell) takes this box as its containing block, so the scroll clips it
     // instead of letting it stretch the page sideways.
-    <div className={cn("bloco-scroll relative overflow-x-auto", className)}>
+    // tabIndex: when the table scrolls sideways, a keyboard user must be able to
+    // reach and scroll it even if no cell has a button (WCAG 2.1.1; axe
+    // scrollable-region-focusable).
+    <div className={cn("bloco-scroll relative overflow-x-auto", className)} tabIndex={0}>
       <table className="w-full border-collapse text-left">
         <thead className={cn(stickyHeader && "sticky top-0 z-10")}>
           <tr className="border-b border-border">

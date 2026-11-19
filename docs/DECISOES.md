@@ -168,3 +168,8 @@ opcionais com o padrao de antes: status `expirado`/`recusado`, `reason` e
 `responseCode` (`showOutcome`), `showSource`, `canExport`, `canRetry`,
 `showHeader`; textos `meta.*` e hora no fuso do provedor (antes America/
 Sao_Paulo fixo). Render padrao identico a main (`comparar-padrao`, 29/29).
+- A area rolavel do `DataTable` passa a receber foco (`tabIndex={0}`): numa
+  tabela so de texto (a fila da Meta) quem usa teclado nao conseguia rolar ate
+  as colunas da direita (axe `scrollable-region-focusable`, achado no QA do
+  CRM-HOF a 390/768 px). Unica mudanca de proposito no render padrao:
+  `comparar-padrao` marca as 4 tabelas como "so o foco da tabela".

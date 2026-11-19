@@ -18,5 +18,13 @@ async function render(root) {
 }
 const [a, bb] = [await render(process.argv[2]), await render(process.argv[3] ?? path.resolve(import.meta.dirname, ".."))];
 let diff = 0;
-for (const k of Object.keys(a)) { const same = a[k] === bb[k]; if (!same) diff++; console.log((same ? 'IGUAL ' : 'DIFERENTE ') + k + (same ? '' : `  (${a[k].length} vs ${bb[k].length})`)); }
+// Mudanca de proposito (PR #6): a area rolavel do DataTable recebe foco (tabIndex=0).
+// Uma diferenca que some ao tirar so esse atributo e marcada assim, nao como regressao.
+const semFoco = (html) => html.replace(/(<div class="bloco-scroll relative overflow-x-auto")(?: tabindex="0")/g, '$1');
+for (const k of Object.keys(a)) {
+  const same = a[k] === bb[k];
+  const soFoco = !same && semFoco(a[k]) === semFoco(bb[k]);
+  if (!same && !soFoco) diff++;
+  console.log((same ? 'IGUAL ' : soFoco ? 'IGUAL (so o foco da tabela) ' : 'DIFERENTE ') + k + (same || soFoco ? '' : `  (${a[k].length} vs ${bb[k].length})`));
+}
 process.exitCode = diff ? 1 : 0;
