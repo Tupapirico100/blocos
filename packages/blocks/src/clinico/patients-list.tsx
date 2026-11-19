@@ -1,8 +1,8 @@
 import * as React from "react";
 import { motion } from "motion/react";
 import { ChevronRight, Search, ShieldCheck, ShieldQuestion, ShieldX, UserRound } from "lucide-react";
-import { Avatar, Badge, DataTable, Panel, Skeleton } from "@blocos/ui";
-import type { BadgeTone, Column } from "@blocos/ui";
+import { Avatar, Badge, DataTable, Panel, Skeleton, useBlocosLocale } from "@blocos/ui";
+import type { BadgeTone, BlocosFormat, Column } from "@blocos/ui";
 import { BlockFrame, requiresOf, rolesOf } from "../shared/index.js";
 import type { BlockProps } from "../shared/index.js";
 import { formatDate, formatPhone, normalizeText } from "./format.js";
@@ -20,8 +20,10 @@ export interface PatientSummary {
   /** Telefone E.164. */
   phone: string;
   email?: string;
-  /** Consentimento de TRATAMENTO (art. 11). */
-  treatmentConsent: ConsentSituation;
+  /** Documento de identidade (ex.: DNI no Peru). So aparece com `showDocument`. */
+  document?: string;
+  /** Consentimento de TRATAMENTO (art. 11). Obrigatorio quando `showConsent` esta ligado (padrao). */
+  treatmentConsent?: ConsentSituation;
   /** Ultima consulta (ISO). */
   lastVisitAt?: string;
   birthDate?: string;
@@ -30,7 +32,25 @@ export interface PatientSummary {
 
 export interface PatientsListData {
   patients: PatientSummary[];
+  /** Campo de busca por nome dentro do bloco. Padrao: sim. Desligue quando o app busca no servidor. */
+  showSearch?: boolean;
+  /** Coluna/selo de consentimento de tratamento. Padrao: sim. */
+  showConsent?: boolean;
+  /** Ultima consulta. Padrao: sim. */
+  showLastVisit?: boolean;
+  /** Coluna de documento (`document`). Padrao: nao. */
+  showDocument?: boolean;
 }
+
+interface ListView {
+  L: BlocosFormat;
+  showConsent: boolean;
+  showLastVisit: boolean;
+  showDocument: boolean;
+}
+
+const consentLabel = (L: BlocosFormat, c: ConsentSituation): string =>
+  L.t(`patients.consent.${c}`, CONSENT_LABEL[c]);
 
 const CONSENT_LABEL: Record<ConsentSituation, string> = {
   vigente: "Consentido",
@@ -56,6 +76,14 @@ const CONSENT_ICON: Record<ConsentSituation, React.ReactNode> = {
 
 export function PatientsList(props: BlockProps<PatientsListData, "table" | "cards" | "grid">) {
   const { data, onAction, variant = "table", state = "success", className, connectors, onRequestConnector } = props;
+  const L = useBlocosLocale();
+  const { t } = L;
+  const view: ListView = {
+    L,
+    showConsent: data.showConsent !== false,
+    showLastVisit: data.showLastVisit !== false,
+    showDocument: data.showDocument === true,
+  };
 
   const [query, setQuery] = React.useState("");
 
@@ -84,9 +112,9 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
       }
       empty={
         <div className="rounded-[var(--r-lg)] border border-dashed border-border p-6 text-center">
-          <p className="bloco-headline">Nenhum paciente cadastrado</p>
+          <p className="bloco-headline">{t("patients.emptyTitle", "Nenhum paciente cadastrado")}</p>
           <p className="bloco-callout mt-1 text-fg-muted">
-            O paciente aparece aqui assim que o primeiro atendimento for registrado.
+            {t("patients.emptyDescription", "O paciente aparece aqui assim que o primeiro atendimento for registrado.")}
           </p>
         </div>
       }
@@ -97,9 +125,10 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
         onAction={onAction}
       >
       <div className="flex flex-col gap-4">
+        {data.showSearch === false ? null : (
         <div className="flex flex-wrap items-center justify-between gap-3">
           <label className="relative block w-full max-w-xs">
-            <span className="sr-only">Buscar paciente por nome</span>
+            <span className="sr-only">{t("patients.searchLabel", "Buscar paciente por nome")}</span>
             <Search
               size={14}
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fg-faint"
@@ -109,22 +138,23 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Buscar por nome"
-              aria-label="Buscar paciente por nome"
+              placeholder={t("patients.searchPlaceholder", "Buscar por nome")}
+              aria-label={t("patients.searchLabel", "Buscar paciente por nome")}
               className="h-9 w-full rounded-[var(--r-md)] border border-border bg-surface-strong/60 pl-8 pr-3 bloco-control-sm text-fg placeholder:text-fg-faint focus:border-accent focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-offset-2 focus-visible:outline-accent focus-visible:ring-4 focus-visible:ring-accent/15"
             />
           </label>
           <p className="bloco-caption text-fg-muted">
-            {filtered.length} de {data.patients.length} paciente(s)
+            {t("patients.count", "{shown} de {total} paciente(s)", { shown: filtered.length, total: data.patients.length })}
           </p>
         </div>
+        )}
 
         {variant === "table" ? (
-          <PatientTable patients={filtered} onOpen={open} />
+          <PatientTable patients={filtered} onOpen={open} view={view} />
         ) : variant === "cards" ? (
-          <PatientCards patients={filtered} onOpen={open} />
+          <PatientCards patients={filtered} onOpen={open} view={view} />
         ) : (
-          <PatientGrid patients={filtered} onOpen={open} />
+          <PatientGrid patients={filtered} onOpen={open} view={view} />
         )}
       </div>
     </BlockFrame>
@@ -138,14 +168,18 @@ export function PatientsList(props: BlockProps<PatientsListData, "table" | "card
 function PatientTable({
   patients,
   onOpen,
+  view,
 }: {
   patients: PatientSummary[];
   onOpen: (patient: PatientSummary) => void;
+  view: ListView;
 }) {
+  const { L, showConsent, showLastVisit, showDocument } = view;
+  const { t } = L;
   const columns: Array<Column<PatientSummary>> = [
     {
       key: "name",
-      header: "Nome",
+      header: t("patients.col.name", "Nome"),
       render: (patient) => (
         <div className="flex min-w-0 items-center gap-2.5">
           <Avatar name={patient.name} size={28} />
@@ -158,54 +192,67 @@ function PatientTable({
         </div>
       ),
     },
-    {
-      key: "contact",
-      header: "Contato",
-      width: "220px",
-      render: (patient) => (
-        <div className="min-w-0">
-          <p className="truncate text-fg-secondary" title={formatPhone(patient.phone)}>{formatPhone(patient.phone)}</p>
-          {patient.email ? (
-            <p className="bloco-caption truncate text-fg-muted" title={patient.email}>{patient.email}</p>
-          ) : null}
-        </div>
-      ),
-    },
-    {
-      key: "consent",
-      header: "Consentimento de tratamento",
-      width: "190px",
-      render: (patient) => (
-        <Badge tone={CONSENT_TONE[patient.treatmentConsent]} icon={CONSENT_ICON[patient.treatmentConsent]}>
-          {CONSENT_LABEL[patient.treatmentConsent]}
-        </Badge>
-      ),
-    },
-    {
-      key: "lastVisit",
-      header: "Ultima consulta",
-      width: "150px",
-      render: (patient) => (
-        <span className="text-fg-secondary">{formatDate(patient.lastVisitAt)}</span>
-      ),
-    },
-    {
-      key: "open",
-      header: "",
-      align: "right",
-      width: "60px",
-      render: (patient) => (
-        <button
-          type="button"
-          onClick={() => onOpen(patient)}
-          aria-label={`Abrir prontuario de ${patient.name}`}
-          className="flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] text-fg-faint transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          <ChevronRight size={16} aria-hidden />
-        </button>
-      ),
-    },
   ];
+  if (showDocument) {
+    columns.push({
+      key: "document",
+      header: t("patients.col.document", "Documento"),
+      width: "140px",
+      render: (patient) => <span className="tabular-nums text-fg-secondary">{patient.document ?? "—"}</span>,
+    });
+  }
+  columns.push({
+    key: "contact",
+    header: t("patients.col.contact", "Contato"),
+    width: "220px",
+    render: (patient) => (
+      <div className="min-w-0">
+        <p className="truncate text-fg-secondary" title={formatPhone(patient.phone)}>{formatPhone(patient.phone)}</p>
+        {patient.email ? (
+          <p className="bloco-caption truncate text-fg-muted" title={patient.email}>{patient.email}</p>
+        ) : null}
+      </div>
+    ),
+  });
+  if (showConsent) {
+    columns.push({
+      key: "consent",
+      header: t("patients.col.consent", "Consentimento de tratamento"),
+      width: "190px",
+      render: (patient) =>
+        patient.treatmentConsent ? (
+          <Badge tone={CONSENT_TONE[patient.treatmentConsent]} icon={CONSENT_ICON[patient.treatmentConsent]}>
+            {consentLabel(L, patient.treatmentConsent)}
+          </Badge>
+        ) : (
+          <span className="text-fg-muted">—</span>
+        ),
+    });
+  }
+  if (showLastVisit) {
+    columns.push({
+      key: "lastVisit",
+      header: t("patients.col.lastVisit", "Ultima consulta"),
+      width: "150px",
+      render: (patient) => <span className="text-fg-secondary">{formatDate(patient.lastVisitAt)}</span>,
+    });
+  }
+  columns.push({
+    key: "open",
+    header: "",
+    align: "right",
+    width: "60px",
+    render: (patient) => (
+      <button
+        type="button"
+        onClick={() => onOpen(patient)}
+        aria-label={t("patients.open", "Abrir prontuario de {name}", { name: patient.name })}
+        className="flex h-8 w-8 items-center justify-center rounded-[var(--r-sm)] text-fg-faint transition-colors hover:bg-surface-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        <ChevronRight size={16} aria-hidden />
+      </button>
+    ),
+  });
 
   return (
     <Panel tone="solid" padding="none">
@@ -216,7 +263,7 @@ function PatientTable({
         onRowClick={onOpen}
         empty={
           <p className="bloco-callout px-4 py-6 text-center text-fg-muted">
-            Nenhum paciente encontrado.
+            {t("patients.noneFound", "Nenhum paciente encontrado.")}
           </p>
         }
       />
@@ -231,15 +278,19 @@ function PatientTable({
 function PatientCards({
   patients,
   onOpen,
+  view,
 }: {
   patients: PatientSummary[];
   onOpen: (patient: PatientSummary) => void;
+  view: ListView;
 }) {
+  const { L, showConsent, showLastVisit, showDocument } = view;
+  const { t } = L;
   return (
     <div className="flex flex-col gap-2">
       {patients.length === 0 ? (
         <p className="bloco-callout rounded-[var(--r-md)] border border-dashed border-border px-4 py-8 text-center text-fg-muted">
-          Nenhum paciente encontrado.
+          {t("patients.noneFound", "Nenhum paciente encontrado.")}
         </p>
       ) : (
         patients.map((patient) => (
@@ -257,15 +308,24 @@ function PatientCards({
                 {patient.email ? ` · ${patient.email}` : ""}
               </span>
               <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                <Badge
-                  tone={CONSENT_TONE[patient.treatmentConsent]}
-                  icon={CONSENT_ICON[patient.treatmentConsent]}
-                >
-                  {CONSENT_LABEL[patient.treatmentConsent]}
-                </Badge>
-                <span className="bloco-caption text-fg-muted">
-                  Ultima consulta: {formatDate(patient.lastVisitAt)}
-                </span>
+                {showConsent && patient.treatmentConsent ? (
+                  <Badge
+                    tone={CONSENT_TONE[patient.treatmentConsent]}
+                    icon={CONSENT_ICON[patient.treatmentConsent]}
+                  >
+                    {consentLabel(L, patient.treatmentConsent)}
+                  </Badge>
+                ) : null}
+                {showDocument && patient.document ? (
+                  <span className="bloco-caption text-fg-muted">
+                    {t("patients.col.document", "Documento")}: {patient.document}
+                  </span>
+                ) : null}
+                {showLastVisit ? (
+                  <span className="bloco-caption text-fg-muted">
+                    {t("patients.lastVisitPrefix", "Ultima consulta:")} {formatDate(patient.lastVisitAt)}
+                  </span>
+                ) : null}
               </span>
             </span>
             <ChevronRight size={16} className="shrink-0 text-fg-faint" aria-hidden />
@@ -283,15 +343,19 @@ function PatientCards({
 function PatientGrid({
   patients,
   onOpen,
+  view,
 }: {
   patients: PatientSummary[];
   onOpen: (patient: PatientSummary) => void;
+  view: ListView;
 }) {
+  const { L, showConsent, showLastVisit, showDocument } = view;
+  const { t } = L;
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {patients.length === 0 ? (
         <p className="bloco-callout rounded-[var(--r-md)] border border-dashed border-border px-4 py-8 text-center text-fg-muted sm:col-span-2 lg:col-span-3 xl:col-span-4">
-          Nenhum paciente encontrado.
+          {t("patients.noneFound", "Nenhum paciente encontrado.")}
         </p>
       ) : (
         patients.map((patient) => (
@@ -313,13 +377,22 @@ function PatientGrid({
                 </span>
               </span>
             </span>
-            <Badge tone={CONSENT_TONE[patient.treatmentConsent]} icon={CONSENT_ICON[patient.treatmentConsent]}>
-              {CONSENT_LABEL[patient.treatmentConsent]}
-            </Badge>
-            <span className="bloco-micro text-fg-faint">
-              <UserRound size={11} className="mr-1 inline" aria-hidden />
-              Ultima consulta: {formatDate(patient.lastVisitAt)}
-            </span>
+            {showConsent && patient.treatmentConsent ? (
+              <Badge tone={CONSENT_TONE[patient.treatmentConsent]} icon={CONSENT_ICON[patient.treatmentConsent]}>
+                {consentLabel(L, patient.treatmentConsent)}
+              </Badge>
+            ) : null}
+            {showDocument && patient.document ? (
+              <span className="bloco-caption text-fg-muted">
+                {t("patients.col.document", "Documento")}: {patient.document}
+              </span>
+            ) : null}
+            {showLastVisit ? (
+              <span className="bloco-micro text-fg-faint">
+                <UserRound size={11} className="mr-1 inline" aria-hidden />
+                {t("patients.lastVisitPrefix", "Ultima consulta:")} {formatDate(patient.lastVisitAt)}
+              </span>
+            ) : null}
           </motion.button>
         ))
       )}

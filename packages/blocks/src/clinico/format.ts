@@ -67,6 +67,14 @@ export function formatTime(iso: string | null | undefined): string {
 export function formatPhone(e164: string | null | undefined): string {
   if (!e164) return "—";
   const digits = e164.replace(/\D/g, "");
+  // Numero internacional de outro pais: nao tratar como brasileiro (um +51 virava "+55 (51) ...").
+  if (e164.trim().startsWith("+") && !digits.startsWith("55")) {
+    // Peru: +51 e 9 digitos -> "+51 933 333 333".
+    if (digits.startsWith("51") && digits.length === 11) {
+      return `+51 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`;
+    }
+    return e164.trim();
+  }
   const hasCountry = digits.startsWith("55");
   const cc = hasCountry ? digits.slice(0, 2) : "55";
   const local = hasCountry ? digits.slice(2) : digits;
