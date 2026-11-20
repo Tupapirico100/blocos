@@ -120,3 +120,19 @@ check('agenda: acao com href vira link nomeado', /<a href="\/es-PE\/payments\/ne
 check('agenda: aviso, detalhe e historico a mostra', agEs.includes('role="status"') && agEs.includes('Falta consentimiento') && agEs.includes('Sala: Sala 1') && agEs.includes('01/12/2026 10:00 — Solicitada'));
 const agDefault = renderToStaticMarkup(React.createElement(blocks.AgendaBoard, { data: blocks.agendaBoardMock, variant: 'list', connectors: [{ id: 'database', status: 'provisioned' }] }));
 check('agenda padrao: Sao Paulo, seletor de status e botoes fixos', agDefault.includes('Fuso America/Sao_Paulo') && agDefault.includes('Alterar status') && agDefault.includes('Reagendar consulta'));
+
+// agenda-board, grade de calendario (CRM-HOF: dia e semana estilo Google, hora de Lima)
+const cal = { ...ag, days: ['2026-11-15','2026-11-16','2026-11-17','2026-11-18','2026-11-19','2026-11-20','2026-11-21'], referenceDate: '2026-11-20',
+  calendar: { today: '2026-11-20', canCreate: true } };
+const calWeek = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima', messages: { 'agenda.calendarLabel': 'Calendario de citas', 'agenda.allProfessionals': 'Todos' } },
+  React.createElement(blocks.AgendaBoard, { data: cal, variant: 'week', connectors: [{ id: 'database', status: 'provisioned' }] })));
+check('grade: 7 colunas de dia com dia da semana em espanhol', (calWeek.match(/data-day="/g) || []).length === 7 && />dom\.?</.test(calWeek) && />vie\.?</.test(calWeek));
+check('grade: consulta posicionada no horario de Lima (15:00Z -> 10:00, topo 3h*56)', calWeek.includes('aria-label="10:00–10:30 · Ana Huamán · Toxina botulínica · Solicitada"') && calWeek.includes('top:168px'));
+check('grade: hoje destacado e fuso GMT-5', calWeek.includes('GMT-5') && calWeek.includes('bg-accent-strong text-accent-fg'));
+check('grade: sem linha da hora atual no servidor', !calWeek.includes('data-now'));
+check('grade: rotulo do calendario', calWeek.includes('aria-label="Calendario de citas"'));
+const calDay = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima' },
+  React.createElement(blocks.AgendaBoard, { data: cal, variant: 'day', connectors: [{ id: 'database', status: 'provisioned' }] })));
+check('grade dia: uma coluna (a data de referencia)', (calDay.match(/data-day="/g) || []).length === 1 && calDay.includes('data-day="2026-11-20"'));
+const calNoHead = renderToStaticMarkup(React.createElement(blocks.AgendaBoard, { data: { ...cal, showHeader: false }, variant: 'week', connectors: [{ id: 'database', status: 'provisioned' }] }));
+check('grade: showHeader false esconde o cabecalho', !calNoHead.includes('Agenda de consultas') && calWeek.includes('Agenda de consultas'));
