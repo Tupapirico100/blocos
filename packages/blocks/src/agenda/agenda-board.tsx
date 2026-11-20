@@ -47,6 +47,8 @@ export interface AgendaAppointment {
   /** ISO 8601 com deslocamento. Mostrado no fuso do LocaleProvider (padrao America/Sao_Paulo). */
   startsAt: string;
   endsAt: string;
+  /** Link da ficha do paciente; com ele, o nome vira link nos cartoes da lista. */
+  patientHref?: string;
   /** Rotulo proprio do estado (ex.: CRM-HOF "En sala de espera"); padrao: o do `status`. */
   statusLabel?: string;
   /** Cor propria do estado; padrao: a do `status`. */
@@ -60,8 +62,9 @@ export interface AgendaAppointment {
   /**
    * Acoes desta consulta, decididas por quem chama (estado, papel, regras).
    * Quando existe, substitui o seletor de status e os botoes fixos (reagendar,
-   * cancelar, compareceu, faltou) na lista e no painel. Cada clique chama
-   * `onAction(acao.id, { id, reason? })`.
+   * cancelar, compareceu, faltou) e a lista vira cartoes, um por consulta,
+   * com tudo a mostra. Cada clique chama `onAction(acao.id, { id, reason? })`;
+   * uma acao com `href` e um link.
    */
   actions?: AgendaActionSpec[];
 }
@@ -72,6 +75,8 @@ export interface AgendaActionSpec {
   id: string;
   label: string;
   tone?: "primary" | "secondary" | "danger";
+  /** Navegacao (ex.: registrar pagamento): vira link, sem onAction. */
+  href?: string;
   /** Pede confirmacao antes de executar. */
   confirm?: { title: string; description?: string; confirmLabel?: string; tone?: "danger" | "primary" };
   /** Pede um motivo obrigatorio antes de executar (vai em `payload.reason`). */
@@ -157,6 +162,15 @@ const actionName = (L: BlocosFormat, action: AgendaActionSpec, a: AgendaAppointm
   L.t("agenda.actionFor", "{action} — {patient}", { action: action.label, patient: a.patientName });
 
 const ACTION_VARIANT = { primary: "primary", secondary: "secondary", danger: "danger" } as const;
+
+/** Link com cara de botao pequeno (mesmas cores do Button: fundo accent-strong, nunca accent como texto). */
+const LINK_BASE =
+  "inline-flex h-[var(--btn-h-sm)] items-center justify-center gap-1.5 rounded-[var(--r-sm)] px-3 bloco-control-sm font-medium no-underline transition-[background-color,filter] duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+const LINK_BUTTON = {
+  primary: `${LINK_BASE} bg-accent-strong text-accent-fg hover:brightness-110`,
+  secondary: `${LINK_BASE} border border-border bg-surface-strong text-fg hover:bg-surface-hover`,
+  danger: `${LINK_BASE} bg-danger-strong text-danger-fg hover:brightness-110`,
+} as const;
 
 /* ------------------------------------------------------------------ */
 /* Bloco                                                                */
@@ -287,7 +301,17 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
   );
 
   const actionButtons = (appointment: AgendaAppointment, size: "sm" = "sm") =>
-    (appointment.actions ?? []).map((action) => (
+    (appointment.actions ?? []).map((action) =>
+      action.href ? (
+        <a
+          key={action.id}
+          href={action.href}
+          aria-label={actionName(L, action, appointment)}
+          className={LINK_BUTTON[action.tone ?? "secondary"]}
+        >
+          {action.label}
+        </a>
+      ) : (
       <Button
         key={action.id}
         size={size}
@@ -298,7 +322,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
       >
         {action.label}
       </Button>
-    ));
+      ));
 
   return (
     <BlockFrame
@@ -332,7 +356,13 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
             toda a largura e o titulo do bloco ficava com 0px (invisivel). */}
         {legendItems.length > 0 ? <div className="flex flex-wrap items-center gap-2">{legend}</div> : null}
 
-        {variant === "list" ? (
+        {variant === "list" && appointments.some((a) => a.actions) ? (
+          <AgendaCards
+            appointments={appointments}
+            professionals={data.professionals}
+            actionButtons={actionButtons}
+          />
+        ) : variant === "list" ? (
           <AgendaList
             appointments={appointments}
             professionals={data.professionals}
@@ -358,7 +388,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
           />
         )}
 
-        {selected ? (
+        {selected && !(variant === "list" && selected.actions) ? (
           <Panel tone="outline" className="flex flex-col gap-3">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
@@ -806,5 +836,91 @@ function AgendaList({
     <Panel tone="outline" padding="none">
       <DataTable columns={columns} rows={sorted} rowKey={(row) => row.id} />
     </Panel>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Cartoes (variacao "list" com acoes vindas dos dados)                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Uma consulta por cartao, com tudo a mostra: quem, que, com quem, estado,
+ * aviso, acoes e historico. E a lista da recepcao: nenhuma acao fica atras de
+ * um clique de selecao.
+ */
+function AgendaCards({
+  appointments,
+  professionals,
+  actionButtons,
+}: {
+  appointments: AgendaAppointment[];
+  professionals: AgendaProfessional[];
+  actionButtons: (appointment: AgendaAppointment) => React.ReactNode;
+}) {
+  const L = useBlocosLocale();
+  const { t } = L;
+  const tz = L.config.timeZone;
+  const sorted = [...appointments].sort((a, b) => a.startsAt.localeCompare(b.startsAt));
+  return (
+    <ul className="flex flex-col gap-3" aria-label={t("agenda.listLabel", "Consultas do dia")}>
+      {sorted.map((a) => {
+        const professional = professionals.find((p) => p.id === a.professionalId);
+        return (
+          <li key={a.id} id={`agenda-${a.id}`} className="scroll-mt-4">
+            <Panel tone="outline" className="flex flex-col gap-2">
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <p className="bloco-headline flex min-w-0 flex-wrap items-baseline gap-x-2">
+                  <span className="tabular-nums">
+                    {timeLabel(tz, a.startsAt)}–{timeLabel(tz, a.endsAt)}
+                  </span>
+                  {a.patientHref ? (
+                    <a
+                      href={a.patientHref}
+                      className="inline-flex min-h-8 items-center text-fg underline decoration-border-strong underline-offset-4 hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    >
+                      {a.patientName}
+                    </a>
+                  ) : (
+                    <span>{a.patientName}</span>
+                  )}
+                </p>
+                <Badge tone={statusToneOf(a)}>{statusLabelOf(L, a)}</Badge>
+              </div>
+              <p className="bloco-caption text-fg-muted">
+                {[a.type, professional?.name].filter(Boolean).join(" · ")}
+              </p>
+              {(a.detail ?? []).map((line) => (
+                <p key={line} className="bloco-caption text-fg-muted">
+                  {line}
+                </p>
+              ))}
+              {a.notice ? (
+                <p
+                  role="status"
+                  className="bloco-callout self-start rounded-[var(--r-md)] border border-warn bg-warn-soft px-3 py-1.5 text-warn"
+                >
+                  {a.notice}
+                </p>
+              ) : null}
+              {a.actions && a.actions.length > 0 ? (
+                <div className="flex flex-wrap items-center gap-2">{actionButtons(a)}</div>
+              ) : null}
+              {a.history && a.history.length > 0 ? (
+                <details className="border-t border-border pt-2">
+                  <summary className="bloco-callout inline-flex min-h-8 cursor-pointer items-center font-medium text-fg-secondary">
+                    {t("agenda.historyTitle", "Historico da consulta")}
+                  </summary>
+                  <ol className="bloco-caption mt-1 flex list-decimal flex-col gap-1 pl-5 text-fg-muted">
+                    {a.history.map((line, index) => (
+                      <li key={`${index}-${line}`}>{line}</li>
+                    ))}
+                  </ol>
+                </details>
+              ) : null}
+            </Panel>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
