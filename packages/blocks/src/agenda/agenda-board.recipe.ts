@@ -103,7 +103,8 @@ export const agendaBoardRecipe = defineBlock({
     },
   ],
   rules: [
-    "Timezone America/Sao_Paulo: a conversao local<->UTC faz DUAS passadas por causa do DST.",
+    "Fuso do LocaleProvider (padrao America/Sao_Paulo; CRM-HOF America/Lima): a conversao local<->UTC faz DUAS passadas por causa do DST.",
+    "Acoes por consulta podem vir dos dados (`actions`): quem chama decide o que o estado e o papel permitem; o bloco so mostra e chama onAction(id, { id, reason? }). Motivo obrigatorio e confirmacao sao pedidos no dialogo antes da chamada.",
     "Agendamento bloqueia em cima de folga do profissional: um horario bloqueado nunca vira slot.",
     "Slots ja descontam atendimento marcado e horario bloqueado.",
     "Regra 11: so respondemos a quem esta na lista de permitidos.",

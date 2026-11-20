@@ -91,3 +91,32 @@ check('tarefas es-PE: textos e botao nomeado', tkEs.includes('Vencida') && tkEs.
 check('tarefas: hora de Lima (15:00Z -> 10:00)', tkEs.includes('20/11 10:00') && !tkEs.includes('12:00'));
 const tkDefault = renderToStaticMarkup(React.createElement(blocks.FollowUpTasks, { data: blocks.followUpMock, variant: 'list', connectors: [{ id: 'whatsapp', status: 'provisioned' }] }));
 check('tarefas padrao: fuso de Sao Paulo, Responsavel e Tipo', tkDefault.includes('Fuso America/Sao_Paulo') && tkDefault.includes('Responsavel') && tkDefault.includes('Tipo'));
+
+// agenda-board (CRM-HOF: hora de Lima, estado proprio, acoes decididas pelo CRM, legenda propria)
+const ag = {
+  professionals: [{ id: 'pr1', name: 'Dra. Rosa Quispe', specialty: 'Medicina estética' }],
+  appointments: [
+    { id: 'a1', patientId: 'p1', patientName: 'Ana Huamán', professionalId: 'pr1', type: 'Toxina botulínica', status: 'agendado',
+      statusLabel: 'Solicitada', statusTone: 'info', startsAt: '2026-11-20T15:00:00Z', endsAt: '2026-11-20T15:30:00Z',
+      patientHref: '/es-PE/patients/p1', notice: 'Falta consentimiento', detail: ['Sala: Sala 1'], history: ['01/12/2026 10:00 — Solicitada'],
+      actions: [{ id: 'appointment.confirm', label: 'Confirmar' }, { id: 'payment.new', label: 'Registrar pago', href: '/es-PE/payments/new?appointmentId=a1' }, { id: 'appointment.cancel', label: 'Cancelar cita', tone: 'danger', reason: { title: 'Cancelar', label: 'Motivo' } }] },
+    { id: 'a2', patientId: 'p2', patientName: 'Luis Rojas', professionalId: 'pr1', type: 'Relleno', status: 'compareceu',
+      statusLabel: 'Atendida', startsAt: '2026-11-20T16:00:00Z', endsAt: '2026-11-20T16:30:00Z', actions: [] },
+  ],
+  legend: [{ label: 'Solicitada', tone: 'info' }, { label: 'Atendida', tone: 'success' }],
+};
+const agEs = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima', messages: { 'agenda.title': 'Programación del día', 'agenda.col.professional': 'Profesional', 'agenda.col.actions': 'Acciones', 'agenda.col.status': 'Estado', 'agenda.col.type': 'Servicio' } },
+  React.createElement(blocks.AgendaBoard, { data: ag, variant: 'list', connectors: [{ id: 'database', status: 'provisioned' }] })));
+check('agenda es-PE: titulo, cartoes e profissional', agEs.includes('Programación del día') && agEs.includes('Toxina botulínica · Dra. Rosa Quispe') && !agEs.includes('<table'));
+check('agenda: hora de Lima (15:00Z -> 10:00)', agEs.includes('10:00') && !agEs.includes('12:00'));
+check('agenda: fuso de Lima no selo', agEs.includes('America/Lima') && !agEs.includes('Sao_Paulo'));
+check('agenda: estado proprio', agEs.includes('Solicitada') && agEs.includes('Atendida') && !agEs.includes('Agendado'));
+check('agenda: acoes do CRM com nome unico', agEs.includes('aria-label="Confirmar — Ana Huamán"') && agEs.includes('aria-label="Cancelar cita — Ana Huamán"'));
+check('agenda: sem seletor de status nem botoes fixos com acoes', !agEs.includes('Alterar status') && !agEs.includes('Reagendar consulta'));
+check('agenda: consulta sem acoes nao ganha botao', !agEs.includes('— Luis Rojas"'));
+check('agenda: legenda propria', !agEs.includes('Faltou'));
+check('agenda: nome do paciente e link da ficha', agEs.includes('href="/es-PE/patients/p1"'));
+check('agenda: acao com href vira link nomeado', /<a href="\/es-PE\/payments\/new\?appointmentId=a1" aria-label="Registrar pago — Ana Huamán"/.test(agEs));
+check('agenda: aviso, detalhe e historico a mostra', agEs.includes('role="status"') && agEs.includes('Falta consentimiento') && agEs.includes('Sala: Sala 1') && agEs.includes('01/12/2026 10:00 — Solicitada'));
+const agDefault = renderToStaticMarkup(React.createElement(blocks.AgendaBoard, { data: blocks.agendaBoardMock, variant: 'list', connectors: [{ id: 'database', status: 'provisioned' }] }));
+check('agenda padrao: Sao Paulo, seletor de status e botoes fixos', agDefault.includes('Fuso America/Sao_Paulo') && agDefault.includes('Alterar status') && agDefault.includes('Reagendar consulta'));
