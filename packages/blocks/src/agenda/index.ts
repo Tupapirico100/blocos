@@ -1,5 +1,6 @@
 export { AgendaBoard } from "./agenda-board.js";
 export type {
+  AgendaActionSpec,
   AgendaAppointment,
   AgendaBoardData,
   AgendaProfessional,
