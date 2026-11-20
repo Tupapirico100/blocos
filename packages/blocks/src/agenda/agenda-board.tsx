@@ -96,6 +96,8 @@ export interface AgendaBoardData {
   legend?: Array<{ label: string; tone: BadgeTone }>;
   /** Uma acao esta em andamento: os botoes de acao ficam travados. */
   busy?: boolean;
+  /** `false` esconde o cabecalho (quem chama ja tem a barra da tela). Padrao: mostra. */
+  showHeader?: boolean;
   /**
    * Grade de calendario nas variacoes "day" e "week" (estilo Google): horas na
    * lateral, uma coluna por dia (`days`, ou `referenceDate` no dia), cada
@@ -359,6 +361,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
         }
       >
       <div className="flex flex-col gap-4">
+        {data.showHeader === false ? null : (
         <SectionHeader
           eyebrow={t("agenda.eyebrow", "Agenda")}
           title={t("agenda.title", "Agenda de consultas")}
@@ -369,6 +372,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
             </Badge>
           }
         />
+        )}
 
         {/* A legenda fica em uma linha propria: dentro do cabecalho ela consumia
             toda a largura e o titulo do bloco ficava com 0px (invisivel). */}

@@ -134,3 +134,5 @@ check('grade: rotulo do calendario', calWeek.includes('aria-label="Calendario de
 const calDay = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { locale: 'es-PE', timeZone: 'America/Lima' },
   React.createElement(blocks.AgendaBoard, { data: cal, variant: 'day', connectors: [{ id: 'database', status: 'provisioned' }] })));
 check('grade dia: uma coluna (a data de referencia)', (calDay.match(/data-day="/g) || []).length === 1 && calDay.includes('data-day="2026-11-20"'));
+const calNoHead = renderToStaticMarkup(React.createElement(blocks.AgendaBoard, { data: { ...cal, showHeader: false }, variant: 'week', connectors: [{ id: 'database', status: 'provisioned' }] }));
+check('grade: showHeader false esconde o cabecalho', !calNoHead.includes('Agenda de consultas') && calWeek.includes('Agenda de consultas'));
