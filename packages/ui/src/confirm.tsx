@@ -74,7 +74,7 @@ export function ConfirmDialog({
       }
     >
       <p className={cn("bloco-callout text-fg-secondary")}>
-        Esta acao nao pode ser desfeita pela interface.
+        {t("ui.irreversible", "Esta acao nao pode ser desfeita pela interface.")}
       </p>
     </Dialog>
   );

@@ -15,6 +15,8 @@ async function render(root) {
     out[`meta/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.MetaConversion, { data: st === 'empty' ? { events: [] } : b.metaConversionMock, variant: v, state: st, connectors: [{ id: 'meta_ads', status: 'provisioned' }] }));
   for (const v of ['list', 'calendar', 'board']) for (const st of ['success', 'empty', 'forbidden'])
     out[`tasks/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.FollowUpTasks, { data: st === 'empty' ? { tasks: [] } : b.followUpMock, variant: v, state: st, connectors: [{ id: 'whatsapp', status: 'provisioned' }] }));
+  for (const v of ['day', 'week', 'list']) for (const st of ['success', 'empty', 'forbidden'])
+    out[`agenda/${v}/${st}`] = renderToStaticMarkup(React.createElement(b.AgendaBoard, { data: st === 'empty' ? { professionals: b.agendaProfessionals, appointments: [] } : b.agendaBoardMock, variant: v, state: st, connectors: [{ id: 'database', status: 'provisioned' }] }));
   for (const v of ['list', 'flow']) out[`webhooks/${v}`] = renderToStaticMarkup(React.createElement(b.WebhooksPanel, { data: b.webhooksMock ?? b.webhooksPanelMock, variant: v, connectors: [{ id: 'webhooks', status: 'provisioned' }] }));
   return out;
 }

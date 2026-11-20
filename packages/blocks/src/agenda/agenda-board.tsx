@@ -4,16 +4,20 @@ import {
   Button,
   ConfirmDialog,
   DataTable,
+  Dialog,
   EmptyState,
+  Field,
   IconButton,
   Input,
   Panel,
   SectionHeader,
   Select,
+  useBlocosLocale,
   type BadgeTone,
+  type BlocosFormat,
   type Column,
 } from "@blocos/ui";
-import { formatMinutes, localDateKey, minutesSinceMidnight, utcToLocal } from "@blocos/core";
+import { formatMinutes, localDateKey, localToUtc, minutesSinceMidnight, utcToLocal } from "@blocos/core";
 import { CalendarClock, CheckCircle2, Clock3, Repeat, UserRound, XCircle } from "lucide-react";
 import { BlockFrame, requiresOf, rolesOf, type BlockProps } from "../shared/index.js";
 import { agendaBoardRecipe } from "./agenda-board.recipe.js";
@@ -40,9 +44,38 @@ export interface AgendaAppointment {
   /** Tipo do atendimento (ex.: "Avaliacao inicial"). */
   type: string;
   status: AppointmentStatus;
-  /** ISO 8601 com deslocamento local. Interpretado em America/Sao_Paulo. */
+  /** ISO 8601 com deslocamento. Mostrado no fuso do LocaleProvider (padrao America/Sao_Paulo). */
   startsAt: string;
   endsAt: string;
+  /** Rotulo proprio do estado (ex.: CRM-HOF "En sala de espera"); padrao: o do `status`. */
+  statusLabel?: string;
+  /** Cor propria do estado; padrao: a do `status`. */
+  statusTone?: BadgeTone;
+  /** Linhas extras no painel da consulta (servico, sala, retorno...). */
+  detail?: string[];
+  /** Aviso no painel (ex.: falta o consentimento para cobrar). */
+  notice?: string;
+  /** Historico da consulta (quem mudou, quando, por que), uma linha por mudanca. */
+  history?: string[];
+  /**
+   * Acoes desta consulta, decididas por quem chama (estado, papel, regras).
+   * Quando existe, substitui o seletor de status e os botoes fixos (reagendar,
+   * cancelar, compareceu, faltou) na lista e no painel. Cada clique chama
+   * `onAction(acao.id, { id, reason? })`.
+   */
+  actions?: AgendaActionSpec[];
+}
+
+/** Uma acao de consulta definida pelos dados. */
+export interface AgendaActionSpec {
+  /** Nome passado a `onAction` (ex.: "appointment.confirm"). */
+  id: string;
+  label: string;
+  tone?: "primary" | "secondary" | "danger";
+  /** Pede confirmacao antes de executar. */
+  confirm?: { title: string; description?: string; confirmLabel?: string; tone?: "danger" | "primary" };
+  /** Pede um motivo obrigatorio antes de executar (vai em `payload.reason`). */
+  reason?: { title: string; label: string; confirmLabel?: string };
 }
 
 export interface AgendaBoardData {
@@ -54,14 +87,15 @@ export interface AgendaBoardData {
   hours?: number[];
   /** Data de referencia (ISO) da variacao "day". */
   referenceDate?: string;
+  /** Legenda propria dos estados; `[]` esconde. Padrao: os 5 estados do bloco. */
+  legend?: Array<{ label: string; tone: BadgeTone }>;
+  /** Uma acao esta em andamento: os botoes de acao ficam travados. */
+  busy?: boolean;
 }
 
 /* ------------------------------------------------------------------ */
 /* Regras de apresentacao                                              */
 /* ------------------------------------------------------------------ */
-
-const TZ = "America/Sao_Paulo";
-const SAO_PAULO_OFFSET = "-03:00";
 
 const STATUS_LABEL: Record<AppointmentStatus, string> = {
   agendado: "Agendado",
@@ -81,25 +115,48 @@ const STATUS_TONE: Record<AppointmentStatus, BadgeTone> = {
 
 const DEFAULT_HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-function localParts(iso: string) {
-  return utcToLocal(TZ, new Date(iso));
+function localParts(tz: string, iso: string) {
+  return utcToLocal(tz, new Date(iso));
 }
 
-function timeLabel(iso: string): string {
-  return formatMinutes(minutesSinceMidnight(localParts(iso)));
+function timeLabel(tz: string, iso: string): string {
+  return formatMinutes(minutesSinceMidnight(localParts(tz, iso)));
 }
 
-function dayKeyOf(iso: string): string {
-  return localDateKey(TZ, new Date(iso));
+function dayKeyOf(tz: string, iso: string): string {
+  return localDateKey(tz, new Date(iso));
 }
 
-function hourOf(iso: string): number {
-  return localParts(iso).hour;
+function hourOf(tz: string, iso: string): number {
+  return localParts(tz, iso).hour;
 }
 
-function isoFrom(dateValue: string, timeValue: string): string {
-  return `${dateValue}T${timeValue}:00${SAO_PAULO_OFFSET}`;
+/** Deslocamento "+HH:MM"/"-HH:MM" do fuso naquela data e hora locais (Sao Paulo -> "-03:00"). */
+function offsetFor(tz: string, dateValue: string, timeValue: string): string {
+  const [year, month, day] = dateValue.split("-").map(Number);
+  const [hour, minute] = timeValue.split(":").map(Number);
+  const local = { year: year!, month: month!, day: day!, hour: hour ?? 0, minute: minute ?? 0, second: 0 };
+  const utc = localToUtc(tz, local);
+  const asUtc = Date.UTC(local.year, local.month - 1, local.day, local.hour, local.minute);
+  const minutes = Math.round((asUtc - utc.getTime()) / 60000);
+  const sign = minutes < 0 ? "-" : "+";
+  const abs = Math.abs(minutes);
+  return `${sign}${String(Math.floor(abs / 60)).padStart(2, "0")}:${String(abs % 60).padStart(2, "0")}`;
 }
+
+function isoFrom(tz: string, dateValue: string, timeValue: string): string {
+  return `${dateValue}T${timeValue}:00${offsetFor(tz, dateValue, timeValue)}`;
+}
+
+const statusLabelOf = (L: BlocosFormat, a: Pick<AgendaAppointment, "status" | "statusLabel">) =>
+  a.statusLabel ?? L.t(`agenda.status.${a.status}`, STATUS_LABEL[a.status]);
+const statusToneOf = (a: Pick<AgendaAppointment, "status" | "statusTone">) => a.statusTone ?? STATUS_TONE[a.status];
+
+/** Nome acessivel unico: "Confirmar — Joana Prado" (o botao se repete em cada linha). */
+const actionName = (L: BlocosFormat, action: AgendaActionSpec, a: AgendaAppointment) =>
+  L.t("agenda.actionFor", "{action} — {patient}", { action: action.label, patient: a.patientName });
+
+const ACTION_VARIANT = { primary: "primary", secondary: "secondary", danger: "danger" } as const;
 
 /* ------------------------------------------------------------------ */
 /* Bloco                                                                */
@@ -116,7 +173,13 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
     className,
   } = props;
 
+  const L = useBlocosLocale();
+  const { t } = L;
+  const tz = L.config.timeZone;
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
+  /** Acao definida pelos dados esperando confirmacao ou motivo. */
+  const [pending, setPending] = React.useState<{ appointment: AgendaAppointment; action: AgendaActionSpec } | null>(null);
+  const [reasonText, setReasonText] = React.useState("");
   const [rescheduling, setRescheduling] = React.useState(false);
   const [newDate, setNewDate] = React.useState("");
   const [newTime, setNewTime] = React.useState("");
@@ -161,7 +224,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
 
   /** Valor local (sem deslocamento) para preencher o formulario de reagendamento. */
   function localInputValue(appointment: AgendaAppointment): string | null {
-    const parts = localParts(appointment.startsAt);
+    const parts = localParts(tz, appointment.startsAt);
     if (!parts) return null;
     const hh = String(parts.hour).padStart(2, "0");
     const mm = String(parts.minute).padStart(2, "0");
@@ -186,25 +249,56 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
   function reschedule(appointment: AgendaAppointment) {
     if (!newDate || !newTime) return;
     const durationMinutes =
-      minutesSinceMidnight(localParts(appointment.endsAt)) -
-      minutesSinceMidnight(localParts(appointment.startsAt));
-    const startsAt = isoFrom(newDate, newTime);
-    const endParts = localParts(startsAt);
+      minutesSinceMidnight(localParts(tz, appointment.endsAt)) -
+      minutesSinceMidnight(localParts(tz, appointment.startsAt));
+    const startsAt = isoFrom(tz, newDate, newTime);
+    const endParts = localParts(tz, startsAt);
     const endMinutes = minutesSinceMidnight(endParts) + (durationMinutes || 30);
-    const endsAt = isoFrom(newDate, formatMinutes(endMinutes % 1440));
+    const endsAt = isoFrom(tz, newDate, formatMinutes(endMinutes % 1440));
     onAction?.("appointment.reschedule", { id: appointment.id, startsAt, endsAt });
     setRescheduling(false);
   }
 
+  /** Acao definida pelos dados: direto, ou pelo dialogo de confirmacao/motivo. */
+  function runAction(appointment: AgendaAppointment, action: AgendaActionSpec) {
+    if (action.confirm || action.reason) {
+      setReasonText("");
+      setPending({ appointment, action });
+      return;
+    }
+    void onAction?.(action.id, { id: appointment.id });
+  }
+
+  const legendItems =
+    data.legend ??
+    (Object.keys(STATUS_LABEL) as AppointmentStatus[]).map((status) => ({
+      label: t(`agenda.status.${status}`, STATUS_LABEL[status]),
+      tone: STATUS_TONE[status],
+    }));
+
   const legend = (
     <div className="flex flex-wrap items-center gap-1.5">
-      {(Object.keys(STATUS_LABEL) as AppointmentStatus[]).map((status) => (
-        <Badge key={status} tone={STATUS_TONE[status]}>
-          {STATUS_LABEL[status]}
+      {legendItems.map((item) => (
+        <Badge key={item.label} tone={item.tone}>
+          {item.label}
         </Badge>
       ))}
     </div>
   );
+
+  const actionButtons = (appointment: AgendaAppointment, size: "sm" = "sm") =>
+    (appointment.actions ?? []).map((action) => (
+      <Button
+        key={action.id}
+        size={size}
+        variant={ACTION_VARIANT[action.tone ?? "secondary"]}
+        aria-label={actionName(L, action, appointment)}
+        disabled={data.busy}
+        onClick={() => runAction(appointment, action)}
+      >
+        {action.label}
+      </Button>
+    ));
 
   return (
     <BlockFrame
@@ -217,26 +311,26 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
         empty={
           <EmptyState
             icon={<CalendarClock className="h-5 w-5" aria-hidden />}
-            title="Nenhum agendamento"
-            description="Os agendamentos chegam sozinhos assim que a agenda do consultorio for criada."
+            title={t("agenda.emptyTitle", "Nenhum agendamento")}
+            description={t("agenda.emptyDescription", "Os agendamentos chegam sozinhos assim que a agenda do consultorio for criada.")}
           />
         }
       >
       <div className="flex flex-col gap-4">
         <SectionHeader
-          eyebrow="Agenda"
-          title="Agenda de consultas"
-          description="Grade por profissional e por hora. Horarios em America/Sao_Paulo."
+          eyebrow={t("agenda.eyebrow", "Agenda")}
+          title={t("agenda.title", "Agenda de consultas")}
+          description={t("agenda.description", "Grade por profissional e por hora. Horarios em {tz}.", { tz })}
           actions={
             <Badge tone="info" icon={<Clock3 size={12} aria-hidden />}>
-              Fuso America/Sao_Paulo
+              {t("agenda.timeZone", "Fuso {tz}", { tz })}
             </Badge>
           }
         />
 
         {/* A legenda fica em uma linha propria: dentro do cabecalho ela consumia
             toda a largura e o titulo do bloco ficava com 0px (invisivel). */}
-        <div className="flex flex-wrap items-center gap-2">{legend}</div>
+        {legendItems.length > 0 ? <div className="flex flex-wrap items-center gap-2">{legend}</div> : null}
 
         {variant === "list" ? (
           <AgendaList
@@ -247,6 +341,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
             selectedId={selectedId}
             onStatus={setStatus}
             onCancel={cancel}
+            actionButtons={actionButtons}
           />
         ) : (
           <ScheduleGrid
@@ -254,6 +349,8 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
             appointments={appointments}
             professionals={data.professionals}
             hours={hours}
+            tz={tz}
+            L={L}
             days={data.days}
             referenceDate={data.referenceDate}
             onSelect={pick}
@@ -267,12 +364,26 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
               <div>
                 <p className="bloco-headline">{selected.patientName}</p>
                 <p className="bloco-caption text-fg-muted">
-                  {selected.type} · {timeLabel(selected.startsAt)}–{timeLabel(selected.endsAt)}
+                  {selected.type} · {timeLabel(tz, selected.startsAt)}–{timeLabel(tz, selected.endsAt)}
                 </p>
+                {(selected.detail ?? []).map((line) => (
+                  <p key={line} className="bloco-caption text-fg-muted">
+                    {line}
+                  </p>
+                ))}
               </div>
-              <Badge tone={STATUS_TONE[selected.status]}>{STATUS_LABEL[selected.status]}</Badge>
+              <Badge tone={statusToneOf(selected)}>{statusLabelOf(L, selected)}</Badge>
             </div>
 
+            {selected.notice ? (
+              <p role="status" className="bloco-callout rounded-[var(--r-md)] border border-warn bg-warn-soft px-3 py-2 text-warn">
+                {selected.notice}
+              </p>
+            ) : null}
+
+            {selected.actions ? (
+              <div className="flex flex-wrap items-center gap-2">{actionButtons(selected)}</div>
+            ) : (
             <div className="flex flex-wrap items-center gap-2">
               <Button
                 size="sm"
@@ -308,8 +419,22 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
                 Cancelar atendimento
               </Button>
             </div>
+            )}
 
-            {rescheduling ? (
+            {selected.history && selected.history.length > 0 ? (
+              <details className="border-t border-border pt-3">
+                <summary className="bloco-callout cursor-pointer font-medium text-fg-secondary">
+                  {t("agenda.historyTitle", "Historico da consulta")}
+                </summary>
+                <ol className="bloco-caption mt-2 flex list-decimal flex-col gap-1 pl-5 text-fg-muted">
+                  {selected.history.map((line, index) => (
+                    <li key={`${index}-${line}`}>{line}</li>
+                  ))}
+                </ol>
+              </details>
+            ) : null}
+
+            {rescheduling && !selected.actions ? (
               <div className="flex flex-wrap items-end gap-3 border-t border-border pt-3">
                 <label className="bloco-caption flex flex-col gap-2">
                   Nova data
@@ -353,7 +478,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
         }
         description={
           consultaEmConfirmacao
-            ? `A consulta de ${consultaEmConfirmacao.patientName} em ${timeLabel(consultaEmConfirmacao.startsAt)} sera cancelada e o horario volta a ficar livre para outro paciente. O paciente precisa ser avisado. Para reverter, reagende o atendimento em outro horario.`
+            ? `A consulta de ${consultaEmConfirmacao.patientName} em ${timeLabel(tz, consultaEmConfirmacao.startsAt)} sera cancelada e o horario volta a ficar livre para outro paciente. O paciente precisa ser avisado. Para reverter, reagende o atendimento em outro horario.`
             : "Esta acao nao pode ser desfeita pela interface."
         }
         confirmLabel={
@@ -364,6 +489,70 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
           onAction?.(confirmando.acao, confirmando.payload);
         }}
       />
+
+      {pending?.action.confirm && !pending.action.reason ? (
+        <ConfirmDialog
+          open
+          onOpenChange={(open) => {
+            if (!open) setPending(null);
+          }}
+          title={pending.action.confirm.title}
+          description={pending.action.confirm.description}
+          confirmLabel={pending.action.confirm.confirmLabel ?? pending.action.label}
+          tone={pending.action.confirm.tone ?? (pending.action.tone === "danger" ? "danger" : "primary")}
+          onConfirm={() => {
+            void onAction?.(pending.action.id, { id: pending.appointment.id });
+          }}
+        />
+      ) : null}
+
+      {pending?.action.reason ? (
+        <Dialog
+          open
+          onOpenChange={(open) => {
+            if (!open) setPending(null);
+          }}
+          title={pending.action.reason.title}
+          size="sm"
+          footer={
+            <>
+              <Button type="button" variant="ghost" onClick={() => setPending(null)}>
+                {t("ui.cancel", "Cancelar")}
+              </Button>
+              <Button
+                type="submit"
+                form="agenda-reason-form"
+                variant={ACTION_VARIANT[pending.action.tone ?? "secondary"]}
+                disabled={reasonText.trim() === "" || data.busy}
+              >
+                {pending.action.reason.confirmLabel ?? pending.action.label}
+              </Button>
+            </>
+          }
+        >
+          <form
+            id="agenda-reason-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              const reason = reasonText.trim();
+              if (!reason) return;
+              void onAction?.(pending.action.id, { id: pending.appointment.id, reason });
+              setPending(null);
+            }}
+          >
+            <Field label={pending.action.reason.label} required htmlFor="agenda-reason-input">
+              <Input
+                id="agenda-reason-input"
+                name="reason"
+                required
+                autoFocus
+                value={reasonText}
+                onChange={(event) => setReasonText(event.target.value)}
+              />
+            </Field>
+          </form>
+        </Dialog>
+      ) : null}
     </BlockFrame>
   );
 }
@@ -383,6 +572,8 @@ function ScheduleGrid({
   appointments,
   professionals,
   hours,
+  tz,
+  L,
   days,
   referenceDate,
   onSelect,
@@ -392,18 +583,21 @@ function ScheduleGrid({
   appointments: AgendaAppointment[];
   professionals: AgendaProfessional[];
   hours: number[];
+  tz: string;
+  L: BlocosFormat;
   days?: string[];
   referenceDate?: string;
   onSelect: (appointment: AgendaAppointment) => void;
   selectedId: string | null;
 }) {
+  const { t } = L;
   const columns: GridColumn[] =
     variant === "day"
       ? professionals.map((p) => ({ id: p.id, title: p.name, subtitle: p.specialty }))
       : (days ?? []).map((day) => ({ id: day, title: day.slice(8, 10), subtitle: day.slice(5, 7) }));
 
   const keyOf = (appointment: AgendaAppointment): string =>
-    variant === "day" ? appointment.professionalId : dayKeyOf(appointment.startsAt);
+    variant === "day" ? appointment.professionalId : dayKeyOf(tz, appointment.startsAt);
 
   /**
    * Largura minima de uma coluna de dia/profissional. Abaixo disso o nome do
@@ -423,7 +617,7 @@ function ScheduleGrid({
         }}
       >
         <div className="bg-surface/90 px-2 py-2">
-          <span className="bloco-micro">Hora</span>
+          <span className="bloco-micro">{t("agenda.col.time", "Hora")}</span>
         </div>
         {columns.map((col) => (
           <div key={col.id} className="bg-surface/90 px-3 py-2">
@@ -439,7 +633,7 @@ function ScheduleGrid({
             </div>
             {columns.map((col) => {
               const cell = appointments.filter(
-                (a) => keyOf(a) === col.id && hourOf(a.startsAt) === hour,
+                (a) => keyOf(a) === col.id && hourOf(tz, a.startsAt) === hour,
               );
               return (
                 <div key={`${col.id}-${hour}`} className="min-h-[64px] bg-surface/40 p-1.5">
@@ -456,13 +650,13 @@ function ScheduleGrid({
                           : "border-border bg-surface-strong/60 hover:bg-surface-hover")
                       }
                     >
-                      <span className="bloco-micro tabular-nums">{timeLabel(appointment.startsAt)}</span>
+                      <span className="bloco-micro tabular-nums">{timeLabel(tz, appointment.startsAt)}</span>
                       <span className="bloco-caption truncate font-medium text-fg">
                         {appointment.patientName}
                       </span>
                       <span className="bloco-micro truncate" title={appointment.type}>{appointment.type}</span>
-                      <Badge tone={STATUS_TONE[appointment.status]} size="sm">
-                        {STATUS_LABEL[appointment.status]}
+                      <Badge tone={statusToneOf(appointment)} size="sm">
+                        {statusLabelOf(L, appointment)}
                       </Badge>
                     </button>
                   ))}
@@ -473,7 +667,9 @@ function ScheduleGrid({
         ))}
       </div>
       {variant === "week" && referenceDate ? (
-        <p className="bloco-micro mt-2">Semana de referencia a partir de {referenceDate}.</p>
+        <p className="bloco-micro mt-2">
+          {t("agenda.weekOf", "Semana de referencia a partir de {date}.", { date: referenceDate })}
+        </p>
       ) : null}
     </div>
   );
@@ -491,6 +687,7 @@ function AgendaList({
   selectedId,
   onStatus,
   onCancel,
+  actionButtons,
 }: {
   appointments: AgendaAppointment[];
   professionals: AgendaProfessional[];
@@ -499,23 +696,27 @@ function AgendaList({
   selectedId: string | null;
   onStatus: (appointment: AgendaAppointment, status: AppointmentStatus) => void;
   onCancel: (appointment: AgendaAppointment) => void;
+  actionButtons: (appointment: AgendaAppointment) => React.ReactNode;
 }) {
+  const L = useBlocosLocale();
+  const { t } = L;
+  const tz = L.config.timeZone;
   const sorted = [...appointments].sort((a, b) => a.startsAt.localeCompare(b.startsAt));
 
   const columns: Array<Column<AgendaAppointment>> = [
     {
       key: "time",
-      header: "Hora",
+      header: t("agenda.col.time", "Hora"),
       width: "96px",
       render: (row) => (
         <span className="tabular-nums text-fg">
-          {timeLabel(row.startsAt)}–{timeLabel(row.endsAt)}
+          {timeLabel(tz, row.startsAt)}–{timeLabel(tz, row.endsAt)}
         </span>
       ),
     },
     {
       key: "patient",
-      header: "Paciente",
+      header: t("agenda.col.patient", "Paciente"),
       render: (row) => (
         <button
           type="button"
@@ -529,7 +730,7 @@ function AgendaList({
     },
     {
       key: "professional",
-      header: "Profissional",
+      header: t("agenda.col.professional", "Profissional"),
       render: (row) => {
         const professional = professionals.find((p) => p.id === row.professionalId);
         return (
@@ -542,13 +743,16 @@ function AgendaList({
     },
     {
       key: "type",
-      header: "Tipo",
+      header: t("agenda.col.type", "Tipo"),
       render: (row) => <span>{row.type}</span>,
     },
     {
       key: "status",
-      header: "Status",
-      render: (row) => (
+      header: t("agenda.col.status", "Status"),
+      render: (row) =>
+        row.actions ? (
+          <Badge tone={statusToneOf(row)}>{statusLabelOf(L, row)}</Badge>
+        ) : (
         <div className="flex items-center gap-2">
           <Badge tone={STATUS_TONE[row.status]}>{STATUS_LABEL[row.status]}</Badge>
           <Select
@@ -568,9 +772,12 @@ function AgendaList({
     },
     {
       key: "actions",
-      header: "Acoes",
+      header: t("agenda.col.actions", "Acoes"),
       align: "right",
-      render: (row) => (
+      render: (row) =>
+        row.actions ? (
+          <div className="flex flex-wrap items-center justify-end gap-1">{actionButtons(row)}</div>
+        ) : (
         <div className="flex items-center justify-end gap-1">
           <IconButton
             label={`Reagendar consulta de ${row.patientName}`}
