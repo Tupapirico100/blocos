@@ -48,6 +48,36 @@ export interface LeadStageMeta {
 export interface LeadBoardData {
   leads: Lead[];
   stages: LeadStageMeta[];
+  /**
+   * Quadro de etapas proprias, arrastavel (CRM-HOF). Quando existe, a variacao
+   * "board" mostra estas colunas e estes cartoes em vez dos leads acima.
+   */
+  dragBoard?: LeadDragBoard;
+}
+
+/**
+ * Quadro arrastavel: o cartao e pego e solto em outra coluna, e isso E a
+ * mudanca de etapa (`onAction("lead.move", { id, stage })`).
+ *
+ *  - Mouse: aperta e arrasta (comeca depois de alguns pixels, entao o clique
+ *    num link ou botao dentro do cartao continua funcionando).
+ *  - Toque: segura um instante e arrasta; um deslize rapido continua rolando.
+ *  - Teclado: o cartao recebe foco; <- e -> movem uma coluna.
+ *
+ * Quem chama decide a etapa de cada cartao (otimista ou nao), marca `busy`
+ * enquanto salva e anuncia o resultado.
+ */
+export interface LeadDragBoard {
+  stages: Array<{ id: string; label: string; total?: string; tone?: "success" | "danger" }>;
+  cards: Array<{ id: string; stage: string; name: string; body: React.ReactNode; busy?: boolean }>;
+  /** O papel pode mover cartoes. Sem isso, so leitura. */
+  canMove: boolean;
+  /** Nome do quadro para leitor de tela. */
+  label: string;
+  /** Instrucao de arrastar (mostrada acima e ligada a cada cartao). */
+  hint?: string;
+  /** Texto da coluna vazia. */
+  empty?: string;
 }
 
 const DEFAULT_STAGES: LeadStageMeta[] = [
@@ -118,6 +148,8 @@ export function LeadsBoard(props: BlockProps<LeadBoardData, "board" | "table" | 
         <LeadTable leads={data.leads} stages={stages} onAction={onAction} />
       ) : variant === "timeline" ? (
         <LeadTimeline leads={data.leads} stages={stages} />
+      ) : data.dragBoard ? (
+        <DragBoard board={data.dragBoard} onAction={onAction} />
       ) : (
         <LeadBoardView leads={data.leads} stages={stages} onAction={onAction} />
       )}
@@ -411,5 +443,338 @@ function LeadTimeline({ leads, stages }: { leads: Lead[]; stages: LeadStageMeta[
         ))}
       </ol>
     </Panel>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Variacao "board" com `dragBoard`: arrastar entre colunas             */
+/* ------------------------------------------------------------------ */
+
+const INTERACTIVE = "a, button, input, select, textarea, summary, label, details[open] > *:not(summary)";
+const MOUSE_SLOP = 5;
+const TOUCH_HOLD_MS = 280;
+const TOUCH_SLOP = 8;
+
+interface DragState {
+  id: string;
+  pointerId: number;
+  startX: number;
+  startY: number;
+  touch: boolean;
+  active: boolean;
+  timer: number | null;
+  ghost: HTMLElement | null;
+  offsetX: number;
+  offsetY: number;
+  card: HTMLElement;
+  /** Onde o dedo foi visto por ultimo (o touchend nao traz posicao). */
+  lastX: number;
+  lastY: number;
+}
+
+function DragBoard({
+  board,
+  onAction,
+}: {
+  board: LeadDragBoard;
+  onAction?: (action: string, payload?: unknown) => void | Promise<void>;
+}) {
+  const { stages, cards, canMove } = board;
+  const [dragging, setDragging] = React.useState<string | null>(null);
+  const [over, setOver] = React.useState<string | null>(null);
+  const drag = React.useRef<DragState | null>(null);
+  const boardRef = React.useRef<HTMLDivElement>(null);
+  const refocus = React.useRef<string | null>(null);
+  const hintId = React.useId();
+
+  // Depois de um movimento pelo teclado o cartao muda de coluna (e de no):
+  // o foco volta para ele.
+  React.useEffect(() => {
+    if (!refocus.current) return;
+    document.getElementById(`lead-${refocus.current}`)?.focus();
+    refocus.current = null;
+  });
+
+  const move = (id: string, stage: string) => {
+    const card = cards.find((c) => c.id === id);
+    if (!card || card.stage === stage) return;
+    void onAction?.("lead.move", { id, stage });
+  };
+
+  const columnAt = (x: number, y: number): string | null => {
+    const el = document.elementFromPoint(x, y);
+    const col = el?.closest<HTMLElement>("[data-kanban-stage]");
+    if (col) return col.dataset.kanbanStage ?? null;
+    // Fora de uma coluna (um vao, a borda do celular): a coluna mais perto do
+    // dedo, se o dedo estiver na altura do quadro.
+    const b = boardRef.current;
+    if (!b) return null;
+    const r = b.getBoundingClientRect();
+    if (y < r.top - 40 || y > r.bottom + 40) return null;
+    const cx = Math.min(Math.max(x, r.left + 1), r.right - 1);
+    let best: { stage: string; distance: number } | null = null;
+    for (const c of b.querySelectorAll<HTMLElement>("[data-kanban-stage]")) {
+      const cr = c.getBoundingClientRect();
+      if (cr.right < r.left || cr.left > r.right) continue;
+      const distance = cx < cr.left ? cr.left - cx : cx > cr.right ? cx - cr.right : 0;
+      if (!best || distance < best.distance) best = { stage: c.dataset.kanbanStage ?? "", distance };
+    }
+    return best?.stage || null;
+  };
+
+  const start = (d: DragState) => {
+    const rect = d.card.getBoundingClientRect();
+    const ghost = d.card.cloneNode(true) as HTMLElement;
+    // Copia so para os olhos: sem ids repetidos, nada focavel.
+    ghost.removeAttribute("id");
+    for (const el of ghost.querySelectorAll("[id]")) el.removeAttribute("id");
+    for (const el of ghost.querySelectorAll("[for]")) el.removeAttribute("for");
+    ghost.removeAttribute("tabindex");
+    ghost.setAttribute("aria-hidden", "true");
+    ghost.setAttribute("data-kanban-ghost", "");
+    Object.assign(ghost.style, {
+      position: "fixed",
+      zIndex: "1000",
+      margin: "0",
+      left: "0",
+      top: "0",
+      width: `${rect.width}px`,
+      pointerEvents: "none",
+      cursor: "grabbing",
+      listStyle: "none",
+      boxShadow: "0 12px 32px rgba(0, 0, 0, 0.35)",
+    });
+    document.body.appendChild(ghost);
+    d.ghost = ghost;
+    d.offsetX = d.startX - rect.left;
+    d.offsetY = d.startY - rect.top;
+    d.active = true;
+    try {
+      d.card.setPointerCapture(d.pointerId);
+    } catch {
+      /* captura e um extra */
+    }
+    setDragging(d.id);
+    // Com o cartao perto da borda, o quadro continua rolando.
+    const tick = () => {
+      const cur = drag.current;
+      const b = boardRef.current;
+      if (!cur || !cur.active || !b) return;
+      const r = b.getBoundingClientRect();
+      const before = b.scrollLeft;
+      if (cur.lastX > r.right - 48) b.scrollLeft += 10;
+      else if (cur.lastX < r.left + 48) b.scrollLeft -= 10;
+      if (b.scrollLeft !== before) setOver(columnAt(cur.lastX, cur.lastY));
+      window.requestAnimationFrame(tick);
+    };
+    window.requestAnimationFrame(tick);
+  };
+
+  const reduced = () =>
+    typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
+  const place = (d: DragState, x: number, y: number) => {
+    if (d.ghost) d.ghost.style.transform = `translate(${x - d.offsetX}px, ${y - d.offsetY}px)${reduced() ? "" : " rotate(2deg)"}`;
+    d.lastX = x;
+    d.lastY = y;
+    setOver(columnAt(x, y));
+  };
+
+  const finish = (drop: boolean, x?: number, y?: number) => {
+    const d = drag.current;
+    drag.current = null;
+    if (!d) return;
+    if (d.timer !== null) window.clearTimeout(d.timer);
+    d.ghost?.remove();
+    setDragging(null);
+    setOver(null);
+    if (drop && d.active && x !== undefined && y !== undefined) {
+      const stage = columnAt(x, y);
+      if (stage) move(d.id, stage);
+    }
+  };
+
+  // O dedo e seguido por eventos de TOQUE, nao de ponteiro: quando o navegador
+  // comeca a rolar ele cancela o ponteiro, e so um touchmove impedido segura a
+  // pagina enquanto o cartao esta preso. Antes de segurar, mover e rolar.
+  const touchHandlers = React.useRef<{ move: (e: TouchEvent) => void; end: (e: TouchEvent) => void } | null>(null);
+  React.useEffect(() => {
+    const onMove = (e: TouchEvent) => touchHandlers.current?.move(e);
+    const onEnd = (e: TouchEvent) => touchHandlers.current?.end(e);
+    window.addEventListener("touchmove", onMove, { passive: false });
+    window.addEventListener("touchend", onEnd);
+    window.addEventListener("touchcancel", onEnd);
+    return () => {
+      window.removeEventListener("touchmove", onMove);
+      window.removeEventListener("touchend", onEnd);
+      window.removeEventListener("touchcancel", onEnd);
+    };
+  }, []);
+  touchHandlers.current = {
+    move: (e: TouchEvent) => {
+      const d = drag.current;
+      const t = e.touches[0];
+      if (!d || !d.touch || !t) return;
+      if (!d.active) {
+        if (Math.hypot(t.clientX - d.startX, t.clientY - d.startY) > TOUCH_SLOP) finish(false);
+        return;
+      }
+      e.preventDefault();
+      place(d, t.clientX, t.clientY);
+    },
+    end: () => {
+      const d = drag.current;
+      if (!d || !d.touch) return;
+      finish(d.active, d.lastX, d.lastY);
+    },
+  };
+
+  const onPointerDown = (id: string, busy?: boolean) => (event: React.PointerEvent<HTMLLIElement>) => {
+    if (!canMove || busy) return;
+    if (event.button !== 0 && event.pointerType === "mouse") return;
+    if ((event.target as HTMLElement).closest(INTERACTIVE)) return;
+    const d: DragState = {
+      id,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      touch: event.pointerType === "touch",
+      active: false,
+      timer: null,
+      ghost: null,
+      offsetX: 0,
+      offsetY: 0,
+      card: event.currentTarget,
+      lastX: event.clientX,
+      lastY: event.clientY,
+    };
+    drag.current = d;
+    if (d.touch) {
+      d.timer = window.setTimeout(() => {
+        if (drag.current === d) {
+          start(d);
+          place(d, d.startX, d.startY);
+          navigator.vibrate?.(10);
+        }
+      }, TOUCH_HOLD_MS);
+    }
+  };
+
+  const onPointerMove = (event: React.PointerEvent<HTMLLIElement>) => {
+    const d = drag.current;
+    if (!d || d.touch || d.pointerId !== event.pointerId) return;
+    // O botao foi solto onde o cartao nao viu: sem arrastar.
+    if (event.buttons === 0) {
+      finish(false);
+      return;
+    }
+    if (!d.active) {
+      if (Math.hypot(event.clientX - d.startX, event.clientY - d.startY) < MOUSE_SLOP) return;
+      start(d);
+    }
+    event.preventDefault();
+    place(d, event.clientX, event.clientY);
+  };
+
+  const onPointerUp = (event: React.PointerEvent<HTMLLIElement>) => {
+    const d = drag.current;
+    if (!d || d.touch || d.pointerId !== event.pointerId) return;
+    finish(true, event.clientX, event.clientY);
+  };
+
+  const onKeyDown = (id: string, stage: string) => (event: React.KeyboardEvent<HTMLLIElement>) => {
+    if (!canMove || event.target !== event.currentTarget) return;
+    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+    event.preventDefault();
+    const i = stages.findIndex((s) => s.id === stage);
+    const next = stages[i + (event.key === "ArrowRight" ? 1 : -1)];
+    if (!next) return;
+    refocus.current = id;
+    move(id, next.id);
+  };
+
+  return (
+    <div className="flex flex-col gap-2">
+      {canMove && board.hint ? (
+        <p id={hintId} className="bloco-callout text-fg-muted">
+          {board.hint}
+        </p>
+      ) : null}
+      {/* tabIndex: o quadro rola de lado; o teclado precisa alcanca-lo mesmo sem cartao. */}
+      <div
+        ref={boardRef}
+        role="list"
+        aria-label={board.label}
+        tabIndex={0}
+        className="bloco-scroll grid auto-cols-[minmax(16rem,1fr)] grid-flow-col gap-3 overflow-x-auto pb-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        {stages.map((stage) => {
+          const inColumn = cards.filter((c) => c.stage === stage.id);
+          return (
+            <section
+              key={stage.id}
+              role="listitem"
+              aria-labelledby={`kanban-col-${stage.id}`}
+              data-kanban-stage={stage.id}
+              className={
+                "grid min-h-48 content-start gap-2 rounded-[var(--r-lg)] border border-border bg-surface/40 p-3 " +
+                (over === stage.id && dragging ? "outline-2 -outline-offset-2 outline-dashed outline-accent-ink bg-accent-soft/40" : "")
+              }
+            >
+              <header className="flex items-center justify-between gap-2">
+                <h2
+                  id={`kanban-col-${stage.id}`}
+                  className={
+                    "bloco-callout font-bold uppercase tracking-wide " +
+                    (stage.tone === "success" ? "text-success" : stage.tone === "danger" ? "text-danger" : "text-fg")
+                  }
+                >
+                  {stage.label}
+                </h2>
+                <Badge tone="neutral" className="shrink-0" data-kanban-count="">
+                  {inColumn.length}
+                </Badge>
+              </header>
+              {stage.total ? (
+                <p className="bloco-caption font-semibold text-fg-muted tabular-nums" data-kanban-total="">
+                  {stage.total}
+                </p>
+              ) : null}
+              <ul className="m-0 grid list-none gap-2 p-0">
+                {inColumn.length === 0 ? (
+                  <li className="bloco-caption rounded-[var(--r-md)] border border-dashed border-border p-3 text-center text-fg-muted">
+                    {board.empty ?? "Nenhum lead nesta etapa."}
+                  </li>
+                ) : null}
+                {inColumn.map((card) => (
+                  <li
+                    key={card.id}
+                    id={`lead-${card.id}`}
+                    data-lead-id={card.id}
+                    tabIndex={canMove ? 0 : undefined}
+                    aria-describedby={canMove && board.hint ? hintId : undefined}
+                    aria-busy={card.busy || undefined}
+                    onPointerDown={onPointerDown(card.id, card.busy)}
+                    onPointerMove={onPointerMove}
+                    onPointerUp={onPointerUp}
+                    onPointerCancel={() => {
+                      if (!drag.current?.touch) finish(false);
+                    }}
+                    onKeyDown={onKeyDown(card.id, card.stage)}
+                    className={
+                      "grid scroll-mt-4 gap-1 rounded-[var(--r-md)] border border-border bg-surface-solid p-3 shadow-sm transition-opacity duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink " +
+                      (canMove ? "cursor-grab touch-pan-x touch-pan-y select-none [&_input]:select-text [&_select]:select-text [&_textarea]:select-text " : "") +
+                      (dragging === card.id ? "opacity-35 " : card.busy ? "opacity-70 " : "")
+                    }
+                  >
+                    {card.body}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </div>
   );
 }

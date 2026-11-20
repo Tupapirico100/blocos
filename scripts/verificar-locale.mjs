@@ -136,3 +136,21 @@ const calDay = renderToStaticMarkup(React.createElement(ui.LocaleProvider, { loc
 check('grade dia: uma coluna (a data de referencia)', (calDay.match(/data-day="/g) || []).length === 1 && calDay.includes('data-day="2026-11-20"'));
 const calNoHead = renderToStaticMarkup(React.createElement(blocks.AgendaBoard, { data: { ...cal, showHeader: false }, variant: 'week', connectors: [{ id: 'database', status: 'provisioned' }] }));
 check('grade: showHeader false esconde o cabecalho', !calNoHead.includes('Agenda de consultas') && calWeek.includes('Agenda de consultas'));
+
+// leads-board com quadro arrastavel (CRM-HOF: etapas proprias, totais em S/, cartoes do servidor)
+const dragData = { leads: [], stages: [], dragBoard: {
+  stages: [{ id: 'new', label: 'Nuevo' }, { id: 'contacted', label: 'Contactado' }, { id: 'customer', label: 'Ganado', total: 'S/ 1,200.00', tone: 'success' }],
+  cards: [{ id: 'l1', stage: 'new', name: 'Rosa', body: React.createElement('p', { className: 'lead-card__name' }, 'Rosa Quispe') },
+          { id: 'l2', stage: 'customer', name: 'Luis', body: React.createElement('p', null, 'Luis Rojas'), busy: true }],
+  canMove: true, label: 'Embudo de prospectos', hint: 'Arrastra la tarjeta a otra columna o usa ← y →.', empty: 'Sin prospectos',
+} };
+const drag = renderToStaticMarkup(React.createElement(blocks.LeadsBoard, { data: dragData, variant: 'board', connectors: [{ id: 'database', status: 'provisioned' }] }));
+check('kanban: colunas proprias com data-kanban-stage', ['new','contacted','customer'].every((s) => drag.includes(`data-kanban-stage="${s}"`)));
+check('kanban: cartao com id, foco e dica', drag.includes('id="lead-l1"') && /id="lead-l1"[^>]*tabindex="0"/.test(drag) && drag.includes('aria-describedby='));
+check('kanban: corpo do cartao vem de quem chama', drag.includes('Rosa Quispe') && drag.includes('lead-card__name'));
+check('kanban: total da coluna e coluna vazia', drag.includes('S/ 1,200.00') && drag.includes('Sin prospectos'));
+check('kanban: cartao salvando', /id="lead-l2"[^>]*aria-busy="true"/.test(drag));
+check('kanban: sem setas Mover', !drag.includes('Mover '));
+check('kanban: lista nomeada e rolavel por teclado', drag.includes('role="list"') && drag.includes('aria-label="Embudo de prospectos"'));
+const dragRO = renderToStaticMarkup(React.createElement(blocks.LeadsBoard, { data: { ...dragData, dragBoard: { ...dragData.dragBoard, canMove: false } }, variant: 'board', connectors: [{ id: 'database', status: 'provisioned' }] }));
+check('kanban so leitura: sem foco nos cartoes e sem dica', !/id="lead-l1"[^>]*tabindex/.test(dragRO) && !dragRO.includes('Arrastra la tarjeta'));
