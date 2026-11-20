@@ -96,6 +96,24 @@ export interface AgendaBoardData {
   legend?: Array<{ label: string; tone: BadgeTone }>;
   /** Uma acao esta em andamento: os botoes de acao ficam travados. */
   busy?: boolean;
+  /**
+   * Grade de calendario nas variacoes "day" e "week" (estilo Google): horas na
+   * lateral, uma coluna por dia (`days`, ou `referenceDate` no dia), cada
+   * consulta posicionada no horario e com a altura da duracao, lado a lado
+   * quando coincidem, linha da hora atual e filtro por profissional. Sem este
+   * campo, a grade de sempre (celulas por hora).
+   */
+  calendar?: AgendaCalendarOptions;
+}
+
+export interface AgendaCalendarOptions {
+  /** Hoje (yyyy-mm-dd, no fuso do provedor): coluna destacada e linha da hora atual. */
+  today?: string;
+  /** Clique num horario vazio chama `onAction("slot.create", { day, time })` (time "HH:MM", de 15 em 15 min). */
+  canCreate?: boolean;
+  /** Primeira e ultima hora da grade (padrao 7 e 21); alargam para caber qualquer consulta. */
+  firstHour?: number;
+  lastHour?: number;
 }
 
 /* ------------------------------------------------------------------ */
@@ -362,6 +380,31 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
             professionals={data.professionals}
             actionButtons={actionButtons}
           />
+        ) : variant !== "list" && data.calendar ? (
+          <CalendarView
+            days={variant === "week" ? (data.days ?? []) : [data.referenceDate ?? data.days?.[0] ?? ""]}
+            appointments={appointments}
+            professionals={data.professionals}
+            options={data.calendar}
+            selectedId={selectedId}
+            onSelect={(a) => setSelectedId((current) => (current === a.id ? null : a.id))}
+            onCreate={(day, time) => void onAction?.("slot.create", { day, time })}
+            panel={
+              selected?.actions ? (
+                <Panel tone="outline" className="flex flex-col gap-2 @4xl:sticky @4xl:top-4" aria-labelledby="agenda-panel-title">
+                  <div className="flex items-start justify-between gap-2">
+                    <p id="agenda-panel-title" className="bloco-headline">
+                      {selected.type}
+                    </p>
+                    <IconButton label={t("agenda.closePanel", "Fechar")} size="icon" onClick={() => setSelectedId(null)}>
+                      <XCircle size={16} aria-hidden />
+                    </IconButton>
+                  </div>
+                  <CardBody a={selected} professionals={data.professionals} actionButtons={actionButtons} />
+                </Panel>
+              ) : null
+            }
+          />
         ) : variant === "list" ? (
           <AgendaList
             appointments={appointments}
@@ -388,7 +431,7 @@ export function AgendaBoard(props: BlockProps<AgendaBoardData, AgendaVariant>) {
           />
         )}
 
-        {selected && !(variant === "list" && selected.actions) ? (
+        {selected && !selected.actions ? (
           <Panel tone="outline" className="flex flex-col gap-3">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
@@ -864,63 +907,317 @@ function AgendaCards({
   return (
     <ul className="flex flex-col gap-3" aria-label={t("agenda.listLabel", "Consultas do dia")}>
       {sorted.map((a) => {
-        const professional = professionals.find((p) => p.id === a.professionalId);
         return (
           <li key={a.id} id={`agenda-${a.id}`} className="scroll-mt-4">
             <Panel tone="outline" className="flex flex-col gap-2">
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <p className="bloco-headline flex min-w-0 flex-wrap items-baseline gap-x-2">
-                  <span className="tabular-nums">
-                    {timeLabel(tz, a.startsAt)}–{timeLabel(tz, a.endsAt)}
-                  </span>
-                  {a.patientHref ? (
-                    <a
-                      href={a.patientHref}
-                      className="inline-flex min-h-8 items-center text-fg underline decoration-border-strong underline-offset-4 hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                    >
-                      {a.patientName}
-                    </a>
-                  ) : (
-                    <span>{a.patientName}</span>
-                  )}
-                </p>
-                <Badge tone={statusToneOf(a)}>{statusLabelOf(L, a)}</Badge>
-              </div>
-              <p className="bloco-caption text-fg-muted">
-                {[a.type, professional?.name].filter(Boolean).join(" · ")}
-              </p>
-              {(a.detail ?? []).map((line) => (
-                <p key={line} className="bloco-caption text-fg-muted">
-                  {line}
-                </p>
-              ))}
-              {a.notice ? (
-                <p
-                  role="status"
-                  className="bloco-callout self-start rounded-[var(--r-md)] border border-warn bg-warn-soft px-3 py-1.5 text-warn"
-                >
-                  {a.notice}
-                </p>
-              ) : null}
-              {a.actions && a.actions.length > 0 ? (
-                <div className="flex flex-wrap items-center gap-2">{actionButtons(a)}</div>
-              ) : null}
-              {a.history && a.history.length > 0 ? (
-                <details className="border-t border-border pt-2">
-                  <summary className="bloco-callout inline-flex min-h-8 cursor-pointer items-center font-medium text-fg-secondary">
-                    {t("agenda.historyTitle", "Historico da consulta")}
-                  </summary>
-                  <ol className="bloco-caption mt-1 flex list-decimal flex-col gap-1 pl-5 text-fg-muted">
-                    {a.history.map((line, index) => (
-                      <li key={`${index}-${line}`}>{line}</li>
-                    ))}
-                  </ol>
-                </details>
-              ) : null}
+              <CardBody a={a} professionals={professionals} actionButtons={actionButtons} />
             </Panel>
           </li>
         );
       })}
     </ul>
+  );
+}
+
+/** O conteudo de uma consulta: no cartao da lista e no painel da grade. */
+function CardBody({
+  a,
+  professionals,
+  actionButtons,
+}: {
+  a: AgendaAppointment;
+  professionals: AgendaProfessional[];
+  actionButtons: (appointment: AgendaAppointment) => React.ReactNode;
+}) {
+  const L = useBlocosLocale();
+  const { t } = L;
+  const tz = L.config.timeZone;
+  const professional = professionals.find((p) => p.id === a.professionalId);
+  return (
+    <>
+    <div className="flex flex-wrap items-start justify-between gap-2">
+      <p className="bloco-headline flex min-w-0 flex-wrap items-baseline gap-x-2">
+        <span className="tabular-nums">
+          {timeLabel(tz, a.startsAt)}–{timeLabel(tz, a.endsAt)}
+        </span>
+        {a.patientHref ? (
+          <a
+            href={a.patientHref}
+            className="inline-flex min-h-8 items-center text-fg underline decoration-border-strong underline-offset-4 hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            {a.patientName}
+          </a>
+        ) : (
+          <span>{a.patientName}</span>
+        )}
+      </p>
+      <Badge tone={statusToneOf(a)}>{statusLabelOf(L, a)}</Badge>
+    </div>
+    <p className="bloco-caption text-fg-muted">
+      {[a.type, professional?.name].filter(Boolean).join(" · ")}
+    </p>
+    {(a.detail ?? []).map((line) => (
+      <p key={line} className="bloco-caption text-fg-muted">
+        {line}
+      </p>
+    ))}
+    {a.notice ? (
+      <p
+        role="status"
+        className="bloco-callout self-start rounded-[var(--r-md)] border border-warn bg-warn-soft px-3 py-1.5 text-warn"
+      >
+        {a.notice}
+      </p>
+    ) : null}
+    {a.actions && a.actions.length > 0 ? (
+      <div className="flex flex-wrap items-center gap-2">{actionButtons(a)}</div>
+    ) : null}
+    {a.history && a.history.length > 0 ? (
+      <details className="border-t border-border pt-2">
+        <summary className="bloco-callout inline-flex min-h-8 cursor-pointer items-center font-medium text-fg-secondary">
+          {t("agenda.historyTitle", "Historico da consulta")}
+        </summary>
+        <ol className="bloco-caption mt-1 flex list-decimal flex-col gap-1 pl-5 text-fg-muted">
+          {a.history.map((line, index) => (
+            <li key={`${index}-${line}`}>{line}</li>
+          ))}
+        </ol>
+      </details>
+    ) : null}
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Calendario (variacoes "day" e "week" com `calendar`)                */
+/* ------------------------------------------------------------------ */
+
+const HOUR_PX = 56;
+const MIN_BLOCK_PX = 44;
+
+/** Cor do bloco da consulta por tom (fundo preenchido usa accent-strong; nunca accent como texto). */
+const EVENT_TONE: Record<BadgeTone, string> = {
+  accent: "bg-accent-strong text-accent-fg",
+  info: "bg-accent-soft text-fg",
+  success: "bg-success text-fg-inverse",
+  warn: "bg-warn-soft text-warn",
+  danger: "bg-danger-soft text-danger",
+  neutral: "bg-surface-strong text-fg-muted line-through",
+  outline: "border border-border-strong bg-surface-solid text-fg",
+};
+
+function minutesOf(tz: string, iso: string) {
+  return minutesSinceMidnight(localParts(tz, iso));
+}
+
+function CalendarView({
+  days,
+  appointments,
+  professionals,
+  options,
+  selectedId,
+  onSelect,
+  onCreate,
+  panel,
+}: {
+  days: string[];
+  appointments: AgendaAppointment[];
+  professionals: AgendaProfessional[];
+  options: AgendaCalendarOptions;
+  selectedId: string | null;
+  onSelect: (appointment: AgendaAppointment) => void;
+  onCreate: (day: string, time: string) => void;
+  panel: React.ReactNode;
+}) {
+  const L = useBlocosLocale();
+  const { t } = L;
+  const tz = L.config.timeZone;
+  const [professional, setProfessional] = React.useState<string | null>(null);
+  // A hora atual so existe no navegador: no servidor nao ha linha (sem diferenca de hidratacao).
+  const [now, setNow] = React.useState<number | null>(null);
+  React.useEffect(() => {
+    setNow(Date.now());
+    const id = window.setInterval(() => setNow(Date.now()), 60_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  const placed = appointments
+    .filter((a) => !professional || a.professionalId === professional)
+    .map((a) => {
+      const from = minutesOf(tz, a.startsAt);
+      return { a, day: dayKeyOf(tz, a.startsAt), from, to: Math.max(minutesOf(tz, a.endsAt), from + 15) };
+    });
+
+  let first = options.firstHour ?? 7;
+  let last = options.lastHour ?? 21;
+  for (const e of placed) {
+    first = Math.min(first, Math.floor(e.from / 60));
+    last = Math.max(last, Math.ceil(e.to / 60));
+  }
+  const hours = Array.from({ length: Math.max(last - first, 1) }, (_, i) => first + i);
+  const height = hours.length * HOUR_PX;
+
+  // Consultas no mesmo horario ficam lado a lado no dia.
+  const lanes = new Map<string, { lane: number; of: number }>();
+  for (const day of days) {
+    const dayEvents = placed.filter((e) => e.day === day).sort((x, y) => x.from - y.from);
+    const ends: number[] = [];
+    const assigned: Array<{ id: string; lane: number; from: number; to: number }> = [];
+    for (const e of dayEvents) {
+      let lane = ends.findIndex((end) => end <= e.from);
+      if (lane === -1) {
+        lane = ends.length;
+        ends.push(e.to);
+      } else ends[lane] = e.to;
+      assigned.push({ id: e.a.id, lane, from: e.from, to: e.to });
+    }
+    for (const x of assigned) {
+      const overlapping = assigned.filter((y) => y.from < x.to && x.from < y.to);
+      lanes.set(x.id, { lane: x.lane, of: Math.max(...overlapping.map((y) => y.lane)) + 1 });
+    }
+  }
+
+  const nowDay = now === null ? null : dayKeyOf(tz, new Date(now).toISOString());
+  const nowMinutes = now === null ? null : minutesOf(tz, new Date(now).toISOString());
+  const weekday = new Intl.DateTimeFormat(L.config.locale, { weekday: "short", timeZone: "UTC" });
+  const refDay = options.today ?? days[0] ?? "";
+  const offset = refDay ? offsetFor(tz, refDay, "12:00") : "";
+  const gmt = offset ? `GMT${offset.startsWith("-") ? "-" : "+"}${Number(offset.slice(1, 3))}${offset.endsWith(":00") ? "" : offset.slice(3)}` : "";
+  const chip =
+    "inline-flex min-h-9 items-center rounded-full border px-3 bloco-control-sm transition-colors duration-[var(--dur-2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+
+  return (
+    <div className={panel ? "@container" : undefined}>
+      <div className={panel ? "flex flex-col gap-4 @4xl:grid @4xl:grid-cols-[minmax(0,1fr)_22rem] @4xl:items-start" : undefined}>
+        <section
+          className="overflow-hidden rounded-[var(--r-lg)] border border-border bg-surface-solid"
+          aria-label={t("agenda.calendarLabel", "Calendario de consultas")}
+        >
+          {professionals.length > 1 ? (
+            <div role="group" aria-label={t("agenda.filterLabel", "Filtrar por profissional")} className="flex flex-wrap gap-2 px-3 pt-3">
+              {[{ id: null as string | null, name: t("agenda.allProfessionals", "Todos") }, ...professionals].map((p) => (
+                <button
+                  key={p.id ?? "all"}
+                  type="button"
+                  aria-pressed={professional === p.id}
+                  onClick={() => setProfessional(p.id)}
+                  className={chip + (professional === p.id ? " border-accent bg-accent-soft text-fg" : " border-border text-fg-secondary hover:bg-surface-hover")}
+                >
+                  {p.name}
+                </button>
+              ))}
+            </div>
+          ) : null}
+          <div className="bloco-scroll max-h-[72vh] overflow-auto">
+            <div
+              className="grid"
+              style={{ gridTemplateColumns: `3.5rem repeat(${Math.max(days.length, 1)}, minmax(4.5rem, 1fr))` }}
+            >
+              <div className="sticky top-0 z-[2] flex items-end justify-center border-b border-border bg-surface-solid pb-1.5 bloco-micro" aria-hidden>
+                {gmt}
+              </div>
+              {days.map((day) => {
+                const date = new Date(`${day}T12:00:00Z`);
+                const isToday = day === options.today;
+                return (
+                  <div key={`h-${day}`} className="sticky top-0 z-[2] grid justify-items-center gap-0.5 border-b border-border bg-surface-solid py-2">
+                    <span className={"bloco-micro font-semibold uppercase tracking-wide " + (isToday ? "text-accent-ink" : "text-fg-muted")}>
+                      {weekday.format(date)}
+                    </span>
+                    <span
+                      className={
+                        "inline-flex h-10 w-10 items-center justify-center rounded-full text-[22px] " +
+                        (isToday ? "bg-accent-strong text-accent-fg" : "text-fg")
+                      }
+                    >
+                      {date.getUTCDate()}
+                    </span>
+                  </div>
+                );
+              })}
+
+              <div className="relative" style={{ height }} aria-hidden>
+                {hours.map((h, i) => (
+                  <span
+                    key={h}
+                    className={"bloco-micro absolute right-1.5 text-fg-muted " + (i === 0 ? "" : "-translate-y-1/2")}
+                    style={{ top: (h - first) * HOUR_PX }}
+                  >
+                    {formatMinutes(h * 60)}
+                  </span>
+                ))}
+              </div>
+
+              {days.map((day) => (
+                <div
+                  key={`c-${day}`}
+                  data-day={day}
+                  className={
+                    "relative border-l border-border " +
+                    (day === options.today ? "bg-accent-soft/20 " : "") +
+                    (options.canCreate ? "cursor-copy" : "")
+                  }
+                  style={{ height }}
+                  title={options.canCreate ? t("agenda.createHint", "Clique num horario livre para marcar") : undefined}
+                  onClick={(event) => {
+                    // So a grade vazia: o clique numa consulta e aquela consulta.
+                    if (!options.canCreate || (event.target as HTMLElement).closest("[data-appointment]")) return;
+                    const rect = event.currentTarget.getBoundingClientRect();
+                    const minutes = first * 60 + ((event.clientY - rect.top) / HOUR_PX) * 60;
+                    onCreate(day, formatMinutes(Math.max(0, Math.floor(minutes / 15) * 15)));
+                  }}
+                >
+                  {hours.map((h) => (
+                    <span key={h} className="absolute inset-x-0 border-t border-border" style={{ top: (h - first) * HOUR_PX }} aria-hidden />
+                  ))}
+                  {nowDay === day && nowMinutes !== null && nowMinutes >= first * 60 && nowMinutes <= last * 60 ? (
+                    <span
+                      data-now
+                      className="absolute -left-[5px] right-0 z-[1] border-t-2 border-danger before:absolute before:-top-[6px] before:left-0 before:h-2.5 before:w-2.5 before:rounded-full before:bg-danger"
+                      style={{ top: ((nowMinutes - first * 60) / 60) * HOUR_PX }}
+                      aria-hidden
+                    />
+                  ) : null}
+                  {placed
+                    .filter((e) => e.day === day)
+                    .map((e) => {
+                      const top = ((e.from - first * 60) / 60) * HOUR_PX;
+                      const tall = Math.max(MIN_BLOCK_PX, ((e.to - e.from) / 60) * HOUR_PX - 2);
+                      const lane = lanes.get(e.a.id) ?? { lane: 0, of: 1 };
+                      const width = 100 / lane.of;
+                      const label = statusLabelOf(L, e.a);
+                      const range = `${formatMinutes(e.from)}–${formatMinutes(e.to)}`;
+                      return (
+                        <button
+                          key={e.a.id}
+                          type="button"
+                          data-appointment={e.a.id}
+                          aria-pressed={selectedId === e.a.id}
+                          aria-label={`${range} · ${e.a.patientName} · ${e.a.type} · ${label}`}
+                          onClick={() => onSelect(e.a)}
+                          className={
+                            "absolute grid content-start gap-px overflow-hidden rounded-[8px] px-1.5 py-1 text-left shadow-[0_0_0_1px_var(--surface-solid)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
+                            EVENT_TONE[statusToneOf(e.a)] +
+                            (selectedId === e.a.id ? " ring-2 ring-accent-ink ring-offset-2 ring-offset-surface-solid" : "")
+                          }
+                          style={{ top, height: tall, left: `calc(${lane.lane * width}% + 2px)`, width: `calc(${width}% - 4px)` }}
+                        >
+                          <span className="truncate text-[12px] font-bold leading-tight" title={e.a.patientName}>
+                            {e.a.patientName}
+                          </span>
+                          <span className="truncate text-[11px] leading-tight opacity-90" title={`${range} · ${e.a.type}`}>
+                            {range} · {e.a.type}
+                          </span>
+                        </button>
+                      );
+                    })}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {panel}
+      </div>
+    </div>
   );
 }
